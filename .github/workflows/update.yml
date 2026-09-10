@@ -1,0 +1,41 @@
+name: 更新上海活动清单
+
+on:
+  schedule:
+    # 每周一、周四 08:00（北京时间）
+    - cron: "0 0 * * 1,4"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  models: read
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+      LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+      LLM_MODEL: ${{ vars.LLM_MODEL }}
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 抓取并生成页面
+        run: python update.py
+
+      - name: 提交更新
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "自动更新上海活动清单"
+          file_pattern: "data/*.json docs/*"

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>上海本月去哪玩</title>
+  <meta name="description" content="上海展览、话剧、音乐剧、演出自动汇总">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">周末去哪玩 · 上海</p>
+    <h1>本月展览 / 话剧 / 音乐剧</h1>
+    <p class="updated">更新于 2026-09-10 15:43 · 暂时没有抓到活动</p>
+  </header>
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="current">本月</button>
+        <button class="tab" data-tab="next">下月</button>
+        <button class="tab" data-tab="all">全部</button>
+      </div>
+      <input id="search" type="search" placeholder="搜名称 / 场馆 / 区域">
+    </div>
+  </div>
+  <div class="chips" id="chips">
+    <button class="chip active" data-cat="all">全部</button>
+  </div>
+  <main id="event-list">
+    
+  </main>
+  <div id="empty" class="empty" hidden>没有符合条件的活动，换个筛选试试。</div>
+  <footer>
+    信息来自公开网页，以官方购票/预约页面为准。如有延期、取消或售罄，请以官方最新信息为准。
+  </footer>
+  <script>
+    const state = { tab: 'current', cat: 'all', q: '' };
+    const cards = Array.from(document.querySelectorAll('.card'));
+    const empty = document.getElementById('empty');
+    const search = document.getElementById('search');
+
+    function applyFilters() {
+      let visible = 0;
+      cards.forEach(card => {
+        const months = (card.dataset.month || '').split(' ');
+        const category = card.dataset.category || '';
+        const text = card.dataset.search || '';
+        const monthOk = state.tab === 'all' || months.includes(state.tab);
+        const catOk = state.cat === 'all' || category === state.cat;
+        const searchOk = !state.q || text.includes(state.q);
+        const show = monthOk && catOk && searchOk;
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+      empty.hidden = visible > 0;
+    }
+
+    document.querySelectorAll('.tab').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        state.tab = button.dataset.tab;
+        applyFilters();
+      });
+    });
+
+    document.querySelectorAll('.chip').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.chip').forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        state.cat = button.dataset.cat;
+        applyFilters();
+      });
+    });
+
+    search.addEventListener('input', () => {
+      state.q = search.value.trim().toLowerCase();
+      applyFilters();
+    });
+
+    applyFilters();
+  </script>
+</body>
+</html>
