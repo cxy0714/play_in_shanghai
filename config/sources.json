@@ -5,7 +5,7 @@
       "name": "猫眼演出",
       "adapter": "maoyan",
       "url": "https://show.maoyan.com/",
-      "categories": [4, 9, 6, 5, 3],
+      "categories": [4, 9, 6, 5, 3, 15],
       "page_size": 30,
       "max_pages": 1,
       "enabled": true
@@ -58,4 +58,5 @@
     }
   ]
 }
+
 

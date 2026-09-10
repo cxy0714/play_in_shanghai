@@ -62,8 +62,22 @@ main { max-width: 980px; margin: 0 auto; padding: 16px 18px 40px; display: grid;
 .badge.concert { background: #eef7ea; color: #2e7d32; }
 .badge.dance { background: #f1eaff; color: #6a35c2; }
 .badge.opera { background: #fff0f0; color: #c62828; }
+.badge.talk { background: #e8f7f0; color: #00796b; }
 .badge.other { background: #f0f0f2; color: #555; }
-.date { color: var(--muted); font-size: 13px; text-align: right; }
+.date { color: var(--muted); font-size: 12px; text-align: right; }
+.when {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  background: #fff4e5; color: #9a4b00; border-radius: 12px;
+  padding: 8px 10px; font-size: 14px; font-weight: 700;
+}
+.when.exhibit { background: #eef6ff; color: #1565c0; }
+.when.musical, .when.concert, .when.drama, .when.dance, .when.opera, .when.talk { background: #fff4e5; color: #9a4b00; }
+.when .when-icon { font-size: 13px; }
+.when .when-date { letter-spacing: .02em; }
+.when .when-time {
+  background: var(--accent); color: #fff; border-radius: 999px;
+  padding: 3px 9px; font-size: 13px; font-weight: 800;
+}
 .card h2 { margin: 0; font-size: 18px; line-height: 1.35; }
 .meta { margin: 0; color: var(--muted); font-size: 13px; }
 .summary { margin: 0; color: #444; font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }

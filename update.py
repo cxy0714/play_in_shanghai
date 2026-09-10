@@ -103,6 +103,90 @@ def save_json(path: Path, payload: Any) -> None:
 
 
 # ---------------------------------------------------------------------------
+# 英文翻译
+# ---------------------------------------------------------------------------
+
+TRANSLATION_CACHE_PATH = DATA_DIR / "translations.json"
+TRANSLATION_CACHE: dict[str, str] = {}
+
+
+def load_translation_cache() -> dict[str, str]:
+    global TRANSLATION_CACHE
+    if TRANSLATION_CACHE_PATH.exists():
+        try:
+            TRANSLATION_CACHE = json.loads(TRANSLATION_CACHE_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            TRANSLATION_CACHE = {}
+    return TRANSLATION_CACHE
+
+
+def save_translation_cache() -> None:
+    if TRANSLATION_CACHE:
+        save_json(TRANSLATION_CACHE_PATH, TRANSLATION_CACHE)
+
+
+def needs_translation(text: str) -> bool:
+    text = clean_text(text)
+    return bool(text) and bool(re.search(r"[A-Za-z]", text)) and not bool(re.search(r"[\u4e00-\u9fff]", text))
+
+
+def translate_with_mymemory(value: str) -> str:
+    query = value if len(value) <= 450 else value[:450]
+    try:
+        response = requests.get(
+            "https://api.mymemory.translated.net/get",
+            params={"q": query, "langpair": "en|zh-CN"},
+            timeout=20,
+            headers={"User-Agent": USER_AGENT},
+        )
+        response.raise_for_status()
+        translated = clean_text(response.json().get("responseData", {}).get("translatedText", ""))
+    except Exception:
+        return ""
+    if not translated or "QUERY LENGTH LIMIT EXCEEDED" in translated.upper():
+        return ""
+    if len(value) > 450:
+        translated = translated.rstrip("。.!！?？ ") + "……"
+    return translated
+
+
+def translate_with_youdao(value: str) -> str:
+    try:
+        response = requests.get(
+            "https://aidemo.youdao.com/trans",
+            params={"q": value, "from": "en", "to": "zh-CHS"},
+            timeout=20,
+            headers={"User-Agent": USER_AGENT, "Referer": "https://fanyi.youdao.com/"},
+        )
+        response.raise_for_status()
+        translated = response.json().get("translation")
+        if isinstance(translated, list):
+            translated = "".join(str(item) for item in translated)
+        return clean_text(translated)
+    except Exception:
+        return ""
+
+
+def translate_to_zh(text: str) -> str:
+    value = clean_text(text)
+    if not needs_translation(value):
+        return value
+    if value in TRANSLATION_CACHE:
+        return TRANSLATION_CACHE[value]
+
+    time.sleep(0.3)
+    translated = translate_with_mymemory(value)
+    if not translated or translated == value:
+        translated = translate_with_youdao(value)
+    if translated and translated != value:
+        TRANSLATION_CACHE[value] = translated
+        return translated
+
+    # 翻译失败时不缓存原句，下次还会重试
+    return value
+
+
+# ---------------------------------------------------------------------------
 # 抓取
 # ---------------------------------------------------------------------------
 
@@ -371,7 +455,7 @@ MAOYAN_CATEGORY_MAP = {
     12: "其他",
     13: "其他",
     14: "话剧",
-    15: "其他",
+    15: "脱口秀",
     16: "其他",
     17: "音乐会",
 }
@@ -385,7 +469,7 @@ SMART_HEADERS = {
 
 DOUBAN_PAGE_CATEGORY = {
     "week-drama": "话剧",
-    "week-comedy": "话剧",
+    "week-comedy": "脱口秀",
     "week-exhibition": "展览",
     "week-music": "音乐会",
 }
@@ -531,9 +615,18 @@ def collect_smartshanghai(source: dict) -> list[dict]:
     results: list[dict] = []
 
     for item in items:
-        title = clean_text(item.get("title"))
-        if not title:
+        category = guess_smart_category(item)
+        if category == "其他":
             continue
+        raw_title = clean_text(item.get("title"))
+        if not raw_title:
+            continue
+        title = translate_to_zh(raw_title)
+        raw_summary = clean_text(item.get("brief_description"))
+        summary = translate_to_zh(raw_summary) if raw_summary else ""
+        if raw_title and raw_title != title:
+            summary = f"原名：{raw_title}。{summary}".strip()
+
         listing_url = clean_text(item.get("listing_url")) or clean_text(item.get("tickets_url"))
         start = ""
         match = re.search(r"(20\d{2}-\d{2}-\d{2})", listing_url)
@@ -543,7 +636,7 @@ def collect_smartshanghai(source: dict) -> list[dict]:
         results.append(
             {
                 "title": title,
-                "category": guess_smart_category(item),
+                "category": category,
                 "venue": clean_text(item.get("venue_name") or item.get("venue_label")),
                 "address": "",
                 "start_date": start,
@@ -552,7 +645,7 @@ def collect_smartshanghai(source: dict) -> list[dict]:
                 "ticket_url": listing_url or clean_text(source.get("url")),
                 "source_url": clean_text(source.get("url")),
                 "image_url": clean_text(item.get("thumbnail_url") or item.get("compressed_thumbnail_url")),
-                "summary": clean_text(item.get("brief_description")),
+                "summary": summary,
                 "status": clean_text((item.get("listing_status") or {}).get("title")),
             }
         )
@@ -567,6 +660,9 @@ def clean_douban_location(text: str) -> str:
     return value or "上海"
 
 
+DOUBAN_CACHE_PATH = DATA_DIR / "douban_cache.json"
+
+
 def collect_douban(source: dict) -> list[dict]:
     pages = source.get("pages") or ["week-drama", "week-comedy", "week-exhibition", "week-music"]
     base = source.get("base_url") or "https://shanghai.douban.com/events"
@@ -574,7 +670,10 @@ def collect_douban(source: dict) -> list[dict]:
 
     for page in pages:
         url = f"{base}/{page}"
-        html_text = http_get(url, timeout=30)
+        try:
+            html_text = http_get(url, timeout=30)
+        except Exception:
+            continue
         soup = BeautifulSoup(html_text, "html.parser")
         page_category = DOUBAN_PAGE_CATEGORY.get(page, "其他")
 
@@ -626,6 +725,19 @@ def collect_douban(source: dict) -> list[dict]:
             )
         time.sleep(0.35)
 
+    if results:
+        # 缓存最后一次成功结果，防止豆瓣偶发风控导致整块数据消失
+        save_json(DOUBAN_CACHE_PATH, results)
+        return results
+
+    if DOUBAN_CACHE_PATH.exists():
+        try:
+            cached = json.loads(DOUBAN_CACHE_PATH.read_text(encoding="utf-8"))
+            if isinstance(cached, list):
+                log(f"  豆瓣直连失败，使用缓存 {len(cached)} 条")
+                return cached
+        except Exception:
+            pass
     return results
 
 
@@ -1123,6 +1235,7 @@ def infer_dates(text: Any) -> tuple[date | None, date | None]:
 
 CATEGORY_KEYWORDS: list[tuple[str, list[str]]] = [
     ("音乐剧", ["音乐剧", "musical"]),
+    ("脱口秀", ["脱口秀", "单口", "开放麦", "喜剧大会", "talk show"]),
     ("话剧", ["话剧", "舞台剧", "戏剧", "默剧", "喜剧"]),
     ("舞蹈", ["舞剧", "舞蹈", "芭蕾"]),
     ("戏曲", ["京剧", "昆曲", "越剧", "沪剧", "评弹", "戏曲"]),
@@ -1132,7 +1245,7 @@ CATEGORY_KEYWORDS: list[tuple[str, list[str]]] = [
         "爵士", "演唱会", "livehouse", "音乐现场", "音乐节",
     ]),
 ]
-CATEGORIES = ["展览", "话剧", "音乐剧", "音乐会", "舞蹈", "戏曲", "其他"]
+CATEGORIES = ["展览", "话剧", "音乐剧", "音乐会", "舞蹈", "戏曲", "脱口秀", "其他"]
 
 
 def guess_category(text: str, hint: str = "") -> str:
@@ -1365,6 +1478,24 @@ def merge_events(primary: dict, other: dict) -> dict:
     return primary
 
 
+def enrich_time_from_title(events: list[dict]) -> list[dict]:
+    """同名活动可能来自不同平台，把有场次时间的一边补到另一边。"""
+    time_by_title: dict[str, str] = {}
+    for event in events:
+        if event.get("time_text"):
+            key = normalized_key(event.get("title", ""))
+            if key and key not in time_by_title:
+                time_by_title[key] = event["time_text"]
+
+    for event in events:
+        if event.get("time_text"):
+            continue
+        key = normalized_key(event.get("title", ""))
+        if key in time_by_title:
+            event["time_text"] = time_by_title[key]
+    return events
+
+
 def dedupe_events(events: list[dict]) -> list[dict]:
     merged: dict[str, dict] = {}
     for event in events:
@@ -1451,6 +1582,7 @@ CATEGORY_CLASS = {
     "音乐会": "concert",
     "舞蹈": "dance",
     "戏曲": "opera",
+    "脱口秀": "talk",
     "其他": "other",
 }
 
@@ -1519,8 +1651,22 @@ main { max-width: 980px; margin: 0 auto; padding: 16px 18px 40px; display: grid;
 .badge.concert { background: #eef7ea; color: #2e7d32; }
 .badge.dance { background: #f1eaff; color: #6a35c2; }
 .badge.opera { background: #fff0f0; color: #c62828; }
+.badge.talk { background: #e8f7f0; color: #00796b; }
 .badge.other { background: #f0f0f2; color: #555; }
-.date { color: var(--muted); font-size: 13px; text-align: right; }
+.date { color: var(--muted); font-size: 12px; text-align: right; }
+.when {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  background: #fff4e5; color: #9a4b00; border-radius: 12px;
+  padding: 8px 10px; font-size: 14px; font-weight: 700;
+}
+.when.exhibit { background: #eef6ff; color: #1565c0; }
+.when.musical, .when.concert, .when.drama, .when.dance, .when.opera, .when.talk { background: #fff4e5; color: #9a4b00; }
+.when .when-icon { font-size: 13px; }
+.when .when-date { letter-spacing: .02em; }
+.when .when-time {
+  background: var(--accent); color: #fff; border-radius: 999px;
+  padding: 3px 9px; font-size: 13px; font-weight: 800;
+}
 .card h2 { margin: 0; font-size: 18px; line-height: 1.35; }
 .meta { margin: 0; color: var(--muted); font-size: 13px; }
 .summary { margin: 0; color: #444; font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
@@ -1541,6 +1687,14 @@ footer { max-width: 980px; margin: 0 auto; padding: 0 18px 40px; color: #999; fo
 """
 
 
+def format_event_date_parts(event: dict) -> tuple[str, str]:
+    full = format_event_date(event)
+    time_text = clean_text(event.get("time_text", ""))
+    if time_text and full.endswith(time_text):
+        return full[: -len(time_text)].strip(), time_text
+    return full, ""
+
+
 def build_card(event: dict, months: str) -> str:
     group = event.get("category") or "其他"
     category = event.get("display_category") or group
@@ -1551,7 +1705,14 @@ def build_card(event: dict, months: str) -> str:
     meta = venue + (f" · {district}" if district else "")
     summary = html_lib.escape(event.get("summary", ""))
     price = html_lib.escape(event.get("price_text", "以页面为准"))
-    date_text = html_lib.escape(format_event_date(event))
+    date_text, time_text = format_event_date_parts(event)
+    date_html = html_lib.escape(date_text)
+    when_icon = "📅" if group == "展览" else "🕒"
+    time_html = (
+        f'<span class="when-time">{html_lib.escape(time_text)}</span>'
+        if time_text
+        else ""
+    )
     status = event.get("status", "")
     status_html = f'<span class="status">{html_lib.escape(status)}</span>' if status else ""
     link = event.get("ticket_url") or event.get("source_url") or "#"
@@ -1564,6 +1725,7 @@ def build_card(event: dict, months: str) -> str:
             event.get("summary", ""),
             category,
             group,
+            time_text,
         ]),
         quote=True,
     )
@@ -1571,9 +1733,13 @@ def build_card(event: dict, months: str) -> str:
       <article class="card" data-month="{months}" data-category="{html_lib.escape(category, quote=True)}" data-group="{html_lib.escape(group, quote=True)}" data-search="{search_text.lower()}">
         <div class="card-top">
           <span class="badge {category_class}">{html_lib.escape(category)}</span>
-          <span class="date">{date_text}</span>
         </div>
         <h2>{title}</h2>
+        <div class="when {category_class}">
+          <span class="when-icon">{when_icon}</span>
+          <span class="when-date">{date_html}</span>
+          {time_html}
+        </div>
         <p class="meta">{meta}</p>
         <p class="summary">{summary}</p>
         <div class="card-bottom">
@@ -1590,7 +1756,7 @@ def build_html(events: list[dict], generated_at: datetime) -> str:
     visible.sort(key=lambda e: (e.get("start_date") or "9999-99-99", e.get("title", "")))
 
     cards = "\n".join(build_card(event, compute_months(event, today)) for event in visible)
-    filter_order = ["展览"] + EXHIBITION_SUBCATEGORIES + [c for c in CATEGORIES if c != "展览"]
+    filter_order = EXHIBITION_SUBCATEGORIES + [c for c in CATEGORIES if c != "展览"]
     present: set[str] = set()
     for event in visible:
         group = event.get("category", "其他")
@@ -1862,6 +2028,7 @@ def collect_from_source(source: dict) -> list[dict]:
 def run(config_path: Path, no_llm: bool = False) -> None:
     global LLM_CONFIG
     LLM_CONFIG = load_llm_config(no_llm=no_llm)
+    load_translation_cache()
 
     if LLM_CONFIG:
         log(f"LLM 已启用：{LLM_CONFIG[0]} / {LLM_CONFIG[2]}")
@@ -1895,6 +2062,7 @@ def run(config_path: Path, no_llm: bool = False) -> None:
         if event:
             events.append(event)
 
+    events = enrich_time_from_title(events)
     events = dedupe_events(events)
 
     generated_at = datetime.now(SHANGHAI_TZ)
@@ -1905,6 +2073,7 @@ def run(config_path: Path, no_llm: bool = False) -> None:
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    save_translation_cache()
 
     payload = {
         "updated": generated_at.isoformat(timespec="seconds"),
