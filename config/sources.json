@@ -27,7 +27,7 @@
     {
       "name": "上海博物馆",
       "adapter": "shmuseum",
-      "url": "https://www.shanghaimuseum.net/",
+      "url": "https://www.shanghaimuseum.cn/mu/frontend/pg/index",
       "enabled": true
     },
     {
@@ -58,3 +58,4 @@
     }
   ]
 }
+

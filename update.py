@@ -458,12 +458,21 @@ def collect_maoyan(source: dict) -> list[dict]:
                     event_category = "音乐剧"
 
                 start, end = parse_maoyan_time_range(item.get("showTimeRange", ""))
-                jump = clean_text(item.get("jumpDetailUrl"))
-                ticket_url = (
-                    "https://show.maoyan.com" + jump
-                    if jump.startswith("/")
-                    else (jump or clean_text(source.get("url")))
+                performance_id = (
+                    item.get("performanceId")
+                    or item.get("project_id")
+                    or item.get("projectId")
                 )
+                jump = clean_text(item.get("jumpDetailUrl"))
+                if performance_id:
+                    ticket_url = (
+                        "https://h5.dianping.com/app/myshow/#/detail/"
+                        f"{performance_id}?isNewPage=true&fromTag=gwlshare"
+                    )
+                elif jump:
+                    ticket_url = urljoin("https://show.maoyan.com", jump)
+                else:
+                    ticket_url = clean_text(source.get("url"))
                 price = ""
                 price_display = item.get("sellPriceDisplay")
                 if isinstance(price_display, dict):
@@ -643,7 +652,16 @@ def collect_shmuseum(source: dict) -> list[dict]:
             continue
         venue = paragraphs[2] if len(paragraphs) > 2 else "上海博物馆"
         detail_link = slide.select_one('a[href*="article"], a[href*="exhibit"]')
-        detail_url = urljoin(url, detail_link["href"]) if detail_link else url
+        if detail_link:
+            detail_href = detail_link["href"]
+            if detail_href.startswith("http"):
+                detail_url = detail_href
+            elif detail_href.startswith("/"):
+                detail_url = "https://www.shanghaimuseum.cn" + detail_href
+            else:
+                detail_url = "https://www.shanghaimuseum.cn/mu/" + detail_href
+        else:
+            detail_url = url
 
         results.append(
             {
@@ -723,7 +741,7 @@ def collect_rockbund(source: dict) -> list[dict]:
         if not title:
             continue
         slug = clean_text(item.get("slug"))
-        path = "exhibition" if item_type == "exhibition" else "event"
+        path = "exhibition" if item_type == "exhibition" else "calendar"
         detail_url = f"https://www.rockbundartmuseum.org/{path}/{slug}" if slug else url
         summary = locale_text(item.get("description"))
         category = "展览" if item_type == "exhibition" else "其他"
@@ -766,9 +784,9 @@ def collect_psa(source: dict) -> list[dict]:
                 continue
             slug = clean_text(item.get("slug"))
             if "exhibition" in endpoint:
-                detail_url = f"https://www.powerstationofart.com/cn/whats-on/exhibitions/{slug}"
+                detail_url = f"https://www.powerstationofart.com/whats-on/exhibitions/{slug}"
             elif "activity" in endpoint:
-                detail_url = f"https://www.powerstationofart.com/cn/whats-on/activities/{slug}"
+                detail_url = f"https://www.powerstationofart.com/whats-on/activities/{slug}"
             else:
                 detail_url = url
             results.append(
