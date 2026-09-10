@@ -1137,6 +1137,59 @@ def guess_category(text: str, hint: str = "") -> str:
     return "其他"
 
 
+EXHIBITION_CATEGORIES: list[tuple[str, list[str]]] = [
+    ("历史文物", [
+        "历史", "文物", "考古", "古代", "文明", "汉代", "唐代", "宋代",
+        "元代", "明代", "清代", "明清", "马王堆", "青铜", "陶瓷", "玉器",
+        "书画", "碑帖", "遗址", "海派", "红色", "革命", "文献",
+    ]),
+    ("现代艺术", [
+        "现代艺术", "当代艺术", "当代", "抽象", "装置", "观念", "行为艺术",
+        "实验艺术", "雕塑", "绘画", "油画", "版画", "水墨",
+    ]),
+    ("艺术家特展", [
+        "个展", "回顾展", "回顾", "作品展", "首展", "艺术家",
+    ]),
+    ("数字沉浸", [
+        "沉浸", "数字", "VR", "AR", "元宇宙", "投影", "互动体验", "巨幕", "全景", "光影",
+    ]),
+    ("摄影影像", [
+        "摄影", "影像", "图片", "电影", "纪录片", "胶片",
+    ]),
+    ("设计工艺", [
+        "设计", "工艺", "珠宝", "时尚", "服饰", "家具", "器物", "匠艺",
+    ]),
+    ("亲子动漫", [
+        "亲子", "儿童", "少儿", "家庭", "恐龙", "动漫", "国漫", "卡通",
+        "童话", "乐园", "游戏", "二次元", "潮玩", "手办",
+    ]),
+    ("建筑城市", [
+        "建筑", "城市", "规划", "景观", "公共艺术",
+    ]),
+    ("自然科技", [
+        "自然", "科学", "科技", "极地", "天文", "生物", "海洋", "深海", "地球", "生态",
+    ]),
+    ("其他展览", [
+        "展览", "美术馆", "艺术中心", "画廊", "艺术",
+    ]),
+]
+EXHIBITION_SUBCATEGORIES = [category for category, _ in EXHIBITION_CATEGORIES]
+
+
+def classify_exhibition(text: str) -> str:
+    haystack = clean_text(text).lower()
+    scores: dict[str, int] = {}
+    for category, keywords in EXHIBITION_CATEGORIES:
+        if category == "其他展览":
+            continue
+        score = sum(1 for keyword in keywords if keyword.lower() in haystack)
+        if score:
+            scores[category] = score
+    if not scores:
+        return "其他展览"
+    return max(scores, key=scores.get)
+
+
 DISTRICTS = [
     "黄浦", "徐汇", "长宁", "静安", "普陀", "虹口", "杨浦", "闵行",
     "宝山", "嘉定", "浦东", "金山", "松江", "青浦", "奉贤", "崇明",
@@ -1219,6 +1272,12 @@ def normalize_event(raw: dict, source: dict) -> dict | None:
     image_url = clean_text(first_present(raw, "image_url", "image"))
     district = clean_text(first_present(raw, "district")) or find_district(venue, address, title)
 
+    display_category = category
+    sub_category = ""
+    if category == "展览":
+        sub_category = classify_exhibition(" ".join([title, summary, venue, address]))
+        display_category = sub_category
+
     unique = f"{title}|{venue}|{start.isoformat() if start else ''}"
     event_id = hashlib.sha1(unique.encode("utf-8")).hexdigest()[:16]
 
@@ -1226,6 +1285,8 @@ def normalize_event(raw: dict, source: dict) -> dict | None:
         "id": event_id,
         "title": title,
         "category": category,
+        "display_category": display_category,
+        "sub_category": sub_category,
         "venue": venue,
         "district": district,
         "address": address,
@@ -1266,6 +1327,7 @@ def merge_events(primary: dict, other: dict) -> dict:
     for field in (
         "summary", "venue", "district", "address", "start_date", "end_date",
         "time_text", "price_text", "ticket_url", "source_url", "image_url", "status",
+        "display_category", "sub_category",
     ):
         if not primary.get(field) and other.get(field):
             primary[field] = other[field]
@@ -1463,8 +1525,9 @@ footer { max-width: 980px; margin: 0 auto; padding: 0 18px 40px; color: #999; fo
 
 
 def build_card(event: dict, months: str) -> str:
-    category = event.get("category") or "其他"
-    category_class = CATEGORY_CLASS.get(category, "other")
+    group = event.get("category") or "其他"
+    category = event.get("display_category") or group
+    category_class = CATEGORY_CLASS.get(group, "other")
     title = html_lib.escape(event.get("title", ""))
     venue = html_lib.escape(event.get("venue", ""))
     district = event.get("district", "")
@@ -1477,11 +1540,18 @@ def build_card(event: dict, months: str) -> str:
     link = event.get("ticket_url") or event.get("source_url") or "#"
     link = html_lib.escape(link, quote=True)
     search_text = html_lib.escape(
-        " ".join([event.get("title", ""), event.get("venue", ""), district, event.get("summary", "")]),
+        " ".join([
+            event.get("title", ""),
+            event.get("venue", ""),
+            district,
+            event.get("summary", ""),
+            category,
+            group,
+        ]),
         quote=True,
     )
     return f"""
-      <article class="card" data-month="{months}" data-category="{html_lib.escape(category, quote=True)}" data-search="{search_text.lower()}">
+      <article class="card" data-month="{months}" data-category="{html_lib.escape(category, quote=True)}" data-group="{html_lib.escape(group, quote=True)}" data-search="{search_text.lower()}">
         <div class="card-top">
           <span class="badge {category_class}">{html_lib.escape(category)}</span>
           <span class="date">{date_text}</span>
@@ -1503,7 +1573,15 @@ def build_html(events: list[dict], generated_at: datetime) -> str:
     visible.sort(key=lambda e: (e.get("start_date") or "9999-99-99", e.get("title", "")))
 
     cards = "\n".join(build_card(event, compute_months(event, today)) for event in visible)
-    categories = sorted({event.get("category", "其他") for event in visible}, key=lambda c: CATEGORIES.index(c) if c in CATEGORIES else 99)
+    filter_order = ["展览"] + EXHIBITION_SUBCATEGORIES + [c for c in CATEGORIES if c != "展览"]
+    present: set[str] = set()
+    for event in visible:
+        group = event.get("category", "其他")
+        present.add(group)
+        if group == "展览":
+            present.add(event.get("display_category") or "其他展览")
+    categories = [category for category in filter_order if category in present]
+
     chips = ['<button class="chip active" data-cat="all">全部</button>']
     chips.extend(f'<button class="chip" data-cat="{html_lib.escape(cat, quote=True)}">{html_lib.escape(cat)}</button>' for cat in categories)
 
@@ -1560,9 +1638,10 @@ def build_html(events: list[dict], generated_at: datetime) -> str:
       cards.forEach(card => {{
         const months = (card.dataset.month || '').split(' ');
         const category = card.dataset.category || '';
+        const group = card.dataset.group || category;
         const text = card.dataset.search || '';
         const monthOk = state.tab === 'all' || months.includes(state.tab);
-        const catOk = state.cat === 'all' || category === state.cat;
+        const catOk = state.cat === 'all' || category === state.cat || group === state.cat;
         const searchOk = !state.q || text.includes(state.q);
         const show = monthOk && catOk && searchOk;
         card.hidden = !show;
