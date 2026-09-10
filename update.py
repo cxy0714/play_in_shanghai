@@ -465,14 +465,13 @@ def collect_maoyan(source: dict) -> list[dict]:
                 )
                 jump = clean_text(item.get("jumpDetailUrl"))
                 if performance_id:
-                    ticket_url = (
-                        "https://h5.dianping.com/app/myshow/#/detail/"
-                        f"{performance_id}?isNewPage=true&fromTag=gwlshare"
-                    )
+                    # 格瓦拉/猫眼的统一网页详情页，能直接看到活动标题、场馆和日期
+                    ticket_url = f"https://www.gewara.com/detail/{performance_id}"
                 elif jump:
                     ticket_url = urljoin("https://show.maoyan.com", jump)
                 else:
                     ticket_url = clean_text(source.get("url"))
+
                 price = ""
                 price_display = item.get("sellPriceDisplay")
                 if isinstance(price_display, dict):
