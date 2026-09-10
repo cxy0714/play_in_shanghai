@@ -25,6 +25,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any, Iterable
@@ -116,6 +117,19 @@ def http_get(url: str, timeout: int = 40) -> str:
     if response.encoding and response.encoding.lower() in ("iso-8859-1", "latin-1"):
         response.encoding = response.apparent_encoding or "utf-8"
     return response.text
+
+
+def http_get_json(url: str, headers: dict | None = None, timeout: int = 40) -> Any:
+    request_headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "zh-CN,zh;q=0.9",
+    }
+    if headers:
+        request_headers.update(headers)
+    response = requests.get(url, headers=request_headers, timeout=timeout)
+    response.raise_for_status()
+    return response.json()
 
 
 def fetch_jina(url: str) -> str:
@@ -335,6 +349,501 @@ def extract_rss_events(xml_text: str, base_url: str) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# 站点适配器
+# ---------------------------------------------------------------------------
+
+MAOYAN_BASE = "https://m.dianping.com/myshow"
+MAOYAN_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)",
+    "Referer": "https://show.maoyan.com/",
+}
+MAOYAN_CATEGORY_MAP = {
+    1: "音乐会",
+    2: "其他",
+    3: "戏曲",
+    4: "话剧",
+    5: "舞蹈",
+    6: "音乐会",
+    7: "其他",
+    8: "其他",
+    9: "展览",
+    10: "音乐会",
+    12: "其他",
+    13: "其他",
+    14: "话剧",
+    15: "其他",
+    16: "其他",
+    17: "音乐会",
+}
+
+SMART_HEADERS = {
+    "User-Agent": USER_AGENT,
+    "X-API-KEY": "oisidoosdkouiimnkcjhisdfui393jskdfu23jsdf",
+    "Authorization": "Bearer oisidoosdkouiimnkcjhisdfui393jskdfu23jsdf",
+    "Referer": "https://www.smartshanghai.com/events",
+}
+
+DOUBAN_PAGE_CATEGORY = {
+    "week-drama": "话剧",
+    "week-comedy": "话剧",
+    "week-exhibition": "展览",
+    "week-music": "音乐会",
+}
+
+
+def locale_text(value: Any) -> str:
+    """处理 Sanity/PSA 常见的 {cn: ...} / [{children: ...}] 结构。"""
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return clean_text(value)
+    if isinstance(value, list):
+        return clean_text(" ".join(locale_text(item) for item in value))
+    if isinstance(value, dict):
+        for key in ("cn", "zh", "zh-Hans", "en"):
+            if key in value:
+                return locale_text(value[key])
+        if "text" in value:
+            return clean_text(value["text"])
+        if "children" in value:
+            return locale_text(value["children"])
+        if "title" in value:
+            return locale_text(value["title"])
+    return clean_text(value)
+
+
+def extract_image_url(value: Any) -> str:
+    if isinstance(value, str):
+        return value
+    if isinstance(value, dict):
+        if value.get("url"):
+            return str(value["url"])
+        srcs = value.get("srcs")
+        if isinstance(srcs, list) and srcs:
+            first = srcs[0]
+            if isinstance(first, dict) and first.get("url"):
+                return str(first["url"])
+    return ""
+
+
+def parse_maoyan_time_range(text: Any) -> tuple[date | None, date | None]:
+    start, end = infer_dates(text)
+    return start, end
+
+
+def collect_maoyan(source: dict) -> list[dict]:
+    results: list[dict] = []
+    categories = source.get("categories") or [4, 9, 6, 3, 5]
+    page_size = int(source.get("page_size", 30))
+    max_pages = int(source.get("max_pages", 1))
+
+    for category in categories:
+        for page in range(1, max_pages + 1):
+            url = (
+                f"{MAOYAN_BASE}/ajax/performances/{category};st=0"
+                f";p={page};s={page_size};tft=0?cityId=10&sellChannel=7"
+            )
+            data = http_get_json(url, headers=MAOYAN_HEADERS)
+            items = data.get("data") or []
+            if not items:
+                break
+
+            for item in items:
+                title = clean_text(item.get("name") or item.get("shortName"))
+                if not title:
+                    continue
+                category_id = int(item.get("categoryId") or category)
+                event_category = MAOYAN_CATEGORY_MAP.get(category_id, "其他")
+                if event_category == "话剧" and "音乐剧" in title:
+                    event_category = "音乐剧"
+
+                start, end = parse_maoyan_time_range(item.get("showTimeRange", ""))
+                jump = clean_text(item.get("jumpDetailUrl"))
+                ticket_url = (
+                    "https://show.maoyan.com" + jump
+                    if jump.startswith("/")
+                    else (jump or clean_text(source.get("url")))
+                )
+                price = ""
+                price_display = item.get("sellPriceDisplay")
+                if isinstance(price_display, dict):
+                    price = clean_text(price_display.get("priceDisplayText"))
+                price = price or clean_text(item.get("priceRange"))
+
+                score = clean_text(item.get("score"))
+                summary = f"猫眼评分 {score}" if score else ""
+
+                results.append(
+                    {
+                        "title": title,
+                        "category": event_category,
+                        "venue": clean_text(item.get("shopName")),
+                        "address": clean_text(item.get("address")),
+                        "start_date": start.isoformat() if start else "",
+                        "end_date": end.isoformat() if end else "",
+                        "price_text": price,
+                        "ticket_url": ticket_url,
+                        "source_url": clean_text(source.get("url")),
+                        "image_url": clean_text(item.get("posterUrl")),
+                        "summary": summary,
+                        "status": "已售罄" if item.get("stockOut") else "",
+                    }
+                )
+
+            paging = data.get("paging") or {}
+            if not paging.get("hasMore"):
+                break
+        time.sleep(0.15)
+
+    return results
+
+
+def guess_smart_category(item: dict) -> str:
+    tags = item.get("main_category_tag_name") or ""
+    if isinstance(tags, list):
+        tags = " ".join(str(tag) for tag in tags)
+    text = f"{tags} {item.get('title', '')}".lower()
+    if any(keyword in text for keyword in ["musical"]):
+        return "音乐剧"
+    if any(keyword in text for keyword in ["exhibition", "museum", "gallery", "art"]):
+        return "展览"
+    if any(keyword in text for keyword in ["theater", "theatre", "drama", "stage", "comedy", "performance"]):
+        return "话剧"
+    if any(keyword in text for keyword in ["dance", "ballet"]):
+        return "舞蹈"
+    if any(keyword in text for keyword in ["music", "concert", "live"]):
+        return "音乐会"
+    return "其他"
+
+
+def collect_smartshanghai(source: dict) -> list[dict]:
+    url = source.get("api_url") or "https://www.smartshanghai.com/api2/events"
+    data = http_get_json(url, headers=SMART_HEADERS)
+    items = data.get("data") or []
+    results: list[dict] = []
+
+    for item in items:
+        title = clean_text(item.get("title"))
+        if not title:
+            continue
+        listing_url = clean_text(item.get("listing_url")) or clean_text(item.get("tickets_url"))
+        start = ""
+        match = re.search(r"(20\d{2}-\d{2}-\d{2})", listing_url)
+        if match:
+            start = match.group(1)
+
+        results.append(
+            {
+                "title": title,
+                "category": guess_smart_category(item),
+                "venue": clean_text(item.get("venue_name") or item.get("venue_label")),
+                "address": "",
+                "start_date": start,
+                "end_date": start,
+                "price_text": clean_text(item.get("price")),
+                "ticket_url": listing_url or clean_text(source.get("url")),
+                "source_url": clean_text(source.get("url")),
+                "image_url": clean_text(item.get("thumbnail_url") or item.get("compressed_thumbnail_url")),
+                "summary": clean_text(item.get("brief_description")),
+                "status": clean_text((item.get("listing_status") or {}).get("title")),
+            }
+        )
+
+    return results
+
+
+def clean_douban_location(text: str) -> str:
+    value = clean_text(text)
+    value = re.sub(r"^上海\s*", "", value)
+    value = re.sub(r"^(黄浦区|徐汇区|长宁区|静安区|普陀区|虹口区|杨浦区|闵行区|宝山区|嘉定区|浦东新区|金山区|松江区|青浦区|奉贤区|崇明区)\s*", "", value)
+    return value or "上海"
+
+
+def collect_douban(source: dict) -> list[dict]:
+    pages = source.get("pages") or ["week-drama", "week-comedy", "week-exhibition", "week-music"]
+    base = source.get("base_url") or "https://shanghai.douban.com/events"
+    results: list[dict] = []
+
+    for page in pages:
+        url = f"{base}/{page}"
+        html_text = http_get(url, timeout=30)
+        soup = BeautifulSoup(html_text, "html.parser")
+        page_category = DOUBAN_PAGE_CATEGORY.get(page, "其他")
+
+        for item in soup.select("li.list-entry"):
+            title_link = item.select_one(".title a[href]")
+            if not title_link:
+                continue
+            title = clean_text(title_link.get("title") or title_link.get_text(" ", strip=True))
+            if not title:
+                continue
+
+            detail_url = title_link.get("href") or url
+            start_el = item.select_one("time[itemprop='startDate']")
+            end_el = item.select_one("time[itemprop='endDate']")
+            start = start_el.get("datetime") if start_el else ""
+            end = end_el.get("datetime") if end_el else ""
+
+            location_el = item.select_one("li[title]")
+            location = clean_text(location_el.get("title")) if location_el else ""
+            if not location:
+                location = clean_text(item.select_one("li[title]").get_text(" ", strip=True)) if item.select_one("li[title]") else ""
+
+            fee_el = item.select_one(".fee strong")
+            price = clean_text(fee_el.get_text(" ", strip=True)) if fee_el else ""
+            summary_el = item.select_one("p")
+            summary = clean_text(summary_el.get_text(" ", strip=True)) if summary_el else ""
+
+            category = page_category
+            if category == "话剧" and "音乐剧" in title:
+                category = "音乐剧"
+            if category == "其他":
+                category = guess_category(title, "")
+
+            results.append(
+                {
+                    "title": title,
+                    "category": category,
+                    "venue": clean_douban_location(location),
+                    "address": location,
+                    "start_date": start,
+                    "end_date": end,
+                    "price_text": price,
+                    "ticket_url": detail_url,
+                    "source_url": url,
+                    "image_url": "",
+                    "summary": summary,
+                    "status": "",
+                }
+            )
+        time.sleep(0.35)
+
+    return results
+
+
+def collect_shmuseum(source: dict) -> list[dict]:
+    url = source.get("url") or "https://www.shanghaimuseum.net/"
+    html_text = http_get(url)
+    soup = BeautifulSoup(html_text, "html.parser")
+    results: list[dict] = []
+
+    for slide in soup.select("div.swiper-slide"):
+        title_el = slide.select_one("p.title")
+        if not title_el:
+            continue
+        paragraphs = [clean_text(p.get_text(" ", strip=True)) for p in slide.select("p")]
+        title = clean_text(title_el.get_text(" ", strip=True))
+        if not title or len(paragraphs) < 2:
+            continue
+
+        date_text = paragraphs[1]
+        if not re.search(r"20\d{2}", date_text):
+            continue
+        if "典藏精选" in title or "开展！" in title or "重磅开展" in title:
+            continue
+        venue = paragraphs[2] if len(paragraphs) > 2 else "上海博物馆"
+        detail_link = slide.select_one('a[href*="article"], a[href*="exhibit"]')
+        detail_url = urljoin(url, detail_link["href"]) if detail_link else url
+
+        results.append(
+            {
+                "title": title,
+                "category": "展览",
+                "venue": venue,
+                "address": venue,
+                "start_date": "",
+                "end_date": "",
+                "date_text": date_text,
+                "price_text": "以官方预约页面为准",
+                "ticket_url": detail_url,
+                "source_url": url,
+                "image_url": "",
+                "summary": date_text,
+                "status": "",
+            }
+        )
+
+    return results
+
+
+def collect_pudong(source: dict) -> list[dict]:
+    url = source.get("url") or "https://www.museumofartpd.org.cn/"
+    html_text = http_get(url)
+    soup = BeautifulSoup(html_text, "html.parser")
+    results: list[dict] = []
+
+    for item in soup.select(".exhibitioniqlist .item"):
+        title_el = item.select_one(".tit")
+        date_el = item.select_one(".txt")
+        link_el = item.select_one("a[href]")
+        if not title_el or not link_el:
+            continue
+        title = clean_text(title_el.get_text(" ", strip=True))
+        date_text = clean_text(date_el.get_text(" ", strip=True)) if date_el else ""
+        if not title or not re.search(r"20\d{2}", date_text):
+            continue
+        detail_url = urljoin(url, link_el["href"])
+        results.append(
+            {
+                "title": title,
+                "category": "展览",
+                "venue": "浦东美术馆",
+                "address": "上海市浦东新区滨江大道2777号",
+                "start_date": "",
+                "end_date": "",
+                "date_text": date_text,
+                "price_text": "以官方预约页面为准",
+                "ticket_url": detail_url,
+                "source_url": url,
+                "image_url": "",
+                "summary": date_text,
+                "status": "",
+            }
+        )
+
+    return results
+
+
+def collect_rockbund(source: dict) -> list[dict]:
+    url = source.get("url") or "https://www.rockbundartmuseum.org/"
+    html_text = http_get(url)
+    soup = BeautifulSoup(html_text, "html.parser")
+    script = soup.find("script", id="__NEXT_DATA__")
+    if not script or not script.string:
+        return []
+    data = json.loads(script.string)
+    items = data.get("props", {}).get("pageProps", {}).get("data", [])
+    results: list[dict] = []
+
+    for item in items:
+        item_type = item.get("_type")
+        if item_type not in ("exhibition", "event"):
+            continue
+        title = locale_text(item.get("title"))
+        if not title:
+            continue
+        slug = clean_text(item.get("slug"))
+        path = "exhibition" if item_type == "exhibition" else "event"
+        detail_url = f"https://www.rockbundartmuseum.org/{path}/{slug}" if slug else url
+        summary = locale_text(item.get("description"))
+        category = "展览" if item_type == "exhibition" else "其他"
+        results.append(
+            {
+                "title": title,
+                "category": category,
+                "venue": "上海外滩美术馆",
+                "address": "上海市黄浦区虎丘路20号",
+                "start_date": item.get("startDate") or "",
+                "end_date": item.get("endDate") or "",
+                "price_text": "以官方预约页面为准",
+                "ticket_url": detail_url,
+                "source_url": url,
+                "image_url": extract_image_url(item.get("mainImage")),
+                "summary": summary,
+                "status": "",
+            }
+        )
+
+    return results
+
+
+def collect_psa(source: dict) -> list[dict]:
+    base = source.get("api_base") or "https://www.powerstationofart.com/campus/api/feed/public/psa"
+    endpoints = source.get("endpoints") or ["/whats-on/exhibitions"]
+    url = source.get("url") or "https://www.powerstationofart.com/"
+    results: list[dict] = []
+
+    for endpoint in endpoints:
+        data = http_get_json(
+            base + endpoint,
+            headers={"X-Language": "zh-Hans", "Referer": "https://www.powerstationofart.com/"},
+        )
+        items = data.get("items") or []
+        category = "展览" if "exhibition" in endpoint else "其他"
+        for item in items:
+            title = clean_text(item.get("title"))
+            if not title:
+                continue
+            slug = clean_text(item.get("slug"))
+            if "exhibition" in endpoint:
+                detail_url = f"https://www.powerstationofart.com/cn/whats-on/exhibitions/{slug}"
+            elif "activity" in endpoint:
+                detail_url = f"https://www.powerstationofart.com/cn/whats-on/activities/{slug}"
+            else:
+                detail_url = url
+            results.append(
+                {
+                    "title": title,
+                    "category": category,
+                    "venue": "上海当代艺术博物馆",
+                    "address": "上海市黄浦区苗江路678号",
+                    "start_date": item.get("startDate") or "",
+                    "end_date": item.get("endDate") or "",
+                    "price_text": "以官方页面为准",
+                    "ticket_url": detail_url,
+                    "source_url": url,
+                    "image_url": extract_image_url(item.get("image")),
+                    "summary": "",
+                    "status": "",
+                }
+            )
+
+    return results
+
+
+def collect_longmuseum(source: dict) -> list[dict]:
+    url = source.get("url") or "http://www.thelongmuseum.org/exhibition-current.html"
+    html_text = http_get(url)
+    soup = BeautifulSoup(html_text, "html.parser")
+    results: list[dict] = []
+
+    for item in soup.select("li"):
+        link_el = item.select_one('a[href*="detail-"]')
+        if not link_el:
+            continue
+        title_el = item.select_one("h1")
+        info_el = item.select_one("h2")
+        summary_el = item.select_one("h3")
+        if not title_el or not info_el:
+            continue
+
+        title = clean_text(title_el.get_text(" ", strip=True))
+        info = clean_text(info_el.get_text(" ", strip=True))
+        if "重庆" in info and "上海" not in info and "西岸" not in info and "浦东" not in info:
+            continue
+        if not any(keyword in info for keyword in ["西岸", "浦东", "上海"]):
+            continue
+
+        date_match = re.search(r"20\d{2}\.\d{1,2}\.\d{1,2}\s*[－\-—~至到]\s*20\d{2}\.\d{1,2}\.\d{1,2}", info)
+        date_text = date_match.group(0) if date_match else ""
+        if not date_text:
+            continue
+
+        venue = "龙美术馆（西岸馆）" if "西岸" in info else "龙美术馆（浦东馆）" if "浦东" in info else "龙美术馆"
+        detail_url = urljoin("http://www.thelongmuseum.org/", link_el["href"])
+        summary = clean_text(summary_el.get_text(" ", strip=True)) if summary_el else ""
+        results.append(
+            {
+                "title": title,
+                "category": "展览",
+                "venue": venue,
+                "address": "上海市徐汇区龙腾大道3398号" if "西岸" in info else "上海市浦东新区罗山路2255弄210号",
+                "start_date": "",
+                "end_date": "",
+                "date_text": date_text,
+                "price_text": "以官方页面为准",
+                "ticket_url": detail_url,
+                "source_url": url,
+                "image_url": "",
+                "summary": summary,
+                "status": "",
+            }
+        )
+
+    return results
+
+
+# ---------------------------------------------------------------------------
 # LLM 抽取
 # ---------------------------------------------------------------------------
 
@@ -545,20 +1054,27 @@ def parse_date(value: Any) -> date | None:
 def extract_date_tokens(text: Any) -> list[date]:
     value = normalize_date_text(text)
     tokens: list[date] = []
+    spans: list[tuple[int, int]] = []
 
-    full_dates = re.findall(r"(20\d{2})-(\d{1,2})-(\d{1,2})", value)
-    for year, month, day in full_dates:
+    for match in re.finditer(r"(20\d{2})-(\d{1,2})-(\d{1,2})", value):
         try:
-            tokens.append(date(int(year), int(month), int(day)))
+            tokens.append(date(int(match.group(1)), int(match.group(2)), int(match.group(3))))
+            spans.append(match.span())
         except ValueError:
             pass
 
-    if full_dates:
-        return sorted(set(tokens))
+    # 去掉完整日期后，再找 "09-12" 这种缺少年份的日期。
+    if spans:
+        pieces: list[str] = []
+        last = 0
+        for start, end in spans:
+            pieces.append(value[last:start])
+            last = end
+        pieces.append(value[last:])
+        value = " ".join(pieces)
 
-    month_days = re.findall(r"(?<!\d)(\d{1,2})-(\d{1,2})(?!\d)", value)
     current = today_cn()
-    for month, day in month_days:
+    for month, day in re.findall(r"(?<!\d)(\d{1,2})-(\d{1,2})(?!\d)", value):
         month_i, day_i = int(month), int(day)
         if not (1 <= month_i <= 12 and 1 <= day_i <= 31):
             continue
@@ -1181,6 +1697,24 @@ def build_ics(events: list[dict], generated_at: datetime) -> str:
 
 def collect_from_source(source: dict) -> list[dict]:
     if not source.get("enabled", True):
+        return []
+
+    adapter = source.get("adapter", "").strip()
+    if adapter:
+        adapters = {
+            "maoyan": collect_maoyan,
+            "smartshanghai": collect_smartshanghai,
+            "douban": collect_douban,
+            "shmuseum": collect_shmuseum,
+            "pudong": collect_pudong,
+            "rockbund": collect_rockbund,
+            "psa": collect_psa,
+            "longmuseum": collect_longmuseum,
+        }
+        collector = adapters.get(adapter)
+        if collector:
+            return collector(source)
+        log(f"  未知适配器：{adapter}")
         return []
 
     url = source.get("url", "").strip()

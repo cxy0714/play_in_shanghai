@@ -1,116 +1,59 @@
-{
-  "version": 1,
+﻿{
+  "version": 2,
   "sources": [
     {
-      "name": "大麦上海",
-      "url": "https://www.damai.cn/sh/",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "演出",
+      "name": "猫眼演出",
+      "adapter": "maoyan",
+      "url": "https://show.maoyan.com/",
+      "categories": [4, 9, 6, 5, 3],
+      "page_size": 30,
+      "max_pages": 1,
       "enabled": true
     },
     {
-      "name": "猫眼演出",
-      "url": "https://show.maoyan.com/",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "演出",
+      "name": "SmartShanghai",
+      "adapter": "smartshanghai",
+      "url": "https://www.smartshanghai.com/events",
+      "api_url": "https://www.smartshanghai.com/api2/events",
       "enabled": true
     },
     {
       "name": "豆瓣同城上海",
-      "url": "https://shanghai.douban.com/events/future",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "综合",
-      "enabled": true
-    },
-    {
-      "name": "活动行上海",
-      "url": "https://www.huodongxing.com/eventlist?city=%E4%B8%8A%E6%B5%B7",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "综合",
-      "enabled": true
-    },
-    {
-      "name": "SmartShanghai Events",
-      "url": "https://www.smartshanghai.com/events",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "综合",
-      "enabled": true
-    },
-    {
-      "name": "Time Out Shanghai Events",
-      "url": "https://www.timeoutshanghai.com/events",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "综合",
-      "enabled": true
-    },
-    {
-      "name": "上海文化广场",
-      "url": "https://www.shculturesquare.com/",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "音乐剧",
-      "enabled": true
-    },
-    {
-      "name": "上海话剧艺术中心",
-      "url": "https://www.china-drama.com/",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "话剧",
-      "enabled": true
-    },
-    {
-      "name": "上海大剧院",
-      "url": "https://www.shgtheatre.com/",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "演出",
-      "enabled": true
-    },
-    {
-      "name": "东方艺术中心",
-      "url": "https://www.shoac.com.cn/",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "演出",
+      "adapter": "douban",
+      "url": "https://shanghai.douban.com/events",
+      "pages": ["week-drama", "week-comedy", "week-exhibition", "week-music"],
       "enabled": true
     },
     {
       "name": "上海博物馆",
+      "adapter": "shmuseum",
       "url": "https://www.shanghaimuseum.net/",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "展览",
-      "enabled": true
-    },
-    {
-      "name": "上海当代艺术博物馆",
-      "url": "https://www.powerstationofart.com/",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "展览",
-      "enabled": true
-    },
-    {
-      "name": "西岸美术馆",
-      "url": "https://www.westbundmuseum.org/",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "展览",
       "enabled": true
     },
     {
       "name": "浦东美术馆",
+      "adapter": "pudong",
       "url": "https://www.museumofartpd.org.cn/",
-      "reader": "jina",
-      "extractor": "auto",
-      "category_hint": "展览",
+      "enabled": true
+    },
+    {
+      "name": "上海外滩美术馆",
+      "adapter": "rockbund",
+      "url": "https://www.rockbundartmuseum.org/",
+      "enabled": true
+    },
+    {
+      "name": "上海当代艺术博物馆",
+      "adapter": "psa",
+      "url": "https://www.powerstationofart.com/",
+      "api_base": "https://www.powerstationofart.com/campus/api/feed/public/psa",
+      "endpoints": ["/whats-on/exhibitions"],
+      "enabled": true
+    },
+    {
+      "name": "龙美术馆",
+      "adapter": "longmuseum",
+      "url": "http://www.thelongmuseum.org/exhibition-current.html",
       "enabled": true
     }
   ]
