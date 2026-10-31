@@ -1,48 +1,55 @@
 {
-  "updated": "2026-10-31 20:09",
-  "count": 135,
+  "updated": "2026-10-31 20:26",
+  "count": 185,
   "categories": [
     {
       "key": "museum",
       "label": "博物馆",
       "color": "#2f6fdb",
       "emoji": "🏛",
-      "count": 26
+      "count": 41
+    },
+    {
+      "key": "memorial",
+      "label": "纪念馆/故居",
+      "color": "#8d6e63",
+      "emoji": "📜",
+      "count": 20
     },
     {
       "key": "gallery",
       "label": "美术馆",
       "color": "#9b51e0",
       "emoji": "🎨",
-      "count": 21
+      "count": 24
     },
     {
       "key": "theater",
       "label": "剧院音乐厅",
       "color": "#f2994a",
       "emoji": "🎭",
-      "count": 23
+      "count": 27
     },
     {
       "key": "church",
       "label": "教堂寺庙",
       "color": "#16a085",
       "emoji": "⛪",
-      "count": 13
+      "count": 15
     },
     {
       "key": "landmark",
       "label": "历史建筑",
       "color": "#c0392b",
       "emoji": "🏙",
-      "count": 24
+      "count": 25
     },
     {
       "key": "garden",
       "label": "园林景点",
       "color": "#27ae60",
       "emoji": "🌳",
-      "count": 23
+      "count": 28
     },
     {
       "key": "culture",
@@ -93,6 +100,32 @@
       ]
     },
     {
+      "slug": "shanghai-sports-museum",
+      "name": "上海体育博物馆",
+      "category": "museum",
+      "district": "黄浦区",
+      "address": "黄浦区南京西路150号",
+      "intro": "体育大厦内的上海体育历史与奖杯陈列。",
+      "site": "",
+      "wgs": [
+        31.2357,
+        121.4675
+      ]
+    },
+    {
+      "slug": "shanghai-children-museum",
+      "name": "上海儿童博物馆",
+      "category": "museum",
+      "district": "长宁区",
+      "address": "长宁区宋园路61号",
+      "intro": "面向儿童的互动科普场馆，适合亲子。",
+      "site": "",
+      "wgs": [
+        31.195953,
+        121.408483
+      ]
+    },
+    {
       "slug": "shanghai-police-museum",
       "name": "上海公安博物馆",
       "category": "museum",
@@ -129,6 +162,19 @@
       "wgs": [
         31.230158,
         121.471
+      ]
+    },
+    {
+      "slug": "shanghai-metro-museum",
+      "name": "上海地铁博物馆",
+      "category": "museum",
+      "district": "闵行区",
+      "address": "闵行区吴中路1799号",
+      "intro": "上海地铁发展史与隧道施工技术科普。",
+      "site": "",
+      "wgs": [
+        31.171437,
+        121.361698
       ]
     },
     {
@@ -184,6 +230,32 @@
       ]
     },
     {
+      "slug": "shanghai-insect-museum",
+      "name": "上海昆虫博物馆",
+      "category": "museum",
+      "district": "徐汇区",
+      "address": "徐汇区枫林路300号",
+      "intro": "中科院昆虫研究所的标本馆，昆虫多样性展示。",
+      "site": "",
+      "wgs": [
+        31.196,
+        121.453
+      ]
+    },
+    {
+      "slug": "shanghai-meteorological-museum",
+      "name": "上海气象博物馆",
+      "category": "museum",
+      "district": "徐汇区",
+      "address": "徐汇区蒲西路166号",
+      "intro": "徐家汇观象台旧址，中国近代气象发源地。",
+      "site": "",
+      "wgs": [
+        31.190847,
+        121.436695
+      ]
+    },
+    {
       "slug": "shanghai-auto-museum",
       "name": "上海汽车博物馆",
       "category": "museum",
@@ -194,6 +266,19 @@
       "wgs": [
         31.280532,
         121.165775
+      ]
+    },
+    {
+      "slug": "shanghai-fire-museum",
+      "name": "上海消防博物馆",
+      "category": "museum",
+      "district": "长宁区",
+      "address": "长宁区中山西路229号",
+      "intro": "上海消防历史与装备陈列，适合亲子科普。",
+      "site": "",
+      "wgs": [
+        31.213,
+        121.4095
       ]
     },
     {
@@ -259,6 +344,19 @@
       "wgs": [
         31.220602,
         121.536733
+      ]
+    },
+    {
+      "slug": "shanghai-textile-museum",
+      "name": "上海纺织博物馆",
+      "category": "museum",
+      "district": "普陀区",
+      "address": "普陀区澳门路150号",
+      "intro": "老纺织厂改造，讲述上海纺织工业百年。",
+      "site": "",
+      "wgs": [
+        31.248646,
+        121.441527
       ]
     },
     {
@@ -353,6 +451,71 @@
       ]
     },
     {
+      "slug": "jiading-museum",
+      "name": "嘉定博物馆",
+      "category": "museum",
+      "district": "嘉定区",
+      "address": "嘉定区博乐路215号",
+      "intro": "嘉定地方历史与文物陈列，法华塔旁。",
+      "site": "",
+      "wgs": [
+        31.382904,
+        121.248794
+      ]
+    },
+    {
+      "slug": "fengxian-museum",
+      "name": "奉贤博物馆",
+      "category": "museum",
+      "district": "奉贤区",
+      "address": "奉贤区湖畔路399号",
+      "intro": "奉贤历史与海塘文化，上海之鱼畔。",
+      "site": "",
+      "wgs": [
+        30.9185,
+        121.493
+      ]
+    },
+    {
+      "slug": "chongming-museum",
+      "name": "崇明博物馆",
+      "category": "museum",
+      "district": "崇明区",
+      "address": "崇明区城桥镇鳌山路696号",
+      "intro": "崇明学宫古建筑群内的岛屿历史陈列。",
+      "site": "",
+      "wgs": [
+        31.626,
+        121.397
+      ]
+    },
+    {
+      "slug": "songjiang-museum",
+      "name": "松江博物馆",
+      "category": "museum",
+      "district": "松江区",
+      "address": "松江区中山东路233号",
+      "intro": "松江府城历史与文物，了解上海之根。",
+      "site": "",
+      "wgs": [
+        31.008416,
+        121.242003
+      ]
+    },
+    {
+      "slug": "dong-haoyun-shipping-museum",
+      "name": "董浩云航运博物馆",
+      "category": "museum",
+      "district": "徐汇区",
+      "address": "徐汇区华山路1954号",
+      "intro": "交大校园内的航运史博物馆，船模与航海文物。",
+      "site": "",
+      "wgs": [
+        31.202081,
+        121.430417
+      ]
+    },
+    {
       "slug": "guanfu-museum",
       "name": "观复博物馆",
       "category": "museum",
@@ -363,6 +526,19 @@
       "wgs": [
         31.235763,
         121.501492
+      ]
+    },
+    {
+      "slug": "jinshan-museum",
+      "name": "金山区博物馆",
+      "category": "museum",
+      "district": "金山区",
+      "address": "金山区金山大道1800号",
+      "intro": "金山地方史与文物，了解杭州湾北岸。",
+      "site": "",
+      "wgs": [
+        30.741,
+        121.341
       ]
     },
     {
@@ -379,6 +555,19 @@
       ]
     },
     {
+      "slug": "minhang-museum",
+      "name": "闵行博物馆",
+      "category": "museum",
+      "district": "闵行区",
+      "address": "闵行区新镇路1538号",
+      "intro": "闵行区域历史与马桥文化陈列。",
+      "site": "",
+      "wgs": [
+        31.162563,
+        121.354755
+      ]
+    },
+    {
       "slug": "aurora-museum",
       "name": "震旦博物馆",
       "category": "museum",
@@ -392,6 +581,279 @@
       ]
     },
     {
+      "slug": "qingpu-museum",
+      "name": "青浦博物馆",
+      "category": "museum",
+      "district": "青浦区",
+      "address": "青浦区华青南路1000号",
+      "intro": "青浦地方史与崧泽、福泉山遗址文物。",
+      "site": "",
+      "wgs": [
+        31.15,
+        121.12
+      ]
+    },
+    {
+      "slug": "cohesion-project-museum",
+      "name": "上海凝聚力工程博物馆",
+      "category": "memorial",
+      "district": "长宁区",
+      "address": "长宁区长宁路878号",
+      "intro": "展示上海基层党建与社区治理的专题博物馆。",
+      "site": "",
+      "wgs": [
+        31.222235,
+        121.414616
+      ]
+    },
+    {
+      "slug": "shanghai-underground-party-memorial",
+      "name": "上海地下组织斗争史陈列馆",
+      "category": "memorial",
+      "district": "静安区",
+      "address": "静安区愚园路81号",
+      "intro": "刘长胜故居，展示中共上海地下组织的斗争史。",
+      "site": "",
+      "wgs": [
+        31.226608,
+        121.441761
+      ]
+    },
+    {
+      "slug": "sun-yat-sen-former-residence",
+      "name": "上海孙中山故居纪念馆",
+      "category": "memorial",
+      "district": "黄浦区",
+      "address": "黄浦区香山路7号",
+      "intro": "孙中山在上海的寓所，室内陈设保留生前原貌。",
+      "site": "",
+      "wgs": [
+        31.218,
+        121.4625
+      ]
+    },
+    {
+      "slug": "song-qingling-former-residence",
+      "name": "上海宋庆龄故居纪念馆",
+      "category": "memorial",
+      "district": "徐汇区",
+      "address": "徐汇区淮海中路1843号",
+      "intro": "宋庆龄晚年居所，花园别墅与生平陈列并存。",
+      "site": "",
+      "wgs": [
+        31.205828,
+        121.434357
+      ]
+    },
+    {
+      "slug": "mao-zedong-former-residence",
+      "name": "上海毛泽东旧居陈列馆",
+      "category": "memorial",
+      "district": "静安区",
+      "address": "静安区茂名北路120弄7号",
+      "intro": "毛泽东在上海的旧居陈列，石库门里弄中的革命记忆。",
+      "site": "",
+      "wgs": [
+        31.22829,
+        121.455942
+      ]
+    },
+    {
+      "slug": "songhu-resistance-memorial",
+      "name": "上海淞沪抗战纪念馆",
+      "category": "memorial",
+      "district": "宝山区",
+      "address": "宝山区友谊路1号",
+      "intro": "宝山临江的抗战纪念地，塔馆合一讲述淞沪会战。",
+      "site": "",
+      "wgs": [
+        31.411996,
+        121.490695
+      ]
+    },
+    {
+      "slug": "cai-yuanpei-former-residence",
+      "name": "上海蔡元培故居陈列馆",
+      "category": "memorial",
+      "district": "静安区",
+      "address": "静安区华山路303弄16号",
+      "intro": "华山路花园住宅，蔡元培在上海的居所与陈列。",
+      "site": "",
+      "wgs": [
+        31.220673,
+        121.442968
+      ]
+    },
+    {
+      "slug": "taofen-memorial",
+      "name": "上海韬奋纪念馆",
+      "category": "memorial",
+      "district": "黄浦区",
+      "address": "黄浦区重庆南路205弄53号",
+      "intro": "邹韬奋故居与生平陈列，新闻出版人的纪念地。",
+      "site": "",
+      "wgs": [
+        31.216323,
+        121.466667
+      ]
+    },
+    {
+      "slug": "luxun-former-residence",
+      "name": "上海鲁迅故居",
+      "category": "memorial",
+      "district": "虹口区",
+      "address": "虹口区山阴路大陆新村9号",
+      "intro": "鲁迅最后的寓所，三层里弄住宅原状陈列。",
+      "site": "",
+      "wgs": [
+        31.268231,
+        121.479929
+      ]
+    },
+    {
+      "slug": "cpc-second-congress-memorial",
+      "name": "中共二大会址纪念馆",
+      "category": "memorial",
+      "district": "静安区",
+      "address": "静安区老成都北路7弄30号",
+      "intro": "石库门里的中共二大会址，第一部党章在此诞生。",
+      "site": "",
+      "wgs": [
+        31.228,
+        121.4625
+      ]
+    },
+    {
+      "slug": "cpc-fourth-congress-memorial",
+      "name": "中共四大会址纪念馆",
+      "category": "memorial",
+      "district": "虹口区",
+      "address": "虹口区四川北路1468号",
+      "intro": "中共四大召开地，展厅讲述革命统一战线与工农运动。",
+      "site": "",
+      "wgs": [
+        31.256,
+        121.4793
+      ]
+    },
+    {
+      "slug": "zhougong-mansion",
+      "name": "中国共产党代表团驻沪办事处纪念馆",
+      "category": "memorial",
+      "district": "黄浦区",
+      "address": "黄浦区思南路73号",
+      "intro": "中共代表团驻沪办事处旧址，思南路花园洋房。",
+      "site": "",
+      "wgs": [
+        31.2125,
+        121.4649
+      ]
+    },
+    {
+      "slug": "left-wing-writers-memorial",
+      "name": "中国左翼作家联盟会址纪念馆",
+      "category": "memorial",
+      "district": "虹口区",
+      "address": "虹口区多伦路201弄2号",
+      "intro": "左翼作家联盟成立地，多伦路文化街上的红色记忆。",
+      "site": "",
+      "wgs": [
+        31.265,
+        121.477
+      ]
+    },
+    {
+      "slug": "sihang-warehouse-memorial",
+      "name": "四行仓库抗战纪念馆",
+      "category": "memorial",
+      "district": "静安区",
+      "address": "静安区光复路1号",
+      "intro": "苏州河畔的抗战遗址，西墙上密布的弹孔是直观的历史现场。",
+      "site": "",
+      "wgs": [
+        31.242215,
+        121.466626
+      ]
+    },
+    {
+      "slug": "national-anthem-exhibition-hall",
+      "name": "国歌展示馆",
+      "category": "memorial",
+      "district": "杨浦区",
+      "address": "杨浦区荆州路151号",
+      "intro": "《义勇军进行曲》诞生地主题馆，讲述国歌故事。",
+      "site": "",
+      "wgs": [
+        31.258,
+        121.518
+      ]
+    },
+    {
+      "slug": "ba-jin-former-residence",
+      "name": "巴金故居",
+      "category": "memorial",
+      "district": "徐汇区",
+      "address": "徐汇区武康路113号",
+      "intro": "巴金在武康路的住所，书房与手稿还原写作现场。",
+      "site": "",
+      "wgs": [
+        31.2123,
+        121.4354
+      ]
+    },
+    {
+      "slug": "zhang-wentian-former-residence",
+      "name": "张闻天故居",
+      "category": "memorial",
+      "district": "浦东新区",
+      "address": "浦东新区祝桥镇",
+      "intro": "浦东祝桥的江南民居，张闻天生平陈列。",
+      "site": "",
+      "wgs": [
+        31.133828,
+        121.75809
+      ]
+    },
+    {
+      "slug": "ke-ling-former-residence",
+      "name": "柯灵故居",
+      "category": "memorial",
+      "district": "徐汇区",
+      "address": "徐汇区复兴西路147号",
+      "intro": "复兴西路上的文人旧居，展示柯灵生平与文学成就。",
+      "site": "",
+      "wgs": [
+        31.2124,
+        121.4385
+      ]
+    },
+    {
+      "slug": "chen-yun-memorial",
+      "name": "陈云纪念馆",
+      "category": "memorial",
+      "district": "青浦区",
+      "address": "青浦区练塘镇朱枫公路3516号",
+      "intro": "青浦练塘的陈云故里，生平陈列与故居建筑。",
+      "site": "",
+      "wgs": [
+        31.008977,
+        121.03933
+      ]
+    },
+    {
+      "slug": "longhua-martyrs-cemetery",
+      "name": "龙华烈士陵园",
+      "category": "memorial",
+      "district": "徐汇区",
+      "address": "徐汇区龙华西路180号",
+      "intro": "龙华革命烈士纪念地，陵园与纪念馆庄重肃穆。",
+      "site": "",
+      "wgs": [
+        31.177499,
+        121.445043
+      ]
+    },
+    {
       "slug": "ucca-edge",
       "name": "上海UCCA Edge",
       "category": "gallery",
@@ -402,6 +864,19 @@
       "wgs": [
         31.244,
         121.4676
+      ]
+    },
+    {
+      "slug": "shanghai-chinese-painting-academy",
+      "name": "上海中国画院美术馆",
+      "category": "gallery",
+      "district": "徐汇区",
+      "address": "徐汇区岳阳路197号",
+      "intro": "上海中国画院的美术馆，海派书画展览。",
+      "site": "",
+      "wgs": [
+        31.2075,
+        121.448
       ]
     },
     {
@@ -480,6 +955,19 @@
       "wgs": [
         31.169876,
         121.458398
+      ]
+    },
+    {
+      "slug": "shanghai-oil-painting-sculpture-academy",
+      "name": "上海油画雕塑院美术馆",
+      "category": "gallery",
+      "district": "长宁区",
+      "address": "长宁区金珠路111号",
+      "intro": "上海油画雕塑院附属美术馆，现当代雕塑与绘画。",
+      "site": "",
+      "wgs": [
+        31.204,
+        121.398
       ]
     },
     {
@@ -600,6 +1088,19 @@
       ]
     },
     {
+      "slug": "zhu-qizhan-art-museum",
+      "name": "朱屺瞻艺术馆",
+      "category": "gallery",
+      "district": "虹口区",
+      "address": "虹口区欧阳路580号",
+      "intro": "虹口欧阳路上的艺术馆，朱屺瞻书画与展览。",
+      "site": "",
+      "wgs": [
+        31.27636,
+        121.481612
+      ]
+    },
+    {
       "slug": "museum-of-art-pudong",
       "name": "浦东美术馆",
       "category": "gallery",
@@ -717,6 +1218,19 @@
       ]
     },
     {
+      "slug": "shanghai-centre-theatre",
+      "name": "上海商城剧院",
+      "category": "theater",
+      "district": "静安区",
+      "address": "静安区南京西路1376号",
+      "intro": "南京西路商城内的剧院，音乐与戏剧演出。",
+      "site": "",
+      "wgs": [
+        31.2287,
+        121.4475
+      ]
+    },
+    {
       "slug": "shanghai-international-dance-center",
       "name": "上海国际舞蹈中心",
       "category": "theater",
@@ -727,6 +1241,19 @@
       "wgs": [
         31.201099,
         121.390632
+      ]
+    },
+    {
+      "slug": "shanghai-city-theatre",
+      "name": "上海城市剧院",
+      "category": "theater",
+      "district": "闵行区",
+      "address": "闵行区都市路4889号",
+      "intro": "莘庄的城市剧院，话剧、儿童剧与音乐会。",
+      "site": "",
+      "wgs": [
+        31.106534,
+        121.385301
       ]
     },
     {
@@ -756,6 +1283,19 @@
       ]
     },
     {
+      "slug": "daning-theatre",
+      "name": "上海大宁剧院",
+      "category": "theater",
+      "district": "静安区",
+      "address": "静安区平型关路1222号",
+      "intro": "海上文化中心内的大剧场，戏剧、音乐会演出。",
+      "site": "",
+      "wgs": [
+        31.285892,
+        121.452127
+      ]
+    },
+    {
       "slug": "wanping-theatre",
       "name": "上海宛平剧院",
       "category": "theater",
@@ -779,6 +1319,19 @@
       "wgs": [
         31.213814,
         121.457731
+      ]
+    },
+    {
+      "slug": "yihai-theatre",
+      "name": "上海艺海剧院",
+      "category": "theater",
+      "district": "静安区",
+      "address": "静安区江宁路466号",
+      "intro": "江宁路上的话剧演出空间，上海话剧艺术中心剧场之一。",
+      "site": "",
+      "wgs": [
+        31.2366,
+        121.4473
       ]
     },
     {
@@ -1068,6 +1621,19 @@
       ]
     },
     {
+      "slug": "chenxiang-pavilion",
+      "name": "沉香阁",
+      "category": "church",
+      "district": "黄浦区",
+      "address": "黄浦区沉香阁路29号",
+      "intro": "豫园商圈内的尼众寺院，沉香观音与明代建筑。",
+      "site": "",
+      "wgs": [
+        31.229346,
+        121.485558
+      ]
+    },
+    {
       "slug": "moore-memorial-church",
       "name": "沐恩堂",
       "category": "church",
@@ -1091,6 +1657,19 @@
       "wgs": [
         31.232606,
         121.485588
+      ]
+    },
+    {
+      "slug": "zhenru-temple",
+      "name": "真如寺",
+      "category": "church",
+      "district": "普陀区",
+      "address": "普陀区兰溪路399号",
+      "intro": "上海现存最早的元代木构建筑之一，真如古镇旁。",
+      "site": "",
+      "wgs": [
+        31.251709,
+        121.396484
       ]
     },
     {
@@ -1328,6 +1907,19 @@
       ]
     },
     {
+      "slug": "guangfulin-archaeological-site",
+      "name": "广富林文化遗址",
+      "category": "landmark",
+      "district": "松江区",
+      "address": "松江区广富林路3260弄",
+      "intro": "松江广富林的考古遗址公园，展示上海先民文化。",
+      "site": "",
+      "wgs": [
+        31.0585,
+        121.1915
+      ]
+    },
+    {
       "slug": "zhangyuan",
       "name": "张园",
       "category": "landmark",
@@ -1471,6 +2063,19 @@
       ]
     },
     {
+      "slug": "shanghai-grand-view-garden",
+      "name": "上海大观园",
+      "category": "garden",
+      "district": "青浦区",
+      "address": "青浦区金商公路701号",
+      "intro": "淀山湖畔的《红楼梦》主题园林，仿古建筑群。",
+      "site": "",
+      "wgs": [
+        31.075585,
+        120.906089
+      ]
+    },
+    {
       "slug": "shanghai-botanical-garden",
       "name": "上海植物园",
       "category": "garden",
@@ -1481,6 +2086,19 @@
       "wgs": [
         31.149813,
         121.440424
+      ]
+    },
+    {
+      "slug": "haiwan-forest-park",
+      "name": "上海海湾国家森林公园",
+      "category": "garden",
+      "district": "奉贤区",
+      "address": "奉贤区随塘河路1677号",
+      "intro": "奉贤海湾的滨海森林，梅园与水上森林。",
+      "site": "",
+      "wgs": [
+        30.863148,
+        121.685923
       ]
     },
     {
@@ -1523,6 +2141,19 @@
       ]
     },
     {
+      "slug": "dongping-forest-park",
+      "name": "东平国家森林公园",
+      "category": "garden",
+      "district": "崇明区",
+      "address": "崇明区东平镇北沿公路2188号",
+      "intro": "崇明岛上的平原森林，骑行、露营与花海。",
+      "site": "",
+      "wgs": [
+        31.680801,
+        121.477055
+      ]
+    },
+    {
       "slug": "zhongshan-park",
       "name": "中山公园",
       "category": "garden",
@@ -1546,6 +2177,19 @@
       "wgs": [
         31.093,
         121.193
+      ]
+    },
+    {
+      "slug": "gongqing-forest-park",
+      "name": "共青森林公园",
+      "category": "garden",
+      "district": "杨浦区",
+      "address": "杨浦区军工路2000号",
+      "intro": "杨浦军工路的大型森林公园，骑行与野餐热门。",
+      "site": "",
+      "wgs": [
+        31.317352,
+        121.542072
       ]
     },
     {
@@ -1650,6 +2294,19 @@
       "wgs": [
         31.167094,
         121.413281
+      ]
+    },
+    {
+      "slug": "binjiang-forest-park",
+      "name": "滨江森林公园",
+      "category": "garden",
+      "district": "浦东新区",
+      "address": "浦东新区高桥镇凌桥高沙滩3号",
+      "intro": "浦东高桥的滨江森林绿地，江堤与林地。",
+      "site": "",
+      "wgs": [
+        31.385238,
+        121.524376
       ]
     },
     {
