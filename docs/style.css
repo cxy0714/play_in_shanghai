@@ -89,6 +89,15 @@ main { max-width: 980px; margin: 0 auto; padding: 16px 18px 40px; display: grid;
 }
 .status { color: #b35c00; font-size: 12px; font-weight: 700; }
 .empty { max-width: 980px; margin: 20px auto; padding: 30px 18px; color: var(--muted); text-align: center; }
+.site-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.site-nav a {
+  display: inline-flex; align-items: center; gap: 5px;
+  text-decoration: none; color: var(--muted); background: #fff;
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 6px 12px; font-size: 13px; font-weight: 600;
+}
+.site-nav a:hover { color: var(--text); border-color: #d0d0d4; }
+.site-nav a.active { background: var(--text); border-color: var(--text); color: #fff; }
 footer { max-width: 980px; margin: 0 auto; padding: 0 18px 40px; color: #999; font-size: 12px; }
 @media (max-width: 720px) {
   main { grid-template-columns: 1fr; padding-top: 12px; }

@@ -4,6 +4,8 @@
 
 展览会自动细分为：历史文物、现代艺术、艺术家特展、数字沉浸、摄影影像、设计工艺、亲子动漫、建筑城市、自然科技、其他展览。
 
+另外还有一个**上海公共建筑地图**（`docs/map.html`）：把博物馆、美术馆、剧院、教堂、历史建筑、园林景点、文化场馆放在一张可筛选、可搜索的地图上，点列表或地图标记可以互相定位。
+
 ## 它怎么工作
 
 1. GitHub Actions 每周一、周四早上 8 点自动运行。
@@ -14,6 +16,8 @@
    - `docs/index.html`：分享给朋友的页面
    - `docs/events.json`：结构化数据
    - `docs/events.ics`：可导入日历的订阅文件
+   - `docs/map.html`：上海公共建筑地图（由 `config/places.json` 生成）
+   - `docs/places.json`：建筑地图的结构化数据
 
 ## 一次性设置
 
@@ -48,6 +52,20 @@
 - `extractor`：`auto` / `jsonld` / `rss`
 - `category_hint`：给 LLM 的类别提示
 - `enabled`：是否启用
+
+## 建筑地图怎么维护
+
+- `config/places.json` 是建筑清单。`places` 里每一项：
+  - `name`：显示名称
+  - `category`：`museum` / `gallery` / `theater` / `church` / `landmark` / `garden` / `culture`
+  - `district`：所在区
+  - `lat` / `lng`：WGS-84 坐标（OpenStreetMap 用的坐标系）
+  - `address` / `intro`：地址和一句话介绍
+  - `query`：可选，给地理编码用的搜索词（名称里有括号、别名时有用）
+- 改完运行 `python update.py --places-only`，只重新生成 `docs/map.html` 和 `docs/places.json`，不会抓取活动、不调用网络。
+- 页面默认使用高德底图（GCJ-02），也可以切换 OpenStreetMap（WGS-84）。构建时会同时算好两套坐标，切换底图不会偏移。
+- 地图前端在 `docs/map.js` / `docs/map.css`；Leaflet 和 markercluster 已放进 `docs/vendor/`，不依赖境外 CDN。
+- 底图瓦片需要联网，断网时左侧列表和筛选仍然可用。
 
 ## 本地预览
 

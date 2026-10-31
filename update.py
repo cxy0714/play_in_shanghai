@@ -4,7 +4,8 @@
 上海活动自动更新器
 
 从 config/sources.json 里的公开网页抓取/抽取活动，
-生成 docs/index.html、docs/events.json、docs/events.ics。
+生成 docs/index.html、docs/events.json、docs/events.ics，
+并调用 mapbuild.py 生成 docs/map.html（上海公共建筑地图）。
 
 优先使用 JSON-LD 结构化数据；没有的话，如果配置了 LLM，
 会把网页正文交给 LLM 抽取成结构化活动。
@@ -1678,6 +1679,15 @@ main { max-width: 980px; margin: 0 auto; padding: 16px 18px 40px; display: grid;
 }
 .status { color: #b35c00; font-size: 12px; font-weight: 700; }
 .empty { max-width: 980px; margin: 20px auto; padding: 30px 18px; color: var(--muted); text-align: center; }
+.site-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.site-nav a {
+  display: inline-flex; align-items: center; gap: 5px;
+  text-decoration: none; color: var(--muted); background: #fff;
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 6px 12px; font-size: 13px; font-weight: 600;
+}
+.site-nav a:hover { color: var(--text); border-color: #d0d0d4; }
+.site-nav a.active { background: var(--text); border-color: var(--text); color: #fff; }
 footer { max-width: 980px; margin: 0 auto; padding: 0 18px 40px; color: #999; font-size: 12px; }
 @media (max-width: 720px) {
   main { grid-template-columns: 1fr; padding-top: 12px; }
@@ -1789,6 +1799,10 @@ def build_html(events: list[dict], generated_at: datetime) -> str:
     <p class="eyebrow">周末去哪玩 · 上海</p>
     <h1>本月展览 / 话剧 / 音乐剧</h1>
     <p class="updated">{subtitle}</p>
+    <nav class="site-nav" aria-label="站点导航">
+      <a class="active" href="index.html" aria-current="page">🎫 活动清单</a>
+      <a href="map.html">🗺 建筑地图</a>
+    </nav>
   </header>
   <div class="toolbar">
     <div class="toolbar-inner">
@@ -2089,6 +2103,16 @@ def run(config_path: Path, no_llm: bool = False) -> None:
     (DOCS_DIR / ".nojekyll").write_text("", encoding="utf-8")
     (DOCS_DIR / "events.ics").write_text(build_ics(upcoming, generated_at), encoding="utf-8")
 
+    try:
+        from mapbuild import build_places_outputs
+
+        places_result = build_places_outputs(ROOT)
+        log(f"建筑地图：{places_result['count']} 处 → {(DOCS_DIR / 'map.html').resolve()}")
+        if places_result.get("skipped"):
+            log("建筑地图缺少坐标已跳过：" + "、".join(places_result["skipped"]))
+    except Exception as exc:
+        log(f"建筑地图生成失败：{exc}")
+
     by_category: dict[str, int] = {}
     for event in upcoming:
         by_category[event["category"]] = by_category.get(event["category"], 0) + 1
@@ -2103,10 +2127,21 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="上海活动自动更新器")
     parser.add_argument("--config", default=str(CONFIG_PATH), help="来源配置路径")
     parser.add_argument("--no-llm", action="store_true", help="禁用 LLM 抽取")
+    parser.add_argument(
+        "--places-only", action="store_true", help="只根据 config/places.json 重新生成建筑地图"
+    )
     args = parser.parse_args()
 
     try:
-        run(Path(args.config), no_llm=args.no_llm)
+        if args.places_only:
+            from mapbuild import build_places_outputs
+
+            result = build_places_outputs(ROOT)
+            log(f"建筑地图：{result['count']} 处 → {(DOCS_DIR / 'map.html').resolve()}")
+            if result.get("skipped"):
+                log("建筑地图缺少坐标已跳过：" + "、".join(result["skipped"]))
+        else:
+            run(Path(args.config), no_llm=args.no_llm)
     except Exception as exc:
         log(f"运行失败：{exc}")
         return 1
