@@ -1701,6 +1701,8 @@ h1 { margin: 0; font-size: 30px; line-height: 1.2; }
   border-radius: 999px; padding: 6px 12px; font-size: 13px; cursor: pointer;
 }
 .chip.active { background: var(--text); border-color: var(--text); color: #fff; }
+.chip .n { margin-left: 4px; font-size: 12px; opacity: .55; font-variant-numeric: tabular-nums; }
+.chip.active .n { opacity: .85; }
 main { max-width: 980px; margin: 0 auto; padding: 16px 18px 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .card {
   background: var(--card); border-radius: 18px; padding: 16px;
@@ -1915,11 +1917,17 @@ def build_html(
     city_counts: dict[str, int] = {}
     for event in visible:
         city = event_city(event)
-        if city != SHANGHAI_CITY:
-            city_counts[city] = city_counts.get(city, 0) + 1
-    city_chips = ['<button class="chip active" data-city="all">全部城市</button>']
+        if city == SHANGHAI_CITY:
+            continue
+        # 和页面默认筛选（本月 + 全部类别）保持一致，避免首屏数字和切换后对不上
+        if "current" not in compute_months(event, today).split():
+            continue
+        city_counts[city] = city_counts.get(city, 0) + 1
+    city_chips = [
+        f'<button class="chip active" data-city="all">全部城市<span class="n">{sum(city_counts.values())}</span></button>'
+    ]
     city_chips.extend(
-        f'<button class="chip" data-city="{html_lib.escape(city, quote=True)}">{html_lib.escape(city)} {num}</button>'
+        f'<button class="chip" data-city="{html_lib.escape(city, quote=True)}">{html_lib.escape(city)}<span class="n">{num}</span></button>'
         for city, num in sorted(city_counts.items(), key=lambda item: (-item[1], item[0]))
     )
 
@@ -1990,26 +1998,63 @@ def build_html(
     const search = document.getElementById('search');
     const cityChips = document.getElementById('city-chips');
 
+    function cardMatches(card, ignoreCity) {{
+      const months = (card.dataset.month || '').split(' ');
+      const category = card.dataset.category || '';
+      const group = card.dataset.group || category;
+      const text = card.dataset.search || '';
+      const cardScope = card.dataset.scope || 'sh';
+      const city = card.dataset.city || '';
+      const monthOk = state.tab === 'all' || months.includes(state.tab);
+      const catOk = state.cat === 'all' || category === state.cat || group === state.cat;
+      const searchOk = !state.q || text.includes(state.q);
+      const scopeOk = state.scope === 'all' || cardScope === 'sh';
+      const cityOk = ignoreCity || state.scope !== 'all' || state.city === 'all' || city === state.city;
+      return monthOk && catOk && searchOk && scopeOk && cityOk;
+    }}
+
+    // 城市按钮上的数字跟着当前「时间 / 类别 / 搜索」变化，而不是三类之和
+    function updateCityChips() {{
+      if (!cityChips || state.scope !== 'all') return false;
+      const counts = {{}};
+      let total = 0;
+      cards.forEach(card => {{
+        if (!cardMatches(card, true)) return;
+        if ((card.dataset.scope || 'sh') !== 'national') return;
+        const city = card.dataset.city || '';
+        if (!city) return;
+        total += 1;
+        counts[city] = (counts[city] || 0) + 1;
+      }});
+      cityChips.querySelectorAll('.chip').forEach(btn => {{
+        const city = btn.dataset.city;
+        const label = btn.querySelector('.n');
+        if (city === 'all') {{
+          if (label) label.textContent = total;
+          return;
+        }}
+        const num = counts[city] || 0;
+        if (label) label.textContent = num;
+        btn.hidden = num === 0;
+      }});
+      if (state.city !== 'all' && (counts[state.city] || 0) === 0) {{
+        state.city = 'all';
+        cityChips.querySelectorAll('.chip').forEach(btn => btn.classList.toggle('active', btn.dataset.city === 'all'));
+        return true;
+      }}
+      return false;
+    }}
+
     function applyFilters() {{
       let visible = 0;
       cards.forEach(card => {{
-        const months = (card.dataset.month || '').split(' ');
-        const category = card.dataset.category || '';
-        const group = card.dataset.group || category;
-        const text = card.dataset.search || '';
-        const scope = card.dataset.scope || 'sh';
-        const city = card.dataset.city || '';
-        const monthOk = state.tab === 'all' || months.includes(state.tab);
-        const catOk = state.cat === 'all' || category === state.cat || group === state.cat;
-        const searchOk = !state.q || text.includes(state.q);
-        const scopeOk = state.scope === 'all' || scope === 'sh';
-        const cityOk = state.scope !== 'all' || state.city === 'all' || city === state.city;
-        const show = monthOk && catOk && searchOk && scopeOk && cityOk;
+        const show = cardMatches(card, false);
         card.hidden = !show;
         if (show) visible += 1;
       }});
       empty.hidden = visible > 0;
       if (cityChips) cityChips.hidden = state.scope !== 'all';
+      if (updateCityChips()) applyFilters();
     }}
 
     document.querySelectorAll('.tabs-range .tab').forEach(button => {{
@@ -2694,12 +2739,46 @@ def run(config_path: Path, no_llm: bool = False) -> None:
     log(f"日历：{(DOCS_DIR / 'events.ics').resolve()}")
 
 
+def rebuild_pages() -> None:
+    """只用 data/events.json + data/updates.json 重新生成页面，不抓取网络（调样式/模板时用）。"""
+    payload = load_json(DATA_DIR / "events.json")
+    events = payload.get("events", []) if isinstance(payload, dict) else payload
+    if not events:
+        raise SystemExit("data/events.json 里没有活动，先跑一次 python update.py")
+    updated = payload.get("updated") if isinstance(payload, dict) else ""
+    generated_at = datetime.fromisoformat(updated) if updated else datetime.now(SHANGHAI_TZ)
+    today = today_cn()
+    upcoming = [
+        event
+        for event in events
+        if event_overlaps(event, today - timedelta(days=31), today + timedelta(days=DATE_WINDOW_DAYS))
+    ]
+    updates = load_updates()
+    new_titles = recent_new_titles(updates)
+
+    DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    (DOCS_DIR / "index.html").write_text(
+        build_html(upcoming, generated_at, updates=updates, new_titles=new_titles), encoding="utf-8"
+    )
+    (DOCS_DIR / "style.css").write_text(STYLE, encoding="utf-8")
+    (DOCS_DIR / ".nojekyll").write_text("", encoding="utf-8")
+    (DOCS_DIR / "events.ics").write_text(
+        build_ics([event for event in upcoming if is_shanghai(event)], generated_at),
+        encoding="utf-8",
+    )
+    (DOCS_DIR / "new.html").write_text(build_new_page(updates, generated_at), encoding="utf-8")
+    log(f"已用本地数据重新生成页面：{len(upcoming)} 个活动（没有抓取网络）")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="上海活动自动更新器")
     parser.add_argument("--config", default=str(CONFIG_PATH), help="来源配置路径")
     parser.add_argument("--no-llm", action="store_true", help="禁用 LLM 抽取")
     parser.add_argument(
         "--places-only", action="store_true", help="只根据 config/places.json 重新生成建筑地图"
+    )
+    parser.add_argument(
+        "--rebuild", action="store_true", help="只用 data/ 里已有数据重新生成页面，不抓取网络"
     )
     args = parser.parse_args()
 
@@ -2711,6 +2790,8 @@ def main() -> int:
             log(f"建筑地图：{result['count']} 处 → {(DOCS_DIR / 'map.html').resolve()}")
             if result.get("skipped"):
                 log("建筑地图缺少坐标已跳过：" + "、".join(result["skipped"]))
+        elif args.rebuild:
+            rebuild_pages()
         else:
             run(Path(args.config), no_llm=args.no_llm)
     except Exception as exc:

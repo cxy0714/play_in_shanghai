@@ -48,6 +48,8 @@ h1 { margin: 0; font-size: 30px; line-height: 1.2; }
   border-radius: 999px; padding: 6px 12px; font-size: 13px; cursor: pointer;
 }
 .chip.active { background: var(--text); border-color: var(--text); color: #fff; }
+.chip .n { margin-left: 4px; font-size: 12px; opacity: .55; font-variant-numeric: tabular-nums; }
+.chip.active .n { opacity: .85; }
 main { max-width: 980px; margin: 0 auto; padding: 16px 18px 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .card {
   background: var(--card); border-radius: 18px; padding: 16px;
