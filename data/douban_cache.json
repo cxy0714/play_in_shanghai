@@ -140,45 +140,31 @@
     "status": ""
   },
   {
-    "title": "豆瓣同城",
+    "title": "迷波隆社交聚会",
     "category": "话剧",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/douban-loc/",
+    "ticket_url": "https://site.douban.com/282179/",
     "source_url": "https://shanghai.douban.com/events/week-drama",
     "image_url": "",
-    "summary": "豆瓣同城",
+    "summary": "迷波隆社交聚会",
     "status": ""
   },
   {
-    "title": "票牛",
+    "title": "伊松馆",
     "category": "话剧",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/267084/",
+    "ticket_url": "https://site.douban.com/289620/",
     "source_url": "https://shanghai.douban.com/events/week-drama",
     "image_url": "",
-    "summary": "票牛",
-    "status": ""
-  },
-  {
-    "title": "林雨阁俱乐部",
-    "category": "话剧",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/133075/",
-    "source_url": "https://shanghai.douban.com/events/week-drama",
-    "image_url": "",
-    "summary": "林雨阁俱乐部",
+    "summary": "伊松馆",
     "status": ""
   },
   {
@@ -196,17 +182,31 @@
     "status": ""
   },
   {
-    "title": "迷波隆社交聚会",
+    "title": "票牛",
     "category": "话剧",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/282179/",
+    "ticket_url": "https://site.douban.com/267084/",
     "source_url": "https://shanghai.douban.com/events/week-drama",
     "image_url": "",
-    "summary": "迷波隆社交聚会",
+    "summary": "票牛",
+    "status": ""
+  },
+  {
+    "title": "豆瓣同城",
+    "category": "话剧",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/douban-loc/",
+    "source_url": "https://shanghai.douban.com/events/week-drama",
+    "image_url": "",
+    "summary": "豆瓣同城",
     "status": ""
   },
   {
@@ -350,17 +350,17 @@
     "status": ""
   },
   {
-    "title": "迷波隆社交聚会",
+    "title": "票牛",
     "category": "脱口秀",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/282179/",
+    "ticket_url": "https://site.douban.com/267084/",
     "source_url": "https://shanghai.douban.com/events/week-comedy",
     "image_url": "",
-    "summary": "迷波隆社交聚会",
+    "summary": "票牛",
     "status": ""
   },
   {
@@ -378,31 +378,31 @@
     "status": ""
   },
   {
-    "title": "票牛",
+    "title": "林雨阁俱乐部",
     "category": "脱口秀",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/267084/",
+    "ticket_url": "https://site.douban.com/133075/",
     "source_url": "https://shanghai.douban.com/events/week-comedy",
     "image_url": "",
-    "summary": "票牛",
+    "summary": "林雨阁俱乐部",
     "status": ""
   },
   {
-    "title": "豆瓣同城",
+    "title": "迷波隆社交聚会",
     "category": "脱口秀",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/douban-loc/",
+    "ticket_url": "https://site.douban.com/282179/",
     "source_url": "https://shanghai.douban.com/events/week-comedy",
     "image_url": "",
-    "summary": "豆瓣同城",
+    "summary": "迷波隆社交聚会",
     "status": ""
   },
   {
@@ -588,31 +588,17 @@
     "status": ""
   },
   {
-    "title": "伊松馆",
+    "title": "迷波隆社交聚会",
     "category": "展览",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/289620/",
+    "ticket_url": "https://site.douban.com/282179/",
     "source_url": "https://shanghai.douban.com/events/week-exhibition",
     "image_url": "",
-    "summary": "伊松馆",
-    "status": ""
-  },
-  {
-    "title": "互助网周末活动",
-    "category": "展览",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/279492/",
-    "source_url": "https://shanghai.douban.com/events/week-exhibition",
-    "image_url": "",
-    "summary": "互助网周末活动",
+    "summary": "迷波隆社交聚会",
     "status": ""
   },
   {
@@ -627,6 +613,20 @@
     "source_url": "https://shanghai.douban.com/events/week-exhibition",
     "image_url": "",
     "summary": "豆瓣同城",
+    "status": ""
+  },
+  {
+    "title": "伊松馆",
+    "category": "展览",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/289620/",
+    "source_url": "https://shanghai.douban.com/events/week-exhibition",
+    "image_url": "",
+    "summary": "伊松馆",
     "status": ""
   },
   {
@@ -714,20 +714,6 @@
     "status": ""
   },
   {
-    "title": "【交响+演唱】“四大名著”红楼梦·西游记·三国演义·水浒传 大型交响演唱会",
-    "category": "音乐会",
-    "venue": "上海东方艺术中心 丁香路425号(近世纪大道)",
-    "address": "上海 浦东新区 上海东方艺术中心 丁香路425号(近世纪大道)",
-    "start_date": "2026-11-07T19:30:00",
-    "end_date": "2026-11-07T21:30:00",
-    "price_text": "100.0元起",
-    "ticket_url": "https://www.douban.com/event/37870637/",
-    "source_url": "https://shanghai.douban.com/events/week-music",
-    "image_url": "",
-    "summary": "1人参加 0人感兴趣",
-    "status": ""
-  },
-  {
     "title": "哈维尔·佩里亚内斯钢琴独奏音乐会",
     "category": "音乐会",
     "venue": "凯迪拉克-上海音乐厅 延安东路523号(近西藏南路)",
@@ -736,6 +722,20 @@
     "end_date": "2026-11-07T20:30:00",
     "price_text": "80.0元起",
     "ticket_url": "https://www.douban.com/event/38041663/",
+    "source_url": "https://shanghai.douban.com/events/week-music",
+    "image_url": "",
+    "summary": "1人参加 0人感兴趣",
+    "status": ""
+  },
+  {
+    "title": "【交响+演唱】“四大名著”红楼梦·西游记·三国演义·水浒传 大型交响演唱会",
+    "category": "音乐会",
+    "venue": "上海东方艺术中心 丁香路425号(近世纪大道)",
+    "address": "上海 浦东新区 上海东方艺术中心 丁香路425号(近世纪大道)",
+    "start_date": "2026-11-07T19:30:00",
+    "end_date": "2026-11-07T21:30:00",
+    "price_text": "100.0元起",
+    "ticket_url": "https://www.douban.com/event/37870637/",
     "source_url": "https://shanghai.douban.com/events/week-music",
     "image_url": "",
     "summary": "1人参加 0人感兴趣",
@@ -770,34 +770,6 @@
     "status": ""
   },
   {
-    "title": "豆瓣同城",
-    "category": "音乐会",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/douban-loc/",
-    "source_url": "https://shanghai.douban.com/events/week-music",
-    "image_url": "",
-    "summary": "豆瓣同城",
-    "status": ""
-  },
-  {
-    "title": "伊松馆",
-    "category": "音乐会",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/289620/",
-    "source_url": "https://shanghai.douban.com/events/week-music",
-    "image_url": "",
-    "summary": "伊松馆",
-    "status": ""
-  },
-  {
     "title": "互助网周末活动",
     "category": "音乐会",
     "venue": "上海",
@@ -809,6 +781,20 @@
     "source_url": "https://shanghai.douban.com/events/week-music",
     "image_url": "",
     "summary": "互助网周末活动",
+    "status": ""
+  },
+  {
+    "title": "票牛",
+    "category": "音乐会",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/267084/",
+    "source_url": "https://shanghai.douban.com/events/week-music",
+    "image_url": "",
+    "summary": "票牛",
     "status": ""
   },
   {
@@ -826,17 +812,31 @@
     "status": ""
   },
   {
-    "title": "票牛",
+    "title": "迷波隆社交聚会",
     "category": "音乐会",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/267084/",
+    "ticket_url": "https://site.douban.com/282179/",
     "source_url": "https://shanghai.douban.com/events/week-music",
     "image_url": "",
-    "summary": "票牛",
+    "summary": "迷波隆社交聚会",
+    "status": ""
+  },
+  {
+    "title": "豆瓣同城",
+    "category": "音乐会",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/douban-loc/",
+    "source_url": "https://shanghai.douban.com/events/week-music",
+    "image_url": "",
+    "summary": "豆瓣同城",
     "status": ""
   }
 ]

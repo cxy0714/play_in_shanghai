@@ -291,6 +291,89 @@
       "venue_default": "南宁市博物馆",
       "max_articles": 20,
       "notes": "列表 li 内 h3 为展名，span 内“展览时间：2026年9月15日-2026年12月15日”；已结束条目的时间为“已结束”，解析失败自动丢弃。链接多指向微信公众号文章，detail=false 避免请求微信。"
+    },
+    {
+      "name": "红砖美术馆",
+      "city": "北京",
+      "list_url": "http://www.redbrickartmuseum.org/exhibitions/",
+      "detail": false,
+      "item_selector": "section",
+      "title_selector": "h2",
+      "max_articles": 6,
+      "venue_default": "红砖美术馆",
+      "notes": "exhibitions 页每个 section 一个展，h2 是展名，日期形如 2026.10.01 - 2027.02.14"
+    },
+    {
+      "name": "天津美术馆",
+      "city": "天津",
+      "list_url": "https://www.tjmsg.cn/FCC0002/ACC0005/index.html",
+      "detail": false,
+      "item_selector": "div.mslistbox2",
+      "max_articles": 8,
+      "venue_default": "天津美术馆",
+      "notes": "正在展出列表；展期在列表项文本里（如 2026年10月22日至11月15日）"
+    },
+    {
+      "name": "长春伪满皇宫博物院",
+      "city": "长春",
+      "list_url": "https://www.wmhgbwy.cn/exhibtion.html",
+      "detail": true,
+      "item_selector": "div.cont",
+      "max_articles": 8,
+      "venue_default": "伪满皇宫博物院",
+      "notes": "列表标题会被截断成「…」，改 detail:true 取详情页全名"
+    },
+    {
+      "name": "浙江美术馆",
+      "city": "杭州",
+      "list_url": "https://www.zjam.org.cn/Site/Exbition/ExbitionList.aspx?type=1",
+      "detail": false,
+      "item_selector": "table#dlExbition tr",
+      "max_articles": 10,
+      "venue_default": "浙江美术馆",
+      "notes": "type=1 是正在展出；表格行含展名 + 展期 + 详情链接"
+    },
+    {
+      "name": "关山月美术馆",
+      "city": "深圳",
+      "list_url": "http://www.gsyart.com/exhibition_index.action",
+      "detail": false,
+      "item_selector": "table tr",
+      "max_articles": 10,
+      "venue_default": "关山月美术馆",
+      "notes": "展览总览页表格，日期形如 2026-06-19 至2028-09-09"
+    },
+    {
+      "name": "上海汽车博物馆",
+      "city": "上海",
+      "list_url": "http://www.shautomuseum.com/exhibition",
+      "detail": false,
+      "item_selector": "dd",
+      "max_articles": 6,
+      "venue_default": "上海汽车博物馆",
+      "notes": "临展页 dd 块含展名与展期；官网个别结束日写成 2045 年，属站方数据"
+    },
+    {
+      "name": "广东美术馆",
+      "city": "广州",
+      "list_url": "https://www.gdmoa.org/Exhibition/",
+      "detail": true,
+      "item_selector": "div.exhibition-content-list a",
+      "link_regex": "/Exhibitions/\\d{4}/\\d{6}/t\\d+_\\d+\\.shtml",
+      "max_articles": 10,
+      "venue_default": "广东美术馆",
+      "max_seconds": 60,
+      "notes": "详情页有完整展期；列表页日期被标签截断，必须 detail:true"
+    },
+    {
+      "name": "今日美术馆",
+      "city": "北京",
+      "list_url": "http://www.todayartmuseum.com/cnexhibitons.aspx?type=currentexh",
+      "detail": false,
+      "item_selector": "p.text",
+      "max_articles": 10,
+      "venue_default": "今日美术馆",
+      "notes": "当前展览页 p.text 每块「<a>展名</a><span>2026.10.24 - 2026.11.29</span>」"
     }
   ]
 }

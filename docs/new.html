@@ -11,7 +11,7 @@
   <header class="hero">
     <p class="eyebrow">更新日志 · 上海 &amp; 全国</p>
     <h1>本周上新</h1>
-    <p class="updated">近 7 天新增 715 个活动（上海 101 · 外地 614）· 下面时间线展示 381 张卡片 · 页面更新于 2026-11-02 20:42</p>
+    <p class="updated">近 7 天新增 739 个活动（上海 104 · 外地 635）· 下面时间线展示 406 张卡片 · 页面更新于 2026-11-02 21:49</p>
     <nav class="site-nav" aria-label="站点导航">
       <a href="index.html">🎫 活动清单</a>
       <a href="map.html">🗺 建筑地图</a>
@@ -19,12 +19,480 @@
     </nav>
   </header>
   <div class="chips" id="new-city-chips">
-    <span class="chip-label">城市</span>['<button class="chip active" data-city="all">全部城市<span class="n">381</span></button>', '<button class="chip" data-city="上海">上海<span class="n">273</span></button>', '<button class="chip" data-city="东莞">东莞<span class="n">10</span></button>', '<button class="chip" data-city="北京">北京<span class="n">7</span></button>', '<button class="chip" data-city="天津">天津<span class="n">6</span></button>', '<button class="chip" data-city="广州">广州<span class="n">6</span></button>', '<button class="chip" data-city="杭州">杭州<span class="n">5</span></button>', '<button class="chip" data-city="西安">西安<span class="n">5</span></button>', '<button class="chip" data-city="成都">成都<span class="n">4</span></button>', '<button class="chip" data-city="济南">济南<span class="n">4</span></button>', '<button class="chip" data-city="深圳">深圳<span class="n">4</span></button>', '<button class="chip" data-city="长沙">长沙<span class="n">4</span></button>', '<button class="chip" data-city="太原">太原<span class="n">3</span></button>', '<button class="chip" data-city="武汉">武汉<span class="n">3</span></button>', '<button class="chip" data-city="海口">海口<span class="n">3</span></button>', '<button class="chip" data-city="石家庄">石家庄<span class="n">3</span></button>', '<button class="chip" data-city="青岛">青岛<span class="n">3</span></button>', '<button class="chip" data-city="佛山">佛山<span class="n">2</span></button>', '<button class="chip" data-city="南京">南京<span class="n">2</span></button>', '<button class="chip" data-city="南昌">南昌<span class="n">2</span></button>', '<button class="chip" data-city="厦门">厦门<span class="n">2</span></button>', '<button class="chip" data-city="合肥">合肥<span class="n">2</span></button>', '<button class="chip" data-city="哈尔滨">哈尔滨<span class="n">2</span></button>', '<button class="chip" data-city="大连">大连<span class="n">2</span></button>', '<button class="chip" data-city="宁波">宁波<span class="n">2</span></button>', '<button class="chip" data-city="无锡">无锡<span class="n">2</span></button>', '<button class="chip" data-city="昆明">昆明<span class="n">2</span></button>', '<button class="chip" data-city="沈阳">沈阳<span class="n">2</span></button>', '<button class="chip" data-city="洛阳">洛阳<span class="n">2</span></button>', '<button class="chip" data-city="福州">福州<span class="n">2</span></button>', '<button class="chip" data-city="苏州">苏州<span class="n">2</span></button>', '<button class="chip" data-city="贵阳">贵阳<span class="n">2</span></button>', '<button class="chip" data-city="郑州">郑州<span class="n">2</span></button>', '<button class="chip" data-city="重庆">重庆<span class="n">2</span></button>', '<button class="chip" data-city="南宁">南宁<span class="n">1</span></button>', '<button class="chip" data-city="扬州">扬州<span class="n">1</span></button>', '<button class="chip" data-city="桂林">桂林<span class="n">1</span></button>', '<button class="chip" data-city="泉州">泉州<span class="n">1</span></button>']
+    <span class="chip-label">城市</span>['<button class="chip active" data-city="all">全部城市<span class="n">406</span></button>', '<button class="chip" data-city="上海">上海<span class="n">276</span></button>', '<button class="chip" data-city="广州">广州<span class="n">14</span></button>', '<button class="chip" data-city="东莞">东莞<span class="n">10</span></button>', '<button class="chip" data-city="北京">北京<span class="n">10</span></button>', '<button class="chip" data-city="杭州">杭州<span class="n">8</span></button>', '<button class="chip" data-city="天津">天津<span class="n">7</span></button>', '<button class="chip" data-city="深圳">深圳<span class="n">7</span></button>', '<button class="chip" data-city="西安">西安<span class="n">5</span></button>', '<button class="chip" data-city="成都">成都<span class="n">4</span></button>', '<button class="chip" data-city="济南">济南<span class="n">4</span></button>', '<button class="chip" data-city="石家庄">石家庄<span class="n">4</span></button>', '<button class="chip" data-city="长沙">长沙<span class="n">4</span></button>', '<button class="chip" data-city="太原">太原<span class="n">3</span></button>', '<button class="chip" data-city="武汉">武汉<span class="n">3</span></button>', '<button class="chip" data-city="海口">海口<span class="n">3</span></button>', '<button class="chip" data-city="青岛">青岛<span class="n">3</span></button>', '<button class="chip" data-city="佛山">佛山<span class="n">2</span></button>', '<button class="chip" data-city="南京">南京<span class="n">2</span></button>', '<button class="chip" data-city="南昌">南昌<span class="n">2</span></button>', '<button class="chip" data-city="厦门">厦门<span class="n">2</span></button>', '<button class="chip" data-city="合肥">合肥<span class="n">2</span></button>', '<button class="chip" data-city="哈尔滨">哈尔滨<span class="n">2</span></button>', '<button class="chip" data-city="大连">大连<span class="n">2</span></button>', '<button class="chip" data-city="宁波">宁波<span class="n">2</span></button>', '<button class="chip" data-city="无锡">无锡<span class="n">2</span></button>', '<button class="chip" data-city="昆明">昆明<span class="n">2</span></button>', '<button class="chip" data-city="桂林">桂林<span class="n">2</span></button>', '<button class="chip" data-city="沈阳">沈阳<span class="n">2</span></button>', '<button class="chip" data-city="洛阳">洛阳<span class="n">2</span></button>', '<button class="chip" data-city="福州">福州<span class="n">2</span></button>', '<button class="chip" data-city="苏州">苏州<span class="n">2</span></button>', '<button class="chip" data-city="贵阳">贵阳<span class="n">2</span></button>', '<button class="chip" data-city="郑州">郑州<span class="n">2</span></button>', '<button class="chip" data-city="重庆">重庆<span class="n">2</span></button>', '<button class="chip" data-city="长春">长春<span class="n">2</span></button>', '<button class="chip" data-city="南宁">南宁<span class="n">1</span></button>', '<button class="chip" data-city="扬州">扬州<span class="n">1</span></button>', '<button class="chip" data-city="泉州">泉州<span class="n">1</span></button>']
   </div>
   <div class="chips" id="new-cat-chips">
-    <span class="chip-label">类型</span>['<button class="chip active" data-cat="all">全部类型<span class="n">381</span></button>', '<button class="chip" data-cat="历史文物">历史文物<span class="n">22</span></button>', '<button class="chip" data-cat="现代艺术">现代艺术<span class="n">16</span></button>', '<button class="chip" data-cat="艺术家特展">艺术家特展<span class="n">10</span></button>', '<button class="chip" data-cat="数字沉浸">数字沉浸<span class="n">15</span></button>', '<button class="chip" data-cat="摄影影像">摄影影像<span class="n">3</span></button>', '<button class="chip" data-cat="设计工艺">设计工艺<span class="n">4</span></button>', '<button class="chip" data-cat="亲子动漫">亲子动漫<span class="n">2</span></button>', '<button class="chip" data-cat="建筑城市">建筑城市<span class="n">3</span></button>', '<button class="chip" data-cat="自然科技">自然科技<span class="n">2</span></button>', '<button class="chip" data-cat="其他展览">其他展览<span class="n">40</span></button>', '<button class="chip" data-cat="话剧">话剧<span class="n">137</span></button>', '<button class="chip" data-cat="音乐剧">音乐剧<span class="n">23</span></button>', '<button class="chip" data-cat="音乐会">音乐会<span class="n">32</span></button>', '<button class="chip" data-cat="舞蹈">舞蹈<span class="n">15</span></button>', '<button class="chip" data-cat="戏曲">戏曲<span class="n">17</span></button>', '<button class="chip" data-cat="脱口秀">脱口秀<span class="n">40</span></button>']
+    <span class="chip-label">类型</span>['<button class="chip active" data-cat="all">全部类型<span class="n">406</span></button>', '<button class="chip" data-cat="历史文物">历史文物<span class="n">23</span></button>', '<button class="chip" data-cat="现代艺术">现代艺术<span class="n">17</span></button>', '<button class="chip" data-cat="艺术家特展">艺术家特展<span class="n">11</span></button>', '<button class="chip" data-cat="数字沉浸">数字沉浸<span class="n">15</span></button>', '<button class="chip" data-cat="摄影影像">摄影影像<span class="n">5</span></button>', '<button class="chip" data-cat="设计工艺">设计工艺<span class="n">4</span></button>', '<button class="chip" data-cat="亲子动漫">亲子动漫<span class="n">2</span></button>', '<button class="chip" data-cat="建筑城市">建筑城市<span class="n">3</span></button>', '<button class="chip" data-cat="自然科技">自然科技<span class="n">2</span></button>', '<button class="chip" data-cat="其他展览">其他展览<span class="n">55</span></button>', '<button class="chip" data-cat="话剧">话剧<span class="n">141</span></button>', '<button class="chip" data-cat="音乐剧">音乐剧<span class="n">23</span></button>', '<button class="chip" data-cat="音乐会">音乐会<span class="n">33</span></button>', '<button class="chip" data-cat="舞蹈">舞蹈<span class="n">15</span></button>', '<button class="chip" data-cat="戏曲">戏曲<span class="n">17</span></button>', '<button class="chip" data-cat="脱口秀">脱口秀<span class="n">40</span></button>']
   </div>
   <div class="timeline">
+    <section class="run" data-at="2026-11-02T21:49:10+08:00">
+      <header class="run-head">
+        <h2>2026年11月2日 21:49</h2>
+        <span class="run-stat">新增 4 个（外地 4 个）</span>
+      </header>
+      
+      <div class="run-cards">
+        
+      <article class="card" data-month="all" data-scope="national" data-city="北京" data-category="其他展览" data-group="展览" data-search="陈澈：微域生长 今日美术馆 北京  展期：2026.10.18 - 2026.11.20 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>陈澈：微域生长</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.10.18 - 11.20</span>
+          
+        </div>
+        <p class="meta">北京 · 今日美术馆</p>
+        <p class="summary">展期：2026.10.18 - 2026.11.20</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="http://www.todayartmuseum.com/cnexhdetails.aspx?type=currentexh&amp;id=881" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="北京" data-category="其他展览" data-group="展览" data-search="世界轻轻飘浮——王彬羽作品... 今日美术馆 北京  展期：2026.10.24 - 2026.11.29 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>世界轻轻飘浮——王彬羽作品...</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.10.24 - 11.29</span>
+          
+        </div>
+        <p class="meta">北京 · 今日美术馆</p>
+        <p class="summary">展期：2026.10.24 - 2026.11.29</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="http://www.todayartmuseum.com/cnexhdetails.aspx?type=currentexh&amp;id=882" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="广州" data-category="话剧" data-group="话剧" data-search="广州·2026王承渲「应·承」生日见面会 mao livehouse广州-永庆坊店 恩宁路265号3层 广州  0人参加 0人感兴趣 话剧 话剧 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge drama">话剧</span></span>
+        </div>
+        <h2>广州·2026王承渲「应·承」生日见面会</h2>
+        <div class="when drama">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.08</span>
+          
+        </div>
+        <p class="meta">广州 · MAO Livehouse广州-永庆坊店 恩宁路265号3层</p>
+        <p class="summary">0人参加 0人感兴趣</p>
+        <div class="card-bottom">
+          <span><span class="price">388.0元起</span></span>
+          <a class="button" href="https://www.douban.com/event/38075844/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="长春" data-category="摄影影像" data-group="展览" data-search="巍峨丰碑——纪念中国工农红军长征胜利90周年图片展 伪满皇宫博物院 长春  展期：2026/10/1—2027/1/10 摄影影像 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">摄影影像</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>巍峨丰碑——纪念中国工农红军长征胜利90周年图片展</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.10.01 - 2027.01.10</span>
+          
+        </div>
+        <p class="meta">长春 · 伪满皇宫博物院</p>
+        <p class="summary">展期：2026/10/1—2027/1/10</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.wmhgbwy.cn/detail/3548.html" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+      </div>
+    </section>
+    <section class="run" data-at="2026-11-02T21:45:58+08:00">
+      <header class="run-head">
+        <h2>2026年11月2日 21:45</h2>
+        <span class="run-stat">新增 21 个（外地 18 个）</span>
+      </header>
+      
+      <div class="run-cards">
+        
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="其他展览" data-group="展览" data-search="勇毅前行——中国汽车拓疆者饶斌主题展 上海汽车博物馆1f临展厅 上海  展期：2025年04月25日-2045年04月25日 地点：上海汽车博物馆1f临展厅 简介 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>勇毅前行——中国汽车拓疆者饶斌主题展</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2025.04.25 - 2045.04.25</span>
+          
+        </div>
+        <p class="meta">上海汽车博物馆1F临展厅</p>
+        <p class="summary">展期：2025年04月25日-2045年04月25日 地点：上海汽车博物馆1F临展厅 简介</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.shautomuseum.com/news/info/25043001" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="其他展览" data-group="展览" data-search="沸腾之心——例数经典车上的发动机 上海汽车博物馆 上海  展期：2025年11月01日-2027年12月31日 地点：上海汽车博物馆 3f技术馆 简 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>沸腾之心——例数经典车上的发动机</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2025.11.01 - 2027.12.31</span>
+          
+        </div>
+        <p class="meta">上海汽车博物馆</p>
+        <p class="summary">展期：2025年11月01日-2027年12月31日 地点：上海汽车博物馆 3F技术馆 简</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="http://www.shautomuseum.com/news/info/lsjd" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="【早鸟5折】“爱乐之城”永恒经典电影名曲音乐会 久事·上海商城剧院 上海  猫眼评分 0.0 音乐会 音乐会 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>【早鸟5折】“爱乐之城”永恒经典电影名曲音乐会</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.20</span>
+          
+        </div>
+        <p class="meta">久事·上海商城剧院</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥80起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/508631" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="广州" data-category="艺术家特展" data-group="展览" data-search="奥斯瓦尔多·维加斯回顾展--心外无物 广东美术馆 广州  展期：2026年8月15日——11月22日 艺术家特展 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">艺术家特展</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>奥斯瓦尔多·维加斯回顾展--心外无物</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.08.15 - 11.22</span>
+          
+        </div>
+        <p class="meta">广州 · 广东美术馆</p>
+        <p class="summary">展期：2026年8月15日——11月22日</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.gdmoa.org/Exhibition/Exhibitions/2026/202608/t20260810_18411.shtml" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="广州" data-category="其他展览" data-group="展览" data-search="万象由心——曾宓艺术大展 广东美术馆新馆一楼1-3号展厅 广州  展期：2026年9月18日—2026年11月12日 地点： 广东美术馆新馆一楼1-3号展 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>万象由心——曾宓艺术大展</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.09.18 - 11.12</span>
+          
+        </div>
+        <p class="meta">广州 · 广东美术馆新馆一楼1-3号展厅</p>
+        <p class="summary">展期：2026年9月18日—2026年11月12日 地点： 广东美术馆新馆一楼1-3号展</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.gdmoa.org/Exhibition/Exhibitions/2026/202609/t20260915_18433.shtml" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="广州" data-category="其他展览" data-group="展览" data-search="字由人二——汉字创意集 广东美术馆新馆四楼14号厅 广州  展期：2026年9月23日-2026年12月15日 地点： 广东美术馆新馆四楼14号厅 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>字由人二——汉字创意集</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.09.23 - 12.15</span>
+          
+        </div>
+        <p class="meta">广州 · 广东美术馆新馆四楼14号厅</p>
+        <p class="summary">展期：2026年9月23日-2026年12月15日 地点： 广东美术馆新馆四楼14号厅</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.gdmoa.org/Exhibition/Exhibitions/2026/202609/t20260914_18430.shtml" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="广州" data-category="现代艺术" data-group="展览" data-search="未完成的未来——中国当代水墨年鉴十周年 广东美术馆 广州  展期：2026年9月24日- 11月22日 现代艺术 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">现代艺术</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>未完成的未来——中国当代水墨年鉴十周年</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.09.24 - 11.22</span>
+          
+        </div>
+        <p class="meta">广州 · 广东美术馆</p>
+        <p class="summary">展期：2026年9月24日- 11月22日</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.gdmoa.org/Exhibition/Exhibitions/2026/202609/t20260923_18442.shtml" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="广州" data-category="其他展览" data-group="展览" data-search="还看今朝——陈家泠艺术展 广东美术馆新馆 广州  展期：2026年9月24日–2026年11月29日 地点： 广东美术馆新馆 三楼9/10 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>还看今朝——陈家泠艺术展</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.09.24 - 11.29</span>
+          
+        </div>
+        <p class="meta">广州 · 广东美术馆新馆</p>
+        <p class="summary">展期：2026年9月24日–2026年11月29日 地点： 广东美术馆新馆 三楼9/10</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.gdmoa.org/Exhibition/Exhibitions/2026/202609/t20260917_18435.shtml" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="广州" data-category="摄影影像" data-group="展览" data-search="纪念中国工农红军长征胜利90周年美术书法摄影展 广东美术馆本馆一楼1、2、3、4号厅 广州  展期：2026年10月22日-2026年11月22日 地点： 广东美术馆本馆一楼1、2、3 摄影影像 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">摄影影像</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>纪念中国工农红军长征胜利90周年美术书法摄影展</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.10.22 - 11.22</span>
+          
+        </div>
+        <p class="meta">广州 · 广东美术馆本馆一楼1、2、3、4号厅</p>
+        <p class="summary">展期：2026年10月22日-2026年11月22日 地点： 广东美术馆本馆一楼1、2、3</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.gdmoa.org/Exhibition/Exhibitions/2026/202610/t20261022_18458.shtml" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="广州" data-category="话剧" data-group="话剧" data-search="「她想去的地方」葡萄不愤怒2026巡演 广州站 mao livehouse广州中大店【二号馆】 新港西路82号中大门城市之丘东3501铺 广州  0人参加 0人感兴趣 话剧 话剧 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge drama">话剧</span></span>
+        </div>
+        <h2>「她想去的地方」葡萄不愤怒2026巡演 广州站</h2>
+        <div class="when drama">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.06</span>
+          
+        </div>
+        <p class="meta">广州 · MAO Livehouse广州中大店【二号馆】 新港西路82号中大门城市之丘东3501铺</p>
+        <p class="summary">0人参加 0人感兴趣</p>
+        <div class="card-bottom">
+          <span><span class="price">129.0元</span></span>
+          <a class="button" href="https://www.douban.com/event/38037315/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="杭州" data-category="其他展览" data-group="展览" data-search="陈高杰：世界的肚脐 浙江美术馆 杭州  展期：2026/10/18 至 2026/11/18 主办单位：浙江美术馆 展厅： 浙江美 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>陈高杰：世界的肚脐</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.10.18 - 11.18</span>
+          
+        </div>
+        <p class="meta">杭州 · 浙江美术馆</p>
+        <p class="summary">展期：2026/10/18 至 2026/11/18 主办单位：浙江美术馆 展厅： 浙江美</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.zjam.org.cn/Site/Exbition/ExbitionDetail.aspx?etid=2915&amp;type=1" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="杭州" data-category="其他展览" data-group="展览" data-search="中非友谊七十载，刀木共鸣正当时｜非洲木雕艺术展 浙江美术馆 杭州  展期：2026/10/31 至 2026/11/19 主办单位：浙江美术馆 展厅： 浙江美 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>中非友谊七十载，刀木共鸣正当时｜非洲木雕艺术展</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.10.31 - 11.19</span>
+          
+        </div>
+        <p class="meta">杭州 · 浙江美术馆</p>
+        <p class="summary">展期：2026/10/31 至 2026/11/19 主办单位：浙江美术馆 展厅： 浙江美</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.zjam.org.cn/Site/Exbition/ExbitionDetail.aspx?etid=2920&amp;type=1" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="杭州" data-category="其他展览" data-group="展览" data-search="“花影缤纷――张世简百年诞辰纪念展 浙江美术馆 杭州  展期：2026/11/1 至 2026/11/21 主办单位：浙江美术馆 展厅： 浙江美 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>“花影缤纷――张世简百年诞辰纪念展</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.11.01 - 11.21</span>
+          
+        </div>
+        <p class="meta">杭州 · 浙江美术馆</p>
+        <p class="summary">展期：2026/11/1 至 2026/11/21 主办单位：浙江美术馆 展厅： 浙江美</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.zjam.org.cn/Site/Exbition/ExbitionDetail.aspx?etid=2918&amp;type=1" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="深圳" data-category="其他展览" data-group="展览" data-search="别开新径——春睡同人艺术研究展 关山月美术馆 深圳  展期：2026-06-19 至2028-09-09 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>别开新径——春睡同人艺术研究展</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.06.19 - 2028.09.09</span>
+          
+        </div>
+        <p class="meta">深圳 · 关山月美术馆</p>
+        <p class="summary">展期：2026-06-19 至2028-09-09</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="http://www.gsyart.com/exhibition_detail.action?id=2215" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="深圳" data-category="话剧" data-group="话剧" data-search="【周末热演】开心麻花华南沉浸式互动悬疑喜剧《庄园疯人夜》 深圳开心麻花红山剧场 深圳  猫眼评分 9.7 话剧 话剧 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge drama">话剧</span></span>
+        </div>
+        <h2>【周末热演】开心麻花华南沉浸式互动悬疑喜剧《庄园疯人夜》</h2>
+        <div class="when drama">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.06 - 11.08</span>
+          
+        </div>
+        <p class="meta">深圳 · 深圳开心麻花红山剧场</p>
+        <p class="summary">猫眼评分 9.7</p>
+        <div class="card-bottom">
+          <span><span class="price">￥180起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/498314" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="深圳" data-category="话剧" data-group="话剧" data-search="第十四届深圳市戏曲名剧名家展演 河北梆子《钟馗》 深圳戏院 东门街道新园路1号(工人文化宫旁) 深圳  0人参加 0人感兴趣 话剧 话剧 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge drama">话剧</span></span>
+        </div>
+        <h2>第十四届深圳市戏曲名剧名家展演 河北梆子《钟馗》</h2>
+        <div class="when drama">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.08</span>
+          
+        </div>
+        <p class="meta">深圳 · 深圳戏院 东门街道新园路1号(工人文化宫旁)</p>
+        <p class="summary">0人参加 0人感兴趣</p>
+        <div class="card-bottom">
+          <span><span class="price">50.00元起</span></span>
+          <a class="button" href="https://www.douban.com/event/38037785/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="北京" data-category="其他展览" data-group="展览" data-search="冰逸 · 象罔无形 红砖美术馆 北京  展期：2026.10.01 - 2027.02.14 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>冰逸 · 象罔无形</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.10.01 - 2027.02.14</span>
+          
+        </div>
+        <p class="meta">北京 · 红砖美术馆</p>
+        <p class="summary">展期：2026.10.01 - 2027.02.14</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="http://www.redbrickartmuseum.org/exhibitions/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="天津" data-category="其他展览" data-group="展览" data-search="纪念中国工农红军长征胜利九十周年——天津市第二届老年书法展 天津美术馆 天津  展期：2026年10月22日至11月15日 展厅： 三层5、6号展厅 10月22日，“纪念 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>纪念中国工农红军长征胜利九十周年——天津市第二届老年书法展</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.10.22 - 11.15</span>
+          
+        </div>
+        <p class="meta">天津 · 天津美术馆</p>
+        <p class="summary">展期：2026年10月22日至11月15日 展厅： 三层5、6号展厅 10月22日，“纪念</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.tjmsg.cn/FCC0002/ACC0005/ACC0005-92c5e88c-da87-4767-901d-11b692912580.html" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="桂林" data-category="其他展览" data-group="展览" data-search="双展启幕忆峥嵘 两大长征主题展览亮相 桂林博物馆临展2号厅 桂林  展期：2026年10月22日——2027年1月10日 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>双展启幕忆峥嵘 两大长征主题展览亮相</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.10.22 - 2027.01.10</span>
+          
+        </div>
+        <p class="meta">桂林 · 桂林博物馆临展2号厅</p>
+        <p class="summary">展期：2026年10月22日——2027年1月10日</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="http://guilinmuseum.org.cn/Exhibition/Details/594598ca-123c-480b-9a44-449dbecc1e99" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="石家庄" data-category="历史文物" data-group="展览" data-search="诺亚之地珍宝闪耀 丝路文明共谱新章 亚美尼亚精品文物亮相 河北博物院北区二层13、14号展厅 石家庄  展期：2026年10月15日—2027年1月3日 历史文物 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">历史文物</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>诺亚之地珍宝闪耀 丝路文明共谱新章 亚美尼亚精品文物亮相</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.10.15 - 2027.01.03</span>
+          
+        </div>
+        <p class="meta">石家庄 · 河北博物院北区二层13、14号展厅</p>
+        <p class="summary">展期：2026年10月15日—2027年1月3日</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.hebeimuseum.org.cn/show-26-12659-1.html" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="national" data-city="长春" data-category="其他展览" data-group="展览" data-search="巍峨丰碑——纪念中国工农红... 伪满皇宫博物院 长春  展期：2026.10.01 ～ 2027.01.10 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span><span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span></span>
+        </div>
+        <h2>巍峨丰碑——纪念中国工农红...</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.10.01 - 2027.01.10</span>
+          
+        </div>
+        <p class="meta">长春 · 伪满皇宫博物院</p>
+        <p class="summary">展期：2026.10.01 ～ 2027.01.10</p>
+        <div class="card-bottom">
+          <span><span class="price">以官网为准</span></span>
+          <a class="button" href="https://www.wmhgbwy.cn/detail/3548.html" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+      </div>
+    </section>
     <section class="run" data-at="2026-11-02T20:42:25+08:00">
       <header class="run-head">
         <h2>2026年11月2日 20:42</h2>

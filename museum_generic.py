@@ -130,6 +130,34 @@ def _pick_title(soup: BeautifulSoup, source: dict, fallback: str) -> str:
     return _article_title(soup, page_text) or fallback
 
 
+_NAV_TITLE_RE = re.compile(
+    r"^(?:首页|展览|当前展览|正在展出|即将展出|即将开展|历史展览|全部展览|全部|更多|查看|详情|发布|"
+    r"展览资讯|展览预告|展讯|常设展览|临时展览|特别展览|虚拟|公共教育|参观|服务|研究|收藏|"
+    r"新闻|动态|活动|资讯|回顾|上一页|下一页|返回|English|EN|中文)$",
+    re.I,
+)
+
+
+def _pick_block_title(block: Tag) -> str:
+    """列表项里挑最像展名的链接文本：优先含「展」、长度适中、不是导航词。"""
+    best = ""
+    best_score = -1
+    for candidate in block.find_all("a", href=True):
+        text = clean_text(candidate.get_text(" ", strip=True))
+        if not (2 <= len(text) <= 80) or _NAV_TITLE_RE.match(text):
+            continue
+        score = 0
+        if "展" in text:
+            score += 3
+        if 6 <= len(text) <= 40:
+            score += 2
+        if re.search(r"[，,、：:—\-]", text):
+            score += 1
+        if score > best_score or (score == best_score and len(text) > len(best)):
+            best, best_score = text, score
+    return best
+
+
 def _list_entries(soup: BeautifulSoup, source: dict, base_url: str) -> list[dict]:
     """从列表页提取条目：优先 item_selector，其次 link_regex；没有详情链接的列表项也支持。"""
     selector = clean_text(source.get("item_selector"))
@@ -163,6 +191,8 @@ def _list_entries(soup: BeautifulSoup, source: dict, base_url: str) -> list[dict
                 title = clean_text(title_node.get_text(" ", strip=True))
         if not title and hasattr(block, "get"):
             title = clean_text(block.get("title") or "")
+        if not title and hasattr(block, "find_all"):
+            title = _pick_block_title(block) or ""
         if not title and anchor is not None:
             title = clean_text(anchor.get_text(" ", strip=True))
         if not title:
@@ -180,8 +210,11 @@ def _list_entries(soup: BeautifulSoup, source: dict, base_url: str) -> list[dict
     return entries
 
 
-_TITLE_PREFIX_RE = re.compile(r"^(?:展览上新|展讯|新展开幕|展览开幕|展览预告|开展|即将开展|公告)\s*[|｜丨:：]\s*")
-_TITLE_TAIL_RE = re.compile(r"\s*(?:地点|展期|展览时间|开展时间|展厅|时间)\s*[：:].*$")
+_TITLE_PREFIX_RE = re.compile(
+    r"^(?:展览上新|展讯|新展开幕|展览开幕|展览预告|开展|即将开展|公告|新馆|本馆|分馆)"
+    r"\s*[|｜丨:：]\s*"
+)
+_TITLE_TAIL_RE = re.compile(r"\s*(?:地点|展期|展览时间|开展时间|展厅|展览日期|发布日期|发布时间|时间)\s*[：:].*$")
 
 
 def _clean_title(title: str) -> str:
@@ -256,6 +289,9 @@ def collect_museum_generic(source: dict) -> list[dict]:
                 time.sleep(SLEEP)
 
             title = _clean_title(title)
+            site_name = clean_text(source.get("name"))
+            if site_name and title.endswith(site_name) and len(title) > len(site_name):
+                title = title[: -len(site_name)].strip(" -–—|_·、,，")
             if not title or len(title) < 2:
                 continue
 
