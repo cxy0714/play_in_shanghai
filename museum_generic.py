@@ -211,7 +211,7 @@ def _list_entries(soup: BeautifulSoup, source: dict, base_url: str) -> list[dict
 
 
 _TITLE_PREFIX_RE = re.compile(
-    r"^(?:展览上新|展讯|新展开幕|展览开幕|展览预告|开展|即将开展|公告|新馆|本馆|分馆)"
+    r"^(?:展览上新|展讯|新展开幕|展览开幕|展览预告|开展|即将开展|公告|新馆|本馆|分馆|新展|外展|临展)"
     r"\s*[|｜丨:：]\s*"
 )
 _TITLE_TAIL_RE = re.compile(r"\s*(?:地点|展期|展览时间|开展时间|展厅|展览日期|发布日期|发布时间|时间)\s*[：:].*$")
@@ -274,6 +274,9 @@ def collect_museum_generic(source: dict) -> list[dict]:
             text = entry["block_text"]
             image = entry["image_url"]
             detail_url = entry["url"]
+            if detail and not str(detail_url or "").startswith("http"):
+                # 列表项没有可用链接（纯 JS 跳转 / 空 href）：详情抓不到，直接跳过
+                continue
             if detail:
                 try:
                     detail_html = http_get(detail_url, headers=GENERIC_HEADERS, timeout=20, retries=1)

@@ -36,7 +36,7 @@
 
 ## 全国范围
 
-- 全国数据由 `national_sources.py` 提供，适配器名：`maoyan_city`（猫眼按城市）、`douban_city`（豆瓣同城城市站）、`museum_cn` / `museum_generic`（各博物馆官网展览，清单见下文「博物馆官网」）。
+- 全国数据由 `national_sources.py` 提供，适配器名：`maoyan_city`（猫眼按城市）、`douban_city`（豆瓣同城城市站）、`museum_cn` / `museum_api` / `museum_json` / `museum_generic`（各博物馆官网展览，清单见下文「博物馆官网」）。
 - 页面默认「上海」，切到「全国」后可以按城市筛选；外地活动只收录**历史文物类展览、音乐剧、话剧**三类，外加**博物馆官网的免费预约临展**（不细分，书画/器物/艺术都收）。
   想放宽/收窄改 `update.py` 顶部的 `NATIONAL_GROUPS` / `NATIONAL_EXHIBITION_SUBS`。
 - 加城市：在 `config/sources.json` 里加一条 `maoyan_city`，`city_id` 必须是**猫眼演出城市 id**（不是大众点评城市 id，传错会静默回落到上海）：北京 1、广州 20、深圳 30、天津 40、西安 42、重庆 45、杭州 50、南京 55、武汉 57、成都 59、长沙 70、苏州 80、上海 10。
@@ -47,7 +47,9 @@
 
 免费预约的特展通常不上猫眼/大麦，只能从各馆官网抓。清单在 [`config/museums.json`](config/museums.json)，**一个馆一条配置**，不用改代码：
 
-- `adapter: "museum_cn"`：用 `national_sources.py` 里的专用采集器，配 `site`（`chnmuseum` / `dpm` / `njmuseum` / `hnmuseum` / `sxhm` / `lzmuseum` / `silkmuseum` / `szmuseum`）。适合结构复杂或要走接口的站。
+- `adapter: "museum_cn"`：用 `national_sources.py` 里的专用采集器，配 `site`（`chnmuseum` / `dpm` / `hnmuseum` / `sxhm` / `lzmuseum` / `silkmuseum` / `szmuseum`）。适合结构复杂或只给 HTML 的站。
+- `adapter: "museum_api"`：用 [`museum_api.py`](museum_api.py) 的接口采集器，配 `site`（目前 `njmuseum` 走 `/api/exhibition/list`，`scmuseum` 走 `sw-cms-cloud` 网关）。**有 JSON 接口的优先用这个**：字段全、不受页面改版影响。
+- `adapter: "museum_json"`：也是打 JSON 接口，但**不用写代码**——配置里填 `api_url` / `method` / `params` / `body` / `items_path` / `fields` 字段映射即可接同构接口（详见 `museum_api.py:collect_museum_json` 的文档字符串）。
 - `adapter: "museum_generic"`：用 [`museum_generic.py`](museum_generic.py) 的通用采集器，配 `list_url`，再加可选字段：
   - `item_selector`（CSS，优先）/ `link_regex`（href 正则）：怎么从列表页挑出「一条展览」
   - `detail`（默认 true）：是否进详情页取展期；列表里就写了展期的设 `false`
@@ -58,6 +60,19 @@
 - 常设陈列不写入（官网没给真实展期，写进去就是假日期）。
 - 单个馆试跑：`python tools/museum_probe.py --name 山东博物馆`；全部跑：`python tools/museum_probe.py --all`。
 - 改完 `python update.py` 即生效；只想重排页面用 `python update.py --rebuild`。
+
+### 接口型馆的现状（2026-11 实测）
+
+| 馆 | 接口 | 状态 |
+| --- | --- | --- |
+| 南京博物院 | `GET/POST /api/exhibition/list` | ✅ 已接入（`museum_api` / `site=njmuseum`，19 条在展） |
+| 四川博物院 | `POST /japi/sw-cms-cloud/api/queryArchivesList` | ⚠️ 代码已写好，但接口要登录态（`code=310 请重新登录`），配置里 `token`/`cookie` 补上即可启用（条目默认 `enabled: false`） |
+| 首都博物馆 | `apiBase=https://m.canalmuseum.org.cn` | ❌ 网关校验 `ugi` 头（`code=A00003 invalid ugi`），非浏览器拿不到 |
+| 福建博物院 | `/api/collection/list` 等 | ❌ 要求 `accessToken`（`code=602`） |
+| 深圳博物馆 | SPA `baseURL=/api` | ❌ 所有 `/api/*` 一律返回 200 空包，取不到数据 |
+| 西安博物院 | `/api/article`、`/api/{entity}` | ❌ 列表参数名未知、详情接口要求登录 |
+
+上面这些「接口存在但拿不到」的馆，HTML 侧也基本是 SPA 壳，**暂时抓不到**，不必再重复试。
 
 ## 一次性设置
 
@@ -92,10 +107,10 @@
 - `extractor`：`auto` / `jsonld` / `rss`
 - `category_hint`：给 LLM 的类别提示
 - `enabled`：是否启用
-- `adapter`：走内置采集器（`maoyan` / `douban` / `shmuseum` / ... / `maoyan_city` / `douban_city` / `museum_cn`）
+- `adapter`：走内置采集器（`maoyan` / `douban` / `shmuseum` / ... / `maoyan_city` / `douban_city` / `museum_cn` / `museum_api` / `museum_json`）
 - `city` / `city_id`：只在 `maoyan_city` / `douban_city` 上用，指定城市
 - `categories` / `page_size` / `max_pages`：抓取量控制
-- `site`：只在 `museum_cn` 上用，选择博物馆站点（`chnmuseum` / `dpm` / `njmuseum` / `hnmuseum` / `sxhm` / `lzmuseum` / `silkmuseum` / `szmuseum`）；常设陈列不写入（源站没有真实展期）
+- `site`：只在 `museum_cn` / `museum_api` 上用，选择博物馆站点（`chnmuseum` / `dpm` / `njmuseum` / `hnmuseum` / `sxhm` / `lzmuseum` / `silkmuseum` / `szmuseum`）；常设陈列不写入（源站没有真实展期）
 
 ## 建筑地图怎么维护
 

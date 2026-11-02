@@ -26,6 +26,17 @@ import update  # noqa: E402  （只为了拿适配器映射，不会跑抓取）
 from museum_generic import collect_museum_generic  # noqa: E402
 from national_sources import NATIONAL_ADAPTERS  # noqa: E402
 
+API_ADAPTERS = {}
+for _adapter_name, _factory in (
+    ("museum_api", "collect_museum_api"),
+    ("museum_json", "collect_museum_json"),
+):
+    try:
+        _module = __import__("museum_api", fromlist=[_factory])
+        API_ADAPTERS[_adapter_name] = getattr(_module, _factory)
+    except Exception as _exc:  # noqa: BLE001
+        print(f"[warn] {_adapter_name} 不可用：{_exc}")
+
 
 def load_entries(file_path: Path) -> list[dict]:
     payload = json.loads(file_path.read_text(encoding="utf-8"))
@@ -38,6 +49,8 @@ def collect(entry: dict) -> tuple[list[dict], float]:
     adapter = entry.get("adapter") or "museum_generic"
     if adapter == "museum_generic":
         items = collect_museum_generic(entry)
+    elif adapter in API_ADAPTERS:
+        items = API_ADAPTERS[adapter](entry)
     else:
         collector = NATIONAL_ADAPTERS.get(adapter)
         items = collector(entry) if collector else []

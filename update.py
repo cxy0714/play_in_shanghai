@@ -48,7 +48,14 @@ except Exception as exc:  # pragma: no cover
     collect_museum_generic = None
     print(f"[warn] museum_generic 加载失败，跳过通用博物馆来源：{exc}", flush=True)
 
-MUSEUM_ADAPTERS = {"museum_cn", "museum_generic", "shmuseum"}
+try:  # 官方 JSON 接口采集器（museum_api / museum_json 条目用）
+    from museum_api import collect_museum_api, collect_museum_json
+except Exception as exc:  # pragma: no cover
+    collect_museum_api = None
+    collect_museum_json = None
+    print(f"[warn] museum_api 加载失败，跳过接口型博物馆来源：{exc}", flush=True)
+
+MUSEUM_ADAPTERS = {"museum_cn", "museum_generic", "museum_api", "museum_json", "shmuseum"}
 
 ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = ROOT / "config" / "sources.json"
@@ -2739,6 +2746,10 @@ def collect_from_source(source: dict) -> list[dict]:
         }
         if collect_museum_generic is not None:
             adapters["museum_generic"] = collect_museum_generic
+        if collect_museum_api is not None:
+            adapters["museum_api"] = collect_museum_api
+        if collect_museum_json is not None:
+            adapters["museum_json"] = collect_museum_json
         collector = adapters.get(adapter)
         if collector:
             return collector(source)
@@ -2810,6 +2821,8 @@ def load_museum_sources() -> list[dict]:
         if not source.get("adapter"):
             source["adapter"] = "museum_generic"
         if source["adapter"] == "museum_generic" and collect_museum_generic is None:
+            continue
+        if source["adapter"] in ("museum_api", "museum_json") and collect_museum_api is None:
             continue
         sources.append(source)
     return sources

@@ -1,5 +1,5 @@
 {
-  "_note": "博物馆官网展览来源清单：一个馆一条配置。adapter=museum_cn 用 national_sources.py 里的专用采集器（site 指定站点）；adapter=museum_generic 用 museum_generic.py 的通用采集器（list_url + 可选选择器/正则）。改完跑 python update.py 即生效。",
+  "_note": "博物馆官网展览来源清单：一个馆一条配置。adapter=museum_cn 用 national_sources.py 里的专用采集器（site 指定站点）；adapter=museum_generic 用 museum_generic.py 从 HTML 列表页抓（list_url + 可选选择器/正则）；adapter=museum_api 用 museum_api.py 打官方 JSON 接口（site 指定站点）；adapter=museum_json 也是 JSON 接口，但不用写代码，在配置里填 api_url/items_path/fields 映射即可。改完跑 python update.py 即生效。",
   "museums": [
     {
       "name": "中国国家博物馆",
@@ -19,11 +19,12 @@
     },
     {
       "name": "南京博物院",
-      "adapter": "museum_cn",
+      "adapter": "museum_api",
       "site": "njmuseum",
-      "url": "https://www.njmuseum.com/api/exhibition/list",
       "city": "南京",
-      "enabled": true
+      "enabled": true,
+      "api_url": "https://www.njmuseum.com/api/exhibition/list",
+      "notes": "官方接口 /api/exhibition/list 直接返回展名/展厅/展期/票价，字段稳定"
     },
     {
       "name": "湖南博物院",
@@ -374,6 +375,15 @@
       "max_articles": 10,
       "venue_default": "今日美术馆",
       "notes": "当前展览页 p.text 每块「<a>展名</a><span>2026.10.24 - 2026.11.29</span>」"
+    },
+    {
+      "name": "四川博物院",
+      "adapter": "museum_api",
+      "site": "scmuseum",
+      "city": "成都",
+      "api_url": "https://www.scmuseum.cn/japi/sw-cms-cloud/api/queryArchivesList",
+      "enabled": false,
+      "notes": "接口已定位（POST entity/param），但目前返回 code=310「请重新登录」，需要在配置里补 token/cookie 才能启用"
     }
   ]
 }
