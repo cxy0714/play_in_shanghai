@@ -140,17 +140,17 @@
     "status": ""
   },
   {
-    "title": "互助网周末活动",
+    "title": "豆瓣同城",
     "category": "话剧",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/279492/",
+    "ticket_url": "https://site.douban.com/douban-loc/",
     "source_url": "https://shanghai.douban.com/events/week-drama",
     "image_url": "",
-    "summary": "互助网周末活动",
+    "summary": "豆瓣同城",
     "status": ""
   },
   {
@@ -182,17 +182,17 @@
     "status": ""
   },
   {
-    "title": "伊松馆",
+    "title": "互助网周末活动",
     "category": "话剧",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/289620/",
+    "ticket_url": "https://site.douban.com/279492/",
     "source_url": "https://shanghai.douban.com/events/week-drama",
     "image_url": "",
-    "summary": "伊松馆",
+    "summary": "互助网周末活动",
     "status": ""
   },
   {
@@ -364,20 +364,6 @@
     "status": ""
   },
   {
-    "title": "伊松馆",
-    "category": "脱口秀",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/289620/",
-    "source_url": "https://shanghai.douban.com/events/week-comedy",
-    "image_url": "",
-    "summary": "伊松馆",
-    "status": ""
-  },
-  {
     "title": "互助网周末活动",
     "category": "脱口秀",
     "venue": "上海",
@@ -417,6 +403,20 @@
     "source_url": "https://shanghai.douban.com/events/week-comedy",
     "image_url": "",
     "summary": "豆瓣同城",
+    "status": ""
+  },
+  {
+    "title": "伊松馆",
+    "category": "脱口秀",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/289620/",
+    "source_url": "https://shanghai.douban.com/events/week-comedy",
+    "image_url": "",
+    "summary": "伊松馆",
     "status": ""
   },
   {
@@ -560,20 +560,6 @@
     "status": ""
   },
   {
-    "title": "互助网周末活动",
-    "category": "展览",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/279492/",
-    "source_url": "https://shanghai.douban.com/events/week-exhibition",
-    "image_url": "",
-    "summary": "互助网周末活动",
-    "status": ""
-  },
-  {
     "title": "票牛",
     "category": "展览",
     "venue": "上海",
@@ -602,17 +588,31 @@
     "status": ""
   },
   {
-    "title": "迷波隆社交聚会",
+    "title": "伊松馆",
     "category": "展览",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/282179/",
+    "ticket_url": "https://site.douban.com/289620/",
     "source_url": "https://shanghai.douban.com/events/week-exhibition",
     "image_url": "",
-    "summary": "迷波隆社交聚会",
+    "summary": "伊松馆",
+    "status": ""
+  },
+  {
+    "title": "互助网周末活动",
+    "category": "展览",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/279492/",
+    "source_url": "https://shanghai.douban.com/events/week-exhibition",
+    "image_url": "",
+    "summary": "互助网周末活动",
     "status": ""
   },
   {
@@ -655,20 +655,6 @@
     "source_url": "https://shanghai.douban.com/events/week-music",
     "image_url": "",
     "summary": "2人参加 0人感兴趣",
-    "status": ""
-  },
-  {
-    "title": "委内瑞拉兰达埃塔交响乐团丨上海交响乐团音乐季",
-    "category": "音乐会",
-    "venue": "上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路)",
-    "address": "上海 徐汇区 上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路)",
-    "start_date": "2026-11-02T19:30:00",
-    "end_date": "2026-11-02T20:30:00",
-    "price_text": "80.0元起",
-    "ticket_url": "https://www.douban.com/event/38097528/",
-    "source_url": "https://shanghai.douban.com/events/week-music",
-    "image_url": "",
-    "summary": "1人参加 0人感兴趣",
     "status": ""
   },
   {
@@ -770,45 +756,31 @@
     "status": ""
   },
   {
-    "title": "票牛",
+    "title": "【钢琴&小提琴】烛光音乐会“海上钢琴师”“爱乐之城”“加勒比海盗”曲目主题青春无限乐团",
     "category": "音乐会",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/267084/",
+    "venue": "青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A",
+    "address": "上海 黄浦区 青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A",
+    "start_date": "2026-11-07T20:20:00",
+    "end_date": "2026-11-28T21:30:00",
+    "price_text": "298.00元起",
+    "ticket_url": "https://www.douban.com/event/37236933/",
     "source_url": "https://shanghai.douban.com/events/week-music",
     "image_url": "",
-    "summary": "票牛",
+    "summary": "1人参加 0人感兴趣",
     "status": ""
   },
   {
-    "title": "林雨阁俱乐部",
+    "title": "豆瓣同城",
     "category": "音乐会",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/133075/",
+    "ticket_url": "https://site.douban.com/douban-loc/",
     "source_url": "https://shanghai.douban.com/events/week-music",
     "image_url": "",
-    "summary": "林雨阁俱乐部",
-    "status": ""
-  },
-  {
-    "title": "迷波隆社交聚会",
-    "category": "音乐会",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/282179/",
-    "source_url": "https://shanghai.douban.com/events/week-music",
-    "image_url": "",
-    "summary": "迷波隆社交聚会",
+    "summary": "豆瓣同城",
     "status": ""
   },
   {
@@ -826,17 +798,45 @@
     "status": ""
   },
   {
-    "title": "豆瓣同城",
+    "title": "互助网周末活动",
     "category": "音乐会",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/douban-loc/",
+    "ticket_url": "https://site.douban.com/279492/",
     "source_url": "https://shanghai.douban.com/events/week-music",
     "image_url": "",
-    "summary": "豆瓣同城",
+    "summary": "互助网周末活动",
+    "status": ""
+  },
+  {
+    "title": "林雨阁俱乐部",
+    "category": "音乐会",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/133075/",
+    "source_url": "https://shanghai.douban.com/events/week-music",
+    "image_url": "",
+    "summary": "林雨阁俱乐部",
+    "status": ""
+  },
+  {
+    "title": "票牛",
+    "category": "音乐会",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/267084/",
+    "source_url": "https://shanghai.douban.com/events/week-music",
+    "image_url": "",
+    "summary": "票牛",
     "status": ""
   }
 ]

@@ -1,0 +1,296 @@
+{
+  "_note": "博物馆官网展览来源清单：一个馆一条配置。adapter=museum_cn 用 national_sources.py 里的专用采集器（site 指定站点）；adapter=museum_generic 用 museum_generic.py 的通用采集器（list_url + 可选选择器/正则）。改完跑 python update.py 即生效。",
+  "museums": [
+    {
+      "name": "中国国家博物馆",
+      "adapter": "museum_cn",
+      "site": "chnmuseum",
+      "url": "https://www.chnmuseum.cn/zl/zzzc/",
+      "city": "北京",
+      "enabled": true
+    },
+    {
+      "name": "故宫博物院",
+      "adapter": "museum_cn",
+      "site": "dpm",
+      "url": "https://www.dpm.org.cn/shows.html",
+      "city": "北京",
+      "enabled": true
+    },
+    {
+      "name": "南京博物院",
+      "adapter": "museum_cn",
+      "site": "njmuseum",
+      "url": "https://www.njmuseum.com/api/exhibition/list",
+      "city": "南京",
+      "enabled": true
+    },
+    {
+      "name": "湖南博物院",
+      "adapter": "museum_cn",
+      "site": "hnmuseum",
+      "url": "https://www.hnmuseum.com/zh-hans/content/%E5%BD%93%E5%89%8D%E5%B1%95%E8%A7%88%EF%BC%8D%E5%9F%BA%E6%9C%AC%E9%99%88%E5%88%97",
+      "city": "长沙",
+      "enabled": true
+    },
+    {
+      "name": "陕西历史博物馆",
+      "adapter": "museum_cn",
+      "site": "sxhm",
+      "url": "https://www.sxhm.com/Temporary.html",
+      "city": "西安",
+      "max_pages": 2,
+      "enabled": true
+    },
+    {
+      "name": "良渚博物院",
+      "adapter": "museum_cn",
+      "site": "lzmuseum",
+      "url": "https://www.lzmuseum.cn/YinJinZhanLan/index.html",
+      "city": "杭州",
+      "max_articles": 12,
+      "enabled": true
+    },
+    {
+      "name": "中国丝绸博物馆",
+      "adapter": "museum_cn",
+      "site": "silkmuseum",
+      "url": "https://www.chinasilkmuseum.com/zz/list_17.aspx",
+      "city": "杭州",
+      "max_articles": 10,
+      "enabled": true
+    },
+    {
+      "name": "苏州博物馆",
+      "adapter": "museum_cn",
+      "site": "szmuseum",
+      "url": "https://www.szmuseum.com/Exhibition/Temporary",
+      "city": "苏州",
+      "enabled": true
+    },
+    {
+      "name": "山东博物馆",
+      "city": "济南",
+      "list_url": "https://www.sdmuseum.com/col/col270290/index.html",
+      "detail": false,
+      "item_selector": "div#temporary div.imgList div.li",
+      "title_selector": "div.t",
+      "date_regex": "展览时间\\s*[:：]\\s*((?:[0-9]{4}\\s*年)?\\s*\\d{1,2}\\s*月\\s*\\d{1,2}\\s*日\\s*[-—–~至]{1,2}\\s*(?:[0-9]{4}\\s*年)?\\s*\\d{1,2}\\s*月\\s*\\d{1,2}\\s*日)",
+      "date_regex_list": [
+        "开展时间\\s*[:：]\\s*((?:[0-9]{4}\\s*年)?\\s*\\d{1,2}\\s*月\\s*\\d{1,2}\\s*日)"
+      ],
+      "exclude_regex": "常设|讲座|活动|撤展|变更|预告",
+      "venue_default": "山东博物馆",
+      "max_articles": 12,
+      "notes": "临展区固定 id=temporary；展名 div.t、展厅 div.p、展期 span.en（展览时间: 2026年9月15日-12月13日）；detail:false 展期在列表；东夷文化展只有「开展时间」无结束日（date_regex_list 已覆盖）；注意：3 个列表项共用「更多内容」链接（/col/col271702/），museum_generic 的 url 去重会让只保留 1 条，若要全拿建议去重键改为 title"
+    },
+    {
+      "name": "青岛市博物馆",
+      "city": "青岛",
+      "list_url": "https://www.qingdaomuseum.com/exhibition/category/29",
+      "detail": true,
+      "link_regex": "/exhibition/detail/\\d+",
+      "date_regex": "展览时间为?\\s*((?:[0-9]{4}\\s*年)?\\s*\\d{1,2}\\s*月\\s*\\d{1,2}\\s*日\\s*[至到]\\s*\\d{1,2}\\s*月\\s*\\d{1,2}\\s*日)",
+      "exclude_regex": "常设|过展|新展预报|虚拟",
+      "venue_default": "青岛市博物馆",
+      "max_articles": 6,
+      "notes": "category/29=热展在线；列表只有标题链接，detail:true 进详情页；展期文案「展览时间为 2026 年 7 月 15 日至 11 月 15 日」（数字与年月日间有空格，通用解析已容忍）；列表当前 2 条 detail/556、detail/554，554 详情页无展期文字被过滤"
+    },
+    {
+      "name": "中华艺术宫（上海美术馆）",
+      "city": "上海",
+      "list_url": "https://www.artmuseumonline.org/art/art/zlgz/zl/dqzl/index.html",
+      "detail": false,
+      "item_selector": "div.xwgg-wp > a",
+      "link_regex": "/zlgz/zl/dqzl/\\d{4}/",
+      "title_selector": "p.zlgc-gcWord-tt",
+      "date_regex": "展期[：:]\\s*((?:[0-9]{4}\\s*年)?\\s*\\d{1,2}\\s*月\\s*\\d{1,2}\\s*日\\s*[-—–~至]\\s*(?:[0-9]{4}\\s*年)?\\s*\\d{1,2}\\s*月\\s*\\d{1,2}\\s*日)",
+      "venue_default": "中华艺术宫（上海美术馆）",
+      "max_articles": 10,
+      "notes": "当前展览=dqzl；列表项是 <a> 包 div.zlgc-zlCon，p.zlgc-gcWord-tt 展名、p.zlgc-gcWord-loc 里「展厅：…」「展期：…」；detail:false 展期在列表（详情页只有发布日期没有展期）"
+    },
+    {
+      "name": "中国美术馆",
+      "city": "北京",
+      "list_url": "https://www.namoc.cn/namoc/zhanlan/zl_list.shtml",
+      "detail": true,
+      "item_selector": "ul.zllist li.clearfix div.text h3 a",
+      "link_regex": "/namoc/zhanlan/\\d{6}/[0-9a-f]{32}\\.shtml",
+      "title_selector": "h1.gbcon_title",
+      "date_regex": "展览时间[：:]\\s*(\\d{4}-\\d{1,2}-\\d{1,2}\\s*至\\s*\\d{4}-\\d{1,2}-\\d{1,2})",
+      "date_regex_list": [
+        "展览时间[：:]\\s*(\\d{4}-\\d{1,2}-\\d{1,2}\\s*至\\s*\\d{4}-\\d{1,2}-\\d{1,2})",
+        "展览时间[：:]\\s*([^<\\n]+)"
+      ],
+      "exclude_regex": "讲座|论坛|研讨会|招募|新闻发布会|预告|回放|延期",
+      "venue_default": "中国美术馆",
+      "max_articles": 30,
+      "notes": "官网域名是 www.namoc.cn（旧域名 www.nam.org.cn 在本机 SSL EOF + ConnectionAborted 10053，不可用）。列表页每条 li 同时有图片链接与标题链接，item_selector 只取 h3 内标题链接避免重复；列表页展览时间写法为「展览时间：2026-10-28至2026-11-07」，详情页为「展览时间： 2026-09-29 至 2027-02-14」，两处 date_regex 都能命中；detail:true 用详情页取全标题（列表标题被截断成「…」）。"
+    },
+    {
+      "name": "河北博物院",
+      "city": "石家庄",
+      "list_url": "https://www.hebeimuseum.org.cn/",
+      "detail": false,
+      "item_selector": "div.main4left a[href^='/show-']",
+      "link_regex": "/show-26-\\d+-1\\.html",
+      "title_selector": "p.name",
+      "date_regex": "展览时间[：:]\\s*(20\\d{2}年\\d{1,2}月\\d{1,2}日\\s*[—–至]\\s*20\\d{2}年\\d{1,2}月\\d{1,2}日)",
+      "date_regex_list": [
+        "展览时间[：:]\\s*(20\\d{2}年\\d{1,2}月\\d{1,2}日\\s*[—–至]\\s*20\\d{2}年\\d{1,2}月\\d{1,2}日)",
+        "展览时间[：:]\\s*([^<\\n]+)"
+      ],
+      "exclude_regex": "讲座|活动|招募|志愿者|研学|预告|回顾",
+      "venue_default": "河北博物院",
+      "max_articles": 12,
+      "notes": "展期只在首页「正在展出」图块（div.main4left 里的 <a>，内含 p.name + p.time「展览时间：2026年10月15日—2027年1月3日」）里，因此 detail:false、日期从列表项文本取；临时展览列表 /index-26-1.html 的 p.time 字段是空的，详情页 /show-26-*.html 也没有展期字段（只有 时间：1970-01-01 这种发布时间），故不要对该站开 detail。max_articles 小一点，首页图块只展示当前几个展。"
+    },
+    {
+      "name": "天津博物馆",
+      "city": "天津",
+      "list_url": "https://www.tjbwg.cn/cn/ExhibitionList.aspx?TypeId=10939",
+      "detail": false,
+      "link_regex": "exhibitionInfo\\.aspx\\?[Ii]d=\\d+",
+      "title_selector": "p.tit",
+      "date_regex": "展期[：:]\\s*(20\\d{2}年\\d{1,2}月\\d{1,2}日)",
+      "exclude_regex": "讲座|活动|回放|往事|百年",
+      "venue_default": "天津博物馆",
+      "max_articles": 20,
+      "notes": "官网域名 www.tjbwg.cn（www.tjbwg.com 在本机 SSLError 不可用）。站方只给开始日 + 在展标记：「展期：2026年10月21日【在展】」，全列表无结束日，详情页 exhibitionInfo.aspx 同样如此，所以只能拿到 start、end 恒为空——需要采集器支持 end 缺省时用【在展】视为未结束，否则会被当成缺日期丢弃。列表项 <a> 文本是「标题 地点：… 展期：…」，title_selector p.tit 若不存在就需按「地点：」截断。"
+    },
+    {
+      "name": "北京大运河博物馆",
+      "city": "北京",
+      "list_url": "https://www.canalmuseum.org.cn/lszl.html",
+      "detail": false,
+      "item_selector": "div.ul div.li a",
+      "link_regex": "/detail2[01]/\\d+\\.html",
+      "date_regex": "时间[：:]\\s*([^<\\n]{4,60})",
+      "exclude_regex": "讲座|活动|预约|导览|公告",
+      "venue_default": "北京大运河博物馆（首都博物馆东馆）",
+      "max_articles": 12,
+      "notes": "正确域名是 www.canalmuseum.org.cn（dyhbowuguan.com / dyhmuseum.com 都是 SSL 失败的错误猜测）。临时展览列表页 /lszl.html，专题展览 /ztzl.html 同构，可换 list_url 复用。列表项形如「时间：2026年5月15日—2026年10月7日 地点：…」，但 2026-11-02 实测该页唯一一条已结束（10-07 结束），/ztzl.html 两条分别 2024-02~2024-12、2023-12-27，均结束；配置本身解析正常，接线后待新展上线即可出数据。注意列表页同一展会有图片/标题/MORE 三个重复链接，需按 url 去重。（2026-11-02 实测暂无未结束展览，先关掉，等新展上线再 enabled:true）",
+      "enabled": false
+    },
+    {
+      "name": "扬州中国大运河博物馆",
+      "city": "扬州",
+      "list_url": "https://www.grandcanalmuseum.cn/linzhantezhan.html",
+      "detail": false,
+      "link_regex": "/linzhantezhan/\\d+\\.html",
+      "title_selector": "div.title",
+      "date_regex": "展览时间[：:]\\s*([0-9]{4}年\\d{1,2}月\\d{1,2}日\\s*[-—–~至]\\s*[0-9]{4}年\\d{1,2}月\\d{1,2}日)",
+      "date_regex_list": [
+        "展期[：:]\\s*([0-9]{4}\\.\\d{1,2}\\.\\d{1,2}\\s*[-—–~至]\\s*[0-9]{4}\\.\\d{1,2}\\.\\d{1,2})"
+      ],
+      "exclude_regex": "常设|线上|交流|回顾",
+      "venue_default": "扬州中国大运河博物馆",
+      "max_articles": 10,
+      "notes": "展览→临展特展；列表项 a[href=/linzhantezhan/NNNN.html] 内 div.title 是展名、div.jianjie 里带「展期：2026.9.25-2027.1.3」；详情页无稳定 h1，故 detail:false；没写展期的条目（部分只有简介）会被过滤"
+    },
+    {
+      "name": "中国茶叶博物馆",
+      "city": "杭州",
+      "list_url": "https://www.teamuseum.cn/information/temp_information_list.htm",
+      "detail": false,
+      "item_selector": "ul.zhanlan_list li",
+      "title_selector": "h2",
+      "date_regex": "展览时间[：:]\\s*([0-9]{4}-\\d{1,2}-\\d{1,2}\\s*-\\s*[0-9]{4}-\\d{1,2}-\\d{1,2})",
+      "exclude_regex": "巡回|常设",
+      "venue_default": "中国茶叶博物馆",
+      "max_articles": 10,
+      "notes": "展览讯息→临时展览；li 里 h2 是展名，正文「展览时间： 2026-07-17 - 2026-11-30」「展览地点： 中国茶叶博物馆（双峰馆区）临时展厅」；detail:false 日期在列表里"
+    },
+    {
+      "name": "成都博物馆",
+      "city": "成都",
+      "list_url": "https://www.cdmuseum.com/linzhan/",
+      "detail": false,
+      "item_selector": "ul.expo-cur > li",
+      "title_selector": ".title p",
+      "date_regex": "展览时间\\s*([0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日?\\s*至\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日)",
+      "exclude_regex": "讲座|活动|开幕|闭幕|回顾|招募|预告|论坛|导览|公告|招聘",
+      "venue_default": "成都博物馆",
+      "max_articles": 30,
+      "notes": "展览列表页每条 li 内 .title p 为展名，.nums p 内为“展览时间 2026年9月30日至12月27日”，结束日期省略年份由通用解析器补年；无需进详情。"
+    },
+    {
+      "name": "海南省博物馆",
+      "city": "海口",
+      "list_url": "https://www.hainanmuseum.org/hnbwgcms/node/251",
+      "detail": false,
+      "item_selector": ".tszl-third-item",
+      "title_selector": ".tszl-third-tit",
+      "date_regex": "展览时间[：:]\\s*([0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日\\s*至\\s*[0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日)",
+      "exclude_regex": "讲座|活动|回顾|预告|公告|招聘|比选",
+      "venue_default": "海南省博物馆",
+      "max_articles": 20,
+      "notes": "列表 .tszl-third-item 内 .tszl-third-tit 为展名，ul.tszl-third-info span.time 为“2026年09月30日 至 2027年02月28日”；detail=false 即可。"
+    },
+    {
+      "name": "南越王博物院",
+      "city": "广州",
+      "list_url": "https://www.nywmuseum.org.cn/Exhibition/TList/lszl",
+      "detail": false,
+      "item_selector": "ul.tempexhlist > li",
+      "title_selector": "h3",
+      "date_regex": "展览时间[：:]\\s*([0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日\\s*至\\s*[0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日)",
+      "exclude_regex": "讲座|活动|回顾|预告|公告|招聘",
+      "venue_default": "南越王博物院",
+      "max_articles": 30,
+      "notes": "列表 li 内 h3 为标题，p.abstract 内含“展览时间：2026年7月31日至2027年2月28日”；detail=false。"
+    },
+    {
+      "name": "泉州海外交通史博物馆",
+      "city": "泉州",
+      "list_url": "http://www.qzhjg.cn/html/lszl/index.html",
+      "detail": true,
+      "item_selector": "div.exhibitionList ul > li",
+      "title_selector": ".detail_title",
+      "date_regex": "展览时间[：:]\\s*([0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日\\s*至\\s*[0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日)",
+      "exclude_regex": "讲座|活动|回顾|预告|公告|招聘|招募",
+      "venue_default": "泉州海外交通史博物馆",
+      "max_articles": 20,
+      "notes": "列表 h3 标题被服务端截断为“...”，详情页 .detail_title 为全名；列表 p 与详情正文均含“展览时间：…”，detail=true 时以详情正文展期为准。若采集器只在列表取标题，可退回 h3（会截断）。"
+    },
+    {
+      "name": "桂林博物馆",
+      "city": "桂林",
+      "list_url": "http://guilinmuseum.org.cn/Exhibition/Temporary/lszl",
+      "detail": true,
+      "item_selector": "ul.tempexhibitlist > li",
+      "title_selector": "h3.ellipsis",
+      "date_regex": "展览时间[：:]\\s*([0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日\\s*[—–\\-~至到]{1,3}\\s*[0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日)",
+      "exclude_regex": "讲座|活动|回顾|预告|公告|招聘|招募",
+      "venue_default": "桂林博物馆",
+      "max_articles": 20,
+      "notes": "列表仅给新闻详情链接，无展期；详情正文“展览时间：2026年10月22日——2027年1月10日”，必须 detail=true。一篇详情可能含两场展（同日展期），标题为新闻标题。"
+    },
+    {
+      "name": "东莞市博物馆",
+      "city": "东莞",
+      "list_url": "http://www.dgmuseum.cn/product.php",
+      "detail": false,
+      "item_selector": "div.swiper-slide .boxes",
+      "title_selector": "h4.tit",
+      "date_regex": "时\\s*间[：:]\\s*([0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日\\s*至\\s*[0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日)",
+      "exclude_regex": "讲座|活动|回顾|预告|公告|招聘",
+      "venue_default": "东莞市博物馆",
+      "max_articles": 40,
+      "notes": "展览总览页每条 .boxes 内 h4.tit + p.text“时 间：2026年9月28日至2026年12月30日”；“2026年9月28日开展（长期开放）”等无结束日期条目会被解析器跳过；detail=false。"
+    },
+    {
+      "name": "南宁市博物馆",
+      "city": "南宁",
+      "list_url": "https://www.nnmuseum.cn/clzl/lszl.html",
+      "detail": false,
+      "item_selector": "ul.clzl-ul > li",
+      "title_selector": "h3",
+      "date_regex": "展览时间[：:]\\s*([0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日\\s*[-—~～至到]{1,3}\\s*[0-9]{4}\\s*年\\s*[0-9]{1,2}\\s*月\\s*[0-9]{1,2}\\s*日)",
+      "exclude_regex": "讲座|活动|回顾|预告|公告|招聘|已结束",
+      "venue_default": "南宁市博物馆",
+      "max_articles": 20,
+      "notes": "列表 li 内 h3 为展名，span 内“展览时间：2026年9月15日-2026年12月15日”；已结束条目的时间为“已结束”，解析失败自动丢弃。链接多指向微信公众号文章，detail=false 避免请求微信。"
+    }
+  ]
+}

@@ -42,8 +42,17 @@ except Exception as exc:  # pragma: no cover - 只在模块缺失/损坏时触�
     NATIONAL_ADAPTERS = {}
     print(f"[warn] national_sources 加载失败，仅抓取上海数据：{exc}", flush=True)
 
+try:  # 通用博物馆采集器（config/museums.json 里的 museum_generic 条目用）
+    from museum_generic import collect_museum_generic
+except Exception as exc:  # pragma: no cover
+    collect_museum_generic = None
+    print(f"[warn] museum_generic 加载失败，跳过通用博物馆来源：{exc}", flush=True)
+
+MUSEUM_ADAPTERS = {"museum_cn", "museum_generic", "shmuseum"}
+
 ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = ROOT / "config" / "sources.json"
+MUSEUM_CONFIG_PATH = ROOT / "config" / "museums.json"
 DATA_DIR = ROOT / "data"
 DOCS_DIR = ROOT / "docs"
 SHANGHAI_TZ = ZoneInfo("Asia/Shanghai")
@@ -1453,6 +1462,7 @@ def normalize_event(raw: dict, source: dict) -> dict | None:
         "ticket_url": ticket_url,
         "source_url": source_url,
         "source_name": source.get("name", ""),
+        "source_kind": "museum" if str(source.get("adapter") or "") in MUSEUM_ADAPTERS else "ticket",
         "summary": summary,
         "image_url": image_url,
         "status": status,
@@ -1502,6 +1512,8 @@ def merge_events(primary: dict, other: dict) -> dict:
 
     names = set(filter(None, [primary.get("source_name", ""), other.get("source_name", "")]))
     primary["source_name"] = " / ".join(sorted(names))
+    if other.get("source_kind") == "museum" or primary.get("source_kind") == "museum":
+        primary["source_kind"] = "museum"
     return primary
 
 
@@ -1551,15 +1563,21 @@ def is_shanghai(event: dict) -> bool:
 
 
 def national_allowed(event: dict) -> bool:
-    """外地活动只收录：历史文物类展览、音乐剧、话剧。"""
+    """外地活动只收录：历史文物类展览、音乐剧、话剧，以及博物馆官网的免费预约特展。
+
+    博物馆官网（config/museums.json）的临展不区分展览细分：书画、器物、考古、
+    艺术类特展都值得跑一趟，细分只影响卡片上的标签。
+    """
     if is_shanghai(event):
         return True
     group = event.get("category", "")
     if group in NATIONAL_GROUPS:
         return True
-    if group == "展览" and (event.get("display_category") or "") in NATIONAL_EXHIBITION_SUBS:
+    if group != "展览":
+        return False
+    if (event.get("display_category") or "") in NATIONAL_EXHIBITION_SUBS:
         return True
-    return False
+    return event.get("source_kind") == "museum"
 
 
 def title_key(event: dict) -> str:
@@ -1575,7 +1593,7 @@ def compact_event(event: dict) -> dict:
     fields = (
         "id", "title", "category", "display_category", "venue", "district", "city",
         "start_date", "end_date", "time_text", "price_text", "ticket_url",
-        "source_url", "source_name", "summary", "status",
+        "source_url", "source_name", "source_kind", "summary", "status",
     )
     return {field: event.get(field, "") for field in fields}
 
@@ -1783,6 +1801,7 @@ footer { max-width: 980px; margin: 0 auto; padding: 0 18px 40px; color: #999; fo
 .updates-list .up-more { color: var(--muted); grid-column: 1 / -1; }
 .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
 .badge.new { background: var(--accent); color: #fff; }
+.badge.museum { background: #f3e8ff; color: #6b21a8; }
 .card.is-new { border-color: #ffd9d9; }
 .chips.city-chips { margin-top: 8px; }
 .timeline { max-width: 980px; margin: 0 auto; padding: 6px 18px 0; }
@@ -1857,11 +1876,16 @@ def build_card(event: dict, months: str, is_new: bool = False) -> str:
         quote=True,
     )
     new_badge = '<span class="badge new">NEW</span>' if is_new else ""
+    museum_badge = (
+        '<span class="badge museum" title="来自博物馆官网，多数免费或需预约，具体以详情页为准">博物馆官网</span>'
+        if event.get("source_kind") == "museum"
+        else ""
+    )
     card_class = "card is-new" if is_new else "card"
     return f"""
       <article class="{card_class}" data-month="{months}" data-scope="{scope}" data-city="{html_lib.escape(city, quote=True)}" data-category="{html_lib.escape(category, quote=True)}" data-group="{html_lib.escape(group, quote=True)}" data-search="{search_text.lower()}">
         <div class="card-top">
-          <span class="badge-row"><span class="badge {category_class}">{html_lib.escape(category)}</span>{new_badge}</span>
+          <span class="badge-row"><span class="badge {category_class}">{html_lib.escape(category)}</span>{museum_badge}{new_badge}</span>
         </div>
         <h2>{title}</h2>
         <div class="when {category_class}">
@@ -2713,6 +2737,8 @@ def collect_from_source(source: dict) -> list[dict]:
             "longmuseum": collect_longmuseum,
             **NATIONAL_ADAPTERS,
         }
+        if collect_museum_generic is not None:
+            adapters["museum_generic"] = collect_museum_generic
         collector = adapters.get(adapter)
         if collector:
             return collector(source)
@@ -2765,6 +2791,30 @@ def collect_from_source(source: dict) -> list[dict]:
     return items
 
 
+def load_museum_sources() -> list[dict]:
+    """读 config/museums.json：一个馆一条配置，统一补 adapter / enabled。"""
+    if not MUSEUM_CONFIG_PATH.exists():
+        return []
+    try:
+        payload = load_json(MUSEUM_CONFIG_PATH)
+    except Exception as exc:  # noqa: BLE001
+        log(f"博物馆清单读取失败：{exc}")
+        return []
+    entries = payload.get("museums", []) if isinstance(payload, dict) else payload
+    sources: list[dict] = []
+    for entry in entries or []:
+        if not isinstance(entry, dict) or not entry.get("name"):
+            continue
+        source = dict(entry)
+        source.setdefault("enabled", True)
+        if not source.get("adapter"):
+            source["adapter"] = "museum_generic"
+        if source["adapter"] == "museum_generic" and collect_museum_generic is None:
+            continue
+        sources.append(source)
+    return sources
+
+
 def run(config_path: Path, no_llm: bool = False) -> None:
     global LLM_CONFIG
     LLM_CONFIG = load_llm_config(no_llm=no_llm)
@@ -2776,7 +2826,11 @@ def run(config_path: Path, no_llm: bool = False) -> None:
         log("未检测到 LLM 配置，只使用 JSON-LD / RSS")
 
     config = load_json(config_path)
-    sources = config.get("sources", [])
+    sources = list(config.get("sources", []))
+    museum_sources = load_museum_sources()
+    if museum_sources:
+        log(f"博物馆官网来源 {len(museum_sources)} 个（config/museums.json）")
+        sources.extend(museum_sources)
     log(f"开始抓取 {len(sources)} 个来源")
 
     raw_with_source: list[tuple[dict, dict]] = []

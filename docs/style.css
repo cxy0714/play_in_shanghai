@@ -130,6 +130,7 @@ footer { max-width: 980px; margin: 0 auto; padding: 0 18px 40px; color: #999; fo
 .updates-list .up-more { color: var(--muted); grid-column: 1 / -1; }
 .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
 .badge.new { background: var(--accent); color: #fff; }
+.badge.museum { background: #f3e8ff; color: #6b21a8; }
 .card.is-new { border-color: #ffd9d9; }
 .chips.city-chips { margin-top: 8px; }
 .timeline { max-width: 980px; margin: 0 auto; padding: 6px 18px 0; }

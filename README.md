@@ -36,12 +36,28 @@
 
 ## 全国范围
 
-- 全国数据由 `national_sources.py` 提供，适配器名：`maoyan_city`（猫眼按城市）、`douban_city`（豆瓣同城城市站）、`museum_cn`（国博/故宫/南博/湖南博物院/陕历博/良渚博物院/中国丝绸博物馆/苏州博物馆官网展览）。
-- 页面默认「上海」，切到「全国」后可以按城市筛选；外地活动只收录**历史文物类展览、音乐剧、话剧**三类。
+- 全国数据由 `national_sources.py` 提供，适配器名：`maoyan_city`（猫眼按城市）、`douban_city`（豆瓣同城城市站）、`museum_cn` / `museum_generic`（各博物馆官网展览，清单见下文「博物馆官网」）。
+- 页面默认「上海」，切到「全国」后可以按城市筛选；外地活动只收录**历史文物类展览、音乐剧、话剧**三类，外加**博物馆官网的免费预约临展**（不细分，书画/器物/艺术都收）。
   想放宽/收窄改 `update.py` 顶部的 `NATIONAL_GROUPS` / `NATIONAL_EXHIBITION_SUBS`。
 - 加城市：在 `config/sources.json` 里加一条 `maoyan_city`，`city_id` 必须是**猫眼演出城市 id**（不是大众点评城市 id，传错会静默回落到上海）：北京 1、广州 20、深圳 30、天津 40、西安 42、重庆 45、杭州 50、南京 55、武汉 57、成都 59、长沙 70、苏州 80、上海 10。
 - 全国源总量太大时可以 `"enabled": false` 关掉部分城市，或把 `categories` 从 `[9, 4]` 改成只留 `[4]`（话剧/音乐剧）或 `[9]`（展览）。
-- 已知缺口：浙江省博物馆（纯 Vue 壳，接口 404）、杭州博物馆（SSL/502）抓不到；其它省级馆多为 SSL/超时/JS 渲染/需鉴权。免费常设展覆盖不足，靠猫眼售票展览兜底。
+- 已知缺口：浙江省博物馆（纯 Vue 壳，接口 404）、杭州博物馆（SSL/502）抓不到；其它省级馆多为 SSL/超时/JS 渲染/需鉴权。
+
+## 博物馆官网（免费预约展）
+
+免费预约的特展通常不上猫眼/大麦，只能从各馆官网抓。清单在 [`config/museums.json`](config/museums.json)，**一个馆一条配置**，不用改代码：
+
+- `adapter: "museum_cn"`：用 `national_sources.py` 里的专用采集器，配 `site`（`chnmuseum` / `dpm` / `njmuseum` / `hnmuseum` / `sxhm` / `lzmuseum` / `silkmuseum` / `szmuseum`）。适合结构复杂或要走接口的站。
+- `adapter: "museum_generic"`：用 [`museum_generic.py`](museum_generic.py) 的通用采集器，配 `list_url`，再加可选字段：
+  - `item_selector`（CSS，优先）/ `link_regex`（href 正则）：怎么从列表页挑出「一条展览」
+  - `detail`（默认 true）：是否进详情页取展期；列表里就写了展期的设 `false`
+  - `title_selector`：展名在哪个元素里（列表页或详情页）
+  - `date_regex` / `date_regex_list`：从正文抽展期字符串（第 1 组）；不写就用内置的通用展期正则
+  - `exclude_regex`：过滤讲座/活动/常设等
+  - `venue_default` / `price_text` / `max_articles` / `max_seconds`
+- 常设陈列不写入（官网没给真实展期，写进去就是假日期）。
+- 单个馆试跑：`python tools/museum_probe.py --name 山东博物馆`；全部跑：`python tools/museum_probe.py --all`。
+- 改完 `python update.py` 即生效；只想重排页面用 `python update.py --rebuild`。
 
 ## 一次性设置
 
