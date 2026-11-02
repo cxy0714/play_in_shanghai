@@ -594,6 +594,32 @@
       "city": "西安",
       "max_pages": 2,
       "enabled": true
+    },
+    {
+      "name": "良渚博物院",
+      "adapter": "museum_cn",
+      "site": "lzmuseum",
+      "url": "https://www.lzmuseum.cn/YinJinZhanLan/index.html",
+      "city": "杭州",
+      "max_articles": 12,
+      "enabled": true
+    },
+    {
+      "name": "中国丝绸博物馆",
+      "adapter": "museum_cn",
+      "site": "silkmuseum",
+      "url": "https://www.chinasilkmuseum.com/zz/list_17.aspx",
+      "city": "杭州",
+      "max_articles": 10,
+      "enabled": true
+    },
+    {
+      "name": "苏州博物馆",
+      "adapter": "museum_cn",
+      "site": "szmuseum",
+      "url": "https://www.szmuseum.com/Exhibition/Temporary",
+      "city": "苏州",
+      "enabled": true
     }
   ]
 }

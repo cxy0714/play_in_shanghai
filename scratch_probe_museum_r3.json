@@ -1,0 +1,168 @@
+{
+ "zhejiangmuseum": [
+  {
+   "url": "https://www.zhejiangmuseum.com/",
+   "http": 200,
+   "final": "https://www.zjmuseum.com.cn/cn/",
+   "len": 1955,
+   "title": "浙江省博物馆",
+   "exhibit_links": [],
+   "api_hints": []
+  },
+  {
+   "url": "http://www.zhejiangmuseum.com/",
+   "http": 403,
+   "final": "http://www.zhejiangmuseum.com/",
+   "len": 640,
+   "title": "Non-compliance ICP Filing",
+   "exhibit_links": [],
+   "api_hints": []
+  },
+  {
+   "url": "https://www.zhejiangmuseum.com/Exhibition",
+   "http": 404,
+   "final": "https://www.zjmuseum.com.cn/Exhibition",
+   "len": 498,
+   "title": "Page Not Found",
+   "exhibit_links": [],
+   "api_hints": []
+  },
+  {
+   "url": "https://www.zhejiangmuseum.com/exhibition",
+   "http": 404,
+   "final": "https://www.zjmuseum.com.cn/exhibition",
+   "len": 498,
+   "title": "Page Not Found",
+   "exhibit_links": [],
+   "api_hints": []
+  }
+ ],
+ "hzmuseum": [
+  {
+   "url": "https://www.hzmuseum.com/",
+   "error": "SSLError(MaxRetryError(\"HTTPSConnectionPool(host='www.hzmuseum.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXP"
+  },
+  {
+   "url": "http://www.hzmuseum.com/",
+   "http": 502,
+   "final": "http://www.hzmuseum.com/",
+   "len": 0,
+   "title": "",
+   "exhibit_links": [],
+   "api_hints": []
+  },
+  {
+   "url": "https://www.hangzhoumuseum.cn/",
+   "error": "SSLError(MaxRetryError(\"HTTPSConnectionPool(host='www.hangzhoumuseum.cn', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: "
+  },
+  {
+   "url": "http://www.hangzhoumuseum.cn/",
+   "http": 502,
+   "final": "http://www.hangzhoumuseum.cn/",
+   "len": 0,
+   "title": "",
+   "exhibit_links": [],
+   "api_hints": []
+  }
+ ],
+ "szmuseum": [
+  {
+   "url": "https://www.szmuseum.com/",
+   "error": "ConnectionError(ReadTimeoutError(\"HTTPSConnectionPool(host='www.szmuseum.com', port=443): Read timed out.\"))"
+  },
+  {
+   "url": "http://www.szmuseum.com/",
+   "error": "ConnectionError(ReadTimeoutError(\"HTTPSConnectionPool(host='www.szmuseum.com', port=443): Read timed out.\"))"
+  },
+  {
+   "url": "https://www.szmuseum.com/Exhibition",
+   "error": "ConnectionError(ReadTimeoutError(\"HTTPSConnectionPool(host='www.szmuseum.com', port=443): Read timed out.\"))"
+  }
+ ],
+ "chinasilk": [
+  {
+   "url": "https://www.chinasilkmuseum.com/",
+   "http": 200,
+   "final": "https://www.chinasilkmuseum.com/",
+   "len": 74939,
+   "title": "中国丝绸博物馆",
+   "exhibit_links": [
+    {
+     "t": "云上展览",
+     "h": "/Cloudzl/list_367.aspx"
+    },
+    {
+     "t": "“绣美之江：浙江省刺绣、抽纱非遗艺术与生活作品展”",
+     "h": "/yz/info_18.aspx?itemid=31765"
+    },
+    {
+     "t": "天蚕灵机：中国蚕桑丝织技艺非物质文化遗产展",
+     "h": "/zz/info_17.aspx?itemid=31423"
+    },
+    {
+     "t": "纺织品文物修复展示馆",
+     "h": "/zz/info_17.aspx?itemid=26331"
+    },
+    {
+     "t": "“绣美之江：浙江省刺绣、抽纱非遗艺术与生活作品展”",
+     "h": "/yz/info_18.aspx?itemid=31765"
+    },
+    {
+     "t": "“天方织绣：摩洛哥传统服饰展”",
+     "h": "/yz/info_18.aspx?itemid=31764"
+    },
+    {
+     "t": "“丝连古今，路通天下——中国丝绸文化艺术展”开幕",
+     "h": "/cs/info_164.aspx?itemid=31782&parent"
+    },
+    {
+     "t": "一文Vol.38｜目的论视角下的展览标题英译——以中国丝绸博物馆等为例",
+     "h": "/gskt/info_319.aspx?itemid=30739"
+    },
+    {
+     "t": "云上展览",
+     "h": "/Cloudzl/list_367.aspx"
+    }
+   ],
+   "api_hints": [
+    ".hc_list",
+    ".list",
+    "//www.chinasilkmuseum.com/gskt/list_319.aspx",
+    "//www.chinasilkmuseum.com/jz/list_15.aspx",
+    "//www.chinasilkmuseum.com/kyjd/list_30.aspx?lpid=86&lcid=87",
+    "//www.chinasilkmuseum.com/kyjd/list_30.aspx?lpid=86&lcid=89",
+    "//www.chinasilkmuseum.com/nhcxg/list_11.aspx",
+    "//www.chinasilkmuseum.com/xscg/list_28.aspx",
+    "//www.chinasilkmuseum.com/xsgk/list_26.aspx",
+    "//www.chinasilkmuseum.com/zjwt/list_27.aspx",
+    "/Cloudzl/list_367.aspx",
+    "/bwgf/list_309.aspx",
+    "/bxfzzwh/list_306.aspx",
+    "/cgjyy/list_6.aspx",
+    "/cs/list_164.aspx"
+   ]
+  },
+  {
+   "url": "http://www.chinasilkmuseum.com/",
+   "error": "ReadTimeout(ReadTimeoutError(\"HTTPConnectionPool(host='127.0.0.1', port=7897): Read timed out. (read timeout=20)\"))"
+  },
+  {
+   "url": "https://www.chinasilkmuseum.com/exhibition",
+   "http": 404,
+   "final": "https://www.chinasilkmuseum.com/exhibition",
+   "len": 240,
+   "title": "",
+   "exhibit_links": [],
+   "api_hints": []
+  },
+  {
+   "url": "https://www.chinasilkmuseum.com/Exhibition",
+   "http": 404,
+   "final": "https://www.chinasilkmuseum.com/Exhibition",
+   "len": 240,
+   "title": "",
+   "exhibit_links": [],
+   "api_hints": []
+  }
+ ]
+}

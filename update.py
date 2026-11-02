@@ -1703,6 +1703,8 @@ h1 { margin: 0; font-size: 30px; line-height: 1.2; }
 .chip.active { background: var(--text); border-color: var(--text); color: #fff; }
 .chip .n { margin-left: 4px; font-size: 12px; opacity: .55; font-variant-numeric: tabular-nums; }
 .chip.active .n { opacity: .85; }
+.chip-label { align-self: center; font-size: 12px; color: var(--muted); letter-spacing: .04em; margin-right: 2px; }
+.chips + .chips { margin-top: 8px; }
 main { max-width: 980px; margin: 0 auto; padding: 16px 18px 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .card {
   background: var(--card); border-radius: 18px; padding: 16px;
@@ -2286,16 +2288,56 @@ def updates_panel_html(updates: dict) -> str:
 BULK_RUN_LIMIT = 150  # 单轮新增超过这个数（比如第一次接入全国源）就走汇总模式
 
 
+CATEGORY_FILTER_ORDER = EXHIBITION_SUBCATEGORIES + [category for category in CATEGORIES if category != "展览"]
+CATEGORY_SORT_ORDER = {category: index for index, category in enumerate(CATEGORIES)}
+
+
+def order_cards(events: list[dict]) -> list[dict]:
+    """按城市（上海最前，其余按条数）、类型、开始日期排序，让同城同类的活动挨在一起。"""
+    city_counts: dict[str, int] = {}
+    for event in events:
+        city = event_city(event)
+        city_counts[city] = city_counts.get(city, 0) + 1
+
+    def sort_key(event: dict) -> tuple:
+        city = event_city(event)
+        return (
+            0 if city == SHANGHAI_CITY else 1,
+            -city_counts.get(city, 0),
+            city,
+            CATEGORY_SORT_ORDER.get(event.get("category") or "其他", 99),
+            event.get("start_date") or "9999-99-99",
+            event.get("title") or "",
+        )
+
+    return sorted(events, key=sort_key)
+
+
+def run_cards(run: dict, cap: int = NEW_PAGE_RUN_CAP) -> list[dict]:
+    """某一轮更新在「本周上新」里展示的卡片（首轮大规模收录时外地按城市抽样）。"""
+    added = [event for event in run.get("added", []) if isinstance(event, dict)]
+    if len(added) > BULK_RUN_LIMIT and not run.get("baseline"):
+        local = [event for event in added if is_shanghai(event)]
+        national = [event for event in added if not is_shanghai(event)]
+        by_city: dict[str, list[dict]] = {}
+        for event in national:
+            by_city.setdefault(event_city(event), []).append(event)
+        samples: list[dict] = []
+        for _, city_events in sorted(by_city.items(), key=lambda item: (-len(item[1]), item[0])):
+            samples.extend(city_events[:2])
+        picked = local[:120] + samples[:64]
+    else:
+        picked = added[:cap]
+    return order_cards(picked)
+
+
 def render_run(run: dict, cap: int = NEW_PAGE_RUN_CAP) -> str:
     added = [event for event in run.get("added", []) if isinstance(event, dict)]
     local_events = [event for event in added if is_shanghai(event)]
     national_events = [event for event in added if not is_shanghai(event)]
     bulk = len(added) > BULK_RUN_LIMIT
 
-    if bulk and not run.get("baseline"):
-        cards = local_events[:cap] + national_events[:12]
-    else:
-        cards = added[:cap]
+    cards = run_cards(run, cap)
     hidden = len(added) - len(cards)
     cards_html = "\n".join(build_card(event, "all") for event in cards)
 
@@ -2317,7 +2359,7 @@ def render_run(run: dict, cap: int = NEW_PAGE_RUN_CAP) -> str:
             breakdown += f" 等 {len(top_cities)} 个城市"
         note = (
             f'<p class="run-note">这一轮第一次大规模收录全国场次：外地 {len(national_events)} 个'
-            f"（{breakdown}）在这里只做汇总，下面列的是上海新增 {len(local_events)} 个和少量外地示例；"
+            f"（{breakdown}）这里按城市各抽样 2 个，上海新增 {len(local_events)} 个全部列出；"
             "完整外地清单可以在「活动清单」里切到全国查看。</p>"
         )
     elif hidden > 0:
@@ -2341,35 +2383,117 @@ def render_run(run: dict, cap: int = NEW_PAGE_RUN_CAP) -> str:
 
 NEW_PAGE_SCRIPT = """
 <script>
-  const scopeChips = Array.from(document.querySelectorAll('.scope-chip'));
   const cards = Array.from(document.querySelectorAll('.run-cards .card'));
   const runs = Array.from(document.querySelectorAll('.run'));
-  let scope = 'all';
+  const cityChips = document.getElementById('new-city-chips');
+  const catChips = document.getElementById('new-cat-chips');
+  const empty = document.getElementById('timeline-empty');
+  const state = { city: 'all', cat: 'all' };
 
-  function applyScope() {
+  function catMatches(card, cat) {
+    const category = card.dataset.category || '';
+    const group = card.dataset.group || category;
+    return cat === 'all' || category === cat || group === cat;
+  }
+
+  function cityMatches(card, city) {
+    return city === 'all' || (card.dataset.city || '') === city;
+  }
+
+  function setCount(button, num) {
+    const label = button.querySelector('.n');
+    if (label) label.textContent = num;
+  }
+
+  // 城市按钮的数字跟当前「类型」走，类型按钮的数字跟当前「城市」走
+  function refresh() {
     let shown = 0;
     cards.forEach(card => {
-      const ok = scope === 'all' || card.dataset.scope === scope;
+      const ok = cityMatches(card, state.city) && catMatches(card, state.cat);
       card.hidden = !ok;
       if (ok) shown += 1;
     });
     runs.forEach(run => {
       run.hidden = run.querySelectorAll('.card:not([hidden])').length === 0;
     });
-    const empty = document.getElementById('timeline-empty');
+    document.querySelectorAll('details.older').forEach(block => {
+      block.hidden = block.querySelectorAll('.card:not([hidden])').length === 0;
+    });
     if (empty) empty.hidden = shown > 0;
+
+    const cityCounts = {};
+    let cityTotal = 0;
+    cards.forEach(card => {
+      if (!catMatches(card, state.cat)) return;
+      const city = card.dataset.city || '';
+      if (!city) return;
+      cityTotal += 1;
+      cityCounts[city] = (cityCounts[city] || 0) + 1;
+    });
+
+    let reset = false;
+    if (cityChips) {
+      cityChips.querySelectorAll('.chip').forEach(button => {
+        const city = button.dataset.city;
+        const num = city === 'all' ? cityTotal : (cityCounts[city] || 0);
+        setCount(button, num);
+        if (city !== 'all') button.hidden = num === 0;
+      });
+      if (state.city !== 'all' && !(cityCounts[state.city] || 0)) {
+        state.city = 'all';
+        reset = true;
+      }
+      cityChips.querySelectorAll('.chip').forEach(button => {
+        button.classList.toggle('active', button.dataset.city === state.city);
+      });
+    }
+
+    if (catChips) {
+      let selectedCount = 0;
+      catChips.querySelectorAll('.chip').forEach(button => {
+        const cat = button.dataset.cat;
+        let num = 0;
+        cards.forEach(card => {
+          if (cityMatches(card, state.city) && catMatches(card, cat)) num += 1;
+        });
+        setCount(button, num);
+        if (cat !== 'all') button.hidden = num === 0;
+        if (cat === state.cat) selectedCount = num;
+      });
+      if (state.cat !== 'all' && selectedCount === 0) {
+        state.cat = 'all';
+        reset = true;
+      }
+      catChips.querySelectorAll('.chip').forEach(button => {
+        button.classList.toggle('active', button.dataset.cat === state.cat);
+      });
+    }
+
+    return reset;
   }
 
-  scopeChips.forEach(btn => {
-    btn.addEventListener('click', () => {
-      scopeChips.forEach(item => item.classList.remove('active'));
-      btn.classList.add('active');
-      scope = btn.dataset.scope;
-      applyScope();
-    });
-  });
+  function applyFilters() {
+    while (refresh()) {}
+  }
 
-  applyScope();
+  if (cityChips) {
+    cityChips.querySelectorAll('.chip').forEach(button => {
+      button.addEventListener('click', () => {
+        state.city = button.dataset.city;
+        applyFilters();
+      });
+    });
+  }
+  if (catChips) {
+    catChips.querySelectorAll('.chip').forEach(button => {
+      button.addEventListener('click', () => {
+        state.cat = button.dataset.cat;
+        applyFilters();
+      });
+    });
+  }
+
+  applyFilters();
 </script>
 """
 
@@ -2396,18 +2520,48 @@ def build_new_page(updates: dict, generated_at: datetime) -> str:
     {older_html}
   </details>"""
 
-    scope_chips = """
-    <button class="chip scope-chip active" data-scope="all">全部</button>
-    <button class="chip scope-chip" data-scope="sh">上海</button>
-    <button class="chip scope-chip" data-scope="national">外地</button>"""
+    shown_cards = [event for run in recent for event in run_cards(run)]
+    shown_cards += [event for run in older for event in run_cards(run, cap=12)]
+
+    city_counts: dict[str, int] = {}
+    for event in shown_cards:
+        city = event_city(event)
+        city_counts[city] = city_counts.get(city, 0) + 1
+    city_chips = [
+        f'<button class="chip active" data-city="all">全部城市<span class="n">{len(shown_cards)}</span></button>'
+    ]
+    city_chips.extend(
+        f'<button class="chip" data-city="{html_lib.escape(city, quote=True)}">{html_lib.escape(city)}<span class="n">{num}</span></button>'
+        for city, num in sorted(
+            city_counts.items(), key=lambda item: (item[0] != SHANGHAI_CITY, -item[1], item[0])
+        )
+    )
+
+    present: set[str] = set()
+    for event in shown_cards:
+        group = event.get("category") or "其他"
+        present.add(group)
+        if group == "展览":
+            present.add(event.get("display_category") or "其他展览")
+    cat_chips = [
+        f'<button class="chip active" data-cat="all">全部类型<span class="n">{len(shown_cards)}</span></button>'
+    ]
+    cat_chips.extend(
+        f'<button class="chip" data-cat="{html_lib.escape(name, quote=True)}">{html_lib.escape(name)}'
+        f'<span class="n">{sum(1 for event in shown_cards if name in (event.get("display_category") or "", event.get("category") or ""))}</span></button>'
+        for name in [category for category in CATEGORY_FILTER_ORDER if category in present]
+    )
 
     if recent_html:
-        timeline = f'<div class="timeline">{recent_html}</div>'
-    else:
-        timeline = (
-            '<div class="timeline"><p class="timeline-empty" id="timeline-empty">'
-            f"最近 {NEW_DAYS} 天还没有新增活动，等下一次自动更新。</p></div>"
+        empty_html = (
+            '<p class="timeline-empty" id="timeline-empty" hidden>没有符合筛选条件的活动。</p>'
         )
+    else:
+        empty_html = (
+            '<p class="timeline-empty" id="timeline-empty">'
+            f"最近 {NEW_DAYS} 天还没有新增活动，等下一次自动更新。</p>"
+        )
+    timeline = f'<div class="timeline">{recent_html}{empty_html}</div>'
 
     return f"""<!doctype html>
 <html lang="zh-CN">
@@ -2429,13 +2583,18 @@ def build_new_page(updates: dict, generated_at: datetime) -> str:
       <a class="active" href="new.html" aria-current="page">🆕 本周上新</a>
     </nav>
   </header>
-  <div class="chips" id="scope-chips">{scope_chips}
+  <div class="chips" id="new-city-chips">
+    <span class="chip-label">城市</span>{city_chips}
+  </div>
+  <div class="chips" id="new-cat-chips">
+    <span class="chip-label">类型</span>{cat_chips}
   </div>
   {timeline}
   {older_block}
   <footer>
     记录口径：每轮自动更新后，与上一轮的活动清单按「标题」比对，出现的新活动记到这里；
     日期、场馆的日常抖动不算新增。外地活动只收录历史文物类展览、音乐剧和话剧。
+    上面可以按城市和类型筛选，每一轮更新里同一城市、同一类型的活动排在一起。
   </footer>
   {NEW_PAGE_SCRIPT}
 </body>

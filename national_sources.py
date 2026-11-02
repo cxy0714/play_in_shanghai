@@ -111,6 +111,9 @@ MUSEUM_DEFAULT_ADDRESS = {
     "南京博物院": "南京市玄武区中山东路321号",
     "湖南博物院": "长沙市开福区东风路50号",
     "陕西历史博物馆": "西安市雁塔区小寨东路91号",
+    "良渚博物院": "杭州市余杭区良渚街道美丽洲路1号",
+    "中国丝绸博物馆": "杭州市西湖区玉皇山路73-1号",
+    "苏州博物馆": "苏州市姑苏区东北街204号",
 }
 
 TODAY = datetime.now().date()
@@ -899,12 +902,333 @@ def _museum_dpm(source: dict) -> list[dict]:
     return results
 
 
+# ---------------------------------------------------------------------------
+# 第三轮补充：良渚博物院 / 中国丝绸博物馆 / 苏州博物馆（免费预约型特展）
+# ---------------------------------------------------------------------------
+
+SZ_HEADERS = {**MUSEUM_HEADERS, "Connection": "close"}
+
+_LZ_RANGE_RE = re.compile(
+    r"(20\d{2})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日?\s*"
+    r"[—–\-~～至到]{1,2}\s*(?:(20\d{2})\s*年\s*)?(\d{1,2})\s*月\s*(\d{1,2})\s*日?"
+)
+
+
+def _article_dates(text: str) -> tuple[date | None, date | None, bool]:
+    """从「展讯」文章正文里抽展期，返回 (start, end, 是否找到明确展期)。"""
+    match = _LZ_RANGE_RE.search(text)
+    if match:
+        start = to_date(match.group(1), match.group(2), match.group(3))
+        year = int(match.group(4) or match.group(1))
+        end = to_date(year, match.group(5), match.group(6))
+        if start and end and end < start:
+            end = None
+        if start:
+            return start, end, True
+
+    end_match = re.search(r"展期(?:将)?至\s*(20\d{2})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日", text)
+    start_match = re.search(
+        r"(20\d{2})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日[^。；]{0,24}?(?:开幕|开展|展出|亮相)", text
+    )
+    start = to_date(start_match.group(1), start_match.group(2), start_match.group(3)) if start_match else None
+    end = to_date(end_match.group(1), end_match.group(2), end_match.group(3)) if end_match else None
+    if start and end and end < start:
+        end = None
+    return start, end, bool(end_match)
+
+
+def _article_title(soup: BeautifulSoup, text: str) -> str:
+    """展讯文章标题往往写成「展讯 | xxx 开幕」，优先从正文引号里取正式展名。"""
+    for quoted in re.findall(r"[“\"]([^”\"]{3,60})[”\"]", text):
+        if "展" in quoted and len(quoted) >= 4:
+            return quoted
+    title_tag = clean_text(soup.title.get_text(" ", strip=True)) if soup.title else ""
+    title_tag = re.sub(r"\s*[-_|]\s*.{0,12}博物院.*$", "", title_tag).strip()
+    title_tag = re.sub(
+        r"^(展讯|展览预告|新展开幕|展览开幕|展览|国际展讯|外展展讯)\s*[|｜丨]\s*", "", title_tag
+    )
+    return title_tag
+
+
+def _museum_lzmuseum(source: dict) -> list[dict]:
+    """良渚博物院「引进展览」：每篇展讯是一篇文章，展期写在正文里。"""
+    url = clean_text(source.get("url")) or "https://www.lzmuseum.cn/YinJinZhanLan/index.html"
+    html_text = http_get(url, timeout=25)
+    soup = BeautifulSoup(html_text, "html.parser")
+
+    entries: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for anchor in soup.select("a[href]"):
+        href = anchor.get("href") or ""
+        if not re.search(r"/YinJinZhanLan/\d+\.html$", href):
+            continue
+        full = urljoin(url, href)
+        if full in seen:
+            continue
+        seen.add(full)
+        image_url = ""
+        node = anchor
+        for _ in range(3):
+            node = node.parent
+            if node is None:
+                break
+            img = node.select_one("img[src]")
+            if img and img.get("src"):
+                image_url = urljoin(url, img["src"])
+                break
+        entries.append((full, image_url))
+
+    # 文章 id 以年份开头，按 id 倒序 = 新的在前；只回抓前 max_articles 篇
+    def _article_id(pair: tuple[str, str]) -> int:
+        match = re.search(r"/(\d+)\.html$", pair[0])
+        return int(match.group(1)) if match else 0
+
+    entries.sort(key=_article_id, reverse=True)
+    max_articles = max(1, int(source.get("max_articles", 12)))
+
+    results: list[dict] = []
+    for full, image_url in entries[:max_articles]:
+        try:
+            detail_html = http_get(full, timeout=25)
+        except Exception:  # noqa: BLE001
+            continue
+        detail_soup = BeautifulSoup(detail_html, "html.parser")
+        text = clean_text(detail_soup.get_text(" ", strip=True))
+        title = _article_title(detail_soup, text)
+        if len(title) < 2:
+            continue
+        start, end, explicit = _article_dates(text)
+        if start is None and end is None:
+            continue  # 没有展期的宣传稿无法判断是否在展
+        if not future_or_ongoing(start, end):
+            continue
+        if start is None:
+            start = end
+        if not image_url:
+            upload = [img.get("src") for img in detail_soup.select("img[src]") if "/upload/" in (img.get("src") or "")]
+            if upload:
+                image_url = urljoin(url, upload[-1])
+
+        raw_range = ""
+        range_match = re.search(
+            r"展期[：:]\s*((?:20\d{2}\s*年\s*)?\d{1,2}\s*月\s*\d{1,2}\s*日?"
+            r"(?:\s*[至到—–\-~～]\s*(?:20\d{2}\s*年\s*)?\d{1,2}\s*月\s*\d{1,2}\s*日)?)",
+            text,
+        )
+        if not range_match:
+            range_match = re.search(
+                r"展期(?:将)?至\s*(20\d{2}\s*年\s*\d{1,2}\s*月\s*\d{1,2}\s*日)", text
+            )
+        if range_match:
+            raw_range = clean_text(range_match.group(1))
+
+        note = ""
+        if end is None:
+            end = start + timedelta(days=120)
+            note = "（展期以官网为准）"
+        summary = f"展期：{raw_range.lstrip('展期：: ')}" if raw_range else "展期以官网为准"
+        if note:
+            summary += note
+
+        venue = "良渚博物院 临展厅" if "临展厅" in text else "良渚博物院"
+        results.append(
+            _result(
+                title=title.strip("“”\""),
+                category="展览",
+                venue=venue,
+                address=MUSEUM_DEFAULT_ADDRESS["良渚博物院"],
+                city="杭州",
+                start_date=start,
+                end_date=end,
+                price_text="免费（需预约）",
+                ticket_url=full,
+                source_url=url,
+                image_url=image_url,
+                summary=summary,
+            )
+        )
+        time.sleep(SLEEP)
+    return results
+
+
+def _museum_silkmuseum(source: dict) -> list[dict]:
+    """中国丝绸博物馆「在展」列表：列表给起始日，详情页给完整展期。"""
+    url = clean_text(source.get("url")) or "https://www.chinasilkmuseum.com/zz/list_17.aspx"
+    html_text = http_get(url, headers={**MUSEUM_HEADERS, "Connection": "close"}, timeout=25)
+    soup = BeautifulSoup(html_text, "html.parser")
+
+    entries: list[tuple[str, str, str]] = []
+    seen: set[str] = set()
+    for anchor in soup.select("a[href]"):
+        href = anchor.get("href") or ""
+        if not re.search(r"info_1[78]\.aspx\?itemid=\d+", href):
+            continue
+        full = urljoin(url, href)
+        if full in seen:
+            continue
+        seen.add(full)
+        title = clean_text(anchor.get_text(" ", strip=True))
+        parent = anchor.find_parent(["li", "div", "tr"])
+        block_text = clean_text(parent.get_text(" ", strip=True)) if parent else ""
+        if not title:
+            title = block_text.split("展览时间")[0].replace("查看更多>", "").strip()
+        img = parent.select_one("img[src]") if parent else None
+        image_url = urljoin(url, img["src"]) if img and img.get("src") else ""
+        entries.append((full, title, image_url))
+
+    max_articles = max(1, int(source.get("max_articles", 10)))
+    results: list[dict] = []
+    for full, title, image_url in entries[:max_articles]:
+        try:
+            detail_html = http_get(full, headers={**MUSEUM_HEADERS, "Connection": "close"}, timeout=25)
+        except Exception:  # noqa: BLE001
+            continue
+        detail_soup = BeautifulSoup(detail_html, "html.parser")
+        text = clean_text(detail_soup.get_text(" ", strip=True))
+        if not title:
+            title = _article_title(detail_soup, text)
+        title = title.strip("“”\"")
+        if len(title) < 2:
+            continue
+
+        date_text = ""
+        date_match = re.search(
+            r"展览时间[：:]\s*((?:20\d{2}\s*年)?\s*\d{1,2}\s*月\s*\d{1,2}\s*日?"
+            r"(?:\s*[-—–~至到]\s*(?:20\d{2}\s*年)?\s*\d{1,2}\s*月\s*\d{1,2}\s*日)?)",
+            text,
+        )
+        if date_match:
+            date_text = date_match.group(1)
+        start, end = parse_date_range(date_text)
+        if end is None:
+            span_match = re.search(r"展期(?:持续)?到\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日", text)
+            if span_match and start:
+                end = to_date(start.year, span_match.group(1), span_match.group(2))
+                if end and end < start:
+                    end = to_date(start.year + 1, span_match.group(1), span_match.group(2))
+        if start is None and end is None:
+            continue
+
+        permanent = False
+        if start and end and (end - start).days > 730:
+            permanent = True  # 源站把常设陈列标成 2016-...-2028 这种超长展期
+        elif end is None and start and (TODAY - start).days > 365:
+            permanent = True
+        if permanent:
+            start, end = TODAY, TODAY + timedelta(days=365)
+        if end is None:
+            end = start + timedelta(days=120)
+        if not future_or_ongoing(start, end):
+            continue
+
+        venue_text = ""
+        venue_match = re.search(r"展览地点[：:]\s*([^\s。；]{2,30})", text)
+        if venue_match:
+            venue_text = clean_text(venue_match.group(1))
+        venue = f"中国丝绸博物馆 {venue_text}".strip()
+
+        summary = "常设陈列，展期以官网为准" if permanent else f"展期：{date_text}" if date_text else "展期以官网为准"
+        results.append(
+            _result(
+                title=title,
+                category="展览",
+                venue=venue,
+                address=MUSEUM_DEFAULT_ADDRESS["中国丝绸博物馆"],
+                city="杭州",
+                start_date=start,
+                end_date=end,
+                price_text="免费（需预约）",
+                ticket_url=full,
+                source_url=url,
+                image_url=image_url,
+                summary=summary,
+            )
+        )
+        time.sleep(SLEEP)
+    return results
+
+
+def _museum_szmuseum(source: dict) -> list[dict]:
+    """苏州博物馆「临时展览」当前展览列表（其 443 端口 keep-alive 会 hang，需 Connection: close）。"""
+    url = clean_text(source.get("url")) or "https://www.szmuseum.com/Exhibition/Temporary"
+    html_text = http_get(url, headers=SZ_HEADERS, timeout=25)
+    soup = BeautifulSoup(html_text, "html.parser")
+
+    results: list[dict] = []
+    for li in soup.select("div.extemwrap ul li"):
+        link = li.select_one('a[href*="TemporaryDetails"]')
+        if not link:
+            continue
+        title_el = li.select_one("h1 a") or link
+        title = clean_text(title_el.get("title") or title_el.get_text(" ", strip=True))
+        if len(title) < 2:
+            continue
+
+        date_text = ""
+        venue_text = ""
+        intro = ""
+        for paragraph in li.select("div.activity_r_detail p"):
+            spans = [clean_text(span.get_text(" ", strip=True)) for span in paragraph.select("span")]
+            if spans and "展览时间" in spans[0]:
+                date_text = " ".join(spans[1:])
+            elif spans and "展览地点" in spans[0]:
+                venue_text = " ".join(spans[1:])
+            elif not spans:
+                text = clean_text(paragraph.get_text(" ", strip=True))
+                if text and len(text) > len(intro):
+                    intro = text
+
+        range_match = re.search(
+            r"(20\d{2})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日[^0-9]{0,20}?"
+            r"[-—–~至到]\s*(20\d{2})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日",
+            date_text,
+        )
+        if range_match:
+            start = to_date(range_match.group(1), range_match.group(2), range_match.group(3))
+            end = to_date(range_match.group(4), range_match.group(5), range_match.group(6))
+        else:
+            start, end = parse_date_range(date_text)
+        if not future_or_ongoing(start, end):
+            continue
+        if end is None:
+            end = start + timedelta(days=120)
+
+        img = li.select_one("img[src]")
+        image_url = img["src"] if img and img.get("src") else ""
+        if image_url.startswith("//"):
+            image_url = "https:" + image_url
+
+        venue = venue_text
+        if venue and "苏州博物馆" not in venue:
+            venue = f"苏州博物馆 {venue}"
+        results.append(
+            _result(
+                title=title,
+                category="展览",
+                venue=venue or "苏州博物馆",
+                address=MUSEUM_DEFAULT_ADDRESS["苏州博物馆"],
+                city="苏州",
+                start_date=start,
+                end_date=end,
+                price_text="免费（需预约）",
+                ticket_url=urljoin(url, link["href"]),
+                source_url=url,
+                image_url=image_url,
+                summary=f"展期：{date_text}" if date_text else "展期以官网为准",
+            )
+        )
+    return results
+
+
 MUSEUM_COLLECTORS: dict[str, Callable[[dict], list[dict]]] = {
     "chnmuseum": _museum_chnmuseum,
     "njmuseum": _museum_njmuseum,
     "hnmuseum": _museum_hnmuseum,
     "sxhm": _museum_sxhm,
     "dpm": _museum_dpm,
+    "lzmuseum": _museum_lzmuseum,
+    "silkmuseum": _museum_silkmuseum,
+    "szmuseum": _museum_szmuseum,
 }
 
 
@@ -912,8 +1236,8 @@ def collect_museum_cn(source: dict) -> list[dict]:
     """全国博物馆/美术馆官网展览。
 
     读取字段：site（必填，见 MUSEUM_COLLECTORS，可用 chnmuseum / njmuseum /
-    hnmuseum / sxhm / dpm）、city（中文名，可选）、url（可覆盖默认列表页）、
-    max_pages（陕历博分页用）。
+    hnmuseum / sxhm / dpm / lzmuseum / silkmuseum / szmuseum）、city（中文名，可选）、
+    url（可覆盖默认列表页）、max_pages（陕历博分页用）、max_articles（展讯文章型站点用）。
     """
     try:
         site = clean_text(source.get("site")).lower()
