@@ -1,11 +1,18 @@
-﻿{
+{
   "version": 2,
   "sources": [
     {
       "name": "猫眼演出",
       "adapter": "maoyan",
       "url": "https://show.maoyan.com/",
-      "categories": [4, 9, 6, 5, 3, 15],
+      "categories": [
+        4,
+        9,
+        6,
+        5,
+        3,
+        15
+      ],
       "page_size": 30,
       "max_pages": 1,
       "enabled": true
@@ -21,7 +28,12 @@
       "name": "豆瓣同城上海",
       "adapter": "douban",
       "url": "https://shanghai.douban.com/events",
-      "pages": ["week-drama", "week-comedy", "week-exhibition", "week-music"],
+      "pages": [
+        "week-drama",
+        "week-comedy",
+        "week-exhibition",
+        "week-music"
+      ],
       "enabled": true
     },
     {
@@ -47,7 +59,9 @@
       "adapter": "psa",
       "url": "https://www.powerstationofart.com/",
       "api_base": "https://www.powerstationofart.com/campus/api/feed/public/psa",
-      "endpoints": ["/whats-on/exhibitions"],
+      "endpoints": [
+        "/whats-on/exhibitions"
+      ],
       "enabled": true
     },
     {
@@ -55,8 +69,531 @@
       "adapter": "longmuseum",
       "url": "http://www.thelongmuseum.org/exhibition-current.html",
       "enabled": true
+    },
+    {
+      "name": "猫眼演出·北京",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "北京",
+      "city_id": 1,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·广州",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "广州",
+      "city_id": 20,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·深圳",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "深圳",
+      "city_id": 30,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·天津",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "天津",
+      "city_id": 40,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·西安",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "西安",
+      "city_id": 42,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·重庆",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "重庆",
+      "city_id": 45,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·杭州",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "杭州",
+      "city_id": 50,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·南京",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "南京",
+      "city_id": 55,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·武汉",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "武汉",
+      "city_id": 57,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·成都",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "成都",
+      "city_id": 59,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·长沙",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "长沙",
+      "city_id": 70,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·苏州",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "苏州",
+      "city_id": 80,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·福州",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "福州",
+      "city_id": 44,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·宁波",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "宁波",
+      "city_id": 51,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·无锡",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "无锡",
+      "city_id": 52,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·合肥",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "合肥",
+      "city_id": 56,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·青岛",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "青岛",
+      "city_id": 60,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·厦门",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "厦门",
+      "city_id": 62,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·大连",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "大连",
+      "city_id": 65,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·沈阳",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "沈阳",
+      "city_id": 66,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·郑州",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "郑州",
+      "city_id": 73,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·石家庄",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "石家庄",
+      "city_id": 76,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·南昌",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "南昌",
+      "city_id": 83,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·哈尔滨",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "哈尔滨",
+      "city_id": 90,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·东莞",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "东莞",
+      "city_id": 91,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·佛山",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "佛山",
+      "city_id": 92,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·海口",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "海口",
+      "city_id": 94,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·济南",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "济南",
+      "city_id": 96,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·洛阳",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "洛阳",
+      "city_id": 97,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·太原",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "太原",
+      "city_id": 101,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·贵阳",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "贵阳",
+      "city_id": 107,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "猫眼演出·昆明",
+      "adapter": "maoyan_city",
+      "url": "https://show.maoyan.com/",
+      "city": "昆明",
+      "city_id": 114,
+      "categories": [
+        9,
+        4
+      ],
+      "page_size": 30,
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "name": "豆瓣同城·北京",
+      "adapter": "douban_city",
+      "url": "https://beijing.douban.com/events",
+      "base_url": "https://beijing.douban.com/events",
+      "city": "北京",
+      "pages": [
+        "week-drama",
+        "week-exhibition"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "豆瓣同城·广州",
+      "adapter": "douban_city",
+      "url": "https://guangzhou.douban.com/events",
+      "base_url": "https://guangzhou.douban.com/events",
+      "city": "广州",
+      "pages": [
+        "week-drama",
+        "week-exhibition"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "豆瓣同城·深圳",
+      "adapter": "douban_city",
+      "url": "https://shenzhen.douban.com/events",
+      "base_url": "https://shenzhen.douban.com/events",
+      "city": "深圳",
+      "pages": [
+        "week-drama",
+        "week-exhibition"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "中国国家博物馆",
+      "adapter": "museum_cn",
+      "site": "chnmuseum",
+      "url": "https://www.chnmuseum.cn/zl/zzzc/",
+      "city": "北京",
+      "enabled": true
+    },
+    {
+      "name": "故宫博物院",
+      "adapter": "museum_cn",
+      "site": "dpm",
+      "url": "https://www.dpm.org.cn/shows.html",
+      "city": "北京",
+      "enabled": true
+    },
+    {
+      "name": "南京博物院",
+      "adapter": "museum_cn",
+      "site": "njmuseum",
+      "url": "https://www.njmuseum.com/api/exhibition/list",
+      "city": "南京",
+      "enabled": true
+    },
+    {
+      "name": "湖南博物院",
+      "adapter": "museum_cn",
+      "site": "hnmuseum",
+      "url": "https://www.hnmuseum.com/zh-hans/content/%E5%BD%93%E5%89%8D%E5%B1%95%E8%A7%88%EF%BC%8D%E5%9F%BA%E6%9C%AC%E9%99%88%E5%88%97",
+      "city": "长沙",
+      "enabled": true
+    },
+    {
+      "name": "陕西历史博物馆",
+      "adapter": "museum_cn",
+      "site": "sxhm",
+      "url": "https://www.sxhm.com/Temporary.html",
+      "city": "西安",
+      "max_pages": 2,
+      "enabled": true
     }
   ]
 }
-
-

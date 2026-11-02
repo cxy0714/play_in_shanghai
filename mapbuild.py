@@ -97,6 +97,7 @@ PLACES_PAGE_TEMPLATE = """<!doctype html>
     <nav class="site-nav" aria-label="站点导航">
       <a href="index.html">🎫 活动清单</a>
       <a class="active" href="map.html" aria-current="page">🗺 建筑地图</a>
+      <a href="new.html">🆕 本周上新</a>
     </nav>
   </header>
 

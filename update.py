@@ -36,6 +36,12 @@ from zoneinfo import ZoneInfo
 import requests
 from bs4 import BeautifulSoup
 
+try:  # 全国范围的数据源（可选模块，缺失时退化为纯上海模式）
+    from national_sources import NATIONAL_ADAPTERS
+except Exception as exc:  # pragma: no cover - 只在模块缺失/损坏时触发
+    NATIONAL_ADAPTERS = {}
+    print(f"[warn] national_sources 加载失败，仅抓取上海数据：{exc}", flush=True)
+
 ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = ROOT / "config" / "sources.json"
 DATA_DIR = ROOT / "data"
@@ -50,6 +56,17 @@ USER_AGENT = (
 DATE_WINDOW_DAYS = 75
 MAX_LLM_TEXT = 28000
 LLM_TIMEOUT = 180
+
+# 全国范围（外地）只收录下面这几类活动；其余类别仍然只看上海
+SHANGHAI_CITY = "上海"
+NATIONAL_GROUPS = {"音乐剧", "话剧"}
+NATIONAL_EXHIBITION_SUBS = {"历史文物"}
+
+# 「本周上新」记录
+UPDATES_PATH = DATA_DIR / "updates.json"
+UPDATES_KEEP_RUNS = 60
+NEW_DAYS = 7
+NEW_PAGE_RUN_CAP = 40  # 单次更新在时间线页面最多展示多少张卡片
 
 LLM_CONFIG: tuple[str, str, str] | None = None
 
@@ -1402,6 +1419,12 @@ def normalize_event(raw: dict, source: dict) -> dict | None:
 
     image_url = clean_text(first_present(raw, "image_url", "image"))
     district = clean_text(first_present(raw, "district")) or find_district(venue, address, title)
+    # 城市：优先用采集模块给的城市名，其次用 source 配置，最后默认上海
+    city = (
+        clean_text(first_present(raw, "city", "city_name", "cityName"))
+        or clean_text(source.get("city"))
+        or SHANGHAI_CITY
+    )
 
     display_category = category
     sub_category = ""
@@ -1420,6 +1443,7 @@ def normalize_event(raw: dict, source: dict) -> dict | None:
         "sub_category": sub_category,
         "venue": venue,
         "district": district,
+        "city": city,
         "address": address,
         "start_date": start.isoformat() if start else "",
         "end_date": end.isoformat() if end else "",
@@ -1446,6 +1470,7 @@ def normalized_key(text: str) -> str:
 def event_key(event: dict) -> str:
     return "|".join(
         [
+            normalized_key(event.get("city", "")),
             normalized_key(event.get("title", "")),
             normalized_key(event.get("venue", "")),
             event.get("start_date", ""),
@@ -1456,7 +1481,7 @@ def event_key(event: dict) -> str:
 def merge_events(primary: dict, other: dict) -> dict:
     preferred_status = ["已取消", "已延期", "已售罄", "", "在售"]
     for field in (
-        "summary", "venue", "district", "address", "start_date", "end_date",
+        "summary", "venue", "district", "city", "address", "start_date", "end_date",
         "time_text", "price_text", "ticket_url", "source_url", "image_url", "status",
         "display_category", "sub_category",
     ):
@@ -1515,6 +1540,43 @@ def dedupe_events(events: list[dict]) -> list[dict]:
 # ---------------------------------------------------------------------------
 # 窗口过滤与渲染数据
 # ---------------------------------------------------------------------------
+
+def event_city(event: dict) -> str:
+    return clean_text(event.get("city")) or SHANGHAI_CITY
+
+
+def is_shanghai(event: dict) -> bool:
+    return event_city(event) == SHANGHAI_CITY
+
+
+def national_allowed(event: dict) -> bool:
+    """外地活动只收录：历史文物类展览、音乐剧、话剧。"""
+    if is_shanghai(event):
+        return True
+    group = event.get("category", "")
+    if group in NATIONAL_GROUPS:
+        return True
+    if group == "展览" and (event.get("display_category") or "") in NATIONAL_EXHIBITION_SUBS:
+        return True
+    return False
+
+
+def title_key(event: dict) -> str:
+    """「上新」的身份键：只看归一化标题。
+
+    日期/场馆在每次抓取里都可能抖动（滚动场次、场馆名多写一个字），
+    用 id 或 title+venue+date 判断会把老活动误报成新增。
+    """
+    return normalized_key(event.get("title", ""))
+
+
+def compact_event(event: dict) -> dict:
+    fields = (
+        "id", "title", "category", "display_category", "venue", "district", "city",
+        "start_date", "end_date", "time_text", "price_text", "ticket_url",
+        "source_url", "source_name", "summary", "status",
+    )
+    return {field: event.get(field, "") for field in fields}
 
 def event_overlaps(event: dict, start: date, end: date) -> bool:
     event_start = parse_date(event.get("start_date"))
@@ -1689,6 +1751,49 @@ main { max-width: 980px; margin: 0 auto; padding: 16px 18px 40px; display: grid;
 .site-nav a:hover { color: var(--text); border-color: #d0d0d4; }
 .site-nav a.active { background: var(--text); border-color: var(--text); color: #fff; }
 footer { max-width: 980px; margin: 0 auto; padding: 0 18px 40px; color: #999; font-size: 12px; }
+.updates-panel { max-width: 980px; margin: 16px auto 0; padding: 0 18px; }
+.updates-inner {
+  background: linear-gradient(135deg, #ffffff 0%, #fff7f7 100%);
+  border: 1px solid #ffe3e3; border-radius: 18px; padding: 16px;
+  box-shadow: var(--shadow);
+  display: grid; grid-template-columns: 1fr auto; gap: 6px 14px; align-items: start;
+}
+.updates-main { min-width: 0; }
+.updates-kicker { margin: 0 0 2px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .06em; }
+.updates-count { margin: 0; font-size: 28px; font-weight: 800; line-height: 1.15; }
+.updates-count span { font-size: 14px; font-weight: 600; color: var(--muted); }
+.updates-meta { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+.updates-link {
+  align-self: start; text-decoration: none; color: var(--accent); font-weight: 700; font-size: 13px;
+  background: #fff; border: 1px solid #ffd6d6; border-radius: 999px; padding: 7px 13px; white-space: nowrap;
+}
+.updates-list {
+  grid-column: 1 / -1; list-style: none; margin: 6px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 16px;
+}
+.updates-list li { display: flex; align-items: baseline; gap: 6px; min-width: 0; font-size: 13px; }
+.updates-list a { color: var(--text); text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.updates-list a:hover { color: var(--accent); }
+.updates-list .up-city { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.updates-list .up-more { color: var(--muted); grid-column: 1 / -1; }
+.badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+.badge.new { background: var(--accent); color: #fff; }
+.card.is-new { border-color: #ffd9d9; }
+.chips.city-chips { margin-top: 8px; }
+.timeline { max-width: 980px; margin: 0 auto; padding: 6px 18px 0; }
+.run { margin-top: 20px; }
+.run-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.run-head h2 { margin: 0; font-size: 18px; }
+.run-stat { color: var(--accent); font-weight: 700; font-size: 13px; }
+.run-note { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
+.run-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.timeline-empty { color: var(--muted); text-align: center; padding: 30px 0; }
+details.older { max-width: 980px; margin: 26px auto 0; padding: 0 18px 40px; }
+details.older summary { cursor: pointer; color: var(--muted); font-weight: 700; font-size: 14px; padding: 10px 0; }
+@media (max-width: 720px) {
+  .updates-list, .run-cards { grid-template-columns: 1fr; }
+  .updates-inner { grid-template-columns: 1fr; }
+}
 @media (max-width: 720px) {
   main { grid-template-columns: 1fr; padding-top: 12px; }
   h1 { font-size: 25px; }
@@ -1705,14 +1810,20 @@ def format_event_date_parts(event: dict) -> tuple[str, str]:
     return full, ""
 
 
-def build_card(event: dict, months: str) -> str:
+def build_card(event: dict, months: str, is_new: bool = False) -> str:
     group = event.get("category") or "其他"
     category = event.get("display_category") or group
     category_class = CATEGORY_CLASS.get(group, "other")
     title = html_lib.escape(event.get("title", ""))
     venue = html_lib.escape(event.get("venue", ""))
+    city = event_city(event)
+    national = city != SHANGHAI_CITY
     district = event.get("district", "")
-    meta = venue + (f" · {district}" if district else "")
+    if national:
+        meta = f"{html_lib.escape(city)} · {venue}"
+    else:
+        meta = venue + (f" · {html_lib.escape(district)}" if district else "")
+    scope = "national" if national else "sh"
     summary = html_lib.escape(event.get("summary", ""))
     price = html_lib.escape(event.get("price_text", "以页面为准"))
     date_text, time_text = format_event_date_parts(event)
@@ -1731,6 +1842,7 @@ def build_card(event: dict, months: str) -> str:
         " ".join([
             event.get("title", ""),
             event.get("venue", ""),
+            city,
             district,
             event.get("summary", ""),
             category,
@@ -1739,10 +1851,12 @@ def build_card(event: dict, months: str) -> str:
         ]),
         quote=True,
     )
+    new_badge = '<span class="badge new">NEW</span>' if is_new else ""
+    card_class = "card is-new" if is_new else "card"
     return f"""
-      <article class="card" data-month="{months}" data-category="{html_lib.escape(category, quote=True)}" data-group="{html_lib.escape(group, quote=True)}" data-search="{search_text.lower()}">
+      <article class="{card_class}" data-month="{months}" data-scope="{scope}" data-city="{html_lib.escape(city, quote=True)}" data-category="{html_lib.escape(category, quote=True)}" data-group="{html_lib.escape(group, quote=True)}" data-search="{search_text.lower()}">
         <div class="card-top">
-          <span class="badge {category_class}">{html_lib.escape(category)}</span>
+          <span class="badge-row"><span class="badge {category_class}">{html_lib.escape(category)}</span>{new_badge}</span>
         </div>
         <h2>{title}</h2>
         <div class="when {category_class}">
@@ -1759,13 +1873,32 @@ def build_card(event: dict, months: str) -> str:
       </article>"""
 
 
-def build_html(events: list[dict], generated_at: datetime) -> str:
+def build_html(
+    events: list[dict],
+    generated_at: datetime,
+    updates: dict | None = None,
+    new_titles: set[str] | None = None,
+) -> str:
     today = today_cn()
     window_end = today + timedelta(days=DATE_WINDOW_DAYS)
-    visible = [event for event in events if event_overlaps(event, today - timedelta(days=31), window_end)]
-    visible.sort(key=lambda e: (e.get("start_date") or "9999-99-99", e.get("title", "")))
+    new_titles = new_titles or set()
+    visible = [
+        event
+        for event in events
+        if national_allowed(event) and event_overlaps(event, today - timedelta(days=31), window_end)
+    ]
+    visible.sort(
+        key=lambda event: (
+            event_city(event) != SHANGHAI_CITY,
+            event.get("start_date") or "9999-99-99",
+            event.get("title", ""),
+        )
+    )
 
-    cards = "\n".join(build_card(event, compute_months(event, today)) for event in visible)
+    cards = "\n".join(
+        build_card(event, compute_months(event, today), is_new=title_key(event) in new_titles)
+        for event in visible
+    )
     filter_order = EXHIBITION_SUBCATEGORIES + [c for c in CATEGORIES if c != "展览"]
     present: set[str] = set()
     for event in visible:
@@ -1778,44 +1911,69 @@ def build_html(events: list[dict], generated_at: datetime) -> str:
     chips = ['<button class="chip active" data-cat="all">全部</button>']
     chips.extend(f'<button class="chip" data-cat="{html_lib.escape(cat, quote=True)}">{html_lib.escape(cat)}</button>' for cat in categories)
 
+    city_counts: dict[str, int] = {}
+    for event in visible:
+        city = event_city(event)
+        if city != SHANGHAI_CITY:
+            city_counts[city] = city_counts.get(city, 0) + 1
+    city_chips = ['<button class="chip active" data-city="all">全部城市</button>']
+    city_chips.extend(
+        f'<button class="chip" data-city="{html_lib.escape(city, quote=True)}">{html_lib.escape(city)} {num}</button>'
+        for city, num in sorted(city_counts.items(), key=lambda item: (-item[1], item[0]))
+    )
+
     updated = generated_at.strftime("%Y-%m-%d %H:%M")
     count = len(visible)
+    sh_count = sum(1 for event in visible if is_shanghai(event))
+    national_count = count - sh_count
     if count:
-        subtitle = f"更新于 {updated} · 近期 {count} 个活动"
+        subtitle = f"更新于 {updated} · 近期 {count} 个活动（上海 {sh_count}"
+        subtitle += f" · 外地 {national_count}）" if national_count else "）"
     else:
         subtitle = f"更新于 {updated} · 暂时没有抓到活动"
+
+    updates_panel = updates_panel_html(updates) if updates else ""
 
     return f"""<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>上海本月去哪玩</title>
-  <meta name="description" content="上海展览、话剧、音乐剧、演出自动汇总">
+  <title>上海 &amp; 全国本月去哪玩</title>
+  <meta name="description" content="上海展览、话剧、音乐剧自动汇总，历史文物/音乐剧/话剧覆盖全国主要城市">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="hero">
-    <p class="eyebrow">周末去哪玩 · 上海</p>
+    <p class="eyebrow">周末去哪玩 · 上海 &amp; 全国</p>
     <h1>本月展览 / 话剧 / 音乐剧</h1>
     <p class="updated">{subtitle}</p>
     <nav class="site-nav" aria-label="站点导航">
       <a class="active" href="index.html" aria-current="page">🎫 活动清单</a>
       <a href="map.html">🗺 建筑地图</a>
+      <a href="new.html">🆕 本周上新</a>
     </nav>
   </header>
+  {updates_panel}
   <div class="toolbar">
     <div class="toolbar-inner">
-      <div class="tabs" role="tablist">
+      <div class="tabs tabs-range" role="group" aria-label="范围">
+        <button class="tab active" data-scope="sh">上海</button>
+        <button class="tab" data-scope="all">全国</button>
+      </div>
+      <div class="tabs" role="tablist" aria-label="时间">
         <button class="tab active" data-tab="current">本月</button>
         <button class="tab" data-tab="next">下月</button>
         <button class="tab" data-tab="all">全部</button>
       </div>
-      <input id="search" type="search" placeholder="搜名称 / 场馆 / 区域">
+      <input id="search" type="search" placeholder="搜名称 / 场馆 / 城市">
     </div>
   </div>
   <div class="chips" id="chips">
     {''.join(chips)}
+  </div>
+  <div class="chips city-chips" id="city-chips" hidden>
+    {''.join(city_chips)}
   </div>
   <main id="event-list">
     {cards}
@@ -1825,10 +1983,11 @@ def build_html(events: list[dict], generated_at: datetime) -> str:
     信息来自公开网页，以官方购票/预约页面为准。如有延期、取消或售罄，请以官方最新信息为准。
   </footer>
   <script>
-    const state = {{ tab: 'current', cat: 'all', q: '' }};
-    const cards = Array.from(document.querySelectorAll('.card'));
+    const state = {{ tab: 'current', cat: 'all', q: '', scope: 'sh', city: 'all' }};
+    const cards = Array.from(document.querySelectorAll('#event-list .card'));
     const empty = document.getElementById('empty');
     const search = document.getElementById('search');
+    const cityChips = document.getElementById('city-chips');
 
     function applyFilters() {{
       let visible = 0;
@@ -1837,30 +1996,59 @@ def build_html(events: list[dict], generated_at: datetime) -> str:
         const category = card.dataset.category || '';
         const group = card.dataset.group || category;
         const text = card.dataset.search || '';
+        const scope = card.dataset.scope || 'sh';
+        const city = card.dataset.city || '';
         const monthOk = state.tab === 'all' || months.includes(state.tab);
         const catOk = state.cat === 'all' || category === state.cat || group === state.cat;
         const searchOk = !state.q || text.includes(state.q);
-        const show = monthOk && catOk && searchOk;
+        const scopeOk = state.scope === 'all' || scope === 'sh';
+        const cityOk = state.scope !== 'all' || state.city === 'all' || city === state.city;
+        const show = monthOk && catOk && searchOk && scopeOk && cityOk;
         card.hidden = !show;
         if (show) visible += 1;
       }});
       empty.hidden = visible > 0;
+      if (cityChips) cityChips.hidden = state.scope !== 'all';
     }}
 
-    document.querySelectorAll('.tab').forEach(button => {{
+    document.querySelectorAll('.tabs-range .tab').forEach(button => {{
       button.addEventListener('click', () => {{
-        document.querySelectorAll('.tab').forEach(item => item.classList.remove('active'));
+        document.querySelectorAll('.tabs-range .tab').forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        state.scope = button.dataset.scope;
+        if (state.scope !== 'all') {{
+          state.city = 'all';
+          document.querySelectorAll('#city-chips .chip').forEach(item => item.classList.remove('active'));
+          const first = document.querySelector('#city-chips .chip[data-city="all"]');
+          if (first) first.classList.add('active');
+        }}
+        applyFilters();
+      }});
+    }});
+
+    document.querySelectorAll('[data-tab]').forEach(button => {{
+      button.addEventListener('click', () => {{
+        document.querySelectorAll('[data-tab]').forEach(item => item.classList.remove('active'));
         button.classList.add('active');
         state.tab = button.dataset.tab;
         applyFilters();
       }});
     }});
 
-    document.querySelectorAll('.chip').forEach(button => {{
+    document.querySelectorAll('#chips .chip').forEach(button => {{
       button.addEventListener('click', () => {{
-        document.querySelectorAll('.chip').forEach(item => item.classList.remove('active'));
+        document.querySelectorAll('#chips .chip').forEach(item => item.classList.remove('active'));
         button.classList.add('active');
         state.cat = button.dataset.cat;
+        applyFilters();
+      }});
+    }});
+
+    document.querySelectorAll('#city-chips .chip').forEach(button => {{
+      button.addEventListener('click', () => {{
+        document.querySelectorAll('#city-chips .chip').forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        state.city = button.dataset.city;
         applyFilters();
       }});
     }});
@@ -1872,6 +2060,338 @@ def build_html(events: list[dict], generated_at: datetime) -> str:
 
     applyFilters();
   </script>
+</body>
+</html>
+"""
+
+
+# ---------------------------------------------------------------------------
+# 「本周上新」：每次运行的新增记录 / 时间线页面
+# ---------------------------------------------------------------------------
+
+def load_updates() -> dict:
+    if not UPDATES_PATH.exists():
+        return {"version": 1, "runs": []}
+    try:
+        payload = json.loads(UPDATES_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {"version": 1, "runs": []}
+    if not isinstance(payload, dict):
+        return {"version": 1, "runs": []}
+    runs = payload.get("runs")
+    if not isinstance(runs, list):
+        runs = []
+    return {"version": 1, "runs": [run for run in runs if isinstance(run, dict)]}
+
+
+def load_previous_events() -> list[dict]:
+    """读上一轮生成的 data/events.json（在覆盖之前调用）。"""
+    path = DATA_DIR / "events.json"
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    events = payload.get("events") if isinstance(payload, dict) else payload
+    return [event for event in (events or []) if isinstance(event, dict)]
+
+
+def record_update(
+    previous_events: list[dict],
+    current_events: list[dict],
+    generated_at: datetime,
+) -> dict:
+    """把本轮相对上一轮的新增活动追加进 data/updates.json。"""
+    updates = load_updates()
+    previous_keys = {title_key(event) for event in previous_events if title_key(event)}
+    current_keys = {title_key(event) for event in current_events if title_key(event)}
+
+    added = [
+        compact_event(event)
+        for event in current_events
+        if title_key(event)
+        and title_key(event) not in previous_keys
+        and national_allowed(event)
+    ]
+    added.sort(
+        key=lambda event: (
+            event_city(event) != SHANGHAI_CITY,
+            event.get("start_date") or "9999-99-99",
+            event.get("title", ""),
+        )
+    )
+
+    run_entry = {
+        "at": generated_at.isoformat(timespec="seconds"),
+        "added": added,
+        "added_count": len(added),
+        "added_national": sum(1 for event in added if not is_shanghai(event)),
+        "removed": len(previous_keys - current_keys),
+        "total": len(current_events),
+        "baseline": not previous_events,
+    }
+    runs = [run for run in updates["runs"] if run.get("at") != run_entry["at"]]
+    runs.append(run_entry)
+    runs.sort(key=lambda run: run.get("at", ""))
+    updates["runs"] = runs[-UPDATES_KEEP_RUNS:]
+
+    # 滚出 7 天窗口的旧记录只保留前几十条，避免 updates.json 越来越大
+    cutoff = generated_at - timedelta(days=NEW_DAYS)
+    for run in updates["runs"]:
+        try:
+            when = datetime.fromisoformat(str(run.get("at", "")))
+        except Exception:
+            continue
+        added = run.get("added")
+        if when < cutoff and isinstance(added, list) and len(added) > NEW_PAGE_RUN_CAP:
+            run["added"] = added[:NEW_PAGE_RUN_CAP]
+            run["trimmed"] = True
+    return updates
+
+
+def save_updates(updates: dict) -> None:
+    save_json(UPDATES_PATH, updates)
+
+
+def recent_runs(updates: dict, days: int = NEW_DAYS, now: datetime | None = None) -> list[dict]:
+    now = now or datetime.now(SHANGHAI_TZ)
+    threshold = now - timedelta(days=days)
+    result: list[dict] = []
+    for run in updates.get("runs", []):
+        try:
+            when = datetime.fromisoformat(str(run.get("at", "")))
+        except Exception:
+            continue
+        if when >= threshold:
+            result.append(run)
+    return result
+
+
+def week_new_events(updates: dict, now: datetime | None = None) -> list[dict]:
+    """近 7 天新增的活动，按标题去重，新的在前。"""
+    seen: set[str] = set()
+    collected: list[dict] = []
+    for run in sorted(recent_runs(updates, now=now), key=lambda run: run.get("at", ""), reverse=True):
+        for event in run.get("added", []):
+            key = title_key(event)
+            if key and key not in seen:
+                seen.add(key)
+                collected.append(event)
+    return collected
+
+
+def recent_new_titles(updates: dict, now: datetime | None = None) -> set[str]:
+    return {title_key(event) for event in week_new_events(updates, now=now) if title_key(event)}
+
+
+def fmt_run_time(value: str) -> str:
+    try:
+        when = datetime.fromisoformat(str(value))
+    except Exception:
+        return ""
+    return f"{when.year}年{when.month}月{when.day}日 {when.strftime('%H:%M')}"
+
+
+def updates_panel_html(updates: dict) -> str:
+    """主页顶部的「本周上新」区块。"""
+    if not updates.get("runs"):
+        return ""
+    week_events = week_new_events(updates)
+    week_count = len(week_events)
+    week_sh = sum(1 for event in week_events if is_shanghai(event))
+    week_nat = week_count - week_sh
+    last = updates["runs"][-1]
+    last_time = fmt_run_time(last.get("at", ""))
+
+    items: list[str] = []
+    for event in week_events[:6]:
+        title = html_lib.escape(event.get("title", ""))
+        link = html_lib.escape(
+            event.get("ticket_url") or event.get("source_url") or "new.html", quote=True
+        )
+        city = html_lib.escape(event_city(event))
+        items.append(
+            f'<li><a href="{link}" target="_blank" rel="noopener noreferrer">{title}</a>'
+            f'<span class="up-city">{city}</span></li>'
+        )
+    if week_count > 6:
+        items.append(f'<li class="up-more">还有 {week_count - 6} 个…</li>')
+    if not week_count:
+        items.append('<li class="up-more">这 7 天还没有新活动，等下一次自动更新。</li>')
+
+    scope_note = f"上海 {week_sh} · 外地 {week_nat}" if week_nat else f"上海 {week_sh}"
+    return f"""
+  <section class="updates-panel">
+    <div class="updates-inner">
+      <div class="updates-main">
+        <p class="updates-kicker">本周上新 · 近 {NEW_DAYS} 天</p>
+        <p class="updates-count">+{week_count}<span> 个新活动</span></p>
+        <p class="updates-meta">{scope_note} · 共 {len(updates.get('runs', []))} 次更新记录 · 最近一次 {last_time}（新增 {last.get('added_count', 0)} 个）</p>
+      </div>
+      <a class="updates-link" href="new.html">看时间线 →</a>
+      <ul class="updates-list">
+        {''.join(items)}
+      </ul>
+    </div>
+  </section>"""
+
+
+BULK_RUN_LIMIT = 150  # 单轮新增超过这个数（比如第一次接入全国源）就走汇总模式
+
+
+def render_run(run: dict, cap: int = NEW_PAGE_RUN_CAP) -> str:
+    added = [event for event in run.get("added", []) if isinstance(event, dict)]
+    local_events = [event for event in added if is_shanghai(event)]
+    national_events = [event for event in added if not is_shanghai(event)]
+    bulk = len(added) > BULK_RUN_LIMIT
+
+    if bulk and not run.get("baseline"):
+        cards = local_events[:cap] + national_events[:12]
+    else:
+        cards = added[:cap]
+    hidden = len(added) - len(cards)
+    cards_html = "\n".join(build_card(event, "all") for event in cards)
+
+    stat = f"新增 {len(added)} 个"
+    if national_events:
+        stat += f"（外地 {len(national_events)} 个）"
+
+    note = ""
+    if run.get("baseline"):
+        note = '<p class="run-note">这是第一次记录，全部在架活动都算新增。</p>'
+    elif bulk:
+        city_counts: dict[str, int] = {}
+        for event in national_events:
+            city = event_city(event)
+            city_counts[city] = city_counts.get(city, 0) + 1
+        top_cities = sorted(city_counts.items(), key=lambda item: (-item[1], item[0]))
+        breakdown = " · ".join(f"{city} {num}" for city, num in top_cities[:12])
+        if len(top_cities) > 12:
+            breakdown += f" 等 {len(top_cities)} 个城市"
+        note = (
+            f'<p class="run-note">这一轮第一次大规模收录全国场次：外地 {len(national_events)} 个'
+            f"（{breakdown}）在这里只做汇总，下面列的是上海新增 {len(local_events)} 个和少量外地示例；"
+            "完整外地清单可以在「活动清单」里切到全国查看。</p>"
+        )
+    elif hidden > 0:
+        note = (
+            f'<p class="run-note">本轮新增 {len(added)} 个，这里只展示最早开始的 {len(cards)} 个；'
+            "完整清单可以在活动清单里切到「全国」按城市查看。</p>"
+        )
+
+    return f"""
+    <section class="run" data-at="{html_lib.escape(str(run.get('at', '')), quote=True)}">
+      <header class="run-head">
+        <h2>{fmt_run_time(run.get('at', ''))}</h2>
+        <span class="run-stat">{stat}</span>
+      </header>
+      {note}
+      <div class="run-cards">
+        {cards_html}
+      </div>
+    </section>"""
+
+
+NEW_PAGE_SCRIPT = """
+<script>
+  const scopeChips = Array.from(document.querySelectorAll('.scope-chip'));
+  const cards = Array.from(document.querySelectorAll('.run-cards .card'));
+  const runs = Array.from(document.querySelectorAll('.run'));
+  let scope = 'all';
+
+  function applyScope() {
+    let shown = 0;
+    cards.forEach(card => {
+      const ok = scope === 'all' || card.dataset.scope === scope;
+      card.hidden = !ok;
+      if (ok) shown += 1;
+    });
+    runs.forEach(run => {
+      run.hidden = run.querySelectorAll('.card:not([hidden])').length === 0;
+    });
+    const empty = document.getElementById('timeline-empty');
+    if (empty) empty.hidden = shown > 0;
+  }
+
+  scopeChips.forEach(btn => {
+    btn.addEventListener('click', () => {
+      scopeChips.forEach(item => item.classList.remove('active'));
+      btn.classList.add('active');
+      scope = btn.dataset.scope;
+      applyScope();
+    });
+  });
+
+  applyScope();
+</script>
+"""
+
+
+def build_new_page(updates: dict, generated_at: datetime) -> str:
+    all_runs = [run for run in updates.get("runs", []) if run.get("added")]
+    all_runs.sort(key=lambda run: run.get("at", ""), reverse=True)
+    recent_at = {run.get("at") for run in recent_runs(updates)}
+    recent = [run for run in all_runs if run.get("at") in recent_at]
+    older = [run for run in all_runs if run.get("at") not in recent_at]
+
+    week_events = week_new_events(updates)
+    week_count = len(week_events)
+    week_sh = sum(1 for event in week_events if is_shanghai(event))
+    week_nat = week_count - week_sh
+
+    recent_html = "".join(render_run(run) for run in recent)
+    older_html = "".join(render_run(run, cap=12) for run in older)
+    older_block = ""
+    if older_html:
+        older_block = f"""
+  <details class="older">
+    <summary>更早的更新（{len(older)} 次）</summary>
+    {older_html}
+  </details>"""
+
+    scope_chips = """
+    <button class="chip scope-chip active" data-scope="all">全部</button>
+    <button class="chip scope-chip" data-scope="sh">上海</button>
+    <button class="chip scope-chip" data-scope="national">外地</button>"""
+
+    if recent_html:
+        timeline = f'<div class="timeline">{recent_html}</div>'
+    else:
+        timeline = (
+            '<div class="timeline"><p class="timeline-empty" id="timeline-empty">'
+            f"最近 {NEW_DAYS} 天还没有新增活动，等下一次自动更新。</p></div>"
+        )
+
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>本周上新 · 上海 &amp; 全国展演</title>
+  <meta name="description" content="每次自动更新新增了哪些展览、话剧和音乐剧">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">更新日志 · 上海 &amp; 全国</p>
+    <h1>本周上新</h1>
+    <p class="updated">近 {NEW_DAYS} 天新增 {week_count} 个活动（上海 {week_sh} · 外地 {week_nat}）· 页面更新于 {generated_at.strftime("%Y-%m-%d %H:%M")}</p>
+    <nav class="site-nav" aria-label="站点导航">
+      <a href="index.html">🎫 活动清单</a>
+      <a href="map.html">🗺 建筑地图</a>
+      <a class="active" href="new.html" aria-current="page">🆕 本周上新</a>
+    </nav>
+  </header>
+  <div class="chips" id="scope-chips">{scope_chips}
+  </div>
+  {timeline}
+  {older_block}
+  <footer>
+    记录口径：每轮自动更新后，与上一轮的活动清单按「标题」比对，出现的新活动记到这里；
+    日期、场馆的日常抖动不算新增。外地活动只收录历史文物类展览、音乐剧和话剧。
+  </footer>
+  {NEW_PAGE_SCRIPT}
 </body>
 </html>
 """
@@ -1986,6 +2506,7 @@ def collect_from_source(source: dict) -> list[dict]:
             "rockbund": collect_rockbund,
             "psa": collect_psa,
             "longmuseum": collect_longmuseum,
+            **NATIONAL_ADAPTERS,
         }
         collector = adapters.get(adapter)
         if collector:
@@ -2054,6 +2575,7 @@ def run(config_path: Path, no_llm: bool = False) -> None:
     log(f"开始抓取 {len(sources)} 个来源")
 
     raw_with_source: list[tuple[dict, dict]] = []
+    source_counts: dict[str, int] = {}
     for source in sources:
         name = source.get("name", source.get("url", "未命名"))
         log(f"→ {name}")
@@ -2063,6 +2585,7 @@ def run(config_path: Path, no_llm: bool = False) -> None:
             log(f"  抓取异常：{exc}")
             items = []
         log(f"  获得 {len(items)} 条原始数据")
+        source_counts[name] = len(items)
         for item in items:
             raw_with_source.append((item, source))
 
@@ -2070,11 +2593,30 @@ def run(config_path: Path, no_llm: bool = False) -> None:
         log("本次没有抓到任何原始数据，保留上一次结果，不覆盖页面")
         return
 
+    previous_events = load_previous_events()
+
     events: list[dict] = []
     for raw, source in raw_with_source:
         event = normalize_event(raw, source)
         if event:
             events.append(event)
+
+    # 某个源整轮没抓到（限流/被墙/改版）时，沿用上一轮该源的数据，避免那一块直接消失
+    missing_sources = {name for name, count in source_counts.items() if count == 0}
+    if missing_sources and previous_events:
+        carried = [
+            event
+            for event in previous_events
+            if {
+                part.strip()
+                for part in str(event.get("source_name", "")).split("/")
+            } & missing_sources
+        ]
+        if carried:
+            events.extend(carried)
+            log(
+                f"沿用上一轮 {len(carried)} 条（这轮没抓到：{('、'.join(sorted(missing_sources)))}）"
+            )
 
     events = enrich_time_from_title(events)
     events = dedupe_events(events)
@@ -2089,6 +2631,16 @@ def run(config_path: Path, no_llm: bool = False) -> None:
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     save_translation_cache()
 
+    # 「本周上新」：先读上一轮清单算差集，再覆盖 events.json
+    updates = record_update(previous_events, events, generated_at)
+    save_updates(updates)
+    new_titles = recent_new_titles(updates)
+    latest = updates["runs"][-1] if updates.get("runs") else {}
+    log(
+        f"本轮新增 {latest.get('added_count', 0)} 个活动"
+        f"（外地 {latest.get('added_national', 0)} 个），消失 {latest.get('removed', 0)} 个"
+    )
+
     payload = {
         "updated": generated_at.isoformat(timespec="seconds"),
         "count": len(upcoming),
@@ -2097,11 +2649,15 @@ def run(config_path: Path, no_llm: bool = False) -> None:
     save_json(DATA_DIR / "events.json", payload)
     save_json(DOCS_DIR / "events.json", payload)
 
-    html_text = build_html(upcoming, generated_at)
+    html_text = build_html(upcoming, generated_at, updates=updates, new_titles=new_titles)
     (DOCS_DIR / "index.html").write_text(html_text, encoding="utf-8")
     (DOCS_DIR / "style.css").write_text(STYLE, encoding="utf-8")
     (DOCS_DIR / ".nojekyll").write_text("", encoding="utf-8")
-    (DOCS_DIR / "events.ics").write_text(build_ics(upcoming, generated_at), encoding="utf-8")
+    (DOCS_DIR / "events.ics").write_text(
+        build_ics([event for event in upcoming if is_shanghai(event)], generated_at),
+        encoding="utf-8",
+    )
+    (DOCS_DIR / "new.html").write_text(build_new_page(updates, generated_at), encoding="utf-8")
 
     try:
         from mapbuild import build_places_outputs
@@ -2117,9 +2673,18 @@ def run(config_path: Path, no_llm: bool = False) -> None:
     for event in upcoming:
         by_category[event["category"]] = by_category.get(event["category"], 0) + 1
 
+    city_counts: dict[str, int] = {}
+    for event in upcoming:
+        if not is_shanghai(event):
+            city = event_city(event)
+            city_counts[city] = city_counts.get(city, 0) + 1
+
     log(f"完成：标准化 {len(events)} 条，近期 {len(upcoming)} 条")
     log(f"分类统计：{json.dumps(by_category, ensure_ascii=False)}")
+    if city_counts:
+        log(f"外地场次：{json.dumps(city_counts, ensure_ascii=False, sort_keys=True)}")
     log(f"页面：{(DOCS_DIR / 'index.html').resolve()}")
+    log(f"上新：{(DOCS_DIR / 'new.html').resolve()}")
     log(f"日历：{(DOCS_DIR / 'events.ics').resolve()}")
 
 
