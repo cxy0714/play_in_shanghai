@@ -2576,7 +2576,7 @@ def build_new_page(updates: dict, generated_at: datetime) -> str:
   <header class="hero">
     <p class="eyebrow">更新日志 · 上海 &amp; 全国</p>
     <h1>本周上新</h1>
-    <p class="updated">近 {NEW_DAYS} 天新增 {week_count} 个活动（上海 {week_sh} · 外地 {week_nat}）· 页面更新于 {generated_at.strftime("%Y-%m-%d %H:%M")}</p>
+    <p class="updated">近 {NEW_DAYS} 天新增 {week_count} 个活动（上海 {week_sh} · 外地 {week_nat}）· 下面时间线展示 {len(shown_cards)} 张卡片 · 页面更新于 {generated_at.strftime("%Y-%m-%d %H:%M")}</p>
     <nav class="site-nav" aria-label="站点导航">
       <a href="index.html">🎫 活动清单</a>
       <a href="map.html">🗺 建筑地图</a>
