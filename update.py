@@ -67,6 +67,7 @@ UPDATES_PATH = DATA_DIR / "updates.json"
 UPDATES_KEEP_RUNS = 60
 NEW_DAYS = 7
 NEW_PAGE_RUN_CAP = 40  # 单次更新在时间线页面最多展示多少张卡片
+FETCH_BUDGET_SECONDS = 18 * 60  # 抓取总时间预算，超时后跳过剩余来源（配合 GitHub Actions 30 分钟超时）
 
 LLM_CONFIG: tuple[str, str, str] | None = None
 
@@ -2576,15 +2577,20 @@ def run(config_path: Path, no_llm: bool = False) -> None:
 
     raw_with_source: list[tuple[dict, dict]] = []
     source_counts: dict[str, int] = {}
+    fetch_started = time.monotonic()
     for source in sources:
+        if time.monotonic() - fetch_started > FETCH_BUDGET_SECONDS:
+            log(f"抓取已超过 {FETCH_BUDGET_SECONDS // 60} 分钟，跳过剩余来源（它们会沿用上一轮数据）")
+            break
         name = source.get("name", source.get("url", "未命名"))
         log(f"→ {name}")
+        source_started = time.monotonic()
         try:
             items = collect_from_source(source)
         except Exception as exc:
             log(f"  抓取异常：{exc}")
             items = []
-        log(f"  获得 {len(items)} 条原始数据")
+        log(f"  获得 {len(items)} 条原始数据（{time.monotonic() - source_started:.1f}s）")
         source_counts[name] = len(items)
         for item in items:
             raw_with_source.append((item, source))
