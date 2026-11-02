@@ -7,7 +7,7 @@
 另外还有：
 
 - **上海公共建筑地图**（`docs/map.html`）：把博物馆、纪念馆/故居、美术馆、剧院、会展中心、教堂、历史建筑、园林景点、文化场馆放在一张可筛选、可搜索的地图上，点列表或地图标记可以互相定位。
-- **本周上新**（`docs/new.html`）：每次自动更新新增了哪些活动的时间线；主页顶部也有「本周上新」摘要和卡片上的 NEW 角标。
+- **本周上新**（`docs/new.html`）：每次自动更新新增了哪些活动的时间线，可以像活动清单一样按城市、类型筛选；主页顶部也有「本周上新」摘要和卡片上的 NEW 角标。
 - **全国范围**：历史文物类展览、音乐剧、话剧会额外抓取北京、广州、深圳、杭州、成都、南京、西安、武汉、苏州、天津、重庆、长沙等主要城市，详见下文「全国范围」。
 
 ## 它怎么工作
@@ -19,7 +19,7 @@
 5. 自动去重、分类，并与上一轮的 `data/events.json` 按标题比对，算出「本次新增了哪些活动」，写进 `data/updates.json`。
 6. 生成：
    - `docs/index.html`：分享给朋友的页面（顶部带 上海 / 全国 范围筛选）
-   - `docs/new.html`：本周上新时间线
+   - `docs/new.html`：本周上新时间线（按城市、类型筛选）
    - `docs/events.json`：结构化数据
    - `docs/events.ics`：可导入日历的订阅文件（只含上海活动）
    - `docs/map.html`：上海公共建筑地图（由 `config/places.json` 生成）
@@ -36,12 +36,12 @@
 
 ## 全国范围
 
-- 全国数据由 `national_sources.py` 提供，适配器名：`maoyan_city`（猫眼按城市）、`douban_city`（豆瓣同城城市站）、`museum_cn`（国博/故宫/南博/湖南博物院/陕历博等官网展览）。
+- 全国数据由 `national_sources.py` 提供，适配器名：`maoyan_city`（猫眼按城市）、`douban_city`（豆瓣同城城市站）、`museum_cn`（国博/故宫/南博/湖南博物院/陕历博/良渚博物院/中国丝绸博物馆/苏州博物馆官网展览）。
 - 页面默认「上海」，切到「全国」后可以按城市筛选；外地活动只收录**历史文物类展览、音乐剧、话剧**三类。
   想放宽/收窄改 `update.py` 顶部的 `NATIONAL_GROUPS` / `NATIONAL_EXHIBITION_SUBS`。
 - 加城市：在 `config/sources.json` 里加一条 `maoyan_city`，`city_id` 必须是**猫眼演出城市 id**（不是大众点评城市 id，传错会静默回落到上海）：北京 1、广州 20、深圳 30、天津 40、西安 42、重庆 45、杭州 50、南京 55、武汉 57、成都 59、长沙 70、苏州 80、上海 10。
 - 全国源总量太大时可以 `"enabled": false` 关掉部分城市，或把 `categories` 从 `[9, 4]` 改成只留 `[4]`（话剧/音乐剧）或 `[9]`（展览）。
-- 已知缺口：除上面几馆外，其它省级博物馆官网多为 SSL/超时/JS 渲染/需鉴权，暂未接入；免费常设展覆盖不足，靠猫眼售票展览兜底。
+- 已知缺口：浙江省博物馆（纯 Vue 壳，接口 404）、杭州博物馆（SSL/502）抓不到；其它省级馆多为 SSL/超时/JS 渲染/需鉴权。免费常设展覆盖不足，靠猫眼售票展览兜底。
 
 ## 一次性设置
 
@@ -79,7 +79,7 @@
 - `adapter`：走内置采集器（`maoyan` / `douban` / `shmuseum` / ... / `maoyan_city` / `douban_city` / `museum_cn`）
 - `city` / `city_id`：只在 `maoyan_city` / `douban_city` 上用，指定城市
 - `categories` / `page_size` / `max_pages`：抓取量控制
-- `site`：只在 `museum_cn` 上用，选择博物馆站点（`chnmuseum` / `dpm` / `njmuseum` / `hnmuseum` / `sxhm`）
+- `site`：只在 `museum_cn` 上用，选择博物馆站点（`chnmuseum` / `dpm` / `njmuseum` / `hnmuseum` / `sxhm` / `lzmuseum` / `silkmuseum` / `szmuseum`）；常设陈列不写入（源站没有真实展期）
 
 ## 建筑地图怎么维护
 

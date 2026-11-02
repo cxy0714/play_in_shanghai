@@ -938,7 +938,12 @@ def _article_dates(text: str) -> tuple[date | None, date | None, bool]:
 
 
 def _article_title(soup: BeautifulSoup, text: str) -> str:
-    """展讯文章标题往往写成「展讯 | xxx 开幕」，优先从正文引号里取正式展名。"""
+    """展讯文章标题往往写成「展讯 | xxx 开幕」，优先从正文里取正式展名。"""
+    # 文章末尾常带「展览名称：“xxx”」信息块，最可靠
+    for pattern in (r"展览名称[：:]\s*[“\"]([^”\"]{3,60})[”\"]", r"展览名称[：:]\s*([^\s。；]{3,60})"):
+        match = re.search(pattern, text)
+        if match:
+            return clean_text(match.group(1))
     for quoted in re.findall(r"[“\"]([^”\"]{3,60})[”\"]", text):
         if "展" in quoted and len(quoted) >= 4:
             return quoted
@@ -1115,7 +1120,8 @@ def _museum_silkmuseum(source: dict) -> list[dict]:
         elif end is None and start and (TODAY - start).days > 365:
             permanent = True
         if permanent:
-            start, end = TODAY, TODAY + timedelta(days=365)
+            # 常设陈列不是「上新」，源站也没给真实展期，跳过以免页面出现假日期
+            continue
         if end is None:
             end = start + timedelta(days=120)
         if not future_or_ongoing(start, end):
