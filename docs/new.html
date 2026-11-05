@@ -11,7 +11,7 @@
   <header class="hero">
     <p class="eyebrow">更新日志 · 上海 &amp; 全国</p>
     <h1>本周上新</h1>
-    <p class="updated">近 7 天新增 743 个活动（上海 106 · 外地 637）· 下面时间线展示 410 张卡片 · 页面更新于 2026-11-02 23:20</p>
+    <p class="updated">近 7 天新增 811 个活动（上海 115 · 外地 696）· 下面时间线展示 430 张卡片 · 页面更新于 2026-11-05 13:43</p>
     <nav class="site-nav" aria-label="站点导航">
       <a href="index.html">🎫 活动清单</a>
       <a href="map.html">🗺 建筑地图</a>
@@ -19,12 +19,741 @@
     </nav>
   </header>
   <div class="chips" id="new-city-chips">
-    <span class="chip-label">城市</span>['<button class="chip active" data-city="all">全部城市<span class="n">410</span></button>', '<button class="chip" data-city="上海">上海<span class="n">278</span></button>', '<button class="chip" data-city="广州">广州<span class="n">14</span></button>', '<button class="chip" data-city="东莞">东莞<span class="n">10</span></button>', '<button class="chip" data-city="北京">北京<span class="n">10</span></button>', '<button class="chip" data-city="杭州">杭州<span class="n">8</span></button>', '<button class="chip" data-city="深圳">深圳<span class="n">8</span></button>', '<button class="chip" data-city="天津">天津<span class="n">7</span></button>', '<button class="chip" data-city="成都">成都<span class="n">5</span></button>', '<button class="chip" data-city="西安">西安<span class="n">5</span></button>', '<button class="chip" data-city="济南">济南<span class="n">4</span></button>', '<button class="chip" data-city="石家庄">石家庄<span class="n">4</span></button>', '<button class="chip" data-city="长沙">长沙<span class="n">4</span></button>', '<button class="chip" data-city="太原">太原<span class="n">3</span></button>', '<button class="chip" data-city="武汉">武汉<span class="n">3</span></button>', '<button class="chip" data-city="海口">海口<span class="n">3</span></button>', '<button class="chip" data-city="青岛">青岛<span class="n">3</span></button>', '<button class="chip" data-city="佛山">佛山<span class="n">2</span></button>', '<button class="chip" data-city="南京">南京<span class="n">2</span></button>', '<button class="chip" data-city="南昌">南昌<span class="n">2</span></button>', '<button class="chip" data-city="厦门">厦门<span class="n">2</span></button>', '<button class="chip" data-city="合肥">合肥<span class="n">2</span></button>', '<button class="chip" data-city="哈尔滨">哈尔滨<span class="n">2</span></button>', '<button class="chip" data-city="大连">大连<span class="n">2</span></button>', '<button class="chip" data-city="宁波">宁波<span class="n">2</span></button>', '<button class="chip" data-city="无锡">无锡<span class="n">2</span></button>', '<button class="chip" data-city="昆明">昆明<span class="n">2</span></button>', '<button class="chip" data-city="桂林">桂林<span class="n">2</span></button>', '<button class="chip" data-city="沈阳">沈阳<span class="n">2</span></button>', '<button class="chip" data-city="洛阳">洛阳<span class="n">2</span></button>', '<button class="chip" data-city="福州">福州<span class="n">2</span></button>', '<button class="chip" data-city="苏州">苏州<span class="n">2</span></button>', '<button class="chip" data-city="贵阳">贵阳<span class="n">2</span></button>', '<button class="chip" data-city="郑州">郑州<span class="n">2</span></button>', '<button class="chip" data-city="重庆">重庆<span class="n">2</span></button>', '<button class="chip" data-city="长春">长春<span class="n">2</span></button>', '<button class="chip" data-city="南宁">南宁<span class="n">1</span></button>', '<button class="chip" data-city="扬州">扬州<span class="n">1</span></button>', '<button class="chip" data-city="泉州">泉州<span class="n">1</span></button>']
+    <span class="chip-label">城市</span>['<button class="chip active" data-city="all">全部城市<span class="n">430</span></button>', '<button class="chip" data-city="上海">上海<span class="n">298</span></button>', '<button class="chip" data-city="广州">广州<span class="n">14</span></button>', '<button class="chip" data-city="东莞">东莞<span class="n">10</span></button>', '<button class="chip" data-city="北京">北京<span class="n">10</span></button>', '<button class="chip" data-city="杭州">杭州<span class="n">8</span></button>', '<button class="chip" data-city="深圳">深圳<span class="n">8</span></button>', '<button class="chip" data-city="天津">天津<span class="n">7</span></button>', '<button class="chip" data-city="成都">成都<span class="n">5</span></button>', '<button class="chip" data-city="西安">西安<span class="n">5</span></button>', '<button class="chip" data-city="济南">济南<span class="n">4</span></button>', '<button class="chip" data-city="石家庄">石家庄<span class="n">4</span></button>', '<button class="chip" data-city="长沙">长沙<span class="n">4</span></button>', '<button class="chip" data-city="太原">太原<span class="n">3</span></button>', '<button class="chip" data-city="武汉">武汉<span class="n">3</span></button>', '<button class="chip" data-city="海口">海口<span class="n">3</span></button>', '<button class="chip" data-city="青岛">青岛<span class="n">3</span></button>', '<button class="chip" data-city="佛山">佛山<span class="n">2</span></button>', '<button class="chip" data-city="南京">南京<span class="n">2</span></button>', '<button class="chip" data-city="南昌">南昌<span class="n">2</span></button>', '<button class="chip" data-city="厦门">厦门<span class="n">2</span></button>', '<button class="chip" data-city="合肥">合肥<span class="n">2</span></button>', '<button class="chip" data-city="哈尔滨">哈尔滨<span class="n">2</span></button>', '<button class="chip" data-city="大连">大连<span class="n">2</span></button>', '<button class="chip" data-city="宁波">宁波<span class="n">2</span></button>', '<button class="chip" data-city="无锡">无锡<span class="n">2</span></button>', '<button class="chip" data-city="昆明">昆明<span class="n">2</span></button>', '<button class="chip" data-city="桂林">桂林<span class="n">2</span></button>', '<button class="chip" data-city="沈阳">沈阳<span class="n">2</span></button>', '<button class="chip" data-city="洛阳">洛阳<span class="n">2</span></button>', '<button class="chip" data-city="福州">福州<span class="n">2</span></button>', '<button class="chip" data-city="苏州">苏州<span class="n">2</span></button>', '<button class="chip" data-city="贵阳">贵阳<span class="n">2</span></button>', '<button class="chip" data-city="郑州">郑州<span class="n">2</span></button>', '<button class="chip" data-city="重庆">重庆<span class="n">2</span></button>', '<button class="chip" data-city="长春">长春<span class="n">2</span></button>', '<button class="chip" data-city="南宁">南宁<span class="n">1</span></button>', '<button class="chip" data-city="扬州">扬州<span class="n">1</span></button>', '<button class="chip" data-city="泉州">泉州<span class="n">1</span></button>']
   </div>
   <div class="chips" id="new-cat-chips">
-    <span class="chip-label">类型</span>['<button class="chip active" data-cat="all">全部类型<span class="n">410</span></button>', '<button class="chip" data-cat="历史文物">历史文物<span class="n">23</span></button>', '<button class="chip" data-cat="现代艺术">现代艺术<span class="n">17</span></button>', '<button class="chip" data-cat="艺术家特展">艺术家特展<span class="n">11</span></button>', '<button class="chip" data-cat="数字沉浸">数字沉浸<span class="n">15</span></button>', '<button class="chip" data-cat="摄影影像">摄影影像<span class="n">5</span></button>', '<button class="chip" data-cat="设计工艺">设计工艺<span class="n">4</span></button>', '<button class="chip" data-cat="亲子动漫">亲子动漫<span class="n">2</span></button>', '<button class="chip" data-cat="建筑城市">建筑城市<span class="n">3</span></button>', '<button class="chip" data-cat="自然科技">自然科技<span class="n">2</span></button>', '<button class="chip" data-cat="其他展览">其他展览<span class="n">55</span></button>', '<button class="chip" data-cat="话剧">话剧<span class="n">143</span></button>', '<button class="chip" data-cat="音乐剧">音乐剧<span class="n">23</span></button>', '<button class="chip" data-cat="音乐会">音乐会<span class="n">34</span></button>', '<button class="chip" data-cat="舞蹈">舞蹈<span class="n">16</span></button>', '<button class="chip" data-cat="戏曲">戏曲<span class="n">17</span></button>', '<button class="chip" data-cat="脱口秀">脱口秀<span class="n">40</span></button>']
+    <span class="chip-label">类型</span>['<button class="chip active" data-cat="all">全部类型<span class="n">430</span></button>', '<button class="chip" data-cat="历史文物">历史文物<span class="n">23</span></button>', '<button class="chip" data-cat="现代艺术">现代艺术<span class="n">18</span></button>', '<button class="chip" data-cat="艺术家特展">艺术家特展<span class="n">11</span></button>', '<button class="chip" data-cat="数字沉浸">数字沉浸<span class="n">16</span></button>', '<button class="chip" data-cat="摄影影像">摄影影像<span class="n">5</span></button>', '<button class="chip" data-cat="设计工艺">设计工艺<span class="n">4</span></button>', '<button class="chip" data-cat="亲子动漫">亲子动漫<span class="n">2</span></button>', '<button class="chip" data-cat="建筑城市">建筑城市<span class="n">3</span></button>', '<button class="chip" data-cat="自然科技">自然科技<span class="n">2</span></button>', '<button class="chip" data-cat="其他展览">其他展览<span class="n">56</span></button>', '<button class="chip" data-cat="话剧">话剧<span class="n">145</span></button>', '<button class="chip" data-cat="音乐剧">音乐剧<span class="n">26</span></button>', '<button class="chip" data-cat="音乐会">音乐会<span class="n">39</span></button>', '<button class="chip" data-cat="舞蹈">舞蹈<span class="n">17</span></button>', '<button class="chip" data-cat="戏曲">戏曲<span class="n">23</span></button>', '<button class="chip" data-cat="脱口秀">脱口秀<span class="n">40</span></button>']
   </div>
   <div class="timeline">
+    <section class="run" data-at="2026-11-05T13:43:19+08:00">
+      <header class="run-head">
+        <h2>2026年11月5日 13:43</h2>
+        <span class="run-stat">新增 108 个（外地 66 个）</span>
+      </header>
+      <p class="run-note">本轮新增 108 个，这里只展示最早开始的 40 个；完整清单可以在活动清单里切到「全国」按城市查看。</p>
+      <div class="run-cards">
+        
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="数字沉浸" data-group="展览" data-search="上海兴业太古汇「消失的法老」胡夫金字塔沉浸式探索体验 博新全宇宙the vers沉浸式探索中心 上海  猫眼评分 9.3 数字沉浸 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">数字沉浸</span></span>
+        </div>
+        <h2>上海兴业太古汇「消失的法老」胡夫金字塔沉浸式探索体验</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2025.08.18 - 2027.05.31</span>
+          
+        </div>
+        <p class="meta">博新全宇宙The VERS沉浸式探索中心</p>
+        <p class="summary">猫眼评分 9.3</p>
+        <div class="card-bottom">
+          <span><span class="price">￥198起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/424107" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="现代艺术" data-group="展览" data-search="共识共生—2026首届中国当代艺术季 · 上海站 n+艺术中心 上海  猫眼评分 9.6 现代艺术 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">现代艺术</span></span>
+        </div>
+        <h2>共识共生—2026首届中国当代艺术季 · 上海站</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.09.16 - 11.30</span>
+          
+        </div>
+        <p class="meta">N+艺术中心</p>
+        <p class="summary">猫眼评分 9.6</p>
+        <div class="card-bottom">
+          <span><span class="price">￥38起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/505701" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="其他展览" data-group="展览" data-search="上海《魔法少女小圆》15周年纪念特展 e展空间 上海  猫眼评分 0.0 其他展览 展览 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span></span>
+        </div>
+        <h2>上海《魔法少女小圆》15周年纪念特展</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.11.05 - 2027.01.03</span>
+          
+        </div>
+        <p class="meta">e展空间</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥98起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/508724" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="其他展览" data-group="展览" data-search="2026上海国际微波射频及天线技术应用展览会 上海浦东新国博览中心 上海 浦东 1人参加 0人感兴趣 其他展览 展览 08:0">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span></span>
+        </div>
+        <h2>2026上海国际微波射频及天线技术应用展览会</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.11.10 - 11.12</span>
+          <span class="when-time">08:0</span>
+        </div>
+        <p class="meta">上海浦东新国博览中心 · 浦东</p>
+        <p class="summary">1人参加 0人感兴趣</p>
+        <div class="card-bottom">
+          <span><span class="price">免费</span></span>
+          <a class="button" href="https://www.douban.com/event/38034839/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="其他展览" data-group="展览" data-search="2026中国先进半导体产业与应用博览会（上海展） 上海浦东新国博览中心 上海 浦东 1人参加 0人感兴趣 其他展览 展览 08:0">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge exhibit">其他展览</span></span>
+        </div>
+        <h2>2026中国先进半导体产业与应用博览会（上海展）</h2>
+        <div class="when exhibit">
+          <span class="when-icon">📅</span>
+          <span class="when-date">2026.11.10 - 11.12</span>
+          <span class="when-time">08:0</span>
+        </div>
+        <p class="meta">上海浦东新国博览中心 · 浦东</p>
+        <p class="summary">1人参加 0人感兴趣</p>
+        <div class="card-bottom">
+          <span><span class="price">免费</span></span>
+          <a class="button" href="https://www.douban.com/event/38034859/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="话剧" data-group="话剧" data-search="阿加莎推理巨作《捕鼠器》 中国大戏院 上海  猫眼评分 0.0 话剧 话剧 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge drama">话剧</span></span>
+        </div>
+        <h2>阿加莎推理巨作《捕鼠器》</h2>
+        <div class="when drama">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.05 - 11.08</span>
+          
+        </div>
+        <p class="meta">中国大戏院</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥80起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/500037" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="话剧" data-group="话剧" data-search="沉浸式中式惊悚·恐怖悬疑声演剧《孙美琪疑案》 沉浸式中式惊悚·恐怖悬疑声演剧《孙美琪疑案》 南京东路街道南京东路829号世茂广场东区l8,星空间16号·长庄小区 上海 黄浦 3人参加 1人感兴趣 话剧 话剧 19:30">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge drama">话剧</span></span>
+        </div>
+        <h2>沉浸式中式惊悚·恐怖悬疑声演剧《孙美琪疑案》</h2>
+        <div class="when drama">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.07 - 11.14</span>
+          <span class="when-time">19:30</span>
+        </div>
+        <p class="meta">沉浸式中式惊悚·恐怖悬疑声演剧《孙美琪疑案》 南京东路街道南京东路829号世茂广场东区L8,星空间16号·长庄小区 · 黄浦</p>
+        <p class="summary">3人参加 1人感兴趣</p>
+        <div class="card-bottom">
+          <span><span class="price">180.0元起</span></span>
+          <a class="button" href="https://www.douban.com/event/37611215/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="话剧" data-group="话剧" data-search="话剧《莎士比亚的罗朱》 茉莉花剧场 上海  猫眼评分 0.0 话剧 话剧 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge drama">话剧</span></span>
+        </div>
+        <h2>话剧《莎士比亚的罗朱》</h2>
+        <div class="when drama">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2027.01.08 - 01.19</span>
+          
+        </div>
+        <p class="meta">茉莉花剧场</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥280起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/516375" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐剧" data-group="音乐剧" data-search="沉浸式原创音乐剧《雕像》 星空间1794号·临窗小剧场 上海  猫眼评分 9.5 音乐剧 音乐剧 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge musical">音乐剧</span></span>
+        </div>
+        <h2>沉浸式原创音乐剧《雕像》</h2>
+        <div class="when musical">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.05 - 12.20</span>
+          
+        </div>
+        <p class="meta">星空间1794号·临窗小剧场</p>
+        <p class="summary">猫眼评分 9.5</p>
+        <div class="card-bottom">
+          <span><span class="price">￥199起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/410371" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐剧" data-group="音乐剧" data-search="音乐剧《夜雨他时》 星空间611号·禾剧场 上海  猫眼评分 9.1 音乐剧 音乐剧 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge musical">音乐剧</span></span>
+        </div>
+        <h2>音乐剧《夜雨他时》</h2>
+        <div class="when musical">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.05 - 12.06</span>
+          
+        </div>
+        <p class="meta">星空间611号·禾剧场</p>
+        <p class="summary">猫眼评分 9.1</p>
+        <div class="card-bottom">
+          <span><span class="price">￥199起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/481617" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐剧" data-group="音乐剧" data-search="音乐剧《西西里的人鱼传说》 时光剧场-大世界c厅 上海  猫眼评分 0.0 音乐剧 音乐剧 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge musical">音乐剧</span></span>
+        </div>
+        <h2>音乐剧《西西里的人鱼传说》</h2>
+        <div class="when musical">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.05 - 11.30</span>
+          
+        </div>
+        <p class="meta">时光剧场-大世界C厅</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥198起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/512230" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐剧" data-group="音乐剧" data-search="【奇幻·治愈】原创音乐剧《the whisper》（再一次听见） 星空间36号·space y·耶比剧场 上海  猫眼评分 0.0 音乐剧 音乐剧 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge musical">音乐剧</span></span>
+        </div>
+        <h2>【奇幻·治愈】原创音乐剧《The Whisper》（再一次听见）</h2>
+        <div class="when musical">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.12 - 12.06</span>
+          
+        </div>
+        <p class="meta">星空间36号·SPACE Y·耶比剧场</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥199起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/516728" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="《弦弹西东》亚历山大・波达切夫 × 碰碰彭碰彭竖琴古筝重奏音乐会 上海交响乐团音乐厅 上海  猫眼评分 0.0 音乐会 音乐会 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>《弦弹西东》亚历山大・波达切夫 × 碰碰彭碰彭竖琴古筝重奏音乐会</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.05</span>
+          
+        </div>
+        <p class="meta">上海交响乐团音乐厅</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥80起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/501171" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="首席之声——德累斯顿弦乐五重奏音乐会 凯迪拉克-上海音乐厅 延安东路523号(近西藏南路) 上海 黄浦 0人参加 1人感兴趣 音乐会 音乐会 19:30">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>首席之声——德累斯顿弦乐五重奏音乐会</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.06</span>
+          <span class="when-time">19:30</span>
+        </div>
+        <p class="meta">凯迪拉克-上海音乐厅 延安东路523号(近西藏南路) · 黄浦</p>
+        <p class="summary">0人参加 1人感兴趣</p>
+        <div class="card-bottom">
+          <span><span class="price">80.0元起</span></span>
+          <a class="button" href="https://www.douban.com/event/38060059/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="“回响”——金瀚文钢琴独奏音乐会 上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路) 上海 徐汇 0人参加 1人感兴趣 音乐会 音乐会 19:15">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>“回响”——金瀚文钢琴独奏音乐会</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.07</span>
+          <span class="when-time">19:15</span>
+        </div>
+        <p class="meta">上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路) · 徐汇</p>
+        <p class="summary">0人参加 1人感兴趣</p>
+        <div class="card-bottom">
+          <span><span class="price">80.0元起</span></span>
+          <a class="button" href="https://www.douban.com/event/38095325/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="「一人一首成名曲」超燃回忆杀丨带爸妈听老歌丨80年代沉浸式音乐现场丨怀旧金曲丨新天地必看《时光唱片》 高笑喜剧·new school 上海  猫眼评分 9.9 音乐会 音乐会 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>「一人一首成名曲」超燃回忆杀丨带爸妈听老歌丨80年代沉浸式音乐现场丨怀旧金曲丨新天地必看《时光唱片》</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.07 - 12.26</span>
+          
+        </div>
+        <p class="meta">高笑喜剧·New School</p>
+        <p class="summary">猫眼评分 9.9</p>
+        <div class="card-bottom">
+          <span><span class="price">￥9.9起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/499385" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="《最后的莫西干人》——旷野之旅 北外滩友邦大剧院 上海  猫眼评分 0.0 音乐会 音乐会 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>《最后的莫西干人》——旷野之旅</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.15</span>
+          
+        </div>
+        <p class="meta">北外滩友邦大剧院</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥100起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/502333" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="东方经典《梁祝》《黄河》传世名曲交响音乐会 上海东方艺术中心 上海  猫眼评分 0.0 音乐会 音乐会 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>东方经典《梁祝》《黄河》传世名曲交响音乐会</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.21</span>
+          
+        </div>
+        <p class="meta">上海东方艺术中心</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥100起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/505071" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="《la la land爱乐之城》浪漫影视经典金曲交响音乐会 上海保利大剧院 上海 嘉定 猫眼评分 0.0 音乐会 音乐会 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>《LA LA LAND爱乐之城》浪漫影视经典金曲交响音乐会</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.22</span>
+          
+        </div>
+        <p class="meta">上海保利大剧院 · 嘉定</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥80起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/515555" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="意大利安东尼亚诺小合唱团2027新年音乐会 上音歌剧院 上海  猫眼评分 0.0 音乐会 音乐会 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>意大利安东尼亚诺小合唱团2027新年音乐会</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.12.31 - 2027.01.03</span>
+          
+        </div>
+        <p class="meta">上音歌剧院</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥180起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/517411" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="维也纳施特劳斯乐团2027新年音乐会 上海大剧院 上海  猫眼评分 0.0 音乐会 音乐会 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>维也纳施特劳斯乐团2027新年音乐会</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.12.31</span>
+          
+        </div>
+        <p class="meta">上海大剧院</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥180起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/486771" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="维也纳春之声交响乐团新年音乐会-上海站 上海东方艺术中心 上海  猫眼评分 0.0 音乐会 音乐会 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>维也纳春之声交响乐团新年音乐会-上海站</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.12.31 - 2027.01.01</span>
+          
+        </div>
+        <p class="meta">上海东方艺术中心</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥126起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/490899" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="（限时早鸟六折）维也纳皇家交响乐团2027新年音乐会-上海站 大宁剧院 上海  猫眼评分 0.0 音乐会 音乐会 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge concert">音乐会</span></span>
+        </div>
+        <h2>（限时早鸟六折）维也纳皇家交响乐团2027新年音乐会-上海站</h2>
+        <div class="when concert">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2027.01.02</span>
+          
+        </div>
+        <p class="meta">大宁剧院</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥108起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/490877" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="舞蹈" data-group="舞蹈" data-search="舞蹈剧场《洄游，洄游》《请放松》 上海国际舞蹈中心 上海  猫眼评分 0.0 舞蹈 舞蹈 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge dance">舞蹈</span></span>
+        </div>
+        <h2>舞蹈剧场《洄游，洄游》《请放松》</h2>
+        <div class="when dance">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.27 - 11.28</span>
+          
+        </div>
+        <p class="meta">上海国际舞蹈中心</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥80起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/516918" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="舞蹈" data-group="舞蹈" data-search="当代舞集锦《慢热集》 上海国际舞蹈中心 上海  猫眼评分 0.0 舞蹈 舞蹈 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge dance">舞蹈</span></span>
+        </div>
+        <h2>当代舞集锦《慢热集》</h2>
+        <div class="when dance">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.12.01 - 12.02</span>
+          
+        </div>
+        <p class="meta">上海国际舞蹈中心</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥80起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/516919" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="舞蹈" data-group="舞蹈" data-search="圣彼得堡艾夫曼芭蕾舞团三部曲 上海大歌剧院 上海  猫眼评分 0.0 舞蹈 舞蹈 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge dance">舞蹈</span></span>
+        </div>
+        <h2>圣彼得堡艾夫曼芭蕾舞团三部曲</h2>
+        <div class="when dance">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.12.09 - 12.18</span>
+          
+        </div>
+        <p class="meta">上海大歌剧院</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥180起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/517119" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="舞蹈" data-group="舞蹈" data-search="舞剧《李清照》 上海保利云间剧院 上海  猫眼评分 0.0 舞蹈 舞蹈 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge dance">舞蹈</span></span>
+        </div>
+        <h2>舞剧《李清照》</h2>
+        <div class="when dance">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2027.01.09 - 01.10</span>
+          
+        </div>
+        <p class="meta">上海保利云间剧院</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥80起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/516696" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="戏曲" data-group="戏曲" data-search="黄冈杂技《险境生花》 白玉兰剧场 上海  猫眼评分 0.0 戏曲 戏曲 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge opera">戏曲</span></span>
+        </div>
+        <h2>黄冈杂技《险境生花》</h2>
+        <div class="when opera">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.07</span>
+          
+        </div>
+        <p class="meta">白玉兰剧场</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥88起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/512818" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="戏曲" data-group="戏曲" data-search="第二十五届中国上海国际艺术节参演剧目 河南豫剧院青年团豫剧《妇好》 宛平剧院 上海  猫眼评分 0.0 戏曲 戏曲 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge opera">戏曲</span></span>
+        </div>
+        <h2>第二十五届中国上海国际艺术节参演剧目 河南豫剧院青年团豫剧《妇好》</h2>
+        <div class="when opera">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.11 - 11.12</span>
+          
+        </div>
+        <p class="meta">宛平剧院</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥80起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/502369" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="戏曲" data-group="戏曲" data-search="京剧《霸王别姬》 豫园·海上梨园 上海 黄浦 猫眼评分 0.0 戏曲 戏曲 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge opera">戏曲</span></span>
+        </div>
+        <h2>京剧《霸王别姬》</h2>
+        <div class="when opera">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.14 - 12.12</span>
+          
+        </div>
+        <p class="meta">豫园·海上梨园 · 黄浦</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥180起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/516790" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="戏曲" data-group="戏曲" data-search="昆曲《牡丹亭·游园惊梦》 豫园·海上梨园 上海 黄浦 猫眼评分 0.0 戏曲 戏曲 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge opera">戏曲</span></span>
+        </div>
+        <h2>昆曲《牡丹亭·游园惊梦》</h2>
+        <div class="when opera">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.15 - 12.13</span>
+          
+        </div>
+        <p class="meta">豫园·海上梨园 · 黄浦</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥180起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/516804" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="戏曲" data-group="戏曲" data-search="魔艺总动员系列演出·国风国韵——海派杂技精品展演 九棵树（上海）未来艺术中心 上海  猫眼评分 0.0 戏曲 戏曲 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge opera">戏曲</span></span>
+        </div>
+        <h2>魔艺总动员系列演出·国风国韵——海派杂技精品展演</h2>
+        <div class="when opera">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.22</span>
+          
+        </div>
+        <p class="meta">九棵树（上海）未来艺术中心</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥80</span></span>
+          <a class="button" href="https://www.gewara.com/detail/516396" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="戏曲" data-group="戏曲" data-search="环境式越剧《红楼梦》 长江剧场 上海  猫眼评分 0.0 戏曲 戏曲 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge opera">戏曲</span></span>
+        </div>
+        <h2>环境式越剧《红楼梦》</h2>
+        <div class="when opera">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.26 - 11.29</span>
+          
+        </div>
+        <p class="meta">长江剧场</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥318</span></span>
+          <a class="button" href="https://www.gewara.com/detail/460828" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="戏曲" data-group="戏曲" data-search="独脚戏《石库门的笑声》 兰心大戏院 上海  猫眼评分 0.0 戏曲 戏曲 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge opera">戏曲</span></span>
+        </div>
+        <h2>独脚戏《石库门的笑声》</h2>
+        <div class="when opera">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.12.25 - 12.26</span>
+          
+        </div>
+        <p class="meta">兰心大戏院</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥180起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/516504" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="戏曲" data-group="戏曲" data-search="黄梅戏《徽州女人》—上海站 美琪大戏院 上海 奉贤 猫眼评分 0.0 戏曲 戏曲 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge opera">戏曲</span></span>
+        </div>
+        <h2>黄梅戏《徽州女人》—上海站</h2>
+        <div class="when opera">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2027.01.08</span>
+          
+        </div>
+        <p class="meta">美琪大戏院 · 奉贤</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥280起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/514508" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="脱口秀" data-group="脱口秀" data-search="趣听喜剧｜爆笑盲盒脱口秀 11月 上海西岸大剧院 上海  猫眼评分 0.0 脱口秀 脱口秀 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge talk">脱口秀</span></span>
+        </div>
+        <h2>趣听喜剧｜爆笑盲盒脱口秀 11月</h2>
+        <div class="when talk">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.07 - 11.29</span>
+          
+        </div>
+        <p class="meta">上海西岸大剧院</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥0起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/515900" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="脱口秀" data-group="脱口秀" data-search="『爆笑互动』【静安大悦城】野师傅丨小马哥丨上海话纯享版丨野师傅拉缸秀丨【银河喜剧】 银河喜剧脱口秀-静安大悦城店 上海 静安 猫眼评分 9.5 脱口秀 脱口秀 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge talk">脱口秀</span></span>
+        </div>
+        <h2>『爆笑互动』【静安大悦城】野师傅丨小马哥丨上海话纯享版丨野师傅拉缸秀丨【银河喜剧】</h2>
+        <div class="when talk">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.14 - 11.27</span>
+          
+        </div>
+        <p class="meta">银河喜剧脱口秀-静安大悦城店 · 静安</p>
+        <p class="summary">猫眼评分 9.5</p>
+        <div class="card-bottom">
+          <span><span class="price">￥168起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/447358" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="脱口秀" data-group="脱口秀" data-search="沪上知名博主【g僧东】跨界脱口秀@赫兹星球·新天地脱口秀 赫兹星球·新天地剧场 上海  猫眼评分 0.0 脱口秀 脱口秀 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge talk">脱口秀</span></span>
+        </div>
+        <h2>沪上知名博主【G僧东】跨界脱口秀@赫兹星球·新天地脱口秀</h2>
+        <div class="when talk">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.21</span>
+          
+        </div>
+        <p class="meta">赫兹星球·新天地剧场</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥9.9起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/390049" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="脱口秀" data-group="脱口秀" data-search="「仅朋友可见：脱友盲盒秀」 脱口秀|笑果出品@上海 美琪大戏院 上海 奉贤 猫眼评分 0.0 脱口秀 脱口秀 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge talk">脱口秀</span></span>
+        </div>
+        <h2>「仅朋友可见：脱友盲盒秀」 脱口秀|笑果出品@上海</h2>
+        <div class="when talk">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.27 - 11.28</span>
+          
+        </div>
+        <p class="meta">美琪大戏院 · 奉贤</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥180起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/504569" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+
+      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="脱口秀" data-group="脱口秀" data-search="果汁&amp;辣条双拼互动秀《我的未来式》 | 超长爆笑互动即兴解压 | 幽默油条喜剧 喜联空间·新天地 上海  猫眼评分 0.0 脱口秀 脱口秀 ">
+        <div class="card-top">
+          <span class="badge-row"><span class="badge talk">脱口秀</span></span>
+        </div>
+        <h2>果汁&amp;辣条双拼互动秀《我的未来式》 | 超长爆笑互动即兴解压 | 幽默油条喜剧</h2>
+        <div class="when talk">
+          <span class="when-icon">🕒</span>
+          <span class="when-date">2026.11.29</span>
+          
+        </div>
+        <p class="meta">喜联空间·新天地</p>
+        <p class="summary">猫眼评分 0.0</p>
+        <div class="card-bottom">
+          <span><span class="price">￥160起</span></span>
+          <a class="button" href="https://www.gewara.com/detail/515753" target="_blank" rel="noopener noreferrer">查看详情 →</a>
+        </div>
+      </article>
+      </div>
+    </section>
     <section class="run" data-at="2026-11-02T23:20:25+08:00">
       <header class="run-head">
         <h2>2026年11月2日 23:20</h2>
@@ -3858,13 +4587,17 @@
         </div>
       </article>
       </div>
-    </section>
+    </section><p class="timeline-empty" id="timeline-empty" hidden>没有符合筛选条件的活动。</p></div>
+  
+  <details class="older">
+    <summary>更早的更新（15 次）</summary>
+    
     <section class="run" data-at="2026-10-29T12:45:55+08:00">
       <header class="run-head">
         <h2>2026年10月29日 12:45</h2>
         <span class="run-stat">新增 32 个</span>
       </header>
-      
+      <p class="run-note">本轮新增 32 个，这里只展示最早开始的 12 个；完整清单可以在活动清单里切到「全国」按城市查看。</p>
       <div class="run-cards">
         
       <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="其他展览" data-group="展览" data-search="浦东美术馆指定单日票 浦东美术馆-乔治.莫兰迪大展 上海 浦东 猫眼评分 9.3 其他展览 展览 ">
@@ -3939,42 +4672,6 @@
         </div>
       </article>
 
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="其他展览" data-group="展览" data-search="2026年第二十一届中国国际货运产业链博览会 上海浦东新国博览中心 上海 浦东 1人参加 1人感兴趣 其他展览 展览 08:0">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge exhibit">其他展览</span></span>
-        </div>
-        <h2>2026年第二十一届中国国际货运产业链博览会</h2>
-        <div class="when exhibit">
-          <span class="when-icon">📅</span>
-          <span class="when-date">2026.11.04 - 11.06</span>
-          <span class="when-time">08:0</span>
-        </div>
-        <p class="meta">上海浦东新国博览中心 · 浦东</p>
-        <p class="summary">1人参加 1人感兴趣</p>
-        <div class="card-bottom">
-          <span><span class="price">免费</span></span>
-          <a class="button" href="https://www.douban.com/event/37673713/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="其他展览" data-group="展览" data-search="上海国际童书展 上海国际童书展 上海  猫眼评分 0.0 其他展览 展览 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge exhibit">其他展览</span></span>
-        </div>
-        <h2>上海国际童书展</h2>
-        <div class="when exhibit">
-          <span class="when-icon">📅</span>
-          <span class="when-date">2026.11.13 - 11.15</span>
-          
-        </div>
-        <p class="meta">上海国际童书展</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥38起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/514615" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
       <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="话剧" data-group="话剧" data-search="爆笑悬疑喜剧《神机庙算》高口碑热销｜致命惊悚博弈｜智斗骗局谁是赢家？ 加场戏剧 上海  猫眼评分 9.9 话剧 话剧 ">
         <div class="card-top">
           <span class="badge-row"><span class="badge drama">话剧</span></span>
@@ -4029,24 +4726,6 @@
         </div>
       </article>
 
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="话剧" data-group="话剧" data-search="歌剧《图兰朵》 上海大歌剧院 上海  猫眼评分 0.0 话剧 话剧 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge drama">话剧</span></span>
-        </div>
-        <h2>歌剧《图兰朵》</h2>
-        <div class="when drama">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.20 - 11.22</span>
-          
-        </div>
-        <p class="meta">上海大歌剧院</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥180起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/515584" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
       <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐剧" data-group="音乐剧" data-search="沉浸式惊悚悬疑音乐剧《怪物》 原创惊悚悬疑音乐剧《怪物》-星空间18号·谜剧场 九江路663号亚洲大厦2楼星空间18号 上海 黄浦 1人参加 1人感兴趣 音乐剧 音乐剧 19:30">
         <div class="card-top">
           <span class="badge-row"><span class="badge musical">音乐剧</span></span>
@@ -4062,24 +4741,6 @@
         <div class="card-bottom">
           <span><span class="price">199.0元起</span></span>
           <a class="button" href="https://www.douban.com/event/36960441/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐剧" data-group="音乐剧" data-search="俄语原版音乐剧《最后的试炼》 上海文化广场 上海  猫眼评分 0.0 音乐剧 音乐剧 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge musical">音乐剧</span></span>
-        </div>
-        <h2>俄语原版音乐剧《最后的试炼》</h2>
-        <div class="when musical">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2027.01.16 - 01.17</span>
-          
-        </div>
-        <p class="meta">上海文化广场</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥180起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/513763" target="_blank" rel="noopener noreferrer">查看详情 →</a>
         </div>
       </article>
 
@@ -4137,168 +4798,6 @@
         </div>
       </article>
 
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="委内瑞拉兰达埃塔交响乐团丨上海交响乐团音乐季 上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路) 上海 徐汇 1人参加 0人感兴趣 音乐会 音乐会 19:30">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge concert">音乐会</span></span>
-        </div>
-        <h2>委内瑞拉兰达埃塔交响乐团丨上海交响乐团音乐季</h2>
-        <div class="when concert">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.02</span>
-          <span class="when-time">19:30</span>
-        </div>
-        <p class="meta">上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路) · 徐汇</p>
-        <p class="summary">1人参加 0人感兴趣</p>
-        <div class="card-bottom">
-          <span><span class="price">80.0元起</span></span>
-          <a class="button" href="https://www.douban.com/event/38097528/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="传奇双星——阿萨德兄弟吉他二重奏音乐会 凯迪拉克-上海音乐厅 延安东路523号(近西藏南路) 上海 黄浦 2人参加 0人感兴趣 音乐会 音乐会 19:30">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge concert">音乐会</span></span>
-        </div>
-        <h2>传奇双星——阿萨德兄弟吉他二重奏音乐会</h2>
-        <div class="when concert">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.04</span>
-          <span class="when-time">19:30</span>
-        </div>
-        <p class="meta">凯迪拉克-上海音乐厅 延安东路523号(近西藏南路) · 黄浦</p>
-        <p class="summary">2人参加 0人感兴趣</p>
-        <div class="card-bottom">
-          <span><span class="price">100.0元起</span></span>
-          <a class="button" href="https://www.douban.com/event/38052120/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="第二十五届中国上海国际艺术节参演节目-维京格尔·奥拉夫松钢琴独奏音乐会 上海东方艺术中心 丁香路425号(近世纪大道) 上海 浦东 1人参加 0人感兴趣 音乐会 音乐会 19:30">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge concert">音乐会</span></span>
-        </div>
-        <h2>第二十五届中国上海国际艺术节参演节目-维京格尔·奥拉夫松钢琴独奏音乐会</h2>
-        <div class="when concert">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.05</span>
-          <span class="when-time">19:30</span>
-        </div>
-        <p class="meta">上海东方艺术中心 丁香路425号(近世纪大道) · 浦东</p>
-        <p class="summary">1人参加 0人感兴趣</p>
-        <div class="card-bottom">
-          <span><span class="price">180.0元起</span></span>
-          <a class="button" href="https://www.douban.com/event/37990542/" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="【限时6折】 《歌剧魅影》主题交响音乐会 久事·上海商城剧院 上海  猫眼评分 0.0 音乐会 音乐会 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge concert">音乐会</span></span>
-        </div>
-        <h2>【限时6折】 《歌剧魅影》主题交响音乐会</h2>
-        <div class="when concert">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.14</span>
-          
-        </div>
-        <p class="meta">久事·上海商城剧院</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥100起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/507303" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="【7.5折早鸟票】维也纳皇家交响乐团2027新年音乐会--上海站 上海东方艺术中心 上海  猫眼评分 0.0 音乐会 音乐会 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge concert">音乐会</span></span>
-        </div>
-        <h2>【7.5折早鸟票】维也纳皇家交响乐团2027新年音乐会--上海站</h2>
-        <div class="when concert">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.12.20 - 2027.01.03</span>
-          
-        </div>
-        <p class="meta">上海东方艺术中心</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥180起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/490529" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="音乐会" data-group="音乐会" data-search="2027上海儿童新年音乐会（交响演唱版） 上海东方艺术中心 上海  猫眼评分 0.0 音乐会 音乐会 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge concert">音乐会</span></span>
-        </div>
-        <h2>2027上海儿童新年音乐会（交响演唱版）</h2>
-        <div class="when concert">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.12.27</span>
-          
-        </div>
-        <p class="meta">上海东方艺术中心</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥80起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/509130" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="舞蹈" data-group="舞蹈" data-search="金庸 · 新武侠舞剧《神雕侠侣》 美琪大戏院 上海 奉贤 猫眼评分 0.0 舞蹈 舞蹈 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge dance">舞蹈</span></span>
-        </div>
-        <h2>金庸 · 新武侠舞剧《神雕侠侣》</h2>
-        <div class="when dance">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.20 - 11.22</span>
-          
-        </div>
-        <p class="meta">美琪大戏院 · 奉贤</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥126起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/514664" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="舞蹈" data-group="舞蹈" data-search="drumk男团沉浸式舞剧《m境》 北外滩友邦大剧院 上海  猫眼评分 0.0 舞蹈 舞蹈 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge dance">舞蹈</span></span>
-        </div>
-        <h2>DRUMK男团沉浸式舞剧《M境》</h2>
-        <div class="when dance">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.12.08</span>
-          
-        </div>
-        <p class="meta">北外滩友邦大剧院</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥80起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/514155" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="舞蹈" data-group="舞蹈" data-search="俄罗斯帝国芭蕾舞团芭蕾舞剧《吉赛尔》 保利上海城市剧院 上海  猫眼评分 0.0 舞蹈 舞蹈 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge dance">舞蹈</span></span>
-        </div>
-        <h2>俄罗斯帝国芭蕾舞团芭蕾舞剧《吉赛尔》</h2>
-        <div class="when dance">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.12.26</span>
-          
-        </div>
-        <p class="meta">保利上海城市剧院</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥80起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/499608" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
       <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="戏曲" data-group="戏曲" data-search="越剧《钟馗传》 天蟾逸夫舞台 上海  猫眼评分 0.0 戏曲 戏曲 ">
         <div class="card-top">
           <span class="badge-row"><span class="badge opera">戏曲</span></span>
@@ -4316,138 +4815,8 @@
           <a class="button" href="https://www.gewara.com/detail/513374" target="_blank" rel="noopener noreferrer">查看详情 →</a>
         </div>
       </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="戏曲" data-group="戏曲" data-search="庆祝上海评弹团成立75周年弹词流派演唱会 凯迪拉克-上海音乐厅 上海  猫眼评分 0.0 戏曲 戏曲 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge opera">戏曲</span></span>
-        </div>
-        <h2>庆祝上海评弹团成立75周年弹词流派演唱会</h2>
-        <div class="when opera">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.21</span>
-          
-        </div>
-        <p class="meta">凯迪拉克-上海音乐厅</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥80起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/515965" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="戏曲" data-group="戏曲" data-search="“杨派”经典沪剧《孤岛血泪》（公益场） 天蟾逸夫舞台 上海  猫眼评分 0.0 戏曲 戏曲 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge opera">戏曲</span></span>
-        </div>
-        <h2>“杨派”经典沪剧《孤岛血泪》（公益场）</h2>
-        <div class="when opera">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.24 - 11.25</span>
-          
-        </div>
-        <p class="meta">天蟾逸夫舞台</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥50起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/515640" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="脱口秀" data-group="脱口秀" data-search="11月6-8日·黑灯单口喜剧专场《先上车》|乐式lemode@上海 上海艺海剧院 上海  猫眼评分 0.0 脱口秀 脱口秀 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge talk">脱口秀</span></span>
-        </div>
-        <h2>11月6-8日·黑灯单口喜剧专场《先上车》|乐式Lemode@上海</h2>
-        <div class="when talk">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.06 - 11.08</span>
-          
-        </div>
-        <p class="meta">上海艺海剧院</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥220起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/511216" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="脱口秀" data-group="脱口秀" data-search="11月13日·毛豆单口喜剧专场《就差一点》|乐式lemode@上海 美琪大戏院 上海 奉贤 猫眼评分 0.0 脱口秀 脱口秀 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge talk">脱口秀</span></span>
-        </div>
-        <h2>11月13日·毛豆单口喜剧专场《就差一点》|乐式Lemode@上海</h2>
-        <div class="when talk">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.13</span>
-          
-        </div>
-        <p class="meta">美琪大戏院 · 奉贤</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="status">已售罄</span><span class="price">￥160起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/512704" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="脱口秀" data-group="脱口秀" data-search="上海·邱瑞脱口秀专场《泡沫之下》 young剧场 上海  猫眼评分 0.0 脱口秀 脱口秀 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge talk">脱口秀</span></span>
-        </div>
-        <h2>上海·邱瑞脱口秀专场《泡沫之下》</h2>
-        <div class="when talk">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.13 - 11.14</span>
-          
-        </div>
-        <p class="meta">YOUNG剧场</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥150起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/509155" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="脱口秀" data-group="脱口秀" data-search="王小利脱口秀专场《自转》｜三好姐妹@上海 黄浦剧场·中剧场 上海 黄浦 猫眼评分 0.0 脱口秀 脱口秀 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge talk">脱口秀</span></span>
-        </div>
-        <h2>王小利脱口秀专场《自转》｜三好姐妹@上海</h2>
-        <div class="when talk">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.21</span>
-          
-        </div>
-        <p class="meta">黄浦剧场·中剧场 · 黄浦</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥100起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/512307" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
-
-      <article class="card" data-month="all" data-scope="sh" data-city="上海" data-category="脱口秀" data-group="脱口秀" data-search="演艺大世界·第12届上海国际喜剧节展演剧目 锐锐脱口秀专场《爱，来不来2.0》 白玉兰剧场 上海  猫眼评分 0.0 脱口秀 脱口秀 ">
-        <div class="card-top">
-          <span class="badge-row"><span class="badge talk">脱口秀</span></span>
-        </div>
-        <h2>演艺大世界·第12届上海国际喜剧节展演剧目 锐锐脱口秀专场《爱，来不来2.0》</h2>
-        <div class="when talk">
-          <span class="when-icon">🕒</span>
-          <span class="when-date">2026.11.27 - 11.28</span>
-          
-        </div>
-        <p class="meta">白玉兰剧场</p>
-        <p class="summary">猫眼评分 0.0</p>
-        <div class="card-bottom">
-          <span><span class="price">￥100起</span></span>
-          <a class="button" href="https://www.gewara.com/detail/512895" target="_blank" rel="noopener noreferrer">查看详情 →</a>
-        </div>
-      </article>
       </div>
-    </section><p class="timeline-empty" id="timeline-empty" hidden>没有符合筛选条件的活动。</p></div>
-  
-  <details class="older">
-    <summary>更早的更新（14 次）</summary>
-    
+    </section>
     <section class="run" data-at="2026-10-26T11:39:43+08:00">
       <header class="run-head">
         <h2>2026年10月26日 11:39</h2>
