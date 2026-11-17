@@ -66,6 +66,7 @@
 | 馆 | 接口 | 状态 |
 | --- | --- | --- |
 | 南京博物院 | `GET/POST /api/exhibition/list` | ✅ 已接入（`museum_api` / `site=njmuseum`，19 条在展） |
+| 上海博物馆 | `POST /mu/frontend/pg/display/search-exhibit` | ✅ 已接入（`shmuseum` 走接口，首页轮播兜底；展讯建档即可抓到，不必等上首页轮播） |
 | 四川博物院 | `POST /japi/sw-cms-cloud/api/queryArchivesList` | ⚠️ 代码已写好，但接口要登录态（`code=310 请重新登录`），配置里 `token`/`cookie` 补上即可启用（条目默认 `enabled: false`） |
 | 首都博物馆 | `apiBase=https://m.canalmuseum.org.cn` | ❌ 网关校验 `ugi` 头（`code=A00003 invalid ugi`），非浏览器拿不到 |
 | 福建博物院 | `/api/collection/list` 等 | ❌ 要求 `accessToken`（`code=602`） |
@@ -111,6 +112,7 @@
 - `city` / `city_id`：只在 `maoyan_city` / `douban_city` 上用，指定城市
 - `categories` / `page_size` / `max_pages`：抓取量控制
 - `site`：只在 `museum_cn` / `museum_api` 上用，选择博物馆站点（`chnmuseum` / `dpm` / `njmuseum` / `hnmuseum` / `sxhm` / `lzmuseum` / `silkmuseum` / `szmuseum`）；常设陈列不写入（源站没有真实展期）
+- `api_url`：只在 `shmuseum` 上用，默认是官网「特别展览」接口 `https://www.shanghaimuseum.cn/mu/frontend/pg/display/search-exhibit`；接口抓不到的展（只在首页轮播上挂着的）会再用 `url` 的轮播图补一遍，按展名去重
 
 ## 建筑地图怎么维护
 

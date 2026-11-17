@@ -776,8 +776,91 @@ def collect_douban(source: dict) -> list[dict]:
     return results
 
 
-def collect_shmuseum(source: dict) -> list[dict]:
-    url = source.get("url") or "https://www.shanghaimuseum.net/"
+SHMUSEUM_API_URL = "https://www.shanghaimuseum.cn/mu/frontend/pg/display/search-exhibit"
+SHMUSEUM_ARTICLE_URL = "https://www.shanghaimuseum.cn/mu/frontend/pg/article/id/{code}"
+
+
+def _shmuseum_api_events(api_url: str, source_url: str) -> list[dict]:
+    """上海博物馆「特别展览」官方 JSON 接口。
+
+    POST /mu/frontend/pg/display/search-exhibit，返回
+    {"code":0,"count":N,"data":[{"code","name","exhibitDateRange","exhibitPlace",
+    "picPath","bannerPath","issueTime"}]}
+    中英文各一条，按展名里有没有汉字过滤；只保留还没结束的展。
+    """
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "Referer": "https://www.shanghaimuseum.cn/mu/frontend/pg/display/offline-exhibit",
+    }
+    body = {
+        "exhibitTypeCode": "OFFLINE_EXHIBITION",
+        "langCode": "CHINESE",
+        "page": 1,
+        "limit": 1 << 16,
+    }
+    response = requests.post(api_url, headers=headers, json=body, timeout=30)
+    response.raise_for_status()
+    payload = response.json()
+    if isinstance(payload, dict) and str(payload.get("code")) not in ("0", ""):
+        log(f"    [shmuseum] 接口返回：{payload.get('msg') or payload.get('code')}")
+        return []
+    records = payload.get("data") if isinstance(payload, dict) else None
+    if not isinstance(records, list):
+        log("    [shmuseum] 接口没取到展览列表，改用首页轮播")
+        return []
+
+    today = today_cn()
+    results: list[dict] = []
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        title = clean_text(record.get("name"))
+        # 接口会把同一展的中英文记录都返回，中文名才收
+        if not title or not re.search(r"[\u4e00-\u9fff]", title):
+            continue
+        date_text = clean_text(record.get("exhibitDateRange"))
+        match = re.search(
+            r"(20\d{2}-\d{1,2}-\d{1,2})\s*(?:-|~|－|—|–|至|到)\s*(20\d{2}-\d{1,2}-\d{1,2})",
+            date_text,
+        )
+        if not match:
+            # 没有真实展期的（数字专题/常设）不写入
+            continue
+        start = parse_date(match.group(1))
+        end = parse_date(match.group(2))
+        if not start or not end or end < today:
+            continue
+
+        code = clean_text(record.get("code"))
+        detail_url = SHMUSEUM_ARTICLE_URL.format(code=code) if code else source_url
+        image_url = clean_text(record.get("bannerPath") or record.get("picPath"))
+        if image_url and not image_url.startswith("http"):
+            image_url = "https://www.shanghaimuseum.cn/mu/" + image_url.lstrip("/")
+        venue = clean_text(record.get("exhibitPlace")) or "上海博物馆"
+        results.append(
+            {
+                "title": title,
+                "category": "展览",
+                "venue": venue,
+                "address": venue,
+                "start_date": start.isoformat(),
+                "end_date": end.isoformat(),
+                "date_text": date_text,
+                "price_text": "以官方预约页面为准",
+                "ticket_url": detail_url,
+                "source_url": source_url,
+                "image_url": image_url,
+                "summary": date_text,
+                "status": "",
+            }
+        )
+    return results
+
+
+def _shmuseum_banner_events(url: str) -> list[dict]:
+    """首页轮播兜底：接口清单里没有、但已经上图挂出来的展（只在轮播里的展）。"""
     html_text = http_get(url)
     soup = BeautifulSoup(html_text, "html.parser")
     results: list[dict] = []
@@ -827,6 +910,37 @@ def collect_shmuseum(source: dict) -> list[dict]:
             }
         )
 
+    return results
+
+
+def collect_shmuseum(source: dict) -> list[dict]:
+    """上海博物馆临展：优先打官网特别展览接口，首页轮播图兜底。
+
+    轮播图是人手动排的，展讯在官网展览库里早就有了、但没上首页时，
+    只抠轮播会漏抓；接口则从展览建档那天就能看到（还有展期/地点/详情 id）。
+    """
+    url = clean_text(source.get("url")) or "https://www.shanghaimuseum.cn/mu/frontend/pg/index"
+    api_url = clean_text(source.get("api_url")) or SHMUSEUM_API_URL
+
+    groups: list[list[dict]] = []
+    try:
+        groups.append(_shmuseum_api_events(api_url, url))
+    except Exception as exc:  # noqa: BLE001
+        log(f"    [shmuseum] 接口失败（{exc}），退回首页轮播")
+    try:
+        groups.append(_shmuseum_banner_events(url))
+    except Exception as exc:  # noqa: BLE001
+        log(f"    [shmuseum] 首页轮播抓取失败：{exc}")
+
+    results: list[dict] = []
+    seen: set[str] = set()
+    for items in groups:
+        for item in items:
+            key = normalized_key(item.get("title", ""))
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            results.append(item)
     return results
 
 
