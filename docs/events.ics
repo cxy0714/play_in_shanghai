@@ -1,2563 +1,2560 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//play-in-shanghai//CN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:上海活动清单
-X-WR-TIMEZONE:Asia/Shanghai
-BEGIN:VEVENT
-UID:604d226df80df83d@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20250425
-DTEND;VALUE=DATE:20450426
-SUMMARY:勇毅前行——中国汽车拓疆者饶斌主题展
-LOCATION:上海汽车博物馆1F临展厅
-DESCRIPTION:展览 | 时间：2025.04.25 - 2045.04.25 | 场馆：上海汽车博物馆1F临展厅 | 票价：以官网为准 |
-  展期：2025年04月25日-2045年04月25日 地点：上海汽车博物馆1F临展厅 简介
-URL:https://www.shautomuseum.com/news/info/25043001
-END:VEVENT
-BEGIN:VEVENT
-UID:6ae6d750db6aea62@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20250711
-DTEND;VALUE=DATE:20270101
-SUMMARY:捕梦人的后花园
-LOCATION:捕梦人の后花园
-DESCRIPTION:展览 | 时间：2025.07.11 - 2026.12.31 | 场馆：捕梦人の后花园 | 票价：￥190 | 猫眼评分 
- 0.0
-URL:https://www.gewara.com/detail/418490
-END:VEVENT
-BEGIN:VEVENT
-UID:ba56b207c003f8d3@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20250818
-DTEND;VALUE=DATE:20270601
-SUMMARY:上海兴业太古汇「消失的法老」胡夫金字塔沉浸式探索体验
-LOCATION:博新全宇宙The VERS沉浸式探索中心
-DESCRIPTION:展览 | 时间：2025.08.18 - 2027.05.31 | 场馆：博新全宇宙The VERS沉浸式探索中心 | 票价
- ：￥198起 | 猫眼评分 9.3
-URL:https://www.gewara.com/detail/424107
-END:VEVENT
-BEGIN:VEVENT
-UID:5bccc558d9fe5a2c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20251101
-DTEND;VALUE=DATE:20280101
-SUMMARY:沸腾之心——例数经典车上的发动机
-LOCATION:上海汽车博物馆
-DESCRIPTION:展览 | 时间：2025.11.01 - 2027.12.31 | 场馆：上海汽车博物馆 | 票价：以官网为准 | 展期：2
- 025年11月01日-2027年12月31日 地点：上海汽车博物馆 3F技术馆 简
-URL:http://www.shautomuseum.com/news/info/lsjd
-END:VEVENT
-BEGIN:VEVENT
-UID:89e118a767209cc0@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260101
-DTEND;VALUE=DATE:20270101
-SUMMARY:《我与上海不可分割》建筑师俞挺空间概念展
-LOCATION:中华艺术宫（上海美术馆）
-DESCRIPTION:展览 | 时间：2026.01.01 - 12.31 | 场馆：中华艺术宫（上海美术馆） | 票价：以官网为准 | 展期：2
- 026年01月01日-2026年12月31日
-URL:https://www.artmuseumonline.org/art/art/zlgz/zl/dqzl/2026/01/01/2c906d
- 9b98ccf29e019b72f2206c57c9.html
-END:VEVENT
-BEGIN:VEVENT
-UID:0f3d8851f75a0619@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260212
-DTEND;VALUE=DATE:20270222
-SUMMARY:卡罗莱娜·凯塞多：鲸鱼的致敬
-LOCATION:浦东美术馆
-DESCRIPTION:展览 | 时间：2026.02.12 - 2027.02.21 | 场馆：浦东美术馆 | 票价：以官方预约页面为准 | 20
- 26.02.12-2027.02.21
-URL:https://www.museumofartpd.org.cn/exhibitiondetail?id=212
-END:VEVENT
-BEGIN:VEVENT
-UID:68b13cc37e79c978@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260617
-DTEND;VALUE=DATE:20270223
-SUMMARY:暂得之乐：暂得楼捐赠明清瓷器展
-LOCATION:上海博物馆东馆三楼中国古代陶瓷馆尾厅
-DESCRIPTION:展览 | 时间：2026.06.17 - 2027.02.22 | 场馆：上海博物馆东馆三楼中国古代陶瓷馆尾厅 | 票价：以
- 官方预约页面为准 | 2026-06-17 - 2027-02-22
-URL:https://www.shanghaimuseum.cn/mu/frontend/pg/article/id/E00004245
-END:VEVENT
-BEGIN:VEVENT
-UID:98254974b350beef@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260627
-DTEND;VALUE=DATE:20270118
-SUMMARY:《史前星球：恐龙篇》沉浸式巨幕体验
-LOCATION:史前星球：恐龙篇沉浸式巨幕体验
-DESCRIPTION:展览 | 时间：2026.06.27 - 2027.01.17 | 场馆：史前星球：恐龙篇沉浸式巨幕体验 | 票价：￥58起
-  | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/490302
-END:VEVENT
-BEGIN:VEVENT
-UID:2b48b9c33114ace5@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260701
-DTEND;VALUE=DATE:20270104
-SUMMARY:中国国家地理·探索 极致发现科学艺术影像展
-LOCATION:「2026版」中国国家地理·探索 极致发现科学艺术影像展
-DESCRIPTION:展览 | 时间：2026.07.01 - 2027.01.03 | 场馆：「2026版」中国国家地理·探索 极致发现科学艺术
- 影像展 | 票价：￥18起 | 猫眼评分 9.7
-URL:https://www.gewara.com/detail/491107
-END:VEVENT
-BEGIN:VEVENT
-UID:4f7b26fd748320a8@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260709
-DTEND;VALUE=DATE:20261201
-SUMMARY:《且看宋词》戴敦邦沉浸式国风艺术展 | 戴敦邦艺术馆首展
-LOCATION:戴敦邦艺术馆
-DESCRIPTION:展览 | 时间：2026.07.09 - 11.30 | 场馆：戴敦邦艺术馆 | 票价：￥49起 | 猫眼评分 9.6
-URL:https://www.gewara.com/detail/490629
-END:VEVENT
-BEGIN:VEVENT
-UID:211c457c3e46d6e5@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260709
-DTEND;VALUE=DATE:20271115
-SUMMARY:世界树之巅：美洲古代文明大展
-LOCATION:上海博物馆人民广场馆一至三楼展厅
-DESCRIPTION:展览 | 时间：2026.07.09 - 2027.11.14 | 场馆：上海博物馆人民广场馆一至三楼展厅 | 票价：以官方
- 预约页面为准 | 2026-07-09 - 2027-11-14
-URL:https://www.shanghaimuseum.cn/mu/frontend/pg/article/id/E00004238
-END:VEVENT
-BEGIN:VEVENT
-UID:488ad4679cc7b735@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260717
-DTEND;VALUE=DATE:20261207
-SUMMARY:塑我此生：贾科梅蒂艺术大展
-LOCATION:【上海民生现代美术馆】塑我此生：贾科梅蒂艺术大展
-DESCRIPTION:展览 | 时间：2026.07.17 - 12.06 | 场馆：【上海民生现代美术馆】塑我此生：贾科梅蒂艺术大展 | 票价：
- ￥50起 | 猫眼评分 9.4
-URL:https://www.gewara.com/detail/488413
-END:VEVENT
-BEGIN:VEVENT
-UID:43a3f7d3b7af66ee@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260725
-DTEND;VALUE=DATE:20261026
-SUMMARY:丽娜·波·巴蒂：生存的诗学
-LOCATION:上海当代艺术博物馆
-DESCRIPTION:展览 | 时间：2026.07.25 - 10.25 11:0 | 场馆：上海当代艺术博物馆 | 票价：以官方页面为准
-URL:https://www.powerstationofart.com/whats-on/exhibitions/lina-bo-bardi-t
- he-poetics-of-survival
-END:VEVENT
-BEGIN:VEVENT
-UID:fcd273151b54017c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260730
-DTEND;VALUE=DATE:20270301
-SUMMARY:“触探深海”远古生命演化特展
-LOCATION:国际传媒港艺术中心
-DESCRIPTION:展览 | 时间：2026.07.30 - 2027.02.28 | 场馆：国际传媒港艺术中心 | 票价：￥58起 | 猫眼评
- 分 9.6
-URL:https://www.gewara.com/detail/494912
-END:VEVENT
-BEGIN:VEVENT
-UID:fdd22c5f4eddb933@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260815
-DTEND;VALUE=DATE:20261214
-SUMMARY:Johnny Depp：2026上海“边缘形象”艺术展
-LOCATION:Johnny Depp·2026上海边缘形象艺术展
-DESCRIPTION:展览 | 时间：2026.08.15 - 12.13 | 场馆：Johnny Depp·2026上海边缘形象艺术展 | 票价
- ：￥58起 | 猫眼评分 8.9
-URL:https://www.gewara.com/detail/495880
-END:VEVENT
-BEGIN:VEVENT
-UID:780c69ce7723ac00@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260905
-DTEND;VALUE=DATE:20261116
-SUMMARY:宝格丽“Kaleidos万花绮镜：色彩·文化·匠艺”特展
-LOCATION:上海当代艺术博物馆
-DESCRIPTION:展览 | 时间：2026.09.05 - 11.15 11:0 | 场馆：上海当代艺术博物馆 | 票价：以官方页面为准
-URL:https://www.powerstationofart.com/whats-on/exhibitions/bvlgari-kaleido
- s
-END:VEVENT
-BEGIN:VEVENT
-UID:a9294275a8c118e2@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260911
-DTEND;VALUE=DATE:20270101
-SUMMARY:Paradox Museum悖论博物馆
-LOCATION:Paradox Museum悖论博物馆
-DESCRIPTION:展览 | 时间：2026.09.11 - 12.31 | 场馆：Paradox Museum悖论博物馆 | 票价：￥68起 
- | 猫眼评分 9.7
-URL:https://www.gewara.com/detail/506649
-END:VEVENT
-BEGIN:VEVENT
-UID:c2d55b5240fcd9f8@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260912
-DTEND;VALUE=DATE:20270301
-SUMMARY:征途与山河：红色经典美术作品展
-LOCATION:龙美术馆（西岸馆）
-DESCRIPTION:展览 | 时间：2026.09.12 - 2027.02.28 | 场馆：龙美术馆（西岸馆） | 票价：以官方页面为准 | 
- 展览以视觉艺术为叙事载体，旨在重温波澜壮阔的历史瞬间，回望中国共产党百年奋斗中的峥嵘岁月。
-URL:http://www.thelongmuseum.org/exhibition-369/detail-2016.html
-END:VEVENT
-BEGIN:VEVENT
-UID:e37a0c56ff5bc3c2@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260923
-DTEND;VALUE=DATE:20270119
-SUMMARY:金冠之下：新罗文物精华展
-LOCATION:上海博物馆东馆二楼中国东方航空第二特展厅
-DESCRIPTION:展览 | 时间：2026.09.23 - 2027.01.18 | 场馆：上海博物馆东馆二楼中国东方航空第二特展厅 | 票价
- ：以官方预约页面为准 | 2026-09-23~2027-01-18
-URL:https://www.shanghaimuseum.cn/mu/frontend/pg/article/id/I00005100
-END:VEVENT
-BEGIN:VEVENT
-UID:e24384a6a77a7251@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20270125
-SUMMARY:《花砖街 11 号》黄油小熊艺术展・全球首站
-LOCATION:花砖街11号-黄油小熊艺术展·全球首站
-DESCRIPTION:展览 | 时间：2026.09.24 - 2027.01.24 | 场馆：花砖街11号-黄油小熊艺术展·全球首站 | 票价：
- ￥39起 | 猫眼评分 9.6
-URL:https://www.gewara.com/detail/502108
-END:VEVENT
-BEGIN:VEVENT
-UID:0d028d36f7e16a01@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20270215
-SUMMARY:计算万千世界
-LOCATION:上海西岸美术馆
-DESCRIPTION:展览 | 时间：2026.09.24 - 2027.02.14 | 场馆：上海西岸美术馆 | 票价：￥100 | 猫眼评分 
- 0.0
-URL:https://www.gewara.com/detail/502124
-END:VEVENT
-BEGIN:VEVENT
-UID:6b66dc19b059f896@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20261116
-SUMMARY:la Galerie du 19M SHANGHAI
-LOCATION:浦东美术馆
-DESCRIPTION:展览 | 时间：2026.09.25 - 11.15 | 场馆：浦东美术馆 | 票价：以官方预约页面为准 | 2026.09
- .25-2026.11.15
-URL:https://www.museumofartpd.org.cn/exhibitiondetail?id=220
-END:VEVENT
-BEGIN:VEVENT
-UID:5f5932df7e83ba9e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20270406
-SUMMARY:[宝龙美术馆] 通票-快乐公式：史莱姆感官漫游记
-LOCATION:宝龙美术馆
-DESCRIPTION:展览 | 时间：2026.10.01 - 2027.04.05 | 场馆：宝龙美术馆 | 票价：￥158起 | 猫眼评分 9
- .3
-URL:https://www.gewara.com/detail/507143
-END:VEVENT
-BEGIN:VEVENT
-UID:3fde2b3162c3998e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261017
-DTEND;VALUE=DATE:20261214
-SUMMARY:奥特曼光之羁绊勇者同行主题展
-LOCATION:虹桥南丰城
-DESCRIPTION:展览 | 时间：2026.10.17 - 12.13 | 场馆：虹桥南丰城 | 票价：￥68 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/511529
-END:VEVENT
-BEGIN:VEVENT
-UID:7b48c97664cd4830@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261030
-DTEND;VALUE=DATE:20270125
-SUMMARY:[油罐艺术中心] 第25届中国上海国际艺术节X-TRA数字艺术项目 《新生之地》
-LOCATION:上海油罐艺术中心
-DESCRIPTION:展览 | 时间：2026.10.30 - 2027.01.24 | 场馆：上海油罐艺术中心 | 票价：￥60 | 猫眼评分 
- 0.0
-URL:https://www.gewara.com/detail/515114
-END:VEVENT
-BEGIN:VEVENT
-UID:18775070cd84b86c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261031
-DTEND;VALUE=DATE:20270222
-SUMMARY:洁宜黄：BANK-A-OKE
-LOCATION:上海外滩美术馆
-DESCRIPTION:展览 | 时间：2026.10.31 - 2027.02.21 | 场馆：上海外滩美术馆 | 票价：以官方预约页面为准 | 
- “BANK-A-OKE”是常驻纽约与香港两地的艺术家洁宜黄的首场机构个展。为此，美术馆正门已变身为一家虚构的“卡拉OK银行”运营点。在这家虚构的银
- 行里，金钱、“气”（生命能量）与声音被视为三种不同的资产类别。展览的另一部分“黄洁宜：TEM-PLE-OKE”可从美术馆历史建筑的虎丘路原大门进入
- 。 在正门迎接你的是《气凝结出纳柜台》（2026），玻璃幕板因充盈的“气”而凝起水雾。雾气中，你看不清楚玻璃后面坐着谁，但能看到自己将要存入银行的
- 那种物质：“气”。朦胧的柜台两侧设有两台ATM，同时也是卡拉OK点唱机——这是互动影像装置《借-我-你-的-声-音》（2026）的一部分。 这件装
- 置源自艺术家的一个设想：卡拉OK是一种借贷。移除主唱声轨后，歌曲也就失去了其最珍贵的形而上资产：“气”。在主唱的空缺中献唱，便可暂时弥补缺失之物，
- 向歌曲出借你的气息和声音。在ATM前，这笔借贷关系被正式确立。你选择账户、输入个人信息，并接受合约条款，随后通过唱歌完成一笔“声音存款”。声音入账
- 后，机器将生成一份占卜文字作为凭证。然而，人声与金钱不同——即便离身，它也无法完全与其根源断开。对洁宜黄来说，声音即便几经易手，仍承载演唱者的“气
- ”。你所存入的声音，始终无法与你完全分离。那么，将某种始终无法与自身分离的东西存入银行，究竟意味着什么？ 美术馆地处上海历史上的金融区——外滩，为
- 这家虚构的银行提供了一个特殊的历史语境。艺术家将信贷与利息的历史叠加于供奉、功德和业报等更为古老的经济体系之上。在这些体系中，当下的行为可能在未来
- 产生义务或回报。在这些交叉重叠的体系里，贷方与借方的界线逐渐模糊。 办理声音存款之前，你大概想要排练一番。美术馆二楼东厅用作银行的练歌房。两块屏幕
- 播放《借我你的声音》（2026），ATM中的卡拉OK曲目即由这件影像作品改编而来。旋律采用五声音阶，专为反复演唱而作，每遍咏唱都会积聚力量。另一块
- 屏幕则播放《内在声音移植》（2022—2024），一件较早的卡拉OK表演讲座作品，探讨人声、健康与灵性之间的关系。这两件作品共同将此次新委任创作置
- 于洁宜黄持续展开的探索实践之中：声音既是身体的表达，也是承载着超越个体自身之能量的媒介。 银行系统已全面开启，欢迎开户。如其他合约一样，敬请仔细阅
- 读条款内容。
-URL:https://www.rockbundartmuseum.org/exhibition/kit-yi-wong-bankaoke
-END:VEVENT
-BEGIN:VEVENT
-UID:89bad861402618d1@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261031
-DTEND;VALUE=DATE:20270222
-SUMMARY:约塔·蒙巴萨：（在潮汐里）困于流动中
-LOCATION:上海外滩美术馆
-DESCRIPTION:展览 | 时间：2026.10.31 - 2027.02.21 | 场馆：上海外滩美术馆 | 票价：以官方预约页面为准 | 
- 十多年来，约塔·蒙巴萨不断将自己的身体埋入土中。这位来自巴西东北部纳塔尔的艺术家与作家，早在创作初期便通过一系列行为表演表达了鲜明的反殖民与废除主
- 义立场。在这些表演中，她将身体置于大地之中，由他人逐条朗读土地权利遭受侵害的记录。在地下呼吸的经验改变了“埋葬”的含义：不再是一种暴力意象，而转变
- 为她所称的“身体与大地之间的连续关系”。展览以《你的血是无人踏足之地》（2024）开场，一张面孔从土地中显现。楼上展出的全新委任歌剧作品，部分灵感
- 源于这件影像。 在四楼和五楼，基于蒙巴萨2023年同名文本创作的歌剧项目《（在潮汐里）困于流动中》（2026）让呼吸化作声音。在一场性质不明的灾变
- 后，歌剧聚焦主人公“她”（星球的异乡者）的处境。她一度为人，如今成为一块地质实体。故事讲述她如何艰难地摆脱既已习得的人类存在模式。蒙巴萨借助巴西哲
- 学家丹尼斯·费雷拉·达·席尔瓦的“重-解-构”（re-de-composition）概念理解这其中的转变：身体、声音与环境之间的边界松动，悲痛和依
- 恋留存。作品不设固定舞台或现场表演者。“她”化作一座大型夯土丘；周围九个较小的土堆“合唱团”则是一群哀悼者；“风”悬在上方。录制的声音在土地间与土
- 地中回响，随着观众在其间游走，变幻、彼此交叠。 五楼的绘画和手稿呈现歌剧创作过程中的阅读、对话和材料实验。伸出手，握持，房屋倾斜，迁徙，不安稳的栖
- 居，重复的痕迹承载着“被世界留下印记”的重量。这些草图和习作亦保留着那些未在歌剧中实现的可能性。 贯穿整场展览，声音通过身体、技术、土地和空气的关
- 系成形，超越任何个体的同一性。声音以振动触碰身体，承载的不止于理性含义。蒙巴萨提出一种不谐的聆听，邀请我们留心声音，而无需急于寻求融洽和谐。聆听由
- 此成为一个带有政治性的问题：我们如何维系不同声音与存在方式之间的关系，而不要求它们归于一体？
-URL:https://www.rockbundartmuseum.org/exhibition/jota-mombaca-stuck-in-mov
- ement-in-the-tide
-END:VEVENT
-BEGIN:VEVENT
-UID:90b2ceca063d96eb@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261031
-DTEND;VALUE=DATE:20270222
-SUMMARY:黄洁宜：TEM-PLE-OKE
-LOCATION:上海外滩美术馆
-DESCRIPTION:展览 | 时间：2026.10.31 - 2027.02.21 | 场馆：上海外滩美术馆 | 票价：以官方预约页面为准 | 
- “TEM-PLE-OKE”在美术馆的一楼和二楼打造了寺庙般的环境，与另一部分“洁宜黄：BANK-A-OKE”共同组成艺术家黄洁宜的首场机构个展。“
- 债”既是经济义务，又是精神境况。展览相关联的两部分围绕这种双重概念下的“债”展开带有哲思性的探讨。艺术家游走在世俗金融与神明账目之间，使二者彼此映
- 照。银行“消耗”你的积蓄，寺庙则显现你想要填补已耗费之物的欲望。 “TEM-PLE-OKE”的空间逻辑衍生自美术馆历史建筑虎丘路一侧的八卦窗。在黄
- 洁宜看来，八个卦象构成护阵，调节进入空间的事物。艺术家将建筑窗户的八边形轮廓延展至展厅内部，空间布局则参考了受邀的新加坡艺术家汪春龙对后天八卦的解
- 读。 一楼是异界输液休息区，实现人们补充“气”——代表生命活力的愿望。核心作品《瓶装（蓝）眼泪》（2026）是一件由两只玻璃葫芦组成的雕塑，饱满的
- 形态令人想到灵丹妙药与长寿意象。一旁的影像和声音装置《静脉滴注尊胜佛母心咒》（2026）融合佛经唱诵与临床输液的语汇，仿佛声音也能在身体内部循环。
- 在这里，古人求取长生不老的愿望与当代生物黑客狂热相遇。一楼是异界输液休息区，实现人们补充“气”——代表生命活力的愿望。核心作品《瓶装（蓝）眼泪》（
- 2026）是一件由两只玻璃葫芦组成的雕塑，饱满的形态令人想到灵丹妙药与长寿意象。一旁的影像和声音装置《静脉滴注尊胜佛母心咒》（2026）融合佛经唱
- 诵与临床输液的语汇，仿佛声音也能在身体内部循环。在这里，古人求取长生不老的愿望与当代生物黑客狂热相遇。 二楼的布局与一楼相照应，展厅上演《恕我们的
- 债》（2026）。这件全新委任的表演讲座以卡拉OK为灵感，邀请不同的身体向作品出借自己的声音。作品的主角则是一具僵尸，他化身为曾撮合清政府于187
- 4年向汇丰银行借款的买办。在黄洁宜的虚构世界里，僵尸在一个多世纪后苏醒，却发现信贷规则彻底颠倒：他如今甚至无法借到小额个人贷款。随着僵尸在各地辗转
- ，金融债务与业力、身体和精神之债也纠缠不休。 在印有道教符箓图案的地毯上，法术已然施成。愿我们所有的债终被宽恕。
-URL:https://www.rockbundartmuseum.org/exhibition/wong-kit-yi-templeoke
-END:VEVENT
-BEGIN:VEVENT
-UID:f9482e3805a7e176@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20270101
-SUMMARY:沉浸式金鱼剧场「千年千变」
-LOCATION:沉浸式金鱼剧场艺术展
-DESCRIPTION:展览 | 时间：2026.11.01 - 12.31 | 场馆：沉浸式金鱼剧场艺术展 | 票价：￥49起 | 猫眼评分 8.
- 9
-URL:https://www.gewara.com/detail/494513
-END:VEVENT
-BEGIN:VEVENT
-UID:320bf6b731b5b430@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20270222
-SUMMARY:“共此山河·中华五十六民族”陈海汶摄影作品展
-LOCATION:中华艺术宫（上海美术馆）
-DESCRIPTION:展览 | 时间：2026.11.06 - 2027.02.21 | 场馆：中华艺术宫（上海美术馆） | 票价：以官网为准 |
-  展期：2026年11月06日-2027年02月21日
-URL:https://www.artmuseumonline.org/art/art/zlgz/zl/dqzl/2026/11/06/2c906d
- 9b9e0127fe01a1aaa848b329ac.html
-END:VEVENT
-BEGIN:VEVENT
-UID:eadb3a8b3fc32db5@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20270408
-SUMMARY:墨韵星洲——新加坡艺术家林子平特展
-LOCATION:中华艺术宫（上海美术馆）
-DESCRIPTION:展览 | 时间：2026.11.06 - 2027.04.07 | 场馆：中华艺术宫（上海美术馆） | 票价：以官网为准 |
-  展期：2026年11月06日-2027年04月07日
-URL:https://www.artmuseumonline.org/art/art/zlgz/zl/dqzl/2026/11/06/2c906d
- 9b9e0127fe01a1aaa4c6a32955.html
-END:VEVENT
-BEGIN:VEVENT
-UID:389049762de292c2@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261107
-DTEND;VALUE=DATE:20270301
-SUMMARY:[油罐艺术中心] 阿娜利亚·萨班：艺术机器
-LOCATION:上海油罐艺术中心
-DESCRIPTION:展览 | 时间：2026.11.07 - 2027.02.28 | 场馆：上海油罐艺术中心 | 票价：￥30 | 猫眼评分 
- 0.0
-URL:https://www.gewara.com/detail/516979
-END:VEVENT
-BEGIN:VEVENT
-UID:5c2aaa3f7041a1a9@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261107
-DTEND;VALUE=DATE:20270222
-SUMMARY:大始——刘建华个展
-LOCATION:上海当代艺术博物馆
-DESCRIPTION:展览 | 时间：2026.11.07 - 2027.02.21 11:0 | 场馆：上海当代艺术博物馆 | 票价：以官方页面
- 为准
-URL:https://www.powerstationofart.com/whats-on/exhibitions/liu-jianhua-the
- -great-beginning
-END:VEVENT
-BEGIN:VEVENT
-UID:3ea4103759557506@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20270401
-SUMMARY:START星美术馆三展齐开 全馆通票
-LOCATION:START星美术馆
-DESCRIPTION:展览 | 时间：2026.11.10 - 2027.03.31 | 场馆：START星美术馆 | 票价：￥50起 | 猫眼评
- 分 0.0
-URL:https://www.gewara.com/detail/516658
-END:VEVENT
-BEGIN:VEVENT
-UID:be69e978b7a4bdf3@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20270215
-SUMMARY:X美术馆 上海 | 王茜瑶：Nostos-归途
-LOCATION:【X美术馆｜上海】The Pool by X Museum
-DESCRIPTION:展览 | 时间：2026.11.10 - 2027.02.14 | 场馆：【X美术馆｜上海】The Pool by X Mu
- seum | 票价：￥10起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/517694
-END:VEVENT
-BEGIN:VEVENT
-UID:da65b2b78f80907c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20270302
-SUMMARY:《我的世界-实境探险》
-LOCATION:我的世界·实境探险
-DESCRIPTION:展览 | 时间：2026.11.10 - 2027.03.01 | 场馆：我的世界·实境探险 | 票价：￥148起 | 猫眼
- 评分 0.0
-URL:https://www.gewara.com/detail/512947
-END:VEVENT
-BEGIN:VEVENT
-UID:35d45c4e422417fa@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261111
-DTEND;VALUE=DATE:20270222
-SUMMARY:“再构香港：何藩与沙龙一代” Fotografiska影像艺术中心 | 单日全馆展览通票
-LOCATION:Fotografiska影像艺术中心单日通票
-DESCRIPTION:展览 | 时间：2026.11.11 - 2027.02.21 00:0 | 场馆：Fotografiska影像艺术中心单日
- 通票 | 票价：￥50起 | 猫眼评分 9.5
-URL:https://www.gewara.com/detail/307511
-END:VEVENT
-BEGIN:VEVENT
-UID:fc6c1863d3853b78@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261111
-DTEND;VALUE=DATE:20270222
-SUMMARY:“再构香港：何藩与沙龙一代” Fotografiska影像艺术中心 | 单日全馆展览通票
-LOCATION:Fotografiska影像艺术中心单日通票 光复路127号
-DESCRIPTION:展览 | 时间：2026.11.11 - 2027.02.21 00:0 | 场馆：Fotografiska影像艺术中心单日
- 通票 光复路127号 | 票价：50.00元起 | 10人参加 11人感兴趣
-URL:https://www.douban.com/event/37538455/
-END:VEVENT
-BEGIN:VEVENT
-UID:d67e83b648a7a7f4@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261111
-DTEND;VALUE=DATE:20270215
-SUMMARY:十年之路：1979-1989中国当代艺术
-LOCATION:龙美术馆（西岸馆）
-DESCRIPTION:展览 | 时间：2026.11.11 - 2027.02.14 | 场馆：龙美术馆（西岸馆） | 票价：以官方页面为准 | 
- 精选约150件作品，呈现1979至1989年的中国当代艺术图卷。
-URL:http://www.thelongmuseum.org/exhibition-369/detail-2019.html
-END:VEVENT
-BEGIN:VEVENT
-UID:f01d392f0d1794a3@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20270215
-SUMMARY:微暗的光：夏禹，一个人和一个时代
-LOCATION:龙美术馆（西岸馆）
-DESCRIPTION:展览 | 时间：2026.11.12 - 2027.02.14 | 场馆：龙美术馆（西岸馆） | 票价：以官方页面为准 | 
- 走进夏禹沉静而悠长的视觉世界，看见他如何以绘画的方式承接一个时代，并在微暗处，继续望向远方。
-URL:http://www.thelongmuseum.org/exhibition-369/detail-2018.html
-END:VEVENT
-BEGIN:VEVENT
-UID:3fa10f55a759b4c5@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20270301
-SUMMARY:江大海：隐蔽的结构
-LOCATION:上海当代艺术博物馆
-DESCRIPTION:展览 | 时间：2026.11.13 - 2027.02.28 11:0 | 场馆：上海当代艺术博物馆 | 票价：以官方页面
- 为准
-URL:https://www.powerstationofart.com/whats-on/exhibitions/jiang-dahai-str
- ucture-cachee
-END:VEVENT
-BEGIN:VEVENT
-UID:65f5a2f04b1e92d6@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20270301
-SUMMARY:刘家琨：明月构想
-LOCATION:上海当代艺术博物馆
-DESCRIPTION:展览 | 时间：2026.11.14 - 2027.02.28 11:0 | 场馆：上海当代艺术博物馆 | 票价：以官方页面
- 为准
-URL:https://www.powerstationofart.com/whats-on/exhibitions/liu-jiakun-the-
- moon-and-the-well
-END:VEVENT
-BEGIN:VEVENT
-UID:b73bf90be3f02f5b@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261201
-SUMMARY:.【南京东路店】人民广场脱口秀周一至周日｜综艺卡司｜吐槽爆笑大会｜开心互动｜【大笑喜剧】即兴之夜精品秀＞
-LOCATION:大笑喜剧-南京东路店
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.30 | 场馆：大笑喜剧-南京东路店 | 票价：￥5起 | 猫眼评分 9.
- 9
-URL:https://www.gewara.com/detail/498157
-END:VEVENT
-BEGIN:VEVENT
-UID:f4b72e21a68cbd9a@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20270104
-SUMMARY:EVA新世纪福音战士 30周年纪念活动【上海新世界 E展空间】
-LOCATION:新世纪福音战士·30周年纪念活动-上海新世界E展空间
-DESCRIPTION:展览 | 时间：2026.11.17 - 2027.01.03 10:0 | 场馆：新世纪福音战士·30周年纪念活动-上海新
- 世界E展空间 | 票价：￥79起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/497705
-END:VEVENT
-BEGIN:VEVENT
-UID:cecc144bc02345db@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20270104
-SUMMARY:EVA新世纪福音战士 30周年纪念活动【上海新世界 E展空间】
-LOCATION:新世纪福音战士·30周年纪念活动-上海新世界E展空间 南京西路2-68号(上海新世界城11楼)
-DESCRIPTION:展览 | 时间：2026.11.17 - 2027.01.03 10:0 | 场馆：新世纪福音战士·30周年纪念活动-上海新
- 世界E展空间 南京西路2-68号(上海新世界城11楼) | 票价：79.00元起 | 5人参加 2人感兴趣
-URL:https://www.douban.com/event/38001772/
-END:VEVENT
-BEGIN:VEVENT
-UID:85756b960f274a35@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261214
-SUMMARY:K11爆款话剧｜沉浸式悬疑推理《致命发布会》高口碑｜一对一审讯｜全员互动｜高能反转｜亲自上台调查
-LOCATION:喜剧玩家
-DESCRIPTION:话剧 | 时间：2026.11.17 - 12.13 | 场馆：喜剧玩家 | 票价：￥30起 | 猫眼评分 9.9
-URL:https://www.gewara.com/detail/501018
-END:VEVENT
-BEGIN:VEVENT
-UID:5d9aca4f13a3b15e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T193000
-DTEND;TZID=Asia/Shanghai:20261129T213000
-SUMMARY:Norah/71/油百万领衔 普通话/沪语/英文脱口秀 by SpicyComedy
-LOCATION:SpicyComedy-新天地时尚一期店
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.29 19:30 | 场馆：SpicyComedy-新天地时尚一期店 | 
- 票价：￥120起 | 猫眼评分 9.8
-URL:https://www.gewara.com/detail/385818
-END:VEVENT
-BEGIN:VEVENT
-UID:5944f9c585cbd2e7@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T193000
-DTEND;TZID=Asia/Shanghai:20261129T213000
-SUMMARY:Norah/71/油百万领衔 普通话/沪语/英文脱口秀 by SpicyComedy
-LOCATION:SpicyComedy-新天地时尚一期店 兴业路123弄6-7号3层南里食集北区14号
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.29 19:30 | 场馆：SpicyComedy-新天地时尚一期店 兴业
- 路123弄6-7号3层南里食集北区14号 | 票价：120.0元起 | 13人参加 20人感兴趣
-URL:https://www.douban.com/event/36977803/
-END:VEVENT
-BEGIN:VEVENT
-UID:4aba270707a3cd25@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261201
-SUMMARY:[大笑喜剧] 南京东路店人民广场脱口秀周一至周日｜综艺卡司｜吐槽爆笑大会｜开心互动｜即兴之夜精品秀
-LOCATION:大笑脱口秀俱乐部-人民广场店
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.30 | 场馆：大笑脱口秀俱乐部-人民广场店 | 票价：￥5起 | 猫眼评
- 分 9.9
-URL:https://www.gewara.com/detail/512575
-END:VEVENT
-BEGIN:VEVENT
-UID:a1317d74bfc34026@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261120
-SUMMARY:《王汝刚从艺五十周年演出》
-LOCATION:天蟾逸夫舞台
-DESCRIPTION:戏曲 | 时间：2026.11.17 - 11.19 | 场馆：天蟾逸夫舞台 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/509599
-END:VEVENT
-BEGIN:VEVENT
-UID:98b90a71e9d0efcd@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T143000
-DTEND;TZID=Asia/Shanghai:20261130T163000
-SUMMARY:【买一送一限量特惠】人民广场脱口秀【魔脱喜剧】周一至周日每天三场丨爆笑精品秀解压脱口秀喜剧大会
-LOCATION:魔脱喜剧-人民广场店
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.30 14:30 | 场馆：魔脱喜剧-人民广场店 | 票价：￥5起 | 猫
- 眼评分 9.9
-URL:https://www.gewara.com/detail/492451
-END:VEVENT
-BEGIN:VEVENT
-UID:c9846eb759b7efd3@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T143000
-DTEND;TZID=Asia/Shanghai:20261130T163000
-SUMMARY:【买一送一限量特惠】人民广场脱口秀【魔脱喜剧】周一至周日每天三场丨爆笑精品秀解压脱口秀喜剧大会
-LOCATION:魔脱喜剧-人民广场店 南京西路388号仙乐斯广场406——人民广场地铁站11号口步行360米
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.30 14:30 | 场馆：魔脱喜剧-人民广场店 南京西路388号仙乐斯广
- 场406——人民广场地铁站11号口步行360米 | 票价：5.00元起 | 1人参加 1人感兴趣
-URL:https://www.douban.com/event/37896783/
-END:VEVENT
-BEGIN:VEVENT
-UID:f5029ecd33d4fef8@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T143000
-DTEND;TZID=Asia/Shanghai:20261231T163000
-SUMMARY:【古风玄幻】《寒鸦镇》沉浸式剧场【视觉奇观】【玄幻氛围】【机关互动】
-LOCATION:暴风岛沉浸式体验馆-打浦桥店 徐家汇路618号日月光中心五楼
-DESCRIPTION:展览 | 时间：2026.11.17 - 12.31 14:30 | 场馆：暴风岛沉浸式体验馆-打浦桥店 徐家汇路618号日
- 月光中心五楼 | 票价：498.00元 | 1人参加 0人感兴趣
-URL:https://www.douban.com/event/37698704/
-END:VEVENT
-BEGIN:VEVENT
-UID:cac18c2877e18112@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T141000
-DTEND;TZID=Asia/Shanghai:20261231T161000
-SUMMARY:【悬疑推理】《无人生还》沉浸式互动剧场【角色扮演】【机制创新】【隐藏悬念】
-LOCATION:暴风岛沉浸式体验馆-打浦桥店 徐家汇路618号日月光中心五楼
-DESCRIPTION:展览 | 时间：2026.11.17 - 12.31 14:10 | 场馆：暴风岛沉浸式体验馆-打浦桥店 徐家汇路618号日
- 月光中心五楼 | 票价：458.00元 | 2人参加 0人感兴趣
-URL:https://www.douban.com/event/37317849/
-END:VEVENT
-BEGIN:VEVENT
-UID:176439ccecee86d1@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T193000
-DTEND;TZID=Asia/Shanghai:20261231T213000
-SUMMARY:【肆笑】脱口秀综艺卡司丨小四爷/继业/林琛/吴鼎/翟小明/小橘/热8丨盲盒秀丨沪语&普通话@南京东路店
-LOCATION:肆笑喜剧脱口秀丨南京东路外滩店
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 12.31 19:30 | 场馆：肆笑喜剧脱口秀丨南京东路外滩店 | 票价：￥9
- .9起 | 猫眼评分 9.8
-URL:https://www.gewara.com/detail/376746
-END:VEVENT
-BEGIN:VEVENT
-UID:791d360de2eaa2d8@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T193000
-DTEND;TZID=Asia/Shanghai:20261130T213000
-SUMMARY:【肆笑】脱口秀综艺卡司丨小四爷/继业/林琛/吴鼎/翟小明/小橘/热8丨盲盒秀丨沪语&普通话@南京东路店
-LOCATION:肆笑喜剧脱口秀丨南京东路外滩店 南京东路479号U479商场4楼
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.30 19:30 | 场馆：肆笑喜剧脱口秀丨南京东路外滩店 南京东路479
- 号U479商场4楼 | 票价：120.00元 | 6人参加 2人感兴趣
-URL:https://www.douban.com/event/36896098/
-END:VEVENT
-BEGIN:VEVENT
-UID:0ddf49bef8641d4e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20270101
-SUMMARY:【肆笑喜剧】【贰叁叁】丨南京东路丨爆笑脱口秀丨开放麦 | 轻松解压丨情侣约会丨双人特惠
-LOCATION:U479剧场
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 12.31 | 场馆：U479剧场 | 票价：￥39起 | 猫眼评分 9.7
-URL:https://www.gewara.com/detail/225986
-END:VEVENT
-BEGIN:VEVENT
-UID:2236508c0783c5e5@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261214
-SUMMARY:上海·悬疑喜剧《谋杀预告》丨英式推理&法式心理悬疑丨互动叙事丨心理博弈丨爆笑反转丨全员恶人炸裂开演
-LOCATION:adult SoDA 沉浸喜剧空间
-DESCRIPTION:话剧 | 时间：2026.11.17 - 12.13 | 场馆：adult SoDA 沉浸喜剧空间 | 票价：￥199起 |
-  猫眼评分 9.9
-URL:https://www.gewara.com/detail/516584
-END:VEVENT
-BEGIN:VEVENT
-UID:5b3e8477300bec2f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20270104
-SUMMARY:上海《魔法少女小圆》15周年纪念特展
-LOCATION:e展空间
-DESCRIPTION:展览 | 时间：2026.11.17 - 2027.01.03 10:0 | 场馆：e展空间 | 票价：￥98起 | 猫眼评
- 分 0.0
-URL:https://www.gewara.com/detail/508724
-END:VEVENT
-BEGIN:VEVENT
-UID:0f48090f47f04641@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20270104
-SUMMARY:上海《魔法少女小圆》15周年纪念特展
-LOCATION:e展空间 南京西路2号-68号上海新世界城11楼
-DESCRIPTION:展览 | 时间：2026.11.17 - 2027.01.03 10:0 | 场馆：e展空间 南京西路2号-68号上海新世界
- 城11楼 | 票价：98.0元 | 0人参加 1人感兴趣
-URL:https://www.douban.com/event/38074858/
-END:VEVENT
-BEGIN:VEVENT
-UID:66c56ebbde82d607@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261201
-SUMMARY:上海人民广场脱口秀｜喜剧部落精品场｜外滩网红周一到周日每天4场｜场场爆满｜轻松解压（人民广场店）
-LOCATION:咯吱喜剧商店
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.30 | 场馆：咯吱喜剧商店 | 票价：￥69起 | 猫眼评分 9.9
-URL:https://www.gewara.com/detail/501588
-END:VEVENT
-BEGIN:VEVENT
-UID:1fd9f604a4f54eec@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261201
-SUMMARY:上海外滩爆笑气味戏剧《死无对证》沉浸式演出 | 原创经典ip版权
-LOCATION:次乐元空间 小东门街道中华路528号3层9309室(黄浦区融创外滩1号汇三楼次乐元空间)
-DESCRIPTION:话剧 | 时间：2026.11.17 - 11.30 15:0 | 场馆：次乐元空间 小东门街道中华路528号3层9309室
- (黄浦区融创外滩1号汇三楼次乐元空间) | 票价：30.00元起 | 3人参加 0人感兴趣
-URL:https://www.douban.com/event/37929881/
-END:VEVENT
-BEGIN:VEVENT
-UID:d7ff59a62cfaf5f6@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261118
-SUMMARY:上海音乐学院学科建设成果展演季暨2026上音歌剧院秋季演出季 纪念莫扎特诞辰270周年巨献——全套钢琴协奏曲音乐会
-LOCATION:贺绿汀音乐厅
-DESCRIPTION:音乐会 | 时间：2026.11.17 | 场馆：贺绿汀音乐厅 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/517965
-END:VEVENT
-BEGIN:VEVENT
-UID:0965df441c7fdf72@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T193000
-DTEND;TZID=Asia/Shanghai:20261130T213000
-SUMMARY:上海首创16种结局悬疑《法外狂徒》｜沉浸式局中剧中局｜上帝视角观影体验
-LOCATION:阴阳club 南昌路125号(近茂名路)负一层
-DESCRIPTION:话剧 | 时间：2026.11.17 - 11.30 19:30 | 场馆：阴阳club 南昌路125号(近茂名路)负一层 
- | 票价：30.00元起 | 1人参加 6人感兴趣
-URL:https://www.douban.com/event/37851175/
-END:VEVENT
-BEGIN:VEVENT
-UID:54cc7c4682854bfc@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261201
-SUMMARY:南京东路店人民广场脱口秀周一至周日｜综艺卡司｜吐槽爆笑大会｜开心互动｜[大笑喜剧] 即兴之夜精品秀
-LOCATION:大笑脱口秀俱乐部-人民广场店 南京东路792号第一百货商场c馆二楼
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.30 14:0 | 场馆：大笑脱口秀俱乐部-人民广场店 南京东路792号第
- 一百货商场c馆二楼 | 票价：5.0元起 | 1人参加 0人感兴趣
-URL:https://www.douban.com/event/38069986/
-END:VEVENT
-BEGIN:VEVENT
-UID:527809ec0d2842bc@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261221
-SUMMARY:南京路爆款｜首创科幻沉浸式悬疑《人工智能杀人案》｜平行时空｜轮回式结构｜孤岛逃生｜人类结局由你定义
-LOCATION:咯吱沉浸剧场
-DESCRIPTION:话剧 | 时间：2026.11.17 - 12.20 | 场馆：咯吱沉浸剧场 | 票价：￥30起 | 猫眼评分 9.8
-URL:https://www.gewara.com/detail/517389
-END:VEVENT
-BEGIN:VEVENT
-UID:f5d5a6c16d0e8b0b@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T193000
-DTEND;TZID=Asia/Shanghai:20261227T213000
-SUMMARY:原版音乐剧《剧院魅影》四十周年上海告别季
-LOCATION:上海大剧院
-DESCRIPTION:音乐剧 | 时间：2026.11.17 - 12.27 19:30 | 场馆：上海大剧院 | 票价：￥280起 | 猫眼评分
-  0.0
-URL:https://www.gewara.com/detail/479752
-END:VEVENT
-BEGIN:VEVENT
-UID:c2569051e6b70d8d@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T193000
-DTEND;TZID=Asia/Shanghai:20261227T213000
-SUMMARY:原版音乐剧《剧院魅影》四十周年上海告别季
-LOCATION:上海大剧院 南京东路街道人民大道300号(近人民广场)
-DESCRIPTION:音乐剧 | 时间：2026.11.17 - 12.27 19:30 | 场馆：上海大剧院 南京东路街道人民大道300号(近人
- 民广场) | 票价：280.0元起 | 4人参加 13人感兴趣
-URL:https://www.douban.com/event/37858471/
-END:VEVENT
-BEGIN:VEVENT
-UID:a79c64e298dfe442@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261207
-SUMMARY:喜剧联盒国明星综艺卡司秀盲盒秀 | Storm/李文/Seven/于渤领衔@喜联空间
-LOCATION:喜联空间·新天地
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 12.06 19:0 | 场馆：喜联空间·新天地 | 票价：￥39起 | 猫眼评
- 分 9.8
-URL:https://www.gewara.com/detail/467138
-END:VEVENT
-BEGIN:VEVENT
-UID:904b6af7d394092e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261207
-SUMMARY:喜剧联盒国明星综艺卡司秀盲盒秀 | Storm/李文/Seven/于渤领衔@喜联空间
-LOCATION:喜联空间·新天地 湖滨路168号无限极荟2楼
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 12.06 19:0 | 场馆：喜联空间·新天地 湖滨路168号无限极荟2楼 |
-  票价：69.00元起 | 1人参加 1人感兴趣
-URL:https://www.douban.com/event/37743227/
-END:VEVENT
-BEGIN:VEVENT
-UID:657b40189be78b10@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261123
-SUMMARY:女性反乌托邦音乐剧《奇美拉》
-LOCATION:上海艺海剧院
-DESCRIPTION:音乐剧 | 时间：2026.11.17 - 11.22 | 场馆：上海艺海剧院 | 票价：￥199起 | 猫眼评分 9.5
-URL:https://www.gewara.com/detail/500764
-END:VEVENT
-BEGIN:VEVENT
-UID:4c6d6e856ec254ac@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20270104
-SUMMARY:沉浸式惊悚悬疑音乐剧《幽灵》
-LOCATION:沉浸式惊悚悬疑音乐剧《幽灵》
-DESCRIPTION:音乐剧 | 时间：2026.11.17 - 2027.01.03 | 场馆：沉浸式惊悚悬疑音乐剧《幽灵》 | 票价：￥199
- 起 | 猫眼评分 9.4
-URL:https://www.gewara.com/detail/391978
-END:VEVENT
-BEGIN:VEVENT
-UID:114c894dece5288e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261214
-SUMMARY:爆款巡演|烧脑推理沉浸式《罪恶滔天》戏剧节金奖|深度互动|高能反转|上台审讯|i人友好|团建聚会
-LOCATION:喜剧玩家
-DESCRIPTION:话剧 | 时间：2026.11.17 - 12.13 | 场馆：喜剧玩家 | 票价：￥30起 | 猫眼评分 9.9
-URL:https://www.gewara.com/detail/490431
-END:VEVENT
-BEGIN:VEVENT
-UID:8dd13ea2383af972@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261127
-SUMMARY:爆笑悬疑喜剧《神机庙算》高口碑热销｜致命惊悚博弈｜智斗骗局谁是赢家？
-LOCATION:加场戏剧
-DESCRIPTION:话剧 | 时间：2026.11.17 - 11.26 | 场馆：加场戏剧 | 票价：￥99起 | 猫眼评分 9.9
-URL:https://www.gewara.com/detail/514665
-END:VEVENT
-BEGIN:VEVENT
-UID:81037c26db483f85@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261201
-SUMMARY:环人广必看沉浸式戏剧 ｜沪版《胡闹厨房 》｜爆款热销｜喜人同款
-LOCATION:半笑酒馆
-DESCRIPTION:话剧 | 时间：2026.11.17 - 11.30 | 场馆：半笑酒馆 | 票价：￥188起 | 猫眼评分 9.9
-URL:https://www.gewara.com/detail/510408
-END:VEVENT
-BEGIN:VEVENT
-UID:48e68be0c9d63019@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261221
-SUMMARY:环人广｜悬疑互动经典IP《孤岛逃生》十周年上海站｜沉浸式推理｜观众投票抉择式互动剧场｜南京路步行街
-LOCATION:咯吱沉浸剧场
-DESCRIPTION:话剧 | 时间：2026.11.17 - 12.20 | 场馆：咯吱沉浸剧场 | 票价：￥30起 | 猫眼评分 9.9
-URL:https://www.gewara.com/detail/517371
-END:VEVENT
-BEGIN:VEVENT
-UID:53982725e673dbd6@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T193000
-DTEND;TZID=Asia/Shanghai:20261117T213000
-SUMMARY:第八届上海早期音乐节 忧思——塔利斯学者合唱团丨上海交响乐团音乐季
-LOCATION:上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路)
-DESCRIPTION:音乐会 | 时间：2026.11.17 19:30 | 场馆：上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路) 
- | 票价：80.0元起 | 1人参加 0人感兴趣
-URL:https://www.douban.com/event/37901008/
-END:VEVENT
-BEGIN:VEVENT
-UID:6e7938510a9caff2@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261130
-SUMMARY:话剧《父亲》Le Père by Florian Zeller
-LOCATION:上海话剧艺术中心
-DESCRIPTION:话剧 | 时间：2026.11.17 - 11.29 | 场馆：上海话剧艺术中心 | 票价：￥280起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/500399
-END:VEVENT
-BEGIN:VEVENT
-UID:d53593f6c71e5b60@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T143000
-DTEND;TZID=Asia/Shanghai:20261130T163000
-SUMMARY:限量特惠买一送一丨人民广场脱口秀丨魔脱喜剧丨周一至周日每天三场丨爆笑精品秀解压脱口秀喜剧大会
-LOCATION:魔脱喜剧-人民广场店
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.30 14:30 | 场馆：魔脱喜剧-人民广场店 | 票价：￥5起 | 猫
- 眼评分 9.9
-URL:https://www.gewara.com/detail/509248
-END:VEVENT
-BEGIN:VEVENT
-UID:04a7449d75d2e70f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261117T143000
-DTEND;TZID=Asia/Shanghai:20261130T163000
-SUMMARY:限量特惠买一送一丨人民广场脱口秀丨魔脱喜剧丨周一至周日每天三场丨爆笑精品秀解压脱口秀喜剧大会
-LOCATION:魔脱喜剧-人民广场店 南京西路388号仙乐斯广场406——人民广场地铁站11号口步行360米
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.30 14:30 | 场馆：魔脱喜剧-人民广场店 南京西路388号仙乐斯广
- 场406——人民广场地铁站11号口步行360米 | 票价：5.0元起 | 0人参加 1人感兴趣
-URL:https://www.douban.com/event/38074995/
-END:VEVENT
-BEGIN:VEVENT
-UID:0e5b56fe6fd10a2a@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261201
-SUMMARY:魔都人民广场脱口秀｜喜剧部落精品场｜外滩网红周一到周日每天4场｜场场爆满｜轻松解压（人民广场店）
-LOCATION:咯吱喜剧商店
-DESCRIPTION:脱口秀 | 时间：2026.11.17 - 11.30 | 场馆：咯吱喜剧商店 | 票价：￥69起 | 猫眼评分 9.9
-URL:https://www.gewara.com/detail/508860
-END:VEVENT
-BEGIN:VEVENT
-UID:a8202186f8a0bdb5@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261118T103000
-DTEND;TZID=Asia/Shanghai:20261125T123000
-SUMMARY:Fotografiska展览通票 | 周三爵士之夜
-LOCATION:Fotografiska影像艺术中心单日通票 光复路127号
-DESCRIPTION:展览 | 时间：2026.11.18 - 11.25 10:30 | 场馆：Fotografiska影像艺术中心单日通票 光
- 复路127号 | 票价：120.00元 | 7人参加 22人感兴趣
-URL:https://www.douban.com/event/36976894/
-END:VEVENT
-BEGIN:VEVENT
-UID:11f1791c39f1fdad@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20270101
-SUMMARY:[周中特惠] 《我的世界-实境探险》
-LOCATION:我的世界·实境探险
-DESCRIPTION:展览 | 时间：2026.11.18 - 12.31 | 场馆：我的世界·实境探险 | 票价：￥128 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/517990
-END:VEVENT
-BEGIN:VEVENT
-UID:38fce1b2fd5cf266@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261118T193000
-DTEND;TZID=Asia/Shanghai:20261129T213000
-SUMMARY:[笑到失控] 爆笑喜剧《连载不要停》｜90分钟事故不断，笑点不断
-LOCATION:沉浸式即兴互动喜剧剧场—草台嘻班 四川北路939号滨港商业中心L2层1228单元
-DESCRIPTION:话剧 | 时间：2026.11.18 - 11.29 19:30 | 场馆：沉浸式即兴互动喜剧剧场—草台嘻班 四川北路939
- 号滨港商业中心L2层1228单元 | 票价：99.0元起 | 4人参加 2人感兴趣
-URL:https://www.douban.com/event/37873355/
-END:VEVENT
-BEGIN:VEVENT
-UID:4dafb822018a8c4b@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20270104
-SUMMARY:[部分场次380起]浸入式音乐秀《双城之战》Immersive Arcane
-LOCATION:浸入式音乐秀《双城之战》Immersive Arcane
-DESCRIPTION:话剧 | 时间：2026.11.18 - 2027.01.03 | 场馆：浸入式音乐秀《双城之战》Immersive Arc
- ane | 票价：￥380起 | 猫眼评分 9.7
-URL:https://www.gewara.com/detail/455744
-END:VEVENT
-BEGIN:VEVENT
-UID:8558fe7f2ba9d9f6@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20270101
-SUMMARY:《花见小馆谋杀事件》环人广｜基尼斯话剧金榜｜沉浸式悬疑庭审剧｜层层反转｜推理戏剧｜超强阵容｜爆笑互动｜真人RPG游戏体验
-LOCATION:半笑空间
-DESCRIPTION:话剧 | 时间：2026.11.18 - 12.31 | 场馆：半笑空间 | 票价：￥30起 | 猫眼评分 9.9
-URL:https://www.gewara.com/detail/490964
-END:VEVENT
-BEGIN:VEVENT
-UID:eb88f7f05abb117e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261118T193000
-DTEND;TZID=Asia/Shanghai:20261120T213000
-SUMMARY:【RAYGAME出品】原创沉浸式光影戏剧《红线II Filo Rosso》
-LOCATION:上海PLUTOROSSO音乐现场
-DESCRIPTION:舞蹈 | 时间：2026.11.18 - 11.20 19:30 | 场馆：上海PLUTOROSSO音乐现场 | 票价：￥2
- 88起 | 猫眼评分 9.8
-URL:https://www.gewara.com/detail/510156
-END:VEVENT
-BEGIN:VEVENT
-UID:d3df88994af5202f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261118T193000
-DTEND;TZID=Asia/Shanghai:20261120T213000
-SUMMARY:【RAYGAME出品】原创沉浸式光影戏剧《红线II Filo Rosso》
-LOCATION:上海PLUTOROSSO音乐现场 淮海中路728号龙凤·PRSCO五楼05室
-DESCRIPTION:话剧 | 时间：2026.11.18 - 11.20 19:30 | 场馆：上海PLUTOROSSO音乐现场 淮海中路728
- 号龙凤·PRSCO五楼05室 | 票价：288.0元起 | 2人参加 0人感兴趣
-URL:https://www.douban.com/event/38081963/
-END:VEVENT
-BEGIN:VEVENT
-UID:a43d7e7e08e7fbf3@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261118T193000
-DTEND;TZID=Asia/Shanghai:20261122T213000
-SUMMARY:【上海必玩】惊悚鬼混沉浸式《开关SWITCH》
-LOCATION:惊悚鬼混沉浸式笑场《开关SWITCH》
-DESCRIPTION:展览 | 时间：2026.11.18 - 11.22 19:30 | 场馆：惊悚鬼混沉浸式笑场《开关SWITCH》 | 票价
- ：￥98起 | 猫眼评分 9.5
-URL:https://www.gewara.com/detail/395150
-END:VEVENT
-BEGIN:VEVENT
-UID:4af8d0293230e1b0@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261118T193000
-DTEND;TZID=Asia/Shanghai:20261122T213000
-SUMMARY:【上海必玩】惊悚鬼混沉浸式《开关SWITCH》
-LOCATION:惊悚鬼混沉浸式笑场《开关SWITCH》 西藏南路1号上海大世界2楼·B厅
-DESCRIPTION:展览 | 时间：2026.11.18 - 11.22 19:30 | 场馆：惊悚鬼混沉浸式笑场《开关SWITCH》 西藏南路
- 1号上海大世界2楼·B厅 | 票价：98.00元起 | 0人参加 4人感兴趣
-URL:https://www.douban.com/event/37473296/
-END:VEVENT
-BEGIN:VEVENT
-UID:32bdfbb73f44e395@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261118T193000
-DTEND;TZID=Asia/Shanghai:20261129T213000
-SUMMARY:【年度金奖】高口碑必看!环境式光影艺术悬疑剧《禁忌的色彩》
-LOCATION:RAYGAME CLUB·剧场
-DESCRIPTION:话剧 | 时间：2026.11.18 - 11.29 19:30 | 场馆：RAYGAME CLUB·剧场 | 票价：￥13
- 1.6起 | 猫眼评分 9.7
-URL:https://www.gewara.com/detail/391445
-END:VEVENT
-BEGIN:VEVENT
-UID:dbeb6c7a93f137d5@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261118T193000
-DTEND;TZID=Asia/Shanghai:20261129T213000
-SUMMARY:【年度金奖】高口碑必看!环境式光影艺术悬疑剧《禁忌的色彩》
-LOCATION:RAYGAME CLUB·剧场 马当路453号L219室
-DESCRIPTION:话剧 | 时间：2026.11.18 - 11.29 19:30 | 场馆：RAYGAME CLUB·剧场 马当路453号L
- 219室 | 票价：188.0元起 | 0人参加 2人感兴趣
-URL:https://www.douban.com/event/37427262/
-END:VEVENT
-BEGIN:VEVENT
-UID:98a3e19a4e081e8d@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261210
-SUMMARY:上海欢乐谷【凭身份证入场】
-LOCATION:上海欢乐谷
-DESCRIPTION:展览 | 时间：2026.11.18 - 12.09 08:0 | 场馆：上海欢乐谷 | 票价：￥180起 | 猫眼评分 0
- .0
-URL:https://www.gewara.com/detail/328673
-END:VEVENT
-BEGIN:VEVENT
-UID:c882ec32002ed9cc@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261210
-SUMMARY:上海欢乐谷【凭身份证入场】
-LOCATION:上海欢乐谷 林湖路888号
-DESCRIPTION:展览 | 时间：2026.11.18 - 12.09 08:0 | 场馆：上海欢乐谷 林湖路888号 | 票价：199.00
- 元起 | 1人参加 0人感兴趣
-URL:https://www.douban.com/event/37714231/
-END:VEVENT
-BEGIN:VEVENT
-UID:ebd66204891837ee@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261119
-SUMMARY:上海音乐学院学科建设成果展演季暨2026上音歌剧院秋季演出季上海当代音乐周 开幕式暨交响作品音乐会
-LOCATION:上音歌剧院
-DESCRIPTION:音乐会 | 时间：2026.11.18 | 场馆：上音歌剧院 | 票价：￥30起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516875
-END:VEVENT
-BEGIN:VEVENT
-UID:4967862fcf918786@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20270104
-SUMMARY:原创爆笑奇幻音乐剧《邦尼帮你》-来音乐剧的现场过生日吧
-LOCATION:邦尼剧场
-DESCRIPTION:音乐剧 | 时间：2026.11.18 - 2027.01.03 | 场馆：邦尼剧场 | 票价：￥199起 | 猫眼评分 9
- .9
-URL:https://www.gewara.com/detail/467399
-END:VEVENT
-BEGIN:VEVENT
-UID:b3120c028290e87a@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261130
-SUMMARY:春晚魔术师领衔｜20万人亲测爆笑体验｜魔术脱口秀《男巫客厅》邓男子/Tony等
-LOCATION:上海共舞台
-DESCRIPTION:脱口秀 | 时间：2026.11.18 - 11.29 | 场馆：上海共舞台 | 票价：￥188起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/515699
-END:VEVENT
-BEGIN:VEVENT
-UID:a1d3ae28d1c37cfb@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20270201
-SUMMARY:沉浸式原创音乐剧《冈格尼尔》
-LOCATION:星空间25号·临窗小剧场
-DESCRIPTION:音乐剧 | 时间：2026.11.18 - 2027.01.31 | 场馆：星空间25号·临窗小剧场 | 票价：￥199起 
- | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/501047
-END:VEVENT
-BEGIN:VEVENT
-UID:fcb7276d5877e939@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20270201
-SUMMARY:沉浸式原创音乐剧《雕像》
-LOCATION:星空间1794号·临窗小剧场
-DESCRIPTION:音乐剧 | 时间：2026.11.18 - 2027.01.31 | 场馆：星空间1794号·临窗小剧场 | 票价：￥199
- 起 | 猫眼评分 9.4
-URL:https://www.gewara.com/detail/410371
-END:VEVENT
-BEGIN:VEVENT
-UID:3678a3a45a5f4ecf@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261214
-SUMMARY:沉浸式悬念剧场《9号秘事》
-LOCATION:上海大剧院
-DESCRIPTION:话剧 | 时间：2026.11.18 - 12.13 | 场馆：上海大剧院 | 票价：￥239起 | 猫眼评分 9.1
-URL:https://www.gewara.com/detail/374137
-END:VEVENT
-BEGIN:VEVENT
-UID:6962a5aec6cba0aa@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261118T193000
-DTEND;TZID=Asia/Shanghai:20261118T213000
-SUMMARY:爵士天后戴安娜·克瑞儿Diana Krall 2026上海音乐会
-LOCATION:上海东方艺术中心 丁香路425号(近世纪大道)
-DESCRIPTION:音乐会 | 时间：2026.11.18 19:30 | 场馆：上海东方艺术中心 丁香路425号(近世纪大道) | 票价：38
- 0.0元起 | 1人参加 0人感兴趣
-URL:https://www.douban.com/event/38045412/
-END:VEVENT
-BEGIN:VEVENT
-UID:1cbaa266e3b471c7@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20270506
-SUMMARY:环宇璀璨：大都会艺术博物馆珠宝珍藏展
-LOCATION:上海博物馆东馆一楼光明乳业第一特展厅
-DESCRIPTION:展览 | 时间：2026.11.18 - 2027.05.05 | 场馆：上海博物馆东馆一楼光明乳业第一特展厅 | 票价：以
- 官方预约页面为准 | 2026-11-18 - 2027-05-05
-URL:https://www.shanghaimuseum.cn/mu/frontend/pg/article/id/E00004253
-END:VEVENT
-BEGIN:VEVENT
-UID:486b419d3f0f11af@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20270104
-SUMMARY:耿子博导演作品 环境式沉浸舞蹈剧场《夜访德古拉》
-LOCATION:星空间5号·山眠剧场
-DESCRIPTION:舞蹈 | 时间：2026.11.18 - 2027.01.03 | 场馆：星空间5号·山眠剧场 | 票价：￥199起 | 猫
- 眼评分 9.8
-URL:https://www.gewara.com/detail/503760
-END:VEVENT
-BEGIN:VEVENT
-UID:cb6bcd775deb9281@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261218
-SUMMARY:荒诞幽默沉浸剧《绝逗野马镇》【喝酒吃肉、斗舞决斗，解锁你的荒诞西部人生】【打工赚钱】【喝酒吃肉】【喜剧氛围】
-LOCATION:暴风岛沉浸式体验馆-百联世纪店 世纪大道百联世纪购物中心三楼
-DESCRIPTION:展览 | 时间：2026.11.18 - 12.17 13:0 | 场馆：暴风岛沉浸式体验馆-百联世纪店 世纪大道百联世纪购
- 物中心三楼 | 票价：498.00元 | 1人参加 2人感兴趣
-URL:https://www.douban.com/event/37317463/
-END:VEVENT
-BEGIN:VEVENT
-UID:d0eee5532384a9f2@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261130
-SUMMARY:趣听喜剧｜爆笑盲盒脱口秀 11月
-LOCATION:上海西岸大剧院
-DESCRIPTION:脱口秀 | 时间：2026.11.18 - 11.29 | 场馆：上海西岸大剧院 | 票价：￥0起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/515900
-END:VEVENT
-BEGIN:VEVENT
-UID:e8e8898148c78af1@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20270104
-SUMMARY:音乐剧《夜雨他时》
-LOCATION:星空间611号·禾剧场
-DESCRIPTION:音乐剧 | 时间：2026.11.18 - 2027.01.03 | 场馆：星空间611号·禾剧场 | 票价：￥199起 |
-  猫眼评分 9.1
-URL:https://www.gewara.com/detail/481617
-END:VEVENT
-BEGIN:VEVENT
-UID:63d2773e58e2cf87@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261119T193000
-DTEND;TZID=Asia/Shanghai:20261122T213000
-SUMMARY:SNH48 星梦剧院公演
-LOCATION:SNH48星梦剧院 嘉兴路267号(近哈尔滨路)
-DESCRIPTION:音乐会 | 时间：2026.11.19 - 11.22 19:30 | 场馆：SNH48星梦剧院 嘉兴路267号(近哈尔滨路
- ) | 票价：118.00元起 | 9人参加 9人感兴趣
-URL:https://www.douban.com/event/37630552/
-END:VEVENT
-BEGIN:VEVENT
-UID:6fc6412f27cd8331@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261119T193000
-DTEND;TZID=Asia/Shanghai:20270102T213000
-SUMMARY:「71特别秀」沪语/普通话脱口秀•SpicyComedy
-LOCATION:SpicyComedy-滨港商业中心店
-DESCRIPTION:脱口秀 | 时间：2026.11.19 - 2027.01.02 19:30 | 场馆：SpicyComedy-滨港商业中心
- 店 | 票价：￥228起 | 猫眼评分 9.8
-URL:https://www.gewara.com/detail/417820
-END:VEVENT
-BEGIN:VEVENT
-UID:c7a122a9185771a4@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261119T193000
-DTEND;TZID=Asia/Shanghai:20270102T213000
-SUMMARY:「71特别秀」沪语/普通话脱口秀•SpicyComedy
-LOCATION:SpicyComedy-滨港商业中心店 四川北路939号滨港商业中心5层1508单元
-DESCRIPTION:脱口秀 | 时间：2026.11.19 - 2027.01.02 19:30 | 场馆：SpicyComedy-滨港商业中心
- 店 四川北路939号滨港商业中心5层1508单元 | 票价：228.0元起 | 9人参加 5人感兴趣
-URL:https://www.douban.com/event/37756152/
-END:VEVENT
-BEGIN:VEVENT
-UID:664afbd84cc844a7@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20270104
-SUMMARY:【千场沉浸 入沪必看】罗生门悬疑音乐剧《FLAMES火焰》｜钢琴大提琴现场live伴奏
-LOCATION:缪时客·月光下小剧场
-DESCRIPTION:音乐剧 | 时间：2026.11.19 - 2027.01.03 | 场馆：缪时客·月光下小剧场 | 票价：￥199起 | 
- 猫眼评分 9.6
-URL:https://www.gewara.com/detail/488204
-END:VEVENT
-BEGIN:VEVENT
-UID:cbafaa1781b79264@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261119T193000
-DTEND;TZID=Asia/Shanghai:20261129T213000
-SUMMARY:玫瑰奇迹·沉浸式近景魔术秀！Jason·林冠廷·饼饼·Laurn专场！见证奇迹！相约浪漫！
-LOCATION:玫瑰奇迹·沉浸式魔术剧场
-DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.29 19:30 | 场馆：玫瑰奇迹·沉浸式魔术剧场 | 票价：￥150起
-  | 猫眼评分 9.8
-URL:https://www.gewara.com/detail/432003
-END:VEVENT
-BEGIN:VEVENT
-UID:814a5db7a972f09c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261119T193000
-DTEND;TZID=Asia/Shanghai:20261129T213000
-SUMMARY:玫瑰奇迹·沉浸式近景魔术秀！Jason·林冠廷·饼饼·Laurn专场！见证奇迹！相约浪漫！
-LOCATION:玫瑰奇迹·沉浸式魔术剧场 徐家汇路268号Luone凯德晶萃广场L5-13
-DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.29 19:30 | 场馆：玫瑰奇迹·沉浸式魔术剧场 徐家汇路268号Lu
- one凯德晶萃广场L5-13 | 票价：218.00元 | 2人参加 1人感兴趣
-URL:https://www.douban.com/event/37593360/
-END:VEVENT
-BEGIN:VEVENT
-UID:62270267b53eb5c6@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261119T193000
-DTEND;TZID=Asia/Shanghai:20261122T213000
-SUMMARY:脱轨爱情喜剧《先这样吧，爸爸》
-LOCATION:茉莉花剧场 北海路247号
-DESCRIPTION:话剧 | 时间：2026.11.19 - 11.22 19:30 | 场馆：茉莉花剧场 北海路247号 | 票价：80.0元
- 起 | 0人参加 2人感兴趣
-URL:https://www.douban.com/event/38002482/
-END:VEVENT
-BEGIN:VEVENT
-UID:35f1a81c87264f2e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261201
-SUMMARY:零距离！互动破案！《暴雨将至2》环境式悬疑剧
-LOCATION:喜梦盒暴雨将至剧场
-DESCRIPTION:话剧 | 时间：2026.11.19 - 11.30 | 场馆：喜梦盒暴雨将至剧场 | 票价：￥198起 | 猫眼评分 9.
- 9
-URL:https://www.gewara.com/detail/505375
-END:VEVENT
-BEGIN:VEVENT
-UID:27e2eceb6ce257e9@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20270101
-SUMMARY:71/Norah领衔 精选脱口秀拼盘 by SpicyComedy
-LOCATION:SpicyComedy-滨港商业中心店
-DESCRIPTION:脱口秀 | 时间：2026.11.20 - 12.31 | 场馆：SpicyComedy-滨港商业中心店 | 票价：￥150
- 起 | 猫眼评分 9.8
-URL:https://www.gewara.com/detail/431629
-END:VEVENT
-BEGIN:VEVENT
-UID:51867969c9bc36b4@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20261216
-SUMMARY:C罗博物馆
-LOCATION:C罗博物馆
-DESCRIPTION:展览 | 时间：2026.11.20 - 12.15 | 场馆：C罗博物馆 | 票价：￥117起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/515404
-END:VEVENT
-BEGIN:VEVENT
-UID:24e1546bb7f7964d@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261120T191500
-DTEND;TZID=Asia/Shanghai:20261120T211500
-SUMMARY:《语言的边界》—— 漫步四季
-LOCATION:上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路)
-DESCRIPTION:音乐会 | 时间：2026.11.20 19:15 | 场馆：上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路) 
- | 票价：100.0元起 | 1人参加 0人感兴趣
-URL:https://www.douban.com/event/38099062/
-END:VEVENT
-BEGIN:VEVENT
-UID:7096f970a10a35ed@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20270104
-SUMMARY:『爆笑互动』【浦东航头店】本地话脱口秀 · 周然专场【银河喜剧】
-LOCATION:GALAXY COMEDY
-DESCRIPTION:脱口秀 | 时间：2026.11.20 - 2027.01.03 | 场馆：GALAXY COMEDY | 票价：￥158起
-  | 猫眼评分 9.8
-URL:https://www.gewara.com/detail/474054
-END:VEVENT
-BEGIN:VEVENT
-UID:afce73306952629c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20261129
-SUMMARY:【普通话/上海话】Storm/于渤/李文领衔 | 明星季综艺卡司盲盒秀-喜剧联盒国@尽情空间
-LOCATION:尽情空间
-DESCRIPTION:脱口秀 | 时间：2026.11.20 - 11.28 | 场馆：尽情空间 | 票价：￥39起 | 猫眼评分 9.4
-URL:https://www.gewara.com/detail/473529
-END:VEVENT
-BEGIN:VEVENT
-UID:451451328f21b34f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20270101
-SUMMARY:全家都能看的脱口秀·【喜剧全家桶】
-LOCATION:品空间·虹口店
-DESCRIPTION:脱口秀 | 时间：2026.11.20 - 12.31 | 场馆：品空间·虹口店 | 票价：￥79起 | 猫眼评分 9.1
-URL:https://www.gewara.com/detail/491807
-END:VEVENT
-BEGIN:VEVENT
-UID:c1f40f5b069e4604@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20261124
-SUMMARY:国际工艺创新博览会 REVELATIONS CHINA
-LOCATION:上海展览中心·展览馆
-DESCRIPTION:展览 | 时间：2026.11.20 - 11.23 | 场馆：上海展览中心·展览馆 | 票价：￥126 | 猫眼评分 0.
- 0
-URL:https://www.gewara.com/detail/502841
-END:VEVENT
-BEGIN:VEVENT
-UID:07cfa9f292f64b33@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20261130
-SUMMARY:开心麻花首部惊悚爆笑戏剧《开心聊斋·三生沉浸版》
-LOCATION:开心麻花大三角剧场
-DESCRIPTION:话剧 | 时间：2026.11.20 - 11.29 | 场馆：开心麻花大三角剧场 | 票价：￥108起 | 猫眼评分 9.
- 3
-URL:https://www.gewara.com/detail/472391
-END:VEVENT
-BEGIN:VEVENT
-UID:64dd05b62968d227@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20261121
-SUMMARY:张宇峰领衔主演 越剧《盘夫索夫》
-LOCATION:大零号湾文化艺术中心
-DESCRIPTION:戏曲 | 时间：2026.11.20 | 场馆：大零号湾文化艺术中心 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/507781
-END:VEVENT
-BEGIN:VEVENT
-UID:11bb730d6ba0b8bb@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20261121
-SUMMARY:星光灿烂典藏版《女驸马》
-LOCATION:上海保利云间剧院
-DESCRIPTION:戏曲 | 时间：2026.11.20 | 场馆：上海保利云间剧院 | 票价：￥160起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/498451
-END:VEVENT
-BEGIN:VEVENT
-UID:e201b20ca34ba6e1@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20261123
-SUMMARY:第二十五届中国上海国际艺术节参演剧目 原创芭蕾舞剧《寻找木卡姆》
-LOCATION:上海国际舞蹈中心
-DESCRIPTION:舞蹈 | 时间：2026.11.20 - 11.22 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/507526
-END:VEVENT
-BEGIN:VEVENT
-UID:468897e6a2d2db74@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20270104
-SUMMARY:耿子博导演作品 环境式沉浸舞蹈剧场《九尾古董店》
-LOCATION:环境式沉浸舞蹈剧场《九尾古董店》
-DESCRIPTION:舞蹈 | 时间：2026.11.20 - 2027.01.03 | 场馆：环境式沉浸舞蹈剧场《九尾古董店》 | 票价：￥20
- 0起 | 猫眼评分 9.5
-URL:https://www.gewara.com/detail/381114
-END:VEVENT
-BEGIN:VEVENT
-UID:13bd327def415ad6@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261120T194500
-DTEND;TZID=Asia/Shanghai:20261128T214500
-SUMMARY:趣听喜剧@YOUNG剧场|爆笑盲盒脱口秀拼盘秀
-LOCATION:YOUNG剧场
-DESCRIPTION:脱口秀 | 时间：2026.11.20 - 11.28 19:45 | 场馆：YOUNG剧场 | 票价：￥19起 | 猫眼评
- 分 9.5
-URL:https://www.gewara.com/detail/428955
-END:VEVENT
-BEGIN:VEVENT
-UID:e3810a01e9c55071@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261120T194500
-DTEND;TZID=Asia/Shanghai:20261128T214500
-SUMMARY:趣听喜剧@YOUNG剧场|爆笑盲盒脱口秀拼盘秀
-LOCATION:YOUNG剧场 控江路1155号
-DESCRIPTION:脱口秀 | 时间：2026.11.20 - 11.28 19:45 | 场馆：YOUNG剧场 控江路1155号 | 票价：0
- .0元起 | 0人参加 1人感兴趣
-URL:https://www.douban.com/event/37714216/
-END:VEVENT
-BEGIN:VEVENT
-UID:31a2ab69497b7705@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20261123
-SUMMARY:金庸 · 新武侠舞剧《神雕侠侣》
-LOCATION:美琪大戏院
-DESCRIPTION:舞蹈 | 时间：2026.11.20 - 11.22 | 场馆：美琪大戏院 | 票价：￥126起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/514664
-END:VEVENT
-BEGIN:VEVENT
-UID:f59f45dd6dc1c1ab@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261120T193000
-DTEND;TZID=Asia/Shanghai:20270103T213000
-SUMMARY:音乐剧《时光代理人》
-LOCATION:【时光剧场】音乐剧《时光代理人》 西藏南路一号大世界二楼E厅
-DESCRIPTION:音乐剧 | 时间：2026.11.20 - 2027.01.03 19:30 | 场馆：【时光剧场】音乐剧《时光代理人》 西
- 藏南路一号大世界二楼E厅 | 票价：299.00元起 | 8人参加 8人感兴趣
-URL:https://www.douban.com/event/36314185/
-END:VEVENT
-BEGIN:VEVENT
-UID:1c5935bd5e3a3bae@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20261130
-SUMMARY:魔术脱口秀丨超沉浸微剧场「奇遇剧场」沉浸式解压爆笑近景魔术主题秀《旮旯秀》
-LOCATION:魔术旮旯俱乐部
-DESCRIPTION:脱口秀 | 时间：2026.11.20 - 11.29 | 场馆：魔术旮旯俱乐部 | 票价：￥30起 | 猫眼评分 9.7
-URL:https://www.gewara.com/detail/511734
-END:VEVENT
-BEGIN:VEVENT
-UID:fa48efaa51c145a1@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261122
-SUMMARY:《“一夜鱼龙”跨界国风演唱会》—鲁肃和他的朋友们深夜京腔专场
-LOCATION:豫园·海上梨园
-DESCRIPTION:戏曲 | 时间：2026.11.21 | 场馆：豫园·海上梨园 | 票价：￥249起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/514330
-END:VEVENT
-BEGIN:VEVENT
-UID:9e713105fa48d778@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261129
-SUMMARY:「Norah's Spicy Show•辣手秀」英文/沪语脱口秀•SpicyComedy特别秀
-LOCATION:SpicyComedy-新天地时尚一期店
-DESCRIPTION:脱口秀 | 时间：2026.11.21 - 11.28 | 场馆：SpicyComedy-新天地时尚一期店 | 票价：￥26
- 8起 | 猫眼评分 9.7
-URL:https://www.gewara.com/detail/514467
-END:VEVENT
-BEGIN:VEVENT
-UID:fba9e2313d48e2e6@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261128
-SUMMARY:『爆笑互动』【静安大悦城】野师傅丨小马哥丨上海话纯享版丨野师傅拉缸秀丨【银河喜剧】
-LOCATION:银河喜剧脱口秀-静安大悦城店
-DESCRIPTION:脱口秀 | 时间：2026.11.21 - 11.27 | 场馆：银河喜剧脱口秀-静安大悦城店 | 票价：￥168起 | 猫
- 眼评分 9.5
-URL:https://www.gewara.com/detail/447358
-END:VEVENT
-BEGIN:VEVENT
-UID:0d068de5f6caf235@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20270103
-SUMMARY:【全男班街舞舞剧】沉浸式驻场SHOW MUSICAL《洗车行》
-LOCATION:沉浸式全男班流行舞秀<洗车行>叶音导演 星空间
-DESCRIPTION:舞蹈 | 时间：2026.11.21 - 2027.01.02 | 场馆：沉浸式全男班流行舞秀<洗车行>叶音导演 星空间 |
-  票价：￥299起 | 猫眼评分 9.5
-URL:https://www.gewara.com/detail/443853
-END:VEVENT
-BEGIN:VEVENT
-UID:5eadd787e915add0@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261122
-SUMMARY:【声厂呈现】留住夜晚的人 | Black Country\, New Road 2026巡演·上海特别专场
-LOCATION:瓦肆 VAS est 龙腾大道2266号3号楼3层
-DESCRIPTION:话剧 | 时间：2026.11.21 19:0 | 场馆：瓦肆 VAS est 龙腾大道2266号3号楼3层 | 票价：36
- 0.0元 | 3人参加 0人感兴趣
-URL:https://www.douban.com/event/38058424/
-END:VEVENT
-BEGIN:VEVENT
-UID:dc10c9bb1d357e8e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20270104
-SUMMARY:【跨年场99元特惠】环境式原创音乐剧《梅尔泉 Mute Spring》
-LOCATION:星空间63号·叙界空间
-DESCRIPTION:音乐剧 | 时间：2026.11.21 - 2027.01.03 | 场馆：星空间63号·叙界空间 | 票价：￥99起 | 
- 猫眼评分 9.3
-URL:https://www.gewara.com/detail/428876
-END:VEVENT
-BEGIN:VEVENT
-UID:bc216aa57d2cb1de@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261129
-SUMMARY:【钢琴&大提琴】奇妙嘿夜烛光音乐会“海上钢琴师”主题演奏
-LOCATION:青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A
-DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 15:0 | 场馆：青春无限乐团烛光音乐会-上海广场店 淮海中路13
- 8号上海广场2楼206A | 票价：388.00元起 | 1人参加 1人感兴趣
-URL:https://www.douban.com/event/37763104/
-END:VEVENT
-BEGIN:VEVENT
-UID:a69d8734b7b5b445@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261121T193000
-DTEND;TZID=Asia/Shanghai:20261121T213000
-SUMMARY:上海爱乐乐团2026-2027音乐季 室内乐音乐会《爱情神话》
-LOCATION:棒呆留学·上海爱乐演奏厅 -武定西路1498号
-DESCRIPTION:音乐会 | 时间：2026.11.21 19:30 | 场馆：棒呆留学·上海爱乐演奏厅 -武定西路1498号 | 票价：80
- .0元起 | 1人参加 0人感兴趣
-URL:https://www.douban.com/event/38115494/
-END:VEVENT
-BEGIN:VEVENT
-UID:2c2af40bb6677936@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261122
-SUMMARY:北欧极光乐团｜《爱乐之城》上映十周年纪念版——欧美经典电影金曲音乐会
-LOCATION:久事·上海商城剧院
-DESCRIPTION:音乐会 | 时间：2026.11.21 | 场馆：久事·上海商城剧院 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/509669
-END:VEVENT
-BEGIN:VEVENT
-UID:a4e1c4c13132753c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261121T093000
-DTEND;TZID=Asia/Shanghai:20261227T113000
-SUMMARY:古影沉浸式互动游戏剧场 《1941·新和医院》
-LOCATION:古影沉浸式互动游戏剧场 《1941·新和医院》
-DESCRIPTION:展览 | 时间：2026.11.21 - 12.27 09:30 | 场馆：古影沉浸式互动游戏剧场 《1941·新和医院》 
- | 票价：￥696起 | 猫眼评分 9.5
-URL:https://www.gewara.com/detail/382799
-END:VEVENT
-BEGIN:VEVENT
-UID:37b801e3d2a5b094@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261121T093000
-DTEND;TZID=Asia/Shanghai:20261227T113000
-SUMMARY:古影沉浸式互动游戏剧场 《1941·新和医院》
-LOCATION:古影沉浸式互动游戏剧场 《1941·新和医院》 沪闵路7388号4层G04-F04-1-034室（百联南方商场1区4层古影剧场）
-DESCRIPTION:展览 | 时间：2026.11.21 - 12.27 09:30 | 场馆：古影沉浸式互动游戏剧场 《1941·新和医院》 
- 沪闵路7388号4层G04-F04-1-034室（百联南方商场1区4层古影剧场） | 票价：798.0元起 | 0人参加 1人感兴趣
-URL:https://www.douban.com/event/37462540/
-END:VEVENT
-BEGIN:VEVENT
-UID:c43063d952fbe736@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261129
-SUMMARY:奇妙嘿夜“海上钢琴师”“诀别书”“世界赠予我的”曲目主题烛光音乐会钢琴&大提琴演奏
-LOCATION:青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A
-DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 15:0 | 场馆：青春无限乐团烛光音乐会-上海广场店 淮海中路13
- 8号上海广场2楼206A | 票价：198.0元起 | 0人参加 1人感兴趣
-URL:https://www.douban.com/event/38006413/
-END:VEVENT
-BEGIN:VEVENT
-UID:ecf46b320686b5e7@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261121T183000
-DTEND;TZID=Asia/Shanghai:20261128T203000
-SUMMARY:奇妙嘿夜万圣节专场烛光音乐会LALALAND世界影视作品曲目钢琴&小提琴&大提琴演奏
-LOCATION:青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A
-DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 18:30 | 场馆：青春无限乐团烛光音乐会-上海广场店 淮海中路1
- 38号上海广场2楼206A | 票价：198.0元起 | 0人参加 1人感兴趣
-URL:https://www.douban.com/event/38006444/
-END:VEVENT
-BEGIN:VEVENT
-UID:f2146e78905b7846@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261129
-SUMMARY:奇妙嘿夜烛光音乐会“爱乐之城”“一步之遥”“加勒比海盗”曲目钢琴小提琴大提琴演奏
-LOCATION:青春无限乐团烛光音乐会-上海广场店
-DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 | 场馆：青春无限乐团烛光音乐会-上海广场店 | 票价：￥198起 
- | 猫眼评分 9.9
-URL:https://www.gewara.com/detail/514890
-END:VEVENT
-BEGIN:VEVENT
-UID:fee6287f70284e51@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261121T143000
-DTEND;TZID=Asia/Shanghai:20261129T163000
-SUMMARY:年度超口碑黑马·环境式国潮悬疑剧 《聊斋·浮生窃》 推理探案｜多重反转｜悬疑互动｜高能奇幻破案
-LOCATION:星空间888号·惊喜剧场 淮海中路街道淮海中路99号大上海时代广场B1楼
-DESCRIPTION:话剧 | 时间：2026.11.21 - 11.29 14:30 | 场馆：星空间888号·惊喜剧场 淮海中路街道淮海中路9
- 9号大上海时代广场B1楼 | 票价：199.0元起 | 5人参加 4人感兴趣
-URL:https://www.douban.com/event/37868277/
-END:VEVENT
-BEGIN:VEVENT
-UID:1675255156176f31@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261122
-SUMMARY:庆祝上海评弹团成立75周年弹词流派演唱会
-LOCATION:凯迪拉克-上海音乐厅
-DESCRIPTION:戏曲 | 时间：2026.11.21 | 场馆：凯迪拉克-上海音乐厅 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/515965
-END:VEVENT
-BEGIN:VEVENT
-UID:6ab92e7b25839ea4@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261122
-SUMMARY:昆剧《牡丹亭》
-LOCATION:宛平剧院
-DESCRIPTION:戏曲 | 时间：2026.11.21 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/501211
-END:VEVENT
-BEGIN:VEVENT
-UID:6ddf0039d47cdd74@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261122
-SUMMARY:海之花慕君邓丽君金曲演唱会
-LOCATION:宛平剧院 中山南二路859号
-DESCRIPTION:音乐会 | 时间：2026.11.21 14:0 | 场馆：宛平剧院 中山南二路859号 | 票价：120.0元起 | 0人
- 参加 1人感兴趣
-URL:https://www.douban.com/event/38056470/
-END:VEVENT
-BEGIN:VEVENT
-UID:24bd91ffa1458e89@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261122
-DTEND;VALUE=DATE:20261123
-SUMMARY:《终曲 未来》坂本龙一经典作品精选音乐会-上海站
-LOCATION:兰心大戏院
-DESCRIPTION:音乐会 | 时间：2026.11.22 | 场馆：兰心大戏院 | 票价：￥60起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/513258
-END:VEVENT
-BEGIN:VEVENT
-UID:dfb9d37d4d921fce@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261122
-DTEND;VALUE=DATE:20261227
-SUMMARY:「一人一首成名曲」超燃回忆杀丨带爸妈听老歌丨80年代沉浸式音乐现场丨怀旧金曲丨新天地必看《时光唱片》
-LOCATION:高笑喜剧·New School
-DESCRIPTION:音乐会 | 时间：2026.11.22 - 12.26 | 场馆：高笑喜剧·New School | 票价：￥9.9起 | 
- 猫眼评分 9.9
-URL:https://www.gewara.com/detail/499385
-END:VEVENT
-BEGIN:VEVENT
-UID:b47a80de05478392@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261122
-DTEND;VALUE=DATE:20261123
-SUMMARY:京剧《秦香莲》
-LOCATION:天蟾逸夫舞台
-DESCRIPTION:戏曲 | 时间：2026.11.22 | 场馆：天蟾逸夫舞台 | 票价：￥80 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/515517
-END:VEVENT
-BEGIN:VEVENT
-UID:845d2eb3fc3536f1@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261122
-DTEND;VALUE=DATE:20270101
-SUMMARY:原创沉浸式荒诞音乐剧《破墙》
-LOCATION:星空间129号·夭蛾剧场
-DESCRIPTION:音乐剧 | 时间：2026.11.22 - 12.31 | 场馆：星空间129号·夭蛾剧场 | 票价：￥159.2起 | 猫
- 眼评分 8.7
-URL:https://www.gewara.com/detail/451677
-END:VEVENT
-BEGIN:VEVENT
-UID:65ad6c467b1ccc5a@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;TZID=Asia/Shanghai:20261122T193000
-DTEND;TZID=Asia/Shanghai:20261122T213000
-SUMMARY:甜愈脱口秀登陆上海国际喜剧节｜黄小明×喜剧之王单口季
-LOCATION:南京东路635号永安百货3楼后区B15（咯吱喜剧商店）
-DESCRIPTION:脱口秀 | 时间：2026.11.22 19:30 | 场馆：南京东路635号永安百货3楼后区B15（咯吱喜剧商店） | 票
- 价：180元(票价以大麦为准) | 1人参加 0人感兴趣
-URL:https://www.douban.com/event/38171925/
-END:VEVENT
-BEGIN:VEVENT
-UID:eb6efe284793de4f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261122
-DTEND;VALUE=DATE:20261123
-SUMMARY:第八届上海早期音乐节 叶斯廷·戴维斯演唱约翰·道兰丨上海交响乐团音乐季
-LOCATION:上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路)
-DESCRIPTION:音乐会 | 时间：2026.11.22 15:0 | 场馆：上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路) |
-  票价：80.0元起 | 1人参加 1人感兴趣
-URL:https://www.douban.com/event/37901045/
-END:VEVENT
-BEGIN:VEVENT
-UID:679b94aceed4c87c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261122
-DTEND;VALUE=DATE:20261123
-SUMMARY:金陵十二钗《梦系红楼》主题音乐会
-LOCATION:上海东方艺术中心
-DESCRIPTION:音乐会 | 时间：2026.11.22 | 场馆：上海东方艺术中心 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/511403
-END:VEVENT
-BEGIN:VEVENT
-UID:94b70438e4d8f47a@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261122
-DTEND;VALUE=DATE:20261123
-SUMMARY:魔艺总动员系列演出·国风国韵——海派杂技精品展演
-LOCATION:九棵树（上海）未来艺术中心
-DESCRIPTION:戏曲 | 时间：2026.11.22 | 场馆：九棵树（上海）未来艺术中心 | 票价：￥80 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516396
-END:VEVENT
-BEGIN:VEVENT
-UID:a804d2ef89110bc0@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261124
-DTEND;VALUE=DATE:20261126
-SUMMARY:“杨派”经典沪剧《孤岛血泪》（公益场）
-LOCATION:天蟾逸夫舞台
-DESCRIPTION:戏曲 | 时间：2026.11.24 - 11.25 | 场馆：天蟾逸夫舞台 | 票价：￥50起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/515640
-END:VEVENT
-BEGIN:VEVENT
-UID:9e6f6644c595cef3@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261125
-DTEND;VALUE=DATE:20270101
-SUMMARY:【热8嘎三五】沪语互动秀｜肆笑喜剧@南京东路店
-LOCATION:肆笑喜剧脱口秀丨南京东路外滩店
-DESCRIPTION:脱口秀 | 时间：2026.11.25 - 12.31 | 场馆：肆笑喜剧脱口秀丨南京东路外滩店 | 票价：￥108起 | 
- 猫眼评分 9.4
-URL:https://www.gewara.com/detail/465311
-END:VEVENT
-BEGIN:VEVENT
-UID:528dcd06a3c4933e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261126
-DTEND;VALUE=DATE:20261127
-SUMMARY:绍剧新版《火焰山》
-LOCATION:宛平剧院
-DESCRIPTION:戏曲 | 时间：2026.11.26 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/518853
-END:VEVENT
-BEGIN:VEVENT
-UID:14e41a646d5c1913@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261127
-DTEND;VALUE=DATE:20261128
-SUMMARY:四季：维瓦尔第 × 皮亚佐拉——西班牙皇家歌剧院独奏家乐团与莱蒂西亚·莫雷诺音乐会
-LOCATION:凯迪拉克-上海音乐厅
-DESCRIPTION:音乐会 | 时间：2026.11.27 | 场馆：凯迪拉克-上海音乐厅 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/512279
-END:VEVENT
-BEGIN:VEVENT
-UID:4f00dae247907757@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261127
-DTEND;VALUE=DATE:20261128
-SUMMARY:安徽省黄梅戏剧院·经典黄梅戏《天仙配》
-LOCATION:大零号湾文化艺术中心
-DESCRIPTION:戏曲 | 时间：2026.11.27 | 场馆：大零号湾文化艺术中心 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/504572
-END:VEVENT
-BEGIN:VEVENT
-UID:29417ee7e40260bb@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261127
-DTEND;VALUE=DATE:20261129
-SUMMARY:演艺大世界·第12届上海国际喜剧节展演剧目 锐锐脱口秀专场《爱，来不来2.0》
-LOCATION:白玉兰剧场
-DESCRIPTION:脱口秀 | 时间：2026.11.27 - 11.28 | 场馆：白玉兰剧场 | 票价：￥100起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/512895
-END:VEVENT
-BEGIN:VEVENT
-UID:0aafaa2d43602b43@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261127
-DTEND;VALUE=DATE:20261129
-SUMMARY:重逢《牡丹亭》
-LOCATION:上海大歌剧院
-DESCRIPTION:戏曲 | 时间：2026.11.27 - 11.28 | 场馆：上海大歌剧院 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516075
-END:VEVENT
-BEGIN:VEVENT
-UID:768ddeb17cb9345f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261130
-SUMMARY:《星河旅馆》 金承志与上海彩虹室内合唱团 2026-2027演出季上海音乐会
-LOCATION:上海东方艺术中心
-DESCRIPTION:音乐会 | 时间：2026.11.28 - 11.29 | 场馆：上海东方艺术中心 | 票价：￥480起 | 猫眼评分 0.
- 0
-URL:https://www.gewara.com/detail/284179
-END:VEVENT
-BEGIN:VEVENT
-UID:7bc696875454cfc4@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
-SUMMARY:《沧海一声笑》金庸武侠影视金曲音乐会
-LOCATION:保利上海城市剧院
-DESCRIPTION:音乐会 | 时间：2026.11.28 | 场馆：保利上海城市剧院 | 票价：￥68起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/509812
-END:VEVENT
-BEGIN:VEVENT
-UID:e7b715d71cfad32a@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
-SUMMARY:「栖息之地」钱安琪生日音乐会-【缪时客出品】
-LOCATION:世界盒子剧场
-DESCRIPTION:音乐会 | 时间：2026.11.28 | 场馆：世界盒子剧场 | 票价：￥199起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/518102
-END:VEVENT
-BEGIN:VEVENT
-UID:8cc8d842a9405fa0@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261201
-SUMMARY:【二狗推荐】一支麦爆笑脱口秀拼盘 | 上海站
-LOCATION:一支麦小剧场
-DESCRIPTION:脱口秀 | 时间：2026.11.28 - 11.30 | 场馆：一支麦小剧场 | 票价：￥88起 | 猫眼评分 9.4
-URL:https://www.gewara.com/detail/471336
-END:VEVENT
-BEGIN:VEVENT
-UID:6297ca799561993a@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
-SUMMARY:伍科玮单口喜剧专场《罗曼蒂克野史》-喜剧联盒国@喜联空间
-LOCATION:喜联空间·新天地
-DESCRIPTION:脱口秀 | 时间：2026.11.28 | 场馆：喜联空间·新天地 | 票价：￥100起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/514578
-END:VEVENT
-BEGIN:VEVENT
-UID:c1026f856290549c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
-SUMMARY:安徽省黄梅戏剧院·经典黄梅戏《女驸马》
-LOCATION:大零号湾文化艺术中心
-DESCRIPTION:戏曲 | 时间：2026.11.28 | 场馆：大零号湾文化艺术中心 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/504571
-END:VEVENT
-BEGIN:VEVENT
-UID:73e4dbb73308b66d@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
-SUMMARY:绍剧《孙悟空三打白骨精》
-LOCATION:宛平剧院
-DESCRIPTION:戏曲 | 时间：2026.11.28 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/518855
-END:VEVENT
-BEGIN:VEVENT
-UID:01bcbe0b762dc29c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
-SUMMARY:龙宝玲专场—《梅润申江·百载传歌》 纪念黄梅戏入城100年感恩演唱会
-LOCATION:豫园·海上梨园
-DESCRIPTION:戏曲 | 时间：2026.11.28 | 场馆：豫园·海上梨园 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/517279
-END:VEVENT
-BEGIN:VEVENT
-UID:d44cd782f289334f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261203
-SUMMARY:当代舞集锦《慢热集》
-LOCATION:上海国际舞蹈中心
-DESCRIPTION:舞蹈 | 时间：2026.12.01 - 12.02 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516919
-END:VEVENT
-BEGIN:VEVENT
-UID:10c8efc5ce01c3bd@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261231
-SUMMARY:新国风沉浸式互动喜剧-王熹正卿国风专场
-LOCATION:松江大世界聚场
-DESCRIPTION:戏曲 | 时间：2026.12.01 - 12.30 | 场馆：松江大世界聚场 | 票价：￥28起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/509516
-END:VEVENT
-BEGIN:VEVENT
-UID:194c78007bbb2f1d@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:豫剧《七品芝麻官》
-LOCATION:天蟾逸夫舞台
-DESCRIPTION:戏曲 | 时间：2026.12.01 | 场馆：天蟾逸夫舞台 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/519113
-END:VEVENT
-BEGIN:VEVENT
-UID:23342b8690ac8e21@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261203
-DTEND;VALUE=DATE:20261204
-SUMMARY:“探索俄罗斯”音乐节——拉赫玛尼诺夫之夜 艺术总监:孔祥东 指挥:张亮 演奏:上海爱乐乐团
-LOCATION:上海东方艺术中心
-DESCRIPTION:音乐会 | 时间：2026.12.03 | 场馆：上海东方艺术中心 | 票价：￥50起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/517275
-END:VEVENT
-BEGIN:VEVENT
-UID:6609d2a82375ed33@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261203
-DTEND;VALUE=DATE:20261207
-SUMMARY:童漠男脱口秀专场《寻找王医生·北下关特别版》丨笑果出品@上海
-LOCATION:交通银行前滩31演艺中心
-DESCRIPTION:脱口秀 | 时间：2026.12.03 - 12.06 | 场馆：交通银行前滩31演艺中心 | 票价：￥220起 | 猫眼评
- 分 0.0
-URL:https://www.gewara.com/detail/507151
-END:VEVENT
-BEGIN:VEVENT
-UID:84831e1468795381@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261204
-DTEND;VALUE=DATE:20261206
-SUMMARY:京剧《大唐贵妃》
-LOCATION:上海大歌剧院
-DESCRIPTION:戏曲 | 时间：2026.12.04 - 12.05 | 场馆：上海大歌剧院 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/518668
-END:VEVENT
-BEGIN:VEVENT
-UID:ff2941427dee91a9@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261204
-DTEND;VALUE=DATE:20261207
-SUMMARY:舞剧《碧海沧澜》
-LOCATION:上海东方艺术中心
-DESCRIPTION:舞蹈 | 时间：2026.12.04 - 12.06 | 场馆：上海东方艺术中心 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/519356
-END:VEVENT
-BEGIN:VEVENT
-UID:cd336eca4770e1c8@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261205
-DTEND;VALUE=DATE:20261206
-SUMMARY:2026东方市民音乐会：神奇的管风琴之旅——马丁·施梅丁管风琴音乐会
-LOCATION:上海东方艺术中心
-DESCRIPTION:音乐会 | 时间：2026.12.05 | 场馆：上海东方艺术中心 | 票价：￥50起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/481020
-END:VEVENT
-BEGIN:VEVENT
-UID:538fbad3cb21481f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261205
-DTEND;VALUE=DATE:20261206
-SUMMARY:“多厨狂喜”白金交响乐团音乐会
-LOCATION:上海东方艺术中心
-DESCRIPTION:音乐会 | 时间：2026.12.05 | 场馆：上海东方艺术中心 | 票价：￥99起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/517871
-END:VEVENT
-BEGIN:VEVENT
-UID:6136dc092b385172@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261205
-DTEND;VALUE=DATE:20261207
-SUMMARY:舞蹈剧场《注意力现场》
-LOCATION:上海国际舞蹈中心
-DESCRIPTION:舞蹈 | 时间：2026.12.05 - 12.06 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516917
-END:VEVENT
-BEGIN:VEVENT
-UID:e07a389358b6f189@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261206
-DTEND;VALUE=DATE:20261207
-SUMMARY:中国建设银行嘉定支行艺术普及 善建者行·月月有戏 婺剧《三打白骨精》
-LOCATION:上海保利大剧院
-DESCRIPTION:戏曲 | 时间：2026.12.06 | 场馆：上海保利大剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516109
-END:VEVENT
-BEGIN:VEVENT
-UID:5a31124afee71c78@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261208
-DTEND;VALUE=DATE:20261209
-SUMMARY:DRUMK男团沉浸式舞剧《M境》
-LOCATION:北外滩友邦大剧院
-DESCRIPTION:舞蹈 | 时间：2026.12.08 | 场馆：北外滩友邦大剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/514155
-END:VEVENT
-BEGIN:VEVENT
-UID:47d35b848359f8c9@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261209
-DTEND;VALUE=DATE:20261219
-SUMMARY:圣彼得堡艾夫曼芭蕾舞团《罪与罚》《叶甫盖尼·奥涅金》《安娜·卡列尼娜》三部曲
-LOCATION:上海大歌剧院
-DESCRIPTION:舞蹈 | 时间：2026.12.09 - 12.18 | 场馆：上海大歌剧院 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/517119
-END:VEVENT
-BEGIN:VEVENT
-UID:0651e561cee3915f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261209
-DTEND;VALUE=DATE:20261211
-SUMMARY:舞剧《五星出东方》
-LOCATION:大零号湾文化艺术中心
-DESCRIPTION:舞蹈 | 时间：2026.12.09 - 12.10 | 场馆：大零号湾文化艺术中心 | 票价：￥100起 | 猫眼评分 0
- .0
-URL:https://www.gewara.com/detail/506918
-END:VEVENT
-BEGIN:VEVENT
-UID:02d902923cfd0ba5@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261212
-DTEND;VALUE=DATE:20261213
-SUMMARY:DDK剧团喜剧专场｜全国巡演第一站｜上海站
-LOCATION:尽情空间
-DESCRIPTION:脱口秀 | 时间：2026.12.12 | 场馆：尽情空间 | 票价：￥168起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/517669
-END:VEVENT
-BEGIN:VEVENT
-UID:446b52ab31ce7f85@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261212
-DTEND;VALUE=DATE:20261213
-SUMMARY:“上海阿婆”—舒悦滑稽专场
-LOCATION:兰心大戏院
-DESCRIPTION:戏曲 | 时间：2026.12.12 | 场馆：兰心大戏院 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/515243
-END:VEVENT
-BEGIN:VEVENT
-UID:24e056585ae2b2e1@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261212
-DTEND;VALUE=DATE:20261213
-SUMMARY:《维也纳－柏林爱乐音乐家合奏团音乐会》
-LOCATION:上海大歌剧院
-DESCRIPTION:音乐会 | 时间：2026.12.12 | 场馆：上海大歌剧院 | 票价：￥280起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/518418
-END:VEVENT
-BEGIN:VEVENT
-UID:d8120a0fa6b1e8b4@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261212
-DTEND;VALUE=DATE:20261213
-SUMMARY:京剧《霸王别姬》
-LOCATION:豫园·海上梨园
-DESCRIPTION:戏曲 | 时间：2026.12.12 | 场馆：豫园·海上梨园 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516790
-END:VEVENT
-BEGIN:VEVENT
-UID:c6063c0227f19b94@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261212
-DTEND;VALUE=DATE:20261213
-SUMMARY:往事单口喜剧专场《率性而活》-喜剧联盒国@喜联空间
-LOCATION:喜联空间·新天地
-DESCRIPTION:脱口秀 | 时间：2026.12.12 | 场馆：喜联空间·新天地 | 票价：￥100起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/514622
-END:VEVENT
-BEGIN:VEVENT
-UID:0d61056b01f606ac@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261213
-DTEND;VALUE=DATE:20261214
-SUMMARY:《哈利的奇幻世界》经典魔幻电影金曲音乐会
-LOCATION:上海保利大剧院
-DESCRIPTION:音乐会 | 时间：2026.12.13 | 场馆：上海保利大剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516138
-END:VEVENT
-BEGIN:VEVENT
-UID:f066fc03063c1a4e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261213
-DTEND;VALUE=DATE:20261214
-SUMMARY:《魔法的世界》经典幻想电影音乐会
-LOCATION:保利上海城市剧院
-DESCRIPTION:音乐会 | 时间：2026.12.13 | 场馆：保利上海城市剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/515245
-END:VEVENT
-BEGIN:VEVENT
-UID:818711933301ef6f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261213
-DTEND;VALUE=DATE:20261220
-SUMMARY:「时代的旋律」超燃回忆杀丨带爸妈听老歌丨80年代沉浸式音乐现场丨怀旧金曲丨致敬经典奔赴旧日芳华《时光唱片》
-LOCATION:喜剧玩家
-DESCRIPTION:音乐会 | 时间：2026.12.13 - 12.19 | 场馆：喜剧玩家 | 票价：￥9.9起 | 猫眼评分 9.9
-URL:https://www.gewara.com/detail/498903
-END:VEVENT
-BEGIN:VEVENT
-UID:19b61800bbfc5b7c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261213
-DTEND;VALUE=DATE:20261214
-SUMMARY:昆曲《牡丹亭·游园惊梦》
-LOCATION:豫园·海上梨园
-DESCRIPTION:戏曲 | 时间：2026.12.13 | 场馆：豫园·海上梨园 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516804
-END:VEVENT
-BEGIN:VEVENT
-UID:2c2d8a2bb26c7cca@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261215
-DTEND;VALUE=DATE:20261221
-SUMMARY:英文原版话剧《肖申克的救赎》
-LOCATION:美琪大戏院
-DESCRIPTION:话剧 | 时间：2026.12.15 - 12.20 | 场馆：美琪大戏院 | 票价：￥280起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/511881
-END:VEVENT
-BEGIN:VEVENT
-UID:3ee257f8c78b7ed7@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261215
-DTEND;VALUE=DATE:20261216
-SUMMARY:越剧《三看御妹》
-LOCATION:宛平剧院
-DESCRIPTION:戏曲 | 时间：2026.12.15 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/514717
-END:VEVENT
-BEGIN:VEVENT
-UID:20f18b563c7e6ed3@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261215
-DTEND;VALUE=DATE:20270104
-SUMMARY:音乐剧《梦断花都》（电影《红磨坊》改编）Moulin Rouge！The Musical
-LOCATION:交通银行前滩31演艺中心
-DESCRIPTION:音乐剧 | 时间：2026.12.15 - 2027.01.03 | 场馆：交通银行前滩31演艺中心 | 票价：￥180起 
- | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/477429
-END:VEVENT
-BEGIN:VEVENT
-UID:c38613eb0432a40c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261216
-DTEND;VALUE=DATE:20270301
-SUMMARY:浦东美术馆指定单日票
-LOCATION:卡罗莱娜·凯塞多·鲸鱼的致敬
-DESCRIPTION:展览 | 时间：2026.12.16 - 2027.02.28 | 场馆：卡罗莱娜·凯塞多·鲸鱼的致敬 | 票价：￥80起 
- | 猫眼评分 9.3
-URL:https://www.gewara.com/detail/453007
-END:VEVENT
-BEGIN:VEVENT
-UID:1f6ecb545b4a09a5@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261218
-DTEND;VALUE=DATE:20270104
-SUMMARY:【悬疑巅峰之作】音乐剧《嫌疑人X的献身》-【跨年演出季-缪时客出品】
-LOCATION:黄浦文化中心·大上海剧场
-DESCRIPTION:音乐剧 | 时间：2026.12.18 - 2027.01.03 | 场馆：黄浦文化中心·大上海剧场 | 票价：￥180起 
- | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/513480
-END:VEVENT
-BEGIN:VEVENT
-UID:4d36b3e931a08512@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261218
-DTEND;VALUE=DATE:20261219
-SUMMARY:史依弘领衔 京剧《霸王别姬》
-LOCATION:宛平剧院
-DESCRIPTION:戏曲 | 时间：2026.12.18 | 场馆：宛平剧院 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/507409
-END:VEVENT
-BEGIN:VEVENT
-UID:63a995564ad03165@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261218
-DTEND;VALUE=DATE:20280515
-SUMMARY:想象现实——蓬皮杜中心典藏展（五）
-LOCATION:上海西岸美术馆
-DESCRIPTION:展览 | 时间：2026.12.18 - 2028.05.14 | 场馆：上海西岸美术馆 | 票价：￥50 | 猫眼评分 0
- .0
-URL:https://www.gewara.com/detail/519854
-END:VEVENT
-BEGIN:VEVENT
-UID:ff69a61eaf6609e0@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261218
-DTEND;VALUE=DATE:20261221
-SUMMARY:舞剧《咏春》
-LOCATION:上海大歌剧院
-DESCRIPTION:舞蹈 | 时间：2026.12.18 - 12.20 | 场馆：上海大歌剧院 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/511245
-END:VEVENT
-BEGIN:VEVENT
-UID:48768333fa4c8e55@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261219
-DTEND;VALUE=DATE:20261220
-SUMMARY:Mr.Miss「十年之后」剧场巡回音乐会——上海站
-LOCATION:上海保利大剧院
-DESCRIPTION:音乐会 | 时间：2026.12.19 | 场馆：上海保利大剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/518031
-END:VEVENT
-BEGIN:VEVENT
-UID:4c07c2431121d669@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261219
-DTEND;VALUE=DATE:20261220
-SUMMARY:史依弘领衔 京剧《西施》
-LOCATION:宛平剧院
-DESCRIPTION:戏曲 | 时间：2026.12.19 | 场馆：宛平剧院 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/507408
-END:VEVENT
-BEGIN:VEVENT
-UID:456148b568c86c9d@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261219
-DTEND;VALUE=DATE:20261221
-SUMMARY:耿子博导演作品 舞蹈剧场《北斗》
-LOCATION:人民大舞台
-DESCRIPTION:舞蹈 | 时间：2026.12.19 - 12.20 | 场馆：人民大舞台 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/519331
-END:VEVENT
-BEGIN:VEVENT
-UID:4fa39036ede76505@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261220
-DTEND;VALUE=DATE:20270104
-SUMMARY:【7.5折早鸟票】维也纳皇家交响乐团2027新年音乐会--上海站
-LOCATION:上海东方艺术中心
-DESCRIPTION:音乐会 | 时间：2026.12.20 - 2027.01.03 | 场馆：上海东方艺术中心 | 票价：￥180起 | 猫眼
- 评分 0.0
-URL:https://www.gewara.com/detail/490529
-END:VEVENT
-BEGIN:VEVENT
-UID:a007db498142f8e5@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261224
-DTEND;VALUE=DATE:20261228
-SUMMARY:俄罗斯芭蕾国家剧院《胡桃夹子》
-LOCATION:上海国际舞蹈中心
-DESCRIPTION:舞蹈 | 时间：2026.12.24 - 12.27 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/509593
-END:VEVENT
-BEGIN:VEVENT
-UID:91deacf41020fec4@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261224
-DTEND;VALUE=DATE:20261226
-SUMMARY:俄罗斯鞑靼国家模范剧院芭蕾舞剧《胡桃夹子》交响乐团现场伴奏版
-LOCATION:上海东方艺术中心
-DESCRIPTION:舞蹈 | 时间：2026.12.24 - 12.25 | 场馆：上海东方艺术中心 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/498758
-END:VEVENT
-BEGIN:VEVENT
-UID:4e9f336a7b3c78a4@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261224
-DTEND;VALUE=DATE:20261226
-SUMMARY:梁海源脱口秀专场《天才的三个夜晚》｜笑果出品@上海
-LOCATION:美琪大戏院
-DESCRIPTION:脱口秀 | 时间：2026.12.24 - 12.25 | 场馆：美琪大戏院 | 票价：￥220起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/515340
-END:VEVENT
-BEGIN:VEVENT
-UID:9941f837b5edf10b@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261224
-DTEND;VALUE=DATE:20261228
-SUMMARY:芭蕾舞剧《胡桃夹子》
-LOCATION:上海大歌剧院
-DESCRIPTION:舞蹈 | 时间：2026.12.24 - 12.27 | 场馆：上海大歌剧院 | 票价：￥100起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/519062
-END:VEVENT
-BEGIN:VEVENT
-UID:a499aa6cf4c5326d@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261225
-DTEND;VALUE=DATE:20261226
-SUMMARY:俄罗斯帝国芭蕾舞团芭蕾舞剧《天鹅湖》
-LOCATION:保利上海城市剧院
-DESCRIPTION:舞蹈 | 时间：2026.12.25 | 场馆：保利上海城市剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/499568
-END:VEVENT
-BEGIN:VEVENT
-UID:c880470e3e26de3e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261225
-DTEND;VALUE=DATE:20261227
-SUMMARY:独脚戏《石库门的笑声》
-LOCATION:兰心大戏院
-DESCRIPTION:戏曲 | 时间：2026.12.25 - 12.26 | 场馆：兰心大戏院 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516504
-END:VEVENT
-BEGIN:VEVENT
-UID:aa012ae1b478b38c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261225
-DTEND;VALUE=DATE:20261227
-SUMMARY:维也纳皇家爱乐乐团新年音乐会
-LOCATION:上海东方艺术中心
-DESCRIPTION:音乐会 | 时间：2026.12.25 - 12.26 | 场馆：上海东方艺术中心 | 票价：￥144起 | 猫眼评分 0.
- 0
-URL:https://www.gewara.com/detail/486961
-END:VEVENT
-BEGIN:VEVENT
-UID:0fdf10a2ae27658d@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261226
-DTEND;VALUE=DATE:20261227
-SUMMARY:俄罗斯帝国芭蕾舞团芭蕾舞剧《胡桃夹子》
-LOCATION:保利上海城市剧院
-DESCRIPTION:舞蹈 | 时间：2026.12.26 | 场馆：保利上海城市剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/499588
-END:VEVENT
-BEGIN:VEVENT
-UID:e4ac6c8e046dc28b@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261226
-DTEND;VALUE=DATE:20261227
-SUMMARY:俄罗斯鞑靼国家模范剧院芭蕾舞剧《天鹅湖》交响乐团现场伴奏版
-LOCATION:上海东方艺术中心
-DESCRIPTION:舞蹈 | 时间：2026.12.26 | 场馆：上海东方艺术中心 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/498757
-END:VEVENT
-BEGIN:VEVENT
-UID:07dd09e476be3def@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261227
-DTEND;VALUE=DATE:20261228
-SUMMARY:2027上海儿童新年音乐会（交响演唱版）
-LOCATION:上海东方艺术中心
-DESCRIPTION:音乐会 | 时间：2026.12.27 | 场馆：上海东方艺术中心 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/509130
-END:VEVENT
-BEGIN:VEVENT
-UID:b84a85799d9e9a65@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261230
-DTEND;VALUE=DATE:20270111
-SUMMARY:法语原版音乐剧《莫里哀》
-LOCATION:上海文化广场
-DESCRIPTION:音乐剧 | 时间：2026.12.30 - 2027.01.10 | 场馆：上海文化广场 | 票价：￥280起 | 猫眼评分
-  0.0
-URL:https://www.gewara.com/detail/501598
-END:VEVENT
-BEGIN:VEVENT
-UID:f74416c73d2129ed@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261231
-DTEND;VALUE=DATE:20270101
-SUMMARY:维也纳施特劳斯乐团2027新年音乐会
-LOCATION:上海大剧院
-DESCRIPTION:音乐会 | 时间：2026.12.31 | 场馆：上海大剧院 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/486771
-END:VEVENT
-BEGIN:VEVENT
-UID:5901702a84b24e77@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261231
-DTEND;VALUE=DATE:20270102
-SUMMARY:维也纳春之声交响乐团新年音乐会-上海站
-LOCATION:上海东方艺术中心
-DESCRIPTION:音乐会 | 时间：2026.12.31 - 2027.01.01 | 场馆：上海东方艺术中心 | 票价：￥126起 | 猫眼
- 评分 0.0
-URL:https://www.gewara.com/detail/490899
-END:VEVENT
-BEGIN:VEVENT
-UID:71b465a8fcad350c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261231
-DTEND;VALUE=DATE:20270104
-SUMMARY:西班牙国宝级舞团 马德里弗拉门戈舞团《卡门》
-LOCATION:上海东方艺术中心
-DESCRIPTION:舞蹈 | 时间：2026.12.31 - 2027.01.03 | 场馆：上海东方艺术中心 | 票价：￥126起 | 猫眼评
- 分 0.0
-URL:https://www.gewara.com/detail/497426
-END:VEVENT
-BEGIN:VEVENT
-UID:2cd1421f9d94d28d@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261231
-DTEND;VALUE=DATE:20270101
-SUMMARY:闪耀2027——上海音乐厅新年音乐会：维也纳约翰施特劳斯管弦乐团®
-LOCATION:凯迪拉克-上海音乐厅
-DESCRIPTION:音乐会 | 时间：2026.12.31 | 场馆：凯迪拉克-上海音乐厅 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/509310
-END:VEVENT
-BEGIN:VEVENT
-UID:71e82f3d409d389c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20261231
-DTEND;VALUE=DATE:20270103
-SUMMARY:阿根廷国宝级探戈舞团《魅影暗舞2 布宜诺斯艾利斯》 Tango 2 Buenos Aires
-LOCATION:上海国际舞蹈中心
-DESCRIPTION:舞蹈 | 时间：2026.12.31 - 2027.01.02 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分
-  0.0
-URL:https://www.gewara.com/detail/511645
-END:VEVENT
-BEGIN:VEVENT
-UID:739c93bf6b4dbd77@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270101
-DTEND;VALUE=DATE:20270102
-SUMMARY:《爱·永恒》理查德·克莱德曼钢琴音乐会-上海站
-LOCATION:国家会展中心（上海）虹馆EH
-DESCRIPTION:音乐会 | 时间：2027.01.01 | 场馆：国家会展中心（上海）虹馆EH | 票价：￥380起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/497189
-END:VEVENT
-BEGIN:VEVENT
-UID:cb6c39c87e759b8a@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270102
-DTEND;VALUE=DATE:20270104
-SUMMARY:原创芭蕾舞剧《白毛女》
-LOCATION:宛平剧院
-DESCRIPTION:舞蹈 | 时间：2027.01.02 - 01.03 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/519617
-END:VEVENT
-BEGIN:VEVENT
-UID:f09c5e5e495d683d@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270109
-DTEND;VALUE=DATE:20270110
-SUMMARY:《爱乐之城》—经典电影金曲交响音乐会
-LOCATION:上海东方艺术中心
-DESCRIPTION:音乐会 | 时间：2027.01.09 | 场馆：上海东方艺术中心 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/518972
-END:VEVENT
-BEGIN:VEVENT
-UID:2a033948467061f7@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270109
-DTEND;VALUE=DATE:20270111
-SUMMARY:舞剧《李清照》
-LOCATION:上海保利云间剧院
-DESCRIPTION:舞蹈 | 时间：2027.01.09 - 01.10 | 场馆：上海保利云间剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516696
-END:VEVENT
-BEGIN:VEVENT
-UID:52705197ffec34a3@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270109
-DTEND;VALUE=DATE:20270110
-SUMMARY:韩再芬领衔主演黄梅戏《女驸马》
-LOCATION:美琪大戏院
-DESCRIPTION:戏曲 | 时间：2027.01.09 | 场馆：美琪大戏院 | 票价：￥280起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/514509
-END:VEVENT
-BEGIN:VEVENT
-UID:20ddbd75690f970e@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270110
-DTEND;VALUE=DATE:20270111
-SUMMARY:《后来•遇见》籁之音歌行合唱团流行经典歌曲合唱音乐会
-LOCATION:上海东方艺术中心
-DESCRIPTION:音乐会 | 时间：2027.01.10 | 场馆：上海东方艺术中心 | 票价：￥100起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516329
-END:VEVENT
-BEGIN:VEVENT
-UID:7b594c6fbaba949f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270110
-DTEND;VALUE=DATE:20270111
-SUMMARY:俄罗斯莫斯科芭蕾舞团《天鹅湖》
-LOCATION:上海东方艺术中心
-DESCRIPTION:舞蹈 | 时间：2027.01.10 | 场馆：上海东方艺术中心 | 票价：￥108起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/512776
-END:VEVENT
-BEGIN:VEVENT
-UID:426b08fc6b49897b@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270110
-DTEND;VALUE=DATE:20270111
-SUMMARY:昆剧《闹天宫》
-LOCATION:宛平剧院
-DESCRIPTION:戏曲 | 时间：2027.01.10 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/518854
-END:VEVENT
-BEGIN:VEVENT
-UID:b83f59ea77d66d7b@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270116
-DTEND;VALUE=DATE:20270118
-SUMMARY:芭蕾舞剧《胡桃夹子》新年特别版-哈尔滨芭蕾舞团×云憬文化
-LOCATION:上海国际舞蹈中心
-DESCRIPTION:舞蹈 | 时间：2027.01.16 - 01.17 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/511920
-END:VEVENT
-BEGIN:VEVENT
-UID:76141be6168dae67@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270116
-DTEND;VALUE=DATE:20270117
-SUMMARY:鼓神降临-当代爵士鼓宗师·格莱美奖得主· Steve Gadd内地首演
-LOCATION:久事·上海商城剧院
-DESCRIPTION:音乐会 | 时间：2027.01.16 | 场馆：久事·上海商城剧院 | 票价：￥280起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/518017
-END:VEVENT
-BEGIN:VEVENT
-UID:3e9787e1dd5aa97f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270121
-DTEND;VALUE=DATE:20270125
-SUMMARY:原创音乐剧《她的海》
-LOCATION:上海西岸大剧院
-DESCRIPTION:音乐剧 | 时间：2027.01.21 - 01.24 | 场馆：上海西岸大剧院 | 票价：￥280起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/518939
-END:VEVENT
-BEGIN:VEVENT
-UID:e98dcfa987f1c9b9@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270123
-DTEND;VALUE=DATE:20270125
-SUMMARY:舞剧《大染坊》
-LOCATION:北外滩友邦大剧院
-DESCRIPTION:舞蹈 | 时间：2027.01.23 - 01.24 | 场馆：北外滩友邦大剧院 | 票价：￥180起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/514057
-END:VEVENT
-BEGIN:VEVENT
-UID:b41fd7c72a0ba07c@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270130
-DTEND;VALUE=DATE:20270131
-SUMMARY:2027马克西姆“边界II”古典跨界钢琴演奏会-上海站
-LOCATION:浦发银行东方体育中心
-DESCRIPTION:音乐会 | 时间：2027.01.30 | 场馆：浦发银行东方体育中心 | 票价：￥380起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/515771
-END:VEVENT
-BEGIN:VEVENT
-UID:9d22981c393c162a@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270130
-DTEND;VALUE=DATE:20270201
-SUMMARY:江西文演·陆川导演作品 舞剧《天工开物》
-LOCATION:上海西岸大剧院
-DESCRIPTION:舞蹈 | 时间：2027.01.30 - 01.31 | 场馆：上海西岸大剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/516150
-END:VEVENT
-BEGIN:VEVENT
-UID:4dd8f642481fef4f@play-in-shanghai
-DTSTAMP:20261117T071318Z
-DTSTART;VALUE=DATE:20270130
-DTEND;VALUE=DATE:20270131
-SUMMARY:沪剧《红灯记》
-LOCATION:上海保利云间剧院
-DESCRIPTION:戏曲 | 时间：2027.01.30 | 场馆：上海保利云间剧院 | 票价：￥80起 | 猫眼评分 0.0
-URL:https://www.gewara.com/detail/514745
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//play-in-shanghai//CN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:上海活动清单
+X-WR-TIMEZONE:Asia/Shanghai
+BEGIN:VEVENT
+UID:604d226df80df83d@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20250425
+DTEND;VALUE=DATE:20450426
+SUMMARY:勇毅前行——中国汽车拓疆者饶斌主题展
+LOCATION:上海汽车博物馆1F临展厅
+DESCRIPTION:展览 | 时间：2025.04.25 - 2045.04.25 | 场馆：上海汽车博物馆1F临展厅 | 票价：以官网为准 |
+  展期：2025年04月25日-2045年04月25日 地点：上海汽车博物馆1F临展厅 简介
+URL:https://www.shautomuseum.com/news/info/25043001
+END:VEVENT
+BEGIN:VEVENT
+UID:ba56b207c003f8d3@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20250818
+DTEND;VALUE=DATE:20270601
+SUMMARY:上海兴业太古汇「消失的法老」胡夫金字塔沉浸式探索体验
+LOCATION:博新全宇宙The VERS沉浸式探索中心
+DESCRIPTION:展览 | 时间：2025.08.18 - 2027.05.31 | 场馆：博新全宇宙The VERS沉浸式探索中心 | 票价
+ ：￥198起 | 猫眼评分 9.3
+URL:https://www.gewara.com/detail/424107
+END:VEVENT
+BEGIN:VEVENT
+UID:5bccc558d9fe5a2c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20251101
+DTEND;VALUE=DATE:20280101
+SUMMARY:沸腾之心——例数经典车上的发动机
+LOCATION:上海汽车博物馆
+DESCRIPTION:展览 | 时间：2025.11.01 - 2027.12.31 | 场馆：上海汽车博物馆 | 票价：以官网为准 | 展期：2
+ 025年11月01日-2027年12月31日 地点：上海汽车博物馆 3F技术馆 简
+URL:http://www.shautomuseum.com/news/info/lsjd
+END:VEVENT
+BEGIN:VEVENT
+UID:89e118a767209cc0@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20270101
+SUMMARY:《我与上海不可分割》建筑师俞挺空间概念展
+LOCATION:中华艺术宫（上海美术馆）
+DESCRIPTION:展览 | 时间：2026.01.01 - 12.31 | 场馆：中华艺术宫（上海美术馆） | 票价：以官网为准 | 展期：2
+ 026年01月01日-2026年12月31日
+URL:https://www.artmuseumonline.org/art/art/zlgz/zl/dqzl/2026/01/01/2c906d
+ 9b98ccf29e019b72f2206c57c9.html
+END:VEVENT
+BEGIN:VEVENT
+UID:0f3d8851f75a0619@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260212
+DTEND;VALUE=DATE:20270222
+SUMMARY:卡罗莱娜·凯塞多：鲸鱼的致敬
+LOCATION:浦东美术馆
+DESCRIPTION:展览 | 时间：2026.02.12 - 2027.02.21 | 场馆：浦东美术馆 | 票价：以官方预约页面为准 | 20
+ 26.02.12-2027.02.21
+URL:https://www.museumofartpd.org.cn/exhibitiondetail?id=212
+END:VEVENT
+BEGIN:VEVENT
+UID:68b13cc37e79c978@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260617
+DTEND;VALUE=DATE:20270223
+SUMMARY:暂得之乐：暂得楼捐赠明清瓷器展
+LOCATION:上海博物馆东馆三楼中国古代陶瓷馆尾厅
+DESCRIPTION:展览 | 时间：2026.06.17 - 2027.02.22 | 场馆：上海博物馆东馆三楼中国古代陶瓷馆尾厅 | 票价：以
+ 官方预约页面为准 | 2026-06-17 - 2027-02-22
+URL:https://www.shanghaimuseum.cn/mu/frontend/pg/article/id/E00004245
+END:VEVENT
+BEGIN:VEVENT
+UID:98254974b350beef@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260627
+DTEND;VALUE=DATE:20270118
+SUMMARY:《史前星球：恐龙篇》沉浸式巨幕体验
+LOCATION:史前星球：恐龙篇沉浸式巨幕体验
+DESCRIPTION:展览 | 时间：2026.06.27 - 2027.01.17 | 场馆：史前星球：恐龙篇沉浸式巨幕体验 | 票价：￥58起
+  | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/490302
+END:VEVENT
+BEGIN:VEVENT
+UID:2b48b9c33114ace5@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20270104
+SUMMARY:中国国家地理·探索 极致发现科学艺术影像展
+LOCATION:「2026版」中国国家地理·探索 极致发现科学艺术影像展
+DESCRIPTION:展览 | 时间：2026.07.01 - 2027.01.03 | 场馆：「2026版」中国国家地理·探索 极致发现科学艺术
+ 影像展 | 票价：￥18起 | 猫眼评分 9.7
+URL:https://www.gewara.com/detail/491107
+END:VEVENT
+BEGIN:VEVENT
+UID:4f7b26fd748320a8@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260709
+DTEND;VALUE=DATE:20261201
+SUMMARY:《且看宋词》戴敦邦沉浸式国风艺术展 | 戴敦邦艺术馆首展
+LOCATION:戴敦邦艺术馆
+DESCRIPTION:展览 | 时间：2026.07.09 - 11.30 | 场馆：戴敦邦艺术馆 | 票价：￥49起 | 猫眼评分 9.6
+URL:https://www.gewara.com/detail/490629
+END:VEVENT
+BEGIN:VEVENT
+UID:211c457c3e46d6e5@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260709
+DTEND;VALUE=DATE:20271115
+SUMMARY:世界树之巅：美洲古代文明大展
+LOCATION:上海博物馆人民广场馆一至三楼展厅
+DESCRIPTION:展览 | 时间：2026.07.09 - 2027.11.14 | 场馆：上海博物馆人民广场馆一至三楼展厅 | 票价：以官方
+ 预约页面为准 | 2026-07-09 - 2027-11-14
+URL:https://www.shanghaimuseum.cn/mu/frontend/pg/article/id/E00004238
+END:VEVENT
+BEGIN:VEVENT
+UID:488ad4679cc7b735@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260717
+DTEND;VALUE=DATE:20261207
+SUMMARY:塑我此生：贾科梅蒂艺术大展
+LOCATION:【上海民生现代美术馆】塑我此生：贾科梅蒂艺术大展
+DESCRIPTION:展览 | 时间：2026.07.17 - 12.06 | 场馆：【上海民生现代美术馆】塑我此生：贾科梅蒂艺术大展 | 票价：
+ ￥50起 | 猫眼评分 9.4
+URL:https://www.gewara.com/detail/488413
+END:VEVENT
+BEGIN:VEVENT
+UID:43a3f7d3b7af66ee@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260725
+DTEND;VALUE=DATE:20261026
+SUMMARY:丽娜·波·巴蒂：生存的诗学
+LOCATION:上海当代艺术博物馆
+DESCRIPTION:展览 | 时间：2026.07.25 - 10.25 11:0 | 场馆：上海当代艺术博物馆 | 票价：以官方页面为准
+URL:https://www.powerstationofart.com/whats-on/exhibitions/lina-bo-bardi-t
+ he-poetics-of-survival
+END:VEVENT
+BEGIN:VEVENT
+UID:fcd273151b54017c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260730
+DTEND;VALUE=DATE:20270301
+SUMMARY:“触探深海”远古生命演化特展
+LOCATION:国际传媒港艺术中心
+DESCRIPTION:展览 | 时间：2026.07.30 - 2027.02.28 | 场馆：国际传媒港艺术中心 | 票价：￥58起 | 猫眼评
+ 分 9.6
+URL:https://www.gewara.com/detail/494912
+END:VEVENT
+BEGIN:VEVENT
+UID:fdd22c5f4eddb933@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20261214
+SUMMARY:Johnny Depp：2026上海“边缘形象”艺术展
+LOCATION:Johnny Depp·2026上海边缘形象艺术展
+DESCRIPTION:展览 | 时间：2026.08.15 - 12.13 | 场馆：Johnny Depp·2026上海边缘形象艺术展 | 票价
+ ：￥58起 | 猫眼评分 9.0
+URL:https://www.gewara.com/detail/495880
+END:VEVENT
+BEGIN:VEVENT
+UID:780c69ce7723ac00@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20261116
+SUMMARY:宝格丽“Kaleidos万花绮镜：色彩·文化·匠艺”特展
+LOCATION:上海当代艺术博物馆
+DESCRIPTION:展览 | 时间：2026.09.05 - 11.15 11:0 | 场馆：上海当代艺术博物馆 | 票价：以官方页面为准
+URL:https://www.powerstationofart.com/whats-on/exhibitions/bvlgari-kaleido
+ s
+END:VEVENT
+BEGIN:VEVENT
+UID:a9294275a8c118e2@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20270101
+SUMMARY:Paradox Museum悖论博物馆
+LOCATION:Paradox Museum悖论博物馆
+DESCRIPTION:展览 | 时间：2026.09.11 - 12.31 | 场馆：Paradox Museum悖论博物馆 | 票价：￥68起 
+ | 猫眼评分 9.7
+URL:https://www.gewara.com/detail/506649
+END:VEVENT
+BEGIN:VEVENT
+UID:c2d55b5240fcd9f8@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20270301
+SUMMARY:征途与山河：红色经典美术作品展
+LOCATION:龙美术馆（西岸馆）
+DESCRIPTION:展览 | 时间：2026.09.12 - 2027.02.28 | 场馆：龙美术馆（西岸馆） | 票价：以官方页面为准 | 
+ 展览以视觉艺术为叙事载体，旨在重温波澜壮阔的历史瞬间，回望中国共产党百年奋斗中的峥嵘岁月。
+URL:http://www.thelongmuseum.org/exhibition-369/detail-2016.html
+END:VEVENT
+BEGIN:VEVENT
+UID:e37a0c56ff5bc3c2@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20270119
+SUMMARY:金冠之下：新罗文物精华展
+LOCATION:上海博物馆东馆二楼中国东方航空第二特展厅
+DESCRIPTION:展览 | 时间：2026.09.23 - 2027.01.18 | 场馆：上海博物馆东馆二楼中国东方航空第二特展厅 | 票价
+ ：以官方预约页面为准 | 2026-09-23~2027-01-18
+URL:https://www.shanghaimuseum.cn/mu/frontend/pg/article/id/I00005100
+END:VEVENT
+BEGIN:VEVENT
+UID:e24384a6a77a7251@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20270125
+SUMMARY:《花砖街 11 号》黄油小熊艺术展・全球首站
+LOCATION:花砖街11号-黄油小熊艺术展·全球首站
+DESCRIPTION:展览 | 时间：2026.09.24 - 2027.01.24 | 场馆：花砖街11号-黄油小熊艺术展·全球首站 | 票价：
+ ￥39起 | 猫眼评分 9.6
+URL:https://www.gewara.com/detail/502108
+END:VEVENT
+BEGIN:VEVENT
+UID:0d028d36f7e16a01@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20270215
+SUMMARY:计算万千世界
+LOCATION:上海西岸美术馆
+DESCRIPTION:展览 | 时间：2026.09.24 - 2027.02.14 | 场馆：上海西岸美术馆 | 票价：￥100 | 猫眼评分 
+ 0.0
+URL:https://www.gewara.com/detail/502124
+END:VEVENT
+BEGIN:VEVENT
+UID:6b66dc19b059f896@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20261116
+SUMMARY:la Galerie du 19M SHANGHAI
+LOCATION:浦东美术馆
+DESCRIPTION:展览 | 时间：2026.09.25 - 11.15 | 场馆：浦东美术馆 | 票价：以官方预约页面为准 | 2026.09
+ .25-2026.11.15
+URL:https://www.museumofartpd.org.cn/exhibitiondetail?id=220
+END:VEVENT
+BEGIN:VEVENT
+UID:5f5932df7e83ba9e@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20270406
+SUMMARY:[宝龙美术馆] 通票-快乐公式：史莱姆感官漫游记
+LOCATION:宝龙美术馆
+DESCRIPTION:展览 | 时间：2026.10.01 - 2027.04.05 | 场馆：宝龙美术馆 | 票价：￥158起 | 猫眼评分 9
+ .3
+URL:https://www.gewara.com/detail/507143
+END:VEVENT
+BEGIN:VEVENT
+UID:3fde2b3162c3998e@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261214
+SUMMARY:奥特曼光之羁绊勇者同行主题展
+LOCATION:虹桥南丰城
+DESCRIPTION:展览 | 时间：2026.10.17 - 12.13 | 场馆：虹桥南丰城 | 票价：￥68 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/511529
+END:VEVENT
+BEGIN:VEVENT
+UID:7b48c97664cd4830@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20270125
+SUMMARY:[油罐艺术中心] 第25届中国上海国际艺术节X-TRA数字艺术项目 《新生之地》
+LOCATION:上海油罐艺术中心
+DESCRIPTION:展览 | 时间：2026.10.30 - 2027.01.24 | 场馆：上海油罐艺术中心 | 票价：￥60 | 猫眼评分 
+ 0.0
+URL:https://www.gewara.com/detail/515114
+END:VEVENT
+BEGIN:VEVENT
+UID:18775070cd84b86c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20270222
+SUMMARY:洁宜黄：BANK-A-OKE
+LOCATION:上海外滩美术馆
+DESCRIPTION:展览 | 时间：2026.10.31 - 2027.02.21 | 场馆：上海外滩美术馆 | 票价：以官方预约页面为准 | 
+ “BANK-A-OKE”是常驻纽约与香港两地的艺术家洁宜黄的首场机构个展。为此，美术馆正门已变身为一家虚构的“卡拉OK银行”运营点。在这家虚构的银
+ 行里，金钱、“气”（生命能量）与声音被视为三种不同的资产类别。展览的另一部分“黄洁宜：TEM-PLE-OKE”可从美术馆历史建筑的虎丘路原大门进入
+ 。 在正门迎接你的是《气凝结出纳柜台》（2026），玻璃幕板因充盈的“气”而凝起水雾。雾气中，你看不清楚玻璃后面坐着谁，但能看到自己将要存入银行的
+ 那种物质：“气”。朦胧的柜台两侧设有两台ATM，同时也是卡拉OK点唱机——这是互动影像装置《借-我-你-的-声-音》（2026）的一部分。 这件装
+ 置源自艺术家的一个设想：卡拉OK是一种借贷。移除主唱声轨后，歌曲也就失去了其最珍贵的形而上资产：“气”。在主唱的空缺中献唱，便可暂时弥补缺失之物，
+ 向歌曲出借你的气息和声音。在ATM前，这笔借贷关系被正式确立。你选择账户、输入个人信息，并接受合约条款，随后通过唱歌完成一笔“声音存款”。声音入账
+ 后，机器将生成一份占卜文字作为凭证。然而，人声与金钱不同——即便离身，它也无法完全与其根源断开。对洁宜黄来说，声音即便几经易手，仍承载演唱者的“气
+ ”。你所存入的声音，始终无法与你完全分离。那么，将某种始终无法与自身分离的东西存入银行，究竟意味着什么？ 美术馆地处上海历史上的金融区——外滩，为
+ 这家虚构的银行提供了一个特殊的历史语境。艺术家将信贷与利息的历史叠加于供奉、功德和业报等更为古老的经济体系之上。在这些体系中，当下的行为可能在未来
+ 产生义务或回报。在这些交叉重叠的体系里，贷方与借方的界线逐渐模糊。 办理声音存款之前，你大概想要排练一番。美术馆二楼东厅用作银行的练歌房。两块屏幕
+ 播放《借我你的声音》（2026），ATM中的卡拉OK曲目即由这件影像作品改编而来。旋律采用五声音阶，专为反复演唱而作，每遍咏唱都会积聚力量。另一块
+ 屏幕则播放《内在声音移植》（2022—2024），一件较早的卡拉OK表演讲座作品，探讨人声、健康与灵性之间的关系。这两件作品共同将此次新委任创作置
+ 于洁宜黄持续展开的探索实践之中：声音既是身体的表达，也是承载着超越个体自身之能量的媒介。 银行系统已全面开启，欢迎开户。如其他合约一样，敬请仔细阅
+ 读条款内容。
+URL:https://www.rockbundartmuseum.org/exhibition/kit-yi-wong-bankaoke
+END:VEVENT
+BEGIN:VEVENT
+UID:89bad861402618d1@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20270222
+SUMMARY:约塔·蒙巴萨：（在潮汐里）困于流动中
+LOCATION:上海外滩美术馆
+DESCRIPTION:展览 | 时间：2026.10.31 - 2027.02.21 | 场馆：上海外滩美术馆 | 票价：以官方预约页面为准 | 
+ 十多年来，约塔·蒙巴萨不断将自己的身体埋入土中。这位来自巴西东北部纳塔尔的艺术家与作家，早在创作初期便通过一系列行为表演表达了鲜明的反殖民与废除主
+ 义立场。在这些表演中，她将身体置于大地之中，由他人逐条朗读土地权利遭受侵害的记录。在地下呼吸的经验改变了“埋葬”的含义：不再是一种暴力意象，而转变
+ 为她所称的“身体与大地之间的连续关系”。展览以《你的血是无人踏足之地》（2024）开场，一张面孔从土地中显现。楼上展出的全新委任歌剧作品，部分灵感
+ 源于这件影像。 在四楼和五楼，基于蒙巴萨2023年同名文本创作的歌剧项目《（在潮汐里）困于流动中》（2026）让呼吸化作声音。在一场性质不明的灾变
+ 后，歌剧聚焦主人公“她”（星球的异乡者）的处境。她一度为人，如今成为一块地质实体。故事讲述她如何艰难地摆脱既已习得的人类存在模式。蒙巴萨借助巴西哲
+ 学家丹尼斯·费雷拉·达·席尔瓦的“重-解-构”（re-de-composition）概念理解这其中的转变：身体、声音与环境之间的边界松动，悲痛和依
+ 恋留存。作品不设固定舞台或现场表演者。“她”化作一座大型夯土丘；周围九个较小的土堆“合唱团”则是一群哀悼者；“风”悬在上方。录制的声音在土地间与土
+ 地中回响，随着观众在其间游走，变幻、彼此交叠。 五楼的绘画和手稿呈现歌剧创作过程中的阅读、对话和材料实验。伸出手，握持，房屋倾斜，迁徙，不安稳的栖
+ 居，重复的痕迹承载着“被世界留下印记”的重量。这些草图和习作亦保留着那些未在歌剧中实现的可能性。 贯穿整场展览，声音通过身体、技术、土地和空气的关
+ 系成形，超越任何个体的同一性。声音以振动触碰身体，承载的不止于理性含义。蒙巴萨提出一种不谐的聆听，邀请我们留心声音，而无需急于寻求融洽和谐。聆听由
+ 此成为一个带有政治性的问题：我们如何维系不同声音与存在方式之间的关系，而不要求它们归于一体？
+URL:https://www.rockbundartmuseum.org/exhibition/jota-mombaca-stuck-in-mov
+ ement-in-the-tide
+END:VEVENT
+BEGIN:VEVENT
+UID:90b2ceca063d96eb@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20270222
+SUMMARY:黄洁宜：TEM-PLE-OKE
+LOCATION:上海外滩美术馆
+DESCRIPTION:展览 | 时间：2026.10.31 - 2027.02.21 | 场馆：上海外滩美术馆 | 票价：以官方预约页面为准 | 
+ “TEM-PLE-OKE”在美术馆的一楼和二楼打造了寺庙般的环境，与另一部分“洁宜黄：BANK-A-OKE”共同组成艺术家黄洁宜的首场机构个展。“
+ 债”既是经济义务，又是精神境况。展览相关联的两部分围绕这种双重概念下的“债”展开带有哲思性的探讨。艺术家游走在世俗金融与神明账目之间，使二者彼此映
+ 照。银行“消耗”你的积蓄，寺庙则显现你想要填补已耗费之物的欲望。 “TEM-PLE-OKE”的空间逻辑衍生自美术馆历史建筑虎丘路一侧的八卦窗。在黄
+ 洁宜看来，八个卦象构成护阵，调节进入空间的事物。艺术家将建筑窗户的八边形轮廓延展至展厅内部，空间布局则参考了受邀的新加坡艺术家汪春龙对后天八卦的解
+ 读。 一楼是异界输液休息区，实现人们补充“气”——代表生命活力的愿望。核心作品《瓶装（蓝）眼泪》（2026）是一件由两只玻璃葫芦组成的雕塑，饱满的
+ 形态令人想到灵丹妙药与长寿意象。一旁的影像和声音装置《静脉滴注尊胜佛母心咒》（2026）融合佛经唱诵与临床输液的语汇，仿佛声音也能在身体内部循环。
+ 在这里，古人求取长生不老的愿望与当代生物黑客狂热相遇。一楼是异界输液休息区，实现人们补充“气”——代表生命活力的愿望。核心作品《瓶装（蓝）眼泪》（
+ 2026）是一件由两只玻璃葫芦组成的雕塑，饱满的形态令人想到灵丹妙药与长寿意象。一旁的影像和声音装置《静脉滴注尊胜佛母心咒》（2026）融合佛经唱
+ 诵与临床输液的语汇，仿佛声音也能在身体内部循环。在这里，古人求取长生不老的愿望与当代生物黑客狂热相遇。 二楼的布局与一楼相照应，展厅上演《恕我们的
+ 债》（2026）。这件全新委任的表演讲座以卡拉OK为灵感，邀请不同的身体向作品出借自己的声音。作品的主角则是一具僵尸，他化身为曾撮合清政府于187
+ 4年向汇丰银行借款的买办。在黄洁宜的虚构世界里，僵尸在一个多世纪后苏醒，却发现信贷规则彻底颠倒：他如今甚至无法借到小额个人贷款。随着僵尸在各地辗转
+ ，金融债务与业力、身体和精神之债也纠缠不休。 在印有道教符箓图案的地毯上，法术已然施成。愿我们所有的债终被宽恕。
+URL:https://www.rockbundartmuseum.org/exhibition/wong-kit-yi-templeoke
+END:VEVENT
+BEGIN:VEVENT
+UID:f9482e3805a7e176@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20270101
+SUMMARY:沉浸式金鱼剧场「千年千变」
+LOCATION:沉浸式金鱼剧场艺术展
+DESCRIPTION:展览 | 时间：2026.11.01 - 12.31 | 场馆：沉浸式金鱼剧场艺术展 | 票价：￥49起 | 猫眼评分 8.
+ 8
+URL:https://www.gewara.com/detail/494513
+END:VEVENT
+BEGIN:VEVENT
+UID:320bf6b731b5b430@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20270222
+SUMMARY:“共此山河·中华五十六民族”陈海汶摄影作品展
+LOCATION:中华艺术宫（上海美术馆）
+DESCRIPTION:展览 | 时间：2026.11.06 - 2027.02.21 | 场馆：中华艺术宫（上海美术馆） | 票价：以官网为准 |
+  展期：2026年11月06日-2027年02月21日
+URL:https://www.artmuseumonline.org/art/art/zlgz/zl/dqzl/2026/11/06/2c906d
+ 9b9e0127fe01a1aaa848b329ac.html
+END:VEVENT
+BEGIN:VEVENT
+UID:eadb3a8b3fc32db5@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20270408
+SUMMARY:墨韵星洲——新加坡艺术家林子平特展
+LOCATION:中华艺术宫（上海美术馆）
+DESCRIPTION:展览 | 时间：2026.11.06 - 2027.04.07 | 场馆：中华艺术宫（上海美术馆） | 票价：以官网为准 |
+  展期：2026年11月06日-2027年04月07日
+URL:https://www.artmuseumonline.org/art/art/zlgz/zl/dqzl/2026/11/06/2c906d
+ 9b9e0127fe01a1aaa4c6a32955.html
+END:VEVENT
+BEGIN:VEVENT
+UID:389049762de292c2@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20270301
+SUMMARY:[油罐艺术中心] 阿娜利亚·萨班：艺术机器
+LOCATION:上海油罐艺术中心
+DESCRIPTION:展览 | 时间：2026.11.07 - 2027.02.28 | 场馆：上海油罐艺术中心 | 票价：￥30 | 猫眼评分 
+ 0.0
+URL:https://www.gewara.com/detail/516979
+END:VEVENT
+BEGIN:VEVENT
+UID:5c2aaa3f7041a1a9@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20270222
+SUMMARY:大始——刘建华个展
+LOCATION:上海当代艺术博物馆
+DESCRIPTION:展览 | 时间：2026.11.07 - 2027.02.21 11:0 | 场馆：上海当代艺术博物馆 | 票价：以官方页面
+ 为准
+URL:https://www.powerstationofart.com/whats-on/exhibitions/liu-jianhua-the
+ -great-beginning
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea4103759557506@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20270401
+SUMMARY:START星美术馆三展齐开 全馆通票
+LOCATION:START星美术馆
+DESCRIPTION:展览 | 时间：2026.11.10 - 2027.03.31 | 场馆：START星美术馆 | 票价：￥50起 | 猫眼评
+ 分 0.0
+URL:https://www.gewara.com/detail/516658
+END:VEVENT
+BEGIN:VEVENT
+UID:be69e978b7a4bdf3@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20270215
+SUMMARY:X美术馆 上海 | 王茜瑶：Nostos-归途
+LOCATION:【X美术馆｜上海】The Pool by X Museum
+DESCRIPTION:展览 | 时间：2026.11.10 - 2027.02.14 | 场馆：【X美术馆｜上海】The Pool by X Mu
+ seum | 票价：￥10起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/517694
+END:VEVENT
+BEGIN:VEVENT
+UID:da65b2b78f80907c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20270302
+SUMMARY:《我的世界-实境探险》
+LOCATION:我的世界·实境探险
+DESCRIPTION:展览 | 时间：2026.11.10 - 2027.03.01 | 场馆：我的世界·实境探险 | 票价：￥148起 | 猫眼
+ 评分 0.0
+URL:https://www.gewara.com/detail/512947
+END:VEVENT
+BEGIN:VEVENT
+UID:35d45c4e422417fa@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20270222
+SUMMARY:“再构香港：何藩与沙龙一代” Fotografiska影像艺术中心 | 单日全馆展览通票
+LOCATION:Fotografiska影像艺术中心单日通票
+DESCRIPTION:展览 | 时间：2026.11.11 - 2027.02.21 00:0 | 场馆：Fotografiska影像艺术中心单日
+ 通票 | 票价：￥50起 | 猫眼评分 9.5
+URL:https://www.gewara.com/detail/307511
+END:VEVENT
+BEGIN:VEVENT
+UID:fc6c1863d3853b78@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20270222
+SUMMARY:“再构香港：何藩与沙龙一代” Fotografiska影像艺术中心 | 单日全馆展览通票
+LOCATION:Fotografiska影像艺术中心单日通票 光复路127号
+DESCRIPTION:展览 | 时间：2026.11.11 - 2027.02.21 00:0 | 场馆：Fotografiska影像艺术中心单日
+ 通票 光复路127号 | 票价：50.00元起 | 10人参加 11人感兴趣
+URL:https://www.douban.com/event/37538455/
+END:VEVENT
+BEGIN:VEVENT
+UID:d67e83b648a7a7f4@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20270215
+SUMMARY:十年之路：1979-1989中国当代艺术
+LOCATION:龙美术馆（西岸馆）
+DESCRIPTION:展览 | 时间：2026.11.11 - 2027.02.14 | 场馆：龙美术馆（西岸馆） | 票价：以官方页面为准 | 
+ 精选约150件作品，呈现1979至1989年的中国当代艺术图卷。
+URL:http://www.thelongmuseum.org/exhibition-369/detail-2019.html
+END:VEVENT
+BEGIN:VEVENT
+UID:f01d392f0d1794a3@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20270215
+SUMMARY:微暗的光：夏禹，一个人和一个时代
+LOCATION:龙美术馆（西岸馆）
+DESCRIPTION:展览 | 时间：2026.11.12 - 2027.02.14 | 场馆：龙美术馆（西岸馆） | 票价：以官方页面为准 | 
+ 走进夏禹沉静而悠长的视觉世界，看见他如何以绘画的方式承接一个时代，并在微暗处，继续望向远方。
+URL:http://www.thelongmuseum.org/exhibition-369/detail-2018.html
+END:VEVENT
+BEGIN:VEVENT
+UID:3fa10f55a759b4c5@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20270301
+SUMMARY:江大海：隐蔽的结构
+LOCATION:上海当代艺术博物馆
+DESCRIPTION:展览 | 时间：2026.11.13 - 2027.02.28 11:0 | 场馆：上海当代艺术博物馆 | 票价：以官方页面
+ 为准
+URL:https://www.powerstationofart.com/whats-on/exhibitions/jiang-dahai-str
+ ucture-cachee
+END:VEVENT
+BEGIN:VEVENT
+UID:65f5a2f04b1e92d6@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20270301
+SUMMARY:刘家琨：明月构想
+LOCATION:上海当代艺术博物馆
+DESCRIPTION:展览 | 时间：2026.11.14 - 2027.02.28 11:0 | 场馆：上海当代艺术博物馆 | 票价：以官方页面
+ 为准
+URL:https://www.powerstationofart.com/whats-on/exhibitions/liu-jiakun-the-
+ moon-and-the-well
+END:VEVENT
+BEGIN:VEVENT
+UID:1cbaa266e3b471c7@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20270506
+SUMMARY:环宇璀璨：大都会艺术博物馆珠宝珍藏展
+LOCATION:上海博物馆东馆一楼光明乳业第一特展厅
+DESCRIPTION:展览 | 时间：2026.11.18 - 2027.05.05 | 场馆：上海博物馆东馆一楼光明乳业第一特展厅 | 票价：以
+ 官方预约页面为准 | 2026-11-18 - 2027-05-05
+URL:https://www.shanghaimuseum.cn/mu/frontend/pg/article/id/E00004253
+END:VEVENT
+BEGIN:VEVENT
+UID:f8c0342d250e5d02@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261201
+SUMMARY:.【南京东路店】人民广场脱口秀周一至周日｜综艺卡司｜吐槽爆笑大会｜开心互动｜【大笑喜剧】即兴之夜精品秀＞
+LOCATION:大笑喜剧-南京东路店
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.30 | 场馆：大笑喜剧-南京东路店 | 票价：￥5起 | 猫眼评分 9.
+ 9
+URL:https://www.gewara.com/detail/498157
+END:VEVENT
+BEGIN:VEVENT
+UID:07adf52e8c70a132@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270104
+SUMMARY:EVA新世纪福音战士 30周年纪念活动【上海新世界 E展空间】
+LOCATION:新世纪福音战士·30周年纪念活动-上海新世界E展空间
+DESCRIPTION:展览 | 时间：2026.11.19 - 2027.01.03 10:0 | 场馆：新世纪福音战士·30周年纪念活动-上海新
+ 世界E展空间 | 票价：￥79起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/497705
+END:VEVENT
+BEGIN:VEVENT
+UID:0c05e766ac5cd813@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270104
+SUMMARY:EVA新世纪福音战士 30周年纪念活动【上海新世界 E展空间】
+LOCATION:新世纪福音战士·30周年纪念活动-上海新世界E展空间 南京西路2-68号(上海新世界城11楼)
+DESCRIPTION:展览 | 时间：2026.11.19 - 2027.01.03 10:0 | 场馆：新世纪福音战士·30周年纪念活动-上海新
+ 世界E展空间 南京西路2-68号(上海新世界城11楼) | 票价：79.00元起 | 5人参加 2人感兴趣
+URL:https://www.douban.com/event/38001772/
+END:VEVENT
+BEGIN:VEVENT
+UID:5dc10ca30e3efad9@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261214
+SUMMARY:K11爆款话剧｜沉浸式悬疑推理《致命发布会》高口碑｜一对一审讯｜全员互动｜高能反转｜亲自上台调查
+LOCATION:喜剧玩家
+DESCRIPTION:话剧 | 时间：2026.11.19 - 12.13 | 场馆：喜剧玩家 | 票价：￥25.5起 | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/501018
+END:VEVENT
+BEGIN:VEVENT
+UID:076765d8b4316474@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20270103T213000
+SUMMARY:Norah/71/油百万领衔 普通话/沪语/英文脱口秀 by SpicyComedy
+LOCATION:SpicyComedy-新天地时尚一期店
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 2027.01.03 19:30 | 场馆：SpicyComedy-新天地时尚一
+ 期店 | 票价：￥120起 | 猫眼评分 9.8
+URL:https://www.gewara.com/detail/385818
+END:VEVENT
+BEGIN:VEVENT
+UID:8bbcb8bde3fcf1e1@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20270103T213000
+SUMMARY:Norah/71/油百万领衔 普通话/沪语/英文脱口秀 by SpicyComedy
+LOCATION:SpicyComedy-新天地时尚一期店 兴业路123弄6-7号3层南里食集北区14号
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 2027.01.03 19:30 | 场馆：SpicyComedy-新天地时尚一
+ 期店 兴业路123弄6-7号3层南里食集北区14号 | 票价：120.0元起 | 13人参加 20人感兴趣
+URL:https://www.douban.com/event/36977803/
+END:VEVENT
+BEGIN:VEVENT
+UID:63d2773e58e2cf87@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20261129T213000
+SUMMARY:SNH48 星梦剧院公演
+LOCATION:SNH48星梦剧院 嘉兴路267号(近哈尔滨路)
+DESCRIPTION:音乐会 | 时间：2026.11.19 - 11.29 19:30 | 场馆：SNH48星梦剧院 嘉兴路267号(近哈尔滨路
+ ) | 票价：118.00元起 | 9人参加 9人感兴趣
+URL:https://www.douban.com/event/37630552/
+END:VEVENT
+BEGIN:VEVENT
+UID:ca5b81bb73e90028@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270101
+SUMMARY:[周中特惠] 《我的世界-实境探险》
+LOCATION:我的世界·实境探险
+DESCRIPTION:展览 | 时间：2026.11.19 - 12.31 | 场馆：我的世界·实境探险 | 票价：￥128 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/517990
+END:VEVENT
+BEGIN:VEVENT
+UID:faa16983b23d33a8@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261201
+SUMMARY:[大笑喜剧] 南京东路店人民广场脱口秀周一至周日｜综艺卡司｜吐槽爆笑大会｜开心互动｜即兴之夜精品秀
+LOCATION:大笑脱口秀俱乐部-人民广场店
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.30 | 场馆：大笑脱口秀俱乐部-人民广场店 | 票价：￥5起 | 猫眼评
+ 分 9.9
+URL:https://www.gewara.com/detail/512575
+END:VEVENT
+BEGIN:VEVENT
+UID:07744dfb4cd752ac@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270104
+SUMMARY:[部分场次380起]浸入式音乐秀《双城之战》Immersive Arcane
+LOCATION:浸入式音乐秀《双城之战》Immersive Arcane
+DESCRIPTION:话剧 | 时间：2026.11.19 - 2027.01.03 | 场馆：浸入式音乐秀《双城之战》Immersive Arc
+ ane | 票价：￥380起 | 猫眼评分 9.7
+URL:https://www.gewara.com/detail/455744
+END:VEVENT
+BEGIN:VEVENT
+UID:4787d3de632ae2e1@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:《王汝刚从艺五十周年演出》
+LOCATION:天蟾逸夫舞台
+DESCRIPTION:戏曲 | 时间：2026.11.19 | 场馆：天蟾逸夫舞台 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/509599
+END:VEVENT
+BEGIN:VEVENT
+UID:6fc6412f27cd8331@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20270102T213000
+SUMMARY:「71特别秀」沪语/普通话脱口秀•SpicyComedy
+LOCATION:SpicyComedy-滨港商业中心店
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 2027.01.02 19:30 | 场馆：SpicyComedy-滨港商业中心
+ 店 | 票价：￥228起 | 猫眼评分 9.8
+URL:https://www.gewara.com/detail/417820
+END:VEVENT
+BEGIN:VEVENT
+UID:c7a122a9185771a4@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20270102T213000
+SUMMARY:「71特别秀」沪语/普通话脱口秀•SpicyComedy
+LOCATION:SpicyComedy-滨港商业中心店 四川北路939号滨港商业中心5层1508单元
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 2027.01.02 19:30 | 场馆：SpicyComedy-滨港商业中心
+ 店 四川北路939号滨港商业中心5层1508单元 | 票价：228.0元起 | 9人参加 5人感兴趣
+URL:https://www.douban.com/event/37756152/
+END:VEVENT
+BEGIN:VEVENT
+UID:60cf40d2ce726775@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20261122T213000
+SUMMARY:【RAYGAME出品】原创沉浸式光影戏剧《红线II Filo Rosso》
+LOCATION:上海PLUTOROSSO音乐现场
+DESCRIPTION:舞蹈 | 时间：2026.11.19 - 11.22 19:30 | 场馆：上海PLUTOROSSO音乐现场 | 票价：￥2
+ 88起 | 猫眼评分 9.8
+URL:https://www.gewara.com/detail/510156
+END:VEVENT
+BEGIN:VEVENT
+UID:e77143da9f29f454@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20261122T213000
+SUMMARY:【RAYGAME出品】原创沉浸式光影戏剧《红线II Filo Rosso》
+LOCATION:上海PLUTOROSSO音乐现场 淮海中路728号龙凤·PRSCO五楼05室
+DESCRIPTION:话剧 | 时间：2026.11.19 - 11.22 19:30 | 场馆：上海PLUTOROSSO音乐现场 淮海中路728
+ 号龙凤·PRSCO五楼05室 | 票价：288.0元起 | 2人参加 1人感兴趣
+URL:https://www.douban.com/event/38081963/
+END:VEVENT
+BEGIN:VEVENT
+UID:a045b38b1305a368@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T143000
+DTEND;TZID=Asia/Shanghai:20261130T163000
+SUMMARY:【买一送一限量特惠】人民广场脱口秀【魔脱喜剧】周一至周日每天三场丨爆笑精品秀解压脱口秀喜剧大会
+LOCATION:魔脱喜剧-人民广场店
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.30 14:30 | 场馆：魔脱喜剧-人民广场店 | 票价：￥5起 | 猫
+ 眼评分 9.9
+URL:https://www.gewara.com/detail/492451
+END:VEVENT
+BEGIN:VEVENT
+UID:ccbde3021535c058@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T143000
+DTEND;TZID=Asia/Shanghai:20261130T163000
+SUMMARY:【买一送一限量特惠】人民广场脱口秀【魔脱喜剧】周一至周日每天三场丨爆笑精品秀解压脱口秀喜剧大会
+LOCATION:魔脱喜剧-人民广场店 南京西路388号仙乐斯广场406——人民广场地铁站11号口步行360米
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.30 14:30 | 场馆：魔脱喜剧-人民广场店 南京西路388号仙乐斯广
+ 场406——人民广场地铁站11号口步行360米 | 票价：5.00元起 | 1人参加 1人感兴趣
+URL:https://www.douban.com/event/37896783/
+END:VEVENT
+BEGIN:VEVENT
+UID:664afbd84cc844a7@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270104
+SUMMARY:【千场沉浸 入沪必看】罗生门悬疑音乐剧《FLAMES火焰》｜钢琴大提琴现场live伴奏
+LOCATION:缪时客·月光下小剧场
+DESCRIPTION:音乐剧 | 时间：2026.11.19 - 2027.01.03 | 场馆：缪时客·月光下小剧场 | 票价：￥199起 | 
+ 猫眼评分 9.6
+URL:https://www.gewara.com/detail/488204
+END:VEVENT
+BEGIN:VEVENT
+UID:6819bf8c7d6dc23c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T143000
+DTEND;TZID=Asia/Shanghai:20270131T163000
+SUMMARY:【古风玄幻】《寒鸦镇》沉浸式剧场【视觉奇观】【玄幻氛围】【机关互动】
+LOCATION:暴风岛沉浸式体验馆-打浦桥店 徐家汇路618号日月光中心五楼
+DESCRIPTION:展览 | 时间：2026.11.19 - 2027.01.31 14:30 | 场馆：暴风岛沉浸式体验馆-打浦桥店 徐家汇路
+ 618号日月光中心五楼 | 票价：498.00元 | 1人参加 0人感兴趣
+URL:https://www.douban.com/event/37698704/
+END:VEVENT
+BEGIN:VEVENT
+UID:35b002a22f71a394@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T141000
+DTEND;TZID=Asia/Shanghai:20270131T161000
+SUMMARY:【悬疑推理】《无人生还》沉浸式互动剧场【角色扮演】【机制创新】【隐藏悬念】
+LOCATION:暴风岛沉浸式体验馆-打浦桥店 徐家汇路618号日月光中心五楼
+DESCRIPTION:展览 | 时间：2026.11.19 - 2027.01.31 14:10 | 场馆：暴风岛沉浸式体验馆-打浦桥店 徐家汇路
+ 618号日月光中心五楼 | 票价：458.00元 | 2人参加 0人感兴趣
+URL:https://www.douban.com/event/37317849/
+END:VEVENT
+BEGIN:VEVENT
+UID:97cb70630f8c53cb@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20261231T213000
+SUMMARY:【肆笑】脱口秀综艺卡司丨小四爷/继业/林琛/吴鼎/翟小明/小橘/热8丨盲盒秀丨沪语&普通话@南京东路店
+LOCATION:肆笑喜剧脱口秀丨南京东路外滩店
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 12.31 19:30 | 场馆：肆笑喜剧脱口秀丨南京东路外滩店 | 票价：￥9
+ .9起 | 猫眼评分 9.8
+URL:https://www.gewara.com/detail/376746
+END:VEVENT
+BEGIN:VEVENT
+UID:8f85efdeeec3d69a@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20261231T213000
+SUMMARY:【肆笑】脱口秀综艺卡司丨小四爷/继业/林琛/吴鼎/翟小明/小橘/热8丨盲盒秀丨沪语&普通话@南京东路店
+LOCATION:肆笑喜剧脱口秀丨南京东路外滩店 南京东路479号U479商场4楼
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 12.31 19:30 | 场馆：肆笑喜剧脱口秀丨南京东路外滩店 南京东路479
+ 号U479商场4楼 | 票价：120.00元 | 6人参加 2人感兴趣
+URL:https://www.douban.com/event/36896098/
+END:VEVENT
+BEGIN:VEVENT
+UID:0f6ec4c850683606@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270101
+SUMMARY:【肆笑喜剧】【贰叁叁】丨南京东路丨爆笑脱口秀丨开放麦 | 轻松解压丨情侣约会丨双人特惠
+LOCATION:U479剧场
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 12.31 | 场馆：U479剧场 | 票价：￥39起 | 猫眼评分 9.7
+URL:https://www.gewara.com/detail/225986
+END:VEVENT
+BEGIN:VEVENT
+UID:1098476f6c473454@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261214
+SUMMARY:上海·悬疑喜剧《谋杀预告》丨英式推理&法式心理悬疑丨互动叙事丨心理博弈丨爆笑反转丨全员恶人炸裂开演
+LOCATION:adult SoDA 沉浸喜剧空间
+DESCRIPTION:话剧 | 时间：2026.11.19 - 12.13 | 场馆：adult SoDA 沉浸喜剧空间 | 票价：￥199起 |
+  猫眼评分 9.9
+URL:https://www.gewara.com/detail/516584
+END:VEVENT
+BEGIN:VEVENT
+UID:57c14f755ef4ecb3@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270104
+SUMMARY:上海《魔法少女小圆》15周年纪念特展
+LOCATION:e展空间
+DESCRIPTION:展览 | 时间：2026.11.19 - 2027.01.03 10:0 | 场馆：e展空间 | 票价：￥98起 | 猫眼评
+ 分 0.0
+URL:https://www.gewara.com/detail/508724
+END:VEVENT
+BEGIN:VEVENT
+UID:93234fe424d00289@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270104
+SUMMARY:上海《魔法少女小圆》15周年纪念特展
+LOCATION:e展空间 南京西路2号-68号上海新世界城11楼
+DESCRIPTION:展览 | 时间：2026.11.19 - 2027.01.03 10:0 | 场馆：e展空间 南京西路2号-68号上海新世界
+ 城11楼 | 票价：98.0元 | 0人参加 1人感兴趣
+URL:https://www.douban.com/event/38074858/
+END:VEVENT
+BEGIN:VEVENT
+UID:1de693d9f8909d80@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261201
+SUMMARY:上海人民广场脱口秀｜喜剧部落精品场｜外滩网红周一到周日每天4场｜场场爆满｜轻松解压（人民广场店）
+LOCATION:咯吱喜剧商店
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.30 | 场馆：咯吱喜剧商店 | 票价：￥69起 | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/501588
+END:VEVENT
+BEGIN:VEVENT
+UID:4f18a5cfcc5bfd96@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261201
+SUMMARY:上海外滩爆笑气味戏剧《死无对证》沉浸式演出 | 原创经典ip版权
+LOCATION:次乐元空间 小东门街道中华路528号3层9309室(黄浦区融创外滩1号汇三楼次乐元空间)
+DESCRIPTION:话剧 | 时间：2026.11.19 - 11.30 15:0 | 场馆：次乐元空间 小东门街道中华路528号3层9309室
+ (黄浦区融创外滩1号汇三楼次乐元空间) | 票价：30.00元起 | 3人参加 0人感兴趣
+URL:https://www.douban.com/event/37929881/
+END:VEVENT
+BEGIN:VEVENT
+UID:1d3d2e3fb8079d7e@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261201
+SUMMARY:上海脱口秀｜喜剧部落精品场｜外滩网红打卡｜轻松解压
+LOCATION:咯吱喜剧商店
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.30 | 场馆：咯吱喜剧商店 | 票价：￥69起 | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/519891
+END:VEVENT
+BEGIN:VEVENT
+UID:689f1946ed3bb6cc@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:上海音乐学院学科建设成果展演季 暨2026上音歌剧院秋季演出季 2026上海当代音乐周 声乐与电影音乐作品音乐会
+LOCATION:上音歌剧院
+DESCRIPTION:音乐会 | 时间：2026.11.19 | 场馆：上音歌剧院 | 票价：￥30起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518193
+END:VEVENT
+BEGIN:VEVENT
+UID:fb5e59fce6e7bcf2@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20261130T213000
+SUMMARY:上海首创16种结局悬疑《法外狂徒》｜沉浸式局中剧中局｜上帝视角观影体验
+LOCATION:阴阳club 南昌路125号(近茂名路)负一层
+DESCRIPTION:话剧 | 时间：2026.11.19 - 11.30 19:30 | 场馆：阴阳club 南昌路125号(近茂名路)负一层 
+ | 票价：30.00元起 | 1人参加 6人感兴趣
+URL:https://www.douban.com/event/37851175/
+END:VEVENT
+BEGIN:VEVENT
+UID:ef68f613053a7f16@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261201
+SUMMARY:南京东路店人民广场脱口秀周一至周日｜综艺卡司｜吐槽爆笑大会｜开心互动｜[大笑喜剧] 即兴之夜精品秀
+LOCATION:大笑脱口秀俱乐部-人民广场店 南京东路792号第一百货商场c馆二楼
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.30 14:0 | 场馆：大笑脱口秀俱乐部-人民广场店 南京东路792号第
+ 一百货商场c馆二楼 | 票价：5.0元起 | 1人参加 0人感兴趣
+URL:https://www.douban.com/event/38069986/
+END:VEVENT
+BEGIN:VEVENT
+UID:bffbfc7a7c181c33@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261221
+SUMMARY:南京东路环人广｜悬疑互动经典IP《孤岛逃生》十周年上海站｜沉浸式推理｜观众投票抉择式互动剧场｜南京路步行街
+LOCATION:咯吱沉浸剧场
+DESCRIPTION:话剧 | 时间：2026.11.19 - 12.20 | 场馆：咯吱沉浸剧场 | 票价：￥25.5起 | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/517371
+END:VEVENT
+BEGIN:VEVENT
+UID:d3b989e08ccf6737@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261221
+SUMMARY:南京路爆款｜首创科幻沉浸式悬疑《人工智能杀人案》｜平行时空｜轮回式结构｜孤岛逃生｜人类结局由你定义
+LOCATION:咯吱沉浸剧场
+DESCRIPTION:话剧 | 时间：2026.11.19 - 12.20 | 场馆：咯吱沉浸剧场 | 票价：￥25.5起 | 猫眼评分 9.8
+URL:https://www.gewara.com/detail/517389
+END:VEVENT
+BEGIN:VEVENT
+UID:13b3b9a9546803ed@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20261227T213000
+SUMMARY:原版音乐剧《剧院魅影》四十周年上海告别季
+LOCATION:上海大剧院
+DESCRIPTION:音乐剧 | 时间：2026.11.19 - 12.27 19:30 | 场馆：上海大剧院 | 票价：￥280起 | 猫眼评分
+  0.0
+URL:https://www.gewara.com/detail/479752
+END:VEVENT
+BEGIN:VEVENT
+UID:8e743f5b8593511a@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20261227T213000
+SUMMARY:原版音乐剧《剧院魅影》四十周年上海告别季
+LOCATION:上海大剧院 南京东路街道人民大道300号(近人民广场)
+DESCRIPTION:音乐剧 | 时间：2026.11.19 - 12.27 19:30 | 场馆：上海大剧院 南京东路街道人民大道300号(近人
+ 民广场) | 票价：280.0元起 | 4人参加 13人感兴趣
+URL:https://www.douban.com/event/37858471/
+END:VEVENT
+BEGIN:VEVENT
+UID:b0532e30bab07288@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261207
+SUMMARY:喜剧联盒国明星综艺卡司秀盲盒秀 | Storm/李文/Seven/于渤领衔@喜联空间
+LOCATION:喜联空间·新天地
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 12.06 19:0 | 场馆：喜联空间·新天地 | 票价：￥39起 | 猫眼评
+ 分 9.8
+URL:https://www.gewara.com/detail/467138
+END:VEVENT
+BEGIN:VEVENT
+UID:973b644ececb347f@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261207
+SUMMARY:喜剧联盒国明星综艺卡司秀盲盒秀 | Storm/李文/Seven/于渤领衔@喜联空间
+LOCATION:喜联空间·新天地 湖滨路168号无限极荟2楼
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 12.06 19:0 | 场馆：喜联空间·新天地 湖滨路168号无限极荟2楼 |
+  票价：69.00元起 | 1人参加 1人感兴趣
+URL:https://www.douban.com/event/37743227/
+END:VEVENT
+BEGIN:VEVENT
+UID:1b69178be0eea261@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261123
+SUMMARY:女性反乌托邦音乐剧《奇美拉》
+LOCATION:上海艺海剧院
+DESCRIPTION:音乐剧 | 时间：2026.11.19 - 11.22 | 场馆：上海艺海剧院 | 票价：￥199起 | 猫眼评分 9.6
+URL:https://www.gewara.com/detail/500764
+END:VEVENT
+BEGIN:VEVENT
+UID:09ba825afd6521a0@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270201
+SUMMARY:沉浸式原创音乐剧《冈格尼尔》
+LOCATION:星空间25号·临窗小剧场
+DESCRIPTION:音乐剧 | 时间：2026.11.19 - 2027.01.31 | 场馆：星空间25号·临窗小剧场 | 票价：￥199起 
+ | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/501047
+END:VEVENT
+BEGIN:VEVENT
+UID:21346c2ddf83dab6@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270201
+SUMMARY:沉浸式原创音乐剧《雕像》
+LOCATION:星空间1794号·临窗小剧场
+DESCRIPTION:音乐剧 | 时间：2026.11.19 - 2027.01.31 | 场馆：星空间1794号·临窗小剧场 | 票价：￥199
+ 起 | 猫眼评分 9.4
+URL:https://www.gewara.com/detail/410371
+END:VEVENT
+BEGIN:VEVENT
+UID:67363d1aedc1cb41@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270104
+SUMMARY:沉浸式惊悚悬疑音乐剧《幽灵》
+LOCATION:沉浸式惊悚悬疑音乐剧《幽灵》
+DESCRIPTION:音乐剧 | 时间：2026.11.19 - 2027.01.03 | 场馆：沉浸式惊悚悬疑音乐剧《幽灵》 | 票价：￥199
+ 起 | 猫眼评分 9.4
+URL:https://www.gewara.com/detail/391978
+END:VEVENT
+BEGIN:VEVENT
+UID:538c8b0cab84bd94@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261214
+SUMMARY:爆款巡演|烧脑推理沉浸式《罪恶滔天》戏剧节金奖|深度互动|高能反转|上台审讯|i人友好|团建聚会
+LOCATION:喜剧玩家
+DESCRIPTION:话剧 | 时间：2026.11.19 - 12.13 | 场馆：喜剧玩家 | 票价：￥25.5起 | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/490431
+END:VEVENT
+BEGIN:VEVENT
+UID:1e80607c06c2c6bb@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270101
+SUMMARY:爆笑悬疑喜剧《神机庙算》高口碑热销｜致命惊悚博弈｜智斗骗局谁是赢家？
+LOCATION:加场戏剧
+DESCRIPTION:话剧 | 时间：2026.11.19 - 12.31 | 场馆：加场戏剧 | 票价：￥99起 | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/514665
+END:VEVENT
+BEGIN:VEVENT
+UID:cbafaa1781b79264@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20261129T213000
+SUMMARY:玫瑰奇迹·沉浸式近景魔术秀！Jason·林冠廷·饼饼·Laurn专场！见证奇迹！相约浪漫！
+LOCATION:玫瑰奇迹·沉浸式魔术剧场
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.29 19:30 | 场馆：玫瑰奇迹·沉浸式魔术剧场 | 票价：￥150起
+  | 猫眼评分 9.8
+URL:https://www.gewara.com/detail/432003
+END:VEVENT
+BEGIN:VEVENT
+UID:814a5db7a972f09c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20261129T213000
+SUMMARY:玫瑰奇迹·沉浸式近景魔术秀！Jason·林冠廷·饼饼·Laurn专场！见证奇迹！相约浪漫！
+LOCATION:玫瑰奇迹·沉浸式魔术剧场 徐家汇路268号Luone凯德晶萃广场L5-13
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.29 19:30 | 场馆：玫瑰奇迹·沉浸式魔术剧场 徐家汇路268号Lu
+ one凯德晶萃广场L5-13 | 票价：218.00元 | 2人参加 1人感兴趣
+URL:https://www.douban.com/event/37593360/
+END:VEVENT
+BEGIN:VEVENT
+UID:597b1e419d8f4abc@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261201
+SUMMARY:环人广必看沉浸式戏剧 ｜沪版《胡闹厨房 》｜爆款热销｜喜人同款
+LOCATION:半笑酒馆
+DESCRIPTION:话剧 | 时间：2026.11.19 - 11.30 | 场馆：半笑酒馆 | 票价：￥188起 | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/510408
+END:VEVENT
+BEGIN:VEVENT
+UID:62270267b53eb5c6@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T193000
+DTEND;TZID=Asia/Shanghai:20261122T213000
+SUMMARY:脱轨爱情喜剧《先这样吧，爸爸》
+LOCATION:茉莉花剧场 北海路247号
+DESCRIPTION:话剧 | 时间：2026.11.19 - 11.22 19:30 | 场馆：茉莉花剧场 北海路247号 | 票价：80.0元
+ 起 | 0人参加 3人感兴趣
+URL:https://www.douban.com/event/38002482/
+END:VEVENT
+BEGIN:VEVENT
+UID:e91398af3f75cb7c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270112
+SUMMARY:荒诞幽默沉浸剧《绝逗野马镇》【喝酒吃肉、斗舞决斗，解锁你的荒诞西部人生】【打工赚钱】【喝酒吃肉】【喜剧氛围】
+LOCATION:暴风岛沉浸式体验馆-百联世纪店 世纪大道百联世纪购物中心三楼
+DESCRIPTION:展览 | 时间：2026.11.19 - 2027.01.11 13:0 | 场馆：暴风岛沉浸式体验馆-百联世纪店 世纪大道
+ 百联世纪购物中心三楼 | 票价：498.00元 | 1人参加 2人感兴趣
+URL:https://www.douban.com/event/37317463/
+END:VEVENT
+BEGIN:VEVENT
+UID:8b7bfbbab66f87ad@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261130
+SUMMARY:话剧《父亲》Le Père by Florian Zeller
+LOCATION:上海话剧艺术中心
+DESCRIPTION:话剧 | 时间：2026.11.19 - 11.29 | 场馆：上海话剧艺术中心 | 票价：￥280起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/500399
+END:VEVENT
+BEGIN:VEVENT
+UID:f264995f9d139d96@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261130
+SUMMARY:趣听喜剧｜爆笑盲盒脱口秀 11月
+LOCATION:上海西岸大剧院
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.29 | 场馆：上海西岸大剧院 | 票价：￥0起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/515900
+END:VEVENT
+BEGIN:VEVENT
+UID:8bb8313b86551e8b@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T143000
+DTEND;TZID=Asia/Shanghai:20261130T163000
+SUMMARY:限量特惠买一送一丨人民广场脱口秀丨魔脱喜剧丨周一至周日每天三场丨爆笑精品秀解压脱口秀喜剧大会
+LOCATION:魔脱喜剧-人民广场店
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.30 14:30 | 场馆：魔脱喜剧-人民广场店 | 票价：￥5起 | 猫
+ 眼评分 9.9
+URL:https://www.gewara.com/detail/509248
+END:VEVENT
+BEGIN:VEVENT
+UID:04ac3c59defae401@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261119T143000
+DTEND;TZID=Asia/Shanghai:20261130T163000
+SUMMARY:限量特惠买一送一丨人民广场脱口秀丨魔脱喜剧丨周一至周日每天三场丨爆笑精品秀解压脱口秀喜剧大会
+LOCATION:魔脱喜剧-人民广场店 南京西路388号仙乐斯广场406——人民广场地铁站11号口步行360米
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.30 14:30 | 场馆：魔脱喜剧-人民广场店 南京西路388号仙乐斯广
+ 场406——人民广场地铁站11号口步行360米 | 票价：5.0元起 | 0人参加 1人感兴趣
+URL:https://www.douban.com/event/38074995/
+END:VEVENT
+BEGIN:VEVENT
+UID:f013d710ca06dffe@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261201
+SUMMARY:零距离！互动破案！《暴雨将至2》环境式悬疑剧
+LOCATION:喜梦盒剧场
+DESCRIPTION:话剧 | 时间：2026.11.19 - 11.30 | 场馆：喜梦盒剧场 | 票价：￥198起 | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/505375
+END:VEVENT
+BEGIN:VEVENT
+UID:d27405fc1431a1a6@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261201
+SUMMARY:魔都人民广场脱口秀｜喜剧部落精品场｜外滩网红周一到周日每天4场｜场场爆满｜轻松解压（人民广场店）
+LOCATION:咯吱喜剧商店
+DESCRIPTION:脱口秀 | 时间：2026.11.19 - 11.30 | 场馆：咯吱喜剧商店 | 票价：￥69起 | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/508860
+END:VEVENT
+BEGIN:VEVENT
+UID:27e2eceb6ce257e9@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20270101
+SUMMARY:71/Norah领衔 精选脱口秀拼盘 by SpicyComedy
+LOCATION:SpicyComedy-滨港商业中心店
+DESCRIPTION:脱口秀 | 时间：2026.11.20 - 12.31 | 场馆：SpicyComedy-滨港商业中心店 | 票价：￥150
+ 起 | 猫眼评分 9.8
+URL:https://www.gewara.com/detail/431629
+END:VEVENT
+BEGIN:VEVENT
+UID:51867969c9bc36b4@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261216
+SUMMARY:C罗博物馆
+LOCATION:C罗博物馆
+DESCRIPTION:展览 | 时间：2026.11.20 - 12.15 | 场馆：C罗博物馆 | 票价：￥117起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/515404
+END:VEVENT
+BEGIN:VEVENT
+UID:4812b02e7053c2ed@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261120T193000
+DTEND;TZID=Asia/Shanghai:20261129T213000
+SUMMARY:[笑到失控] 爆笑喜剧《连载不要停》｜90分钟事故不断，笑点不断
+LOCATION:沉浸式即兴互动喜剧剧场—草台嘻班 四川北路939号滨港商业中心L2层1228单元
+DESCRIPTION:话剧 | 时间：2026.11.20 - 11.29 19:30 | 场馆：沉浸式即兴互动喜剧剧场—草台嘻班 四川北路939
+ 号滨港商业中心L2层1228单元 | 票价：99.0元起 | 4人参加 2人感兴趣
+URL:https://www.douban.com/event/37873355/
+END:VEVENT
+BEGIN:VEVENT
+UID:aff3911491e26ec5@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20270101
+SUMMARY:《花见小馆谋杀事件》环人广｜基尼斯话剧金榜｜沉浸式悬疑庭审剧｜层层反转｜推理戏剧｜超强阵容｜爆笑互动｜真人RPG游戏体验
+LOCATION:半笑空间
+DESCRIPTION:话剧 | 时间：2026.11.20 - 12.31 | 场馆：半笑空间 | 票价：￥30起 | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/490964
+END:VEVENT
+BEGIN:VEVENT
+UID:7096f970a10a35ed@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20270104
+SUMMARY:『爆笑互动』【浦东航头店】本地话脱口秀 · 周然专场【银河喜剧】
+LOCATION:GALAXY COMEDY
+DESCRIPTION:脱口秀 | 时间：2026.11.20 - 2027.01.03 | 场馆：GALAXY COMEDY | 票价：￥158起
+  | 猫眼评分 9.8
+URL:https://www.gewara.com/detail/474054
+END:VEVENT
+BEGIN:VEVENT
+UID:a464d880a5f9079b@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261120T193000
+DTEND;TZID=Asia/Shanghai:20261206T213000
+SUMMARY:【上海必玩】惊悚鬼混沉浸式《开关SWITCH》
+LOCATION:惊悚鬼混沉浸式笑场《开关SWITCH》
+DESCRIPTION:展览 | 时间：2026.11.20 - 12.06 19:30 | 场馆：惊悚鬼混沉浸式笑场《开关SWITCH》 | 票价
+ ：￥98起 | 猫眼评分 9.5
+URL:https://www.gewara.com/detail/395150
+END:VEVENT
+BEGIN:VEVENT
+UID:5e3316c169cbf75c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261120T193000
+DTEND;TZID=Asia/Shanghai:20261206T213000
+SUMMARY:【上海必玩】惊悚鬼混沉浸式《开关SWITCH》
+LOCATION:惊悚鬼混沉浸式笑场《开关SWITCH》 西藏南路1号上海大世界2楼·B厅
+DESCRIPTION:展览 | 时间：2026.11.20 - 12.06 19:30 | 场馆：惊悚鬼混沉浸式笑场《开关SWITCH》 西藏南路
+ 1号上海大世界2楼·B厅 | 票价：98.00元起 | 0人参加 4人感兴趣
+URL:https://www.douban.com/event/37473296/
+END:VEVENT
+BEGIN:VEVENT
+UID:36a72282115af0f5@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261120T193000
+DTEND;TZID=Asia/Shanghai:20261231T213000
+SUMMARY:【年度金奖】高口碑必看!环境式光影艺术悬疑剧《禁忌的色彩》
+LOCATION:RAYGAME CLUB·剧场
+DESCRIPTION:话剧 | 时间：2026.11.20 - 12.31 19:30 | 场馆：RAYGAME CLUB·剧场 | 票价：￥13
+ 1.6起 | 猫眼评分 9.7
+URL:https://www.gewara.com/detail/391445
+END:VEVENT
+BEGIN:VEVENT
+UID:8b88d33512a20f69@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261120T193000
+DTEND;TZID=Asia/Shanghai:20261129T213000
+SUMMARY:【年度金奖】高口碑必看!环境式光影艺术悬疑剧《禁忌的色彩》
+LOCATION:RAYGAME CLUB·剧场 马当路453号L219室
+DESCRIPTION:话剧 | 时间：2026.11.20 - 11.29 19:30 | 场馆：RAYGAME CLUB·剧场 马当路453号L
+ 219室 | 票价：188.0元起 | 0人参加 2人感兴趣
+URL:https://www.douban.com/event/37427262/
+END:VEVENT
+BEGIN:VEVENT
+UID:afce73306952629c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261129
+SUMMARY:【普通话/上海话】Storm/于渤/李文领衔 | 明星季综艺卡司盲盒秀-喜剧联盒国@尽情空间
+LOCATION:尽情空间
+DESCRIPTION:脱口秀 | 时间：2026.11.20 - 11.28 | 场馆：尽情空间 | 票价：￥39起 | 猫眼评分 9.5
+URL:https://www.gewara.com/detail/473529
+END:VEVENT
+BEGIN:VEVENT
+UID:b9989b385d86e039@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261210
+SUMMARY:上海欢乐谷【凭身份证入场】
+LOCATION:上海欢乐谷 林湖路888号
+DESCRIPTION:展览 | 时间：2026.11.20 - 12.09 08:0 | 场馆：上海欢乐谷 林湖路888号 | 票价：199.00
+ 元起 | 1人参加 0人感兴趣
+URL:https://www.douban.com/event/37714231/
+END:VEVENT
+BEGIN:VEVENT
+UID:451451328f21b34f@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20270101
+SUMMARY:全家都能看的脱口秀·【喜剧全家桶】
+LOCATION:品空间·虹口店
+DESCRIPTION:脱口秀 | 时间：2026.11.20 - 12.31 | 场馆：品空间·虹口店 | 票价：￥79起 | 猫眼评分 9.1
+URL:https://www.gewara.com/detail/491807
+END:VEVENT
+BEGIN:VEVENT
+UID:b52e27e467205c0b@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20270104
+SUMMARY:原创爆笑奇幻音乐剧《邦尼帮你》-来音乐剧的现场过生日吧
+LOCATION:邦尼剧场
+DESCRIPTION:音乐剧 | 时间：2026.11.20 - 2027.01.03 | 场馆：邦尼剧场 | 票价：￥199起 | 猫眼评分 9
+ .9
+URL:https://www.gewara.com/detail/467399
+END:VEVENT
+BEGIN:VEVENT
+UID:c1f40f5b069e4604@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261124
+SUMMARY:国际工艺创新博览会 REVELATIONS CHINA
+LOCATION:上海展览中心·展览馆
+DESCRIPTION:展览 | 时间：2026.11.20 - 11.23 | 场馆：上海展览中心·展览馆 | 票价：￥126 | 猫眼评分 0.
+ 0
+URL:https://www.gewara.com/detail/502841
+END:VEVENT
+BEGIN:VEVENT
+UID:07cfa9f292f64b33@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261120T193000
+DTEND;TZID=Asia/Shanghai:20261129T213000
+SUMMARY:开心麻花首部惊悚爆笑戏剧《开心聊斋·三生沉浸版》
+LOCATION:开心麻花大三角剧场
+DESCRIPTION:话剧 | 时间：2026.11.20 - 11.29 19:30 | 场馆：开心麻花大三角剧场 | 票价：￥108起 | 猫
+ 眼评分 9.3
+URL:https://www.gewara.com/detail/472391
+END:VEVENT
+BEGIN:VEVENT
+UID:f4949cefe97a5cc9@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261120T193000
+DTEND;TZID=Asia/Shanghai:20261129T213000
+SUMMARY:开心麻花首部惊悚爆笑戏剧《开心聊斋·三生沉浸版》
+LOCATION:开心麻花大三角剧场 龙腾大道2266号GateM西岸梦中心7栋3楼
+DESCRIPTION:话剧 | 时间：2026.11.20 - 11.29 19:30 | 场馆：开心麻花大三角剧场 龙腾大道2266号GateM
+ 西岸梦中心7栋3楼 | 票价：180.0元起 | 1人参加 1人感兴趣
+URL:https://www.douban.com/event/37792831/
+END:VEVENT
+BEGIN:VEVENT
+UID:64dd05b62968d227@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:张宇峰领衔主演 越剧《盘夫索夫》
+LOCATION:大零号湾文化艺术中心
+DESCRIPTION:戏曲 | 时间：2026.11.20 | 场馆：大零号湾文化艺术中心 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/507781
+END:VEVENT
+BEGIN:VEVENT
+UID:11bb730d6ba0b8bb@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:星光灿烂典藏版《女驸马》
+LOCATION:上海保利云间剧院
+DESCRIPTION:戏曲 | 时间：2026.11.20 | 场馆：上海保利云间剧院 | 票价：￥160起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/498451
+END:VEVENT
+BEGIN:VEVENT
+UID:c517caeabf92cac6@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261130
+SUMMARY:春晚魔术师领衔｜20万人亲测爆笑体验｜魔术脱口秀《男巫客厅》邓男子/Tony等
+LOCATION:上海共舞台
+DESCRIPTION:脱口秀 | 时间：2026.11.20 - 11.29 | 场馆：上海共舞台 | 票价：￥188起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/515699
+END:VEVENT
+BEGIN:VEVENT
+UID:0fe22d2ecac6fc85@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20270101
+SUMMARY:沉浸式悬念剧场《9号秘事》
+LOCATION:上海大剧院
+DESCRIPTION:话剧 | 时间：2026.11.20 - 12.31 | 场馆：上海大剧院 | 票价：￥239起 | 猫眼评分 9.1
+URL:https://www.gewara.com/detail/374137
+END:VEVENT
+BEGIN:VEVENT
+UID:e201b20ca34ba6e1@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261123
+SUMMARY:第二十五届中国上海国际艺术节参演剧目 原创芭蕾舞剧《寻找木卡姆》
+LOCATION:上海国际舞蹈中心
+DESCRIPTION:舞蹈 | 时间：2026.11.20 - 11.22 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/507526
+END:VEVENT
+BEGIN:VEVENT
+UID:468897e6a2d2db74@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20270104
+SUMMARY:耿子博导演作品 环境式沉浸舞蹈剧场《九尾古董店》
+LOCATION:环境式沉浸舞蹈剧场《九尾古董店》
+DESCRIPTION:舞蹈 | 时间：2026.11.20 - 2027.01.03 | 场馆：环境式沉浸舞蹈剧场《九尾古董店》 | 票价：￥20
+ 0起 | 猫眼评分 9.5
+URL:https://www.gewara.com/detail/381114
+END:VEVENT
+BEGIN:VEVENT
+UID:8c9dbcbf9fe03968@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20270104
+SUMMARY:耿子博导演作品 环境式沉浸舞蹈剧场《夜访德古拉》
+LOCATION:星空间5号·山眠剧场
+DESCRIPTION:舞蹈 | 时间：2026.11.20 - 2027.01.03 | 场馆：星空间5号·山眠剧场 | 票价：￥199起 | 猫
+ 眼评分 9.8
+URL:https://www.gewara.com/detail/503760
+END:VEVENT
+BEGIN:VEVENT
+UID:e3810a01e9c55071@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261120T194500
+DTEND;TZID=Asia/Shanghai:20261128T214500
+SUMMARY:趣听喜剧@YOUNG剧场|爆笑盲盒脱口秀拼盘秀
+LOCATION:YOUNG剧场 控江路1155号
+DESCRIPTION:脱口秀 | 时间：2026.11.20 - 11.28 19:45 | 场馆：YOUNG剧场 控江路1155号 | 票价：0
+ .0元起 | 0人参加 1人感兴趣
+URL:https://www.douban.com/event/37714216/
+END:VEVENT
+BEGIN:VEVENT
+UID:31a2ab69497b7705@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261123
+SUMMARY:金庸 · 新武侠舞剧《神雕侠侣》
+LOCATION:美琪大戏院
+DESCRIPTION:舞蹈 | 时间：2026.11.20 - 11.22 | 场馆：美琪大戏院 | 票价：￥126起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/514664
+END:VEVENT
+BEGIN:VEVENT
+UID:d9afb5e39e5b3d5d@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20270104
+SUMMARY:音乐剧《夜雨他时》
+LOCATION:星空间611号·禾剧场
+DESCRIPTION:音乐剧 | 时间：2026.11.20 - 2027.01.03 | 场馆：星空间611号·禾剧场 | 票价：￥199起 |
+  猫眼评分 9.1
+URL:https://www.gewara.com/detail/481617
+END:VEVENT
+BEGIN:VEVENT
+UID:f59f45dd6dc1c1ab@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261120T193000
+DTEND;TZID=Asia/Shanghai:20270103T213000
+SUMMARY:音乐剧《时光代理人》
+LOCATION:【时光剧场】音乐剧《时光代理人》 西藏南路一号大世界二楼E厅
+DESCRIPTION:音乐剧 | 时间：2026.11.20 - 2027.01.03 19:30 | 场馆：【时光剧场】音乐剧《时光代理人》 西
+ 藏南路一号大世界二楼E厅 | 票价：299.00元起 | 8人参加 8人感兴趣
+URL:https://www.douban.com/event/36314185/
+END:VEVENT
+BEGIN:VEVENT
+UID:1c5935bd5e3a3bae@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261130
+SUMMARY:魔术脱口秀丨超沉浸微剧场「奇遇剧场」沉浸式解压爆笑近景魔术主题秀《旮旯秀》
+LOCATION:魔术旮旯俱乐部
+DESCRIPTION:脱口秀 | 时间：2026.11.20 - 11.29 | 场馆：魔术旮旯俱乐部 | 票价：￥30起 | 猫眼评分 9.7
+URL:https://www.gewara.com/detail/511734
+END:VEVENT
+BEGIN:VEVENT
+UID:3ed87f4f9b102f1a@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261121T183000
+DTEND;TZID=Asia/Shanghai:20261128T203000
+SUMMARY:[青春无限乐团]“爱乐之城主题”世界影视作品曲目LALALAND三重奏烛光音乐会
+LOCATION:青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A
+DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 18:30 | 场馆：青春无限乐团烛光音乐会-上海广场店 淮海中路1
+ 38号上海广场2楼206A | 票价：298.00元起 | 0人参加 1人感兴趣
+URL:https://www.douban.com/event/37264238/
+END:VEVENT
+BEGIN:VEVENT
+UID:fa48efaa51c145a1@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:《“一夜鱼龙”跨界国风演唱会》—鲁肃和他的朋友们深夜京腔专场
+LOCATION:豫园·海上梨园
+DESCRIPTION:戏曲 | 时间：2026.11.21 | 场馆：豫园·海上梨园 | 票价：￥124.5起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/514330
+END:VEVENT
+BEGIN:VEVENT
+UID:9e713105fa48d778@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20270102
+SUMMARY:「Norah's Spicy Show•辣手秀」英文/沪语脱口秀•SpicyComedy特别秀
+LOCATION:SpicyComedy-新天地时尚一期店
+DESCRIPTION:脱口秀 | 时间：2026.11.21 - 2027.01.01 | 场馆：SpicyComedy-新天地时尚一期店 | 票
+ 价：￥268起 | 猫眼评分 9.7
+URL:https://www.gewara.com/detail/514467
+END:VEVENT
+BEGIN:VEVENT
+UID:fba9e2313d48e2e6@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261128
+SUMMARY:『爆笑互动』【静安大悦城】野师傅丨小马哥丨上海话纯享版丨野师傅拉缸秀丨【银河喜剧】
+LOCATION:银河喜剧脱口秀-静安大悦城店
+DESCRIPTION:脱口秀 | 时间：2026.11.21 - 11.27 | 场馆：银河喜剧脱口秀-静安大悦城店 | 票价：￥168起 | 猫
+ 眼评分 9.5
+URL:https://www.gewara.com/detail/447358
+END:VEVENT
+BEGIN:VEVENT
+UID:0d068de5f6caf235@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20270103
+SUMMARY:【全男班街舞舞剧】沉浸式驻场SHOW MUSICAL《洗车行》
+LOCATION:沉浸式全男班流行舞秀<洗车行>叶音导演 星空间
+DESCRIPTION:舞蹈 | 时间：2026.11.21 - 2027.01.02 | 场馆：沉浸式全男班流行舞秀<洗车行>叶音导演 星空间 |
+  票价：￥299起 | 猫眼评分 9.5
+URL:https://www.gewara.com/detail/443853
+END:VEVENT
+BEGIN:VEVENT
+UID:8cae751ecbd45d5e@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261129
+SUMMARY:【奇妙嘿夜】“海上钢琴师”“爱乐之城”“世界赠予我的”曲目主题烛光音乐会钢琴&大提琴演奏
+LOCATION:青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A
+DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 15:0 | 场馆：青春无限乐团烛光音乐会-上海广场店 淮海中路13
+ 8号上海广场2楼206A | 票价：388.00元起 | 0人参加 1人感兴趣
+URL:https://www.douban.com/event/37975994/
+END:VEVENT
+BEGIN:VEVENT
+UID:67f58535402d4328@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261121T183000
+DTEND;TZID=Asia/Shanghai:20261128T203000
+SUMMARY:【奇妙嘿夜】世界影视作品“LaLaLand”曲目钢琴小提琴大提琴演奏烛光音乐会
+LOCATION:青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A
+DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 18:30 | 场馆：青春无限乐团烛光音乐会-上海广场店 淮海中路1
+ 38号上海广场2楼206A | 票价：388.00元起 | 0人参加 1人感兴趣
+URL:https://www.douban.com/event/37975988/
+END:VEVENT
+BEGIN:VEVENT
+UID:003db11f70caed6d@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261121T183000
+DTEND;TZID=Asia/Shanghai:20261128T203000
+SUMMARY:【奇妙嘿夜】烛光音乐会LALALA ND爱乐之城影视金曲烛光音乐会钢琴&小提琴&大提琴演奏
+LOCATION:青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A
+DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 18:30 | 场馆：青春无限乐团烛光音乐会-上海广场店 淮海中路1
+ 38号上海广场2楼206A | 票价：388.00元起 | 1人参加 0人感兴趣
+URL:https://www.douban.com/event/37836333/
+END:VEVENT
+BEGIN:VEVENT
+UID:bc216aa57d2cb1de@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261129
+SUMMARY:【钢琴&大提琴】奇妙嘿夜烛光音乐会“海上钢琴师”主题演奏
+LOCATION:青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A
+DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 15:0 | 场馆：青春无限乐团烛光音乐会-上海广场店 淮海中路13
+ 8号上海广场2楼206A | 票价：388.00元起 | 1人参加 1人感兴趣
+URL:https://www.douban.com/event/37763104/
+END:VEVENT
+BEGIN:VEVENT
+UID:115fc9bfdd71580c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261129
+SUMMARY:【钢琴&大提琴】青春无限乐团烛光音乐会权力的游戏&诀别书曲目演出
+LOCATION:青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A
+DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 15:0 | 场馆：青春无限乐团烛光音乐会-上海广场店 淮海中路13
+ 8号上海广场2楼206A | 票价：488.00元起 | 0人参加 1人感兴趣
+URL:https://www.douban.com/event/37347039/
+END:VEVENT
+BEGIN:VEVENT
+UID:ffea6dbc53f62a33@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261121T202000
+DTEND;TZID=Asia/Shanghai:20261128T222000
+SUMMARY:【钢琴&小提琴】烛光音乐会“海上钢琴师”“爱乐之城”“加勒比海盗”曲目主题青春无限乐团
+LOCATION:青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A
+DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 20:20 | 场馆：青春无限乐团烛光音乐会-上海广场店 淮海中路1
+ 38号上海广场2楼206A | 票价：298.00元起 | 1人参加 0人感兴趣
+URL:https://www.douban.com/event/37236933/
+END:VEVENT
+BEGIN:VEVENT
+UID:2c2af40bb6677936@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:北欧极光乐团｜《爱乐之城》上映十周年纪念版——欧美经典电影金曲音乐会
+LOCATION:久事·上海商城剧院
+DESCRIPTION:音乐会 | 时间：2026.11.21 | 场馆：久事·上海商城剧院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/509669
+END:VEVENT
+BEGIN:VEVENT
+UID:a4e1c4c13132753c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261121T093000
+DTEND;TZID=Asia/Shanghai:20261227T113000
+SUMMARY:古影沉浸式互动游戏剧场 《1941·新和医院》
+LOCATION:古影沉浸式互动游戏剧场 《1941·新和医院》
+DESCRIPTION:展览 | 时间：2026.11.21 - 12.27 09:30 | 场馆：古影沉浸式互动游戏剧场 《1941·新和医院》 
+ | 票价：￥696起 | 猫眼评分 9.5
+URL:https://www.gewara.com/detail/382799
+END:VEVENT
+BEGIN:VEVENT
+UID:37b801e3d2a5b094@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261121T093000
+DTEND;TZID=Asia/Shanghai:20261227T113000
+SUMMARY:古影沉浸式互动游戏剧场 《1941·新和医院》
+LOCATION:古影沉浸式互动游戏剧场 《1941·新和医院》 沪闵路7388号4层G04-F04-1-034室（百联南方商场1区4层古影剧场）
+DESCRIPTION:展览 | 时间：2026.11.21 - 12.27 09:30 | 场馆：古影沉浸式互动游戏剧场 《1941·新和医院》 
+ 沪闵路7388号4层G04-F04-1-034室（百联南方商场1区4层古影剧场） | 票价：798.0元起 | 0人参加 1人感兴趣
+URL:https://www.douban.com/event/37462540/
+END:VEVENT
+BEGIN:VEVENT
+UID:c43063d952fbe736@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261129
+SUMMARY:奇妙嘿夜“海上钢琴师”“诀别书”“世界赠予我的”曲目主题烛光音乐会钢琴&大提琴演奏
+LOCATION:青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A
+DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 15:0 | 场馆：青春无限乐团烛光音乐会-上海广场店 淮海中路13
+ 8号上海广场2楼206A | 票价：198.0元起 | 0人参加 1人感兴趣
+URL:https://www.douban.com/event/38006413/
+END:VEVENT
+BEGIN:VEVENT
+UID:f2146e78905b7846@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261129
+SUMMARY:奇妙嘿夜烛光音乐会“爱乐之城”“一步之遥”“加勒比海盗”曲目钢琴小提琴大提琴演奏
+LOCATION:青春无限乐团烛光音乐会-上海广场店
+DESCRIPTION:音乐会 | 时间：2026.11.21 - 11.28 | 场馆：青春无限乐团烛光音乐会-上海广场店 | 票价：￥198起 
+ | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/514890
+END:VEVENT
+BEGIN:VEVENT
+UID:fee6287f70284e51@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261121T143000
+DTEND;TZID=Asia/Shanghai:20261129T163000
+SUMMARY:年度超口碑黑马·环境式国潮悬疑剧 《聊斋·浮生窃》 推理探案｜多重反转｜悬疑互动｜高能奇幻破案
+LOCATION:星空间888号·惊喜剧场 淮海中路街道淮海中路99号大上海时代广场B1楼
+DESCRIPTION:话剧 | 时间：2026.11.21 - 11.29 14:30 | 场馆：星空间888号·惊喜剧场 淮海中路街道淮海中路9
+ 9号大上海时代广场B1楼 | 票价：199.0元起 | 5人参加 4人感兴趣
+URL:https://www.douban.com/event/37868277/
+END:VEVENT
+BEGIN:VEVENT
+UID:1675255156176f31@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:庆祝上海评弹团成立75周年弹词流派演唱会
+LOCATION:凯迪拉克-上海音乐厅
+DESCRIPTION:戏曲 | 时间：2026.11.21 | 场馆：凯迪拉克-上海音乐厅 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/515965
+END:VEVENT
+BEGIN:VEVENT
+UID:6ab92e7b25839ea4@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:昆剧《牡丹亭》
+LOCATION:宛平剧院
+DESCRIPTION:戏曲 | 时间：2026.11.21 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/501211
+END:VEVENT
+BEGIN:VEVENT
+UID:a03a909bc1004399@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20270131
+SUMMARY:音乐剧《西西里的人鱼传说》
+LOCATION:时光剧场-大世界C厅
+DESCRIPTION:音乐剧 | 时间：2026.11.21 - 2027.01.30 | 场馆：时光剧场-大世界C厅 | 票价：￥198起 | 
+ 猫眼评分 0.0
+URL:https://www.gewara.com/detail/512230
+END:VEVENT
+BEGIN:VEVENT
+UID:5c7b2e5284876f71@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:《LA LA LAND爱乐之城》浪漫影视经典金曲交响音乐会
+LOCATION:上海保利大剧院
+DESCRIPTION:音乐会 | 时间：2026.11.22 | 场馆：上海保利大剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/515555
+END:VEVENT
+BEGIN:VEVENT
+UID:24bd91ffa1458e89@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:《终曲 未来》坂本龙一经典作品精选音乐会-上海站
+LOCATION:兰心大戏院
+DESCRIPTION:音乐会 | 时间：2026.11.22 | 场馆：兰心大戏院 | 票价：￥60起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/513258
+END:VEVENT
+BEGIN:VEVENT
+UID:dfb9d37d4d921fce@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261227
+SUMMARY:「一人一首成名曲」超燃回忆杀丨带爸妈听老歌丨80年代沉浸式音乐现场丨怀旧金曲丨新天地必看《时光唱片》
+LOCATION:高笑喜剧·New School
+DESCRIPTION:音乐会 | 时间：2026.11.22 - 12.26 | 场馆：高笑喜剧·New School | 票价：￥9.9起 | 
+ 猫眼评分 9.9
+URL:https://www.gewara.com/detail/499385
+END:VEVENT
+BEGIN:VEVENT
+UID:b47a80de05478392@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:京剧《秦香莲》
+LOCATION:天蟾逸夫舞台
+DESCRIPTION:戏曲 | 时间：2026.11.22 | 场馆：天蟾逸夫舞台 | 票价：￥80 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/515517
+END:VEVENT
+BEGIN:VEVENT
+UID:845d2eb3fc3536f1@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20270101
+SUMMARY:原创沉浸式荒诞音乐剧《破墙》
+LOCATION:星空间129号·夭蛾剧场
+DESCRIPTION:音乐剧 | 时间：2026.11.22 - 12.31 | 场馆：星空间129号·夭蛾剧场 | 票价：￥159.2起 | 猫
+ 眼评分 8.7
+URL:https://www.gewara.com/detail/451677
+END:VEVENT
+BEGIN:VEVENT
+UID:65ad6c467b1ccc5a@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261122T193000
+DTEND;TZID=Asia/Shanghai:20261122T213000
+SUMMARY:甜愈脱口秀登陆上海国际喜剧节｜黄小明×喜剧之王单口季
+LOCATION:南京东路635号永安百货3楼后区B15（咯吱喜剧商店）
+DESCRIPTION:脱口秀 | 时间：2026.11.22 19:30 | 场馆：南京东路635号永安百货3楼后区B15（咯吱喜剧商店） | 票
+ 价：180元(票价以大麦为准) | 1人参加 0人感兴趣
+URL:https://www.douban.com/event/38171925/
+END:VEVENT
+BEGIN:VEVENT
+UID:eb6efe284793de4f@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:第八届上海早期音乐节 叶斯廷·戴维斯演唱约翰·道兰丨上海交响乐团音乐季
+LOCATION:上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路)
+DESCRIPTION:音乐会 | 时间：2026.11.22 15:0 | 场馆：上海交响乐团音乐厅 湖南路街道复兴中路1380号(近宝庆路) |
+  票价：80.0元起 | 1人参加 1人感兴趣
+URL:https://www.douban.com/event/37901045/
+END:VEVENT
+BEGIN:VEVENT
+UID:679b94aceed4c87c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:金陵十二钗《梦系红楼》主题音乐会
+LOCATION:上海东方艺术中心
+DESCRIPTION:音乐会 | 时间：2026.11.22 | 场馆：上海东方艺术中心 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/511403
+END:VEVENT
+BEGIN:VEVENT
+UID:a804d2ef89110bc0@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261126
+SUMMARY:“杨派”经典沪剧《孤岛血泪》（公益场）
+LOCATION:天蟾逸夫舞台
+DESCRIPTION:戏曲 | 时间：2026.11.24 - 11.25 | 场馆：天蟾逸夫舞台 | 票价：￥50起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/515640
+END:VEVENT
+BEGIN:VEVENT
+UID:6602915d502d7109@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;TZID=Asia/Shanghai:20261125T103000
+DTEND;TZID=Asia/Shanghai:20261125T123000
+SUMMARY:Fotografiska展览通票 | 周三爵士之夜
+LOCATION:Fotografiska影像艺术中心单日通票 光复路127号
+DESCRIPTION:展览 | 时间：2026.11.25 10:30 | 场馆：Fotografiska影像艺术中心单日通票 光复路127号 |
+  票价：120.00元 | 7人参加 22人感兴趣
+URL:https://www.douban.com/event/36976894/
+END:VEVENT
+BEGIN:VEVENT
+UID:9e6f6644c595cef3@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20270101
+SUMMARY:【热8嘎三五】沪语互动秀｜肆笑喜剧@南京东路店
+LOCATION:肆笑喜剧脱口秀丨南京东路外滩店
+DESCRIPTION:脱口秀 | 时间：2026.11.25 - 12.31 | 场馆：肆笑喜剧脱口秀丨南京东路外滩店 | 票价：￥108起 | 
+ 猫眼评分 9.4
+URL:https://www.gewara.com/detail/465311
+END:VEVENT
+BEGIN:VEVENT
+UID:528dcd06a3c4933e@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:绍剧新版《火焰山》
+LOCATION:宛平剧院
+DESCRIPTION:戏曲 | 时间：2026.11.26 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518853
+END:VEVENT
+BEGIN:VEVENT
+UID:14e41a646d5c1913@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:四季：维瓦尔第 × 皮亚佐拉——西班牙皇家歌剧院独奏家乐团与莱蒂西亚·莫雷诺音乐会
+LOCATION:凯迪拉克-上海音乐厅
+DESCRIPTION:音乐会 | 时间：2026.11.27 | 场馆：凯迪拉克-上海音乐厅 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/512279
+END:VEVENT
+BEGIN:VEVENT
+UID:4f00dae247907757@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:安徽省黄梅戏剧院·经典黄梅戏《天仙配》
+LOCATION:大零号湾文化艺术中心
+DESCRIPTION:戏曲 | 时间：2026.11.27 | 场馆：大零号湾文化艺术中心 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/504572
+END:VEVENT
+BEGIN:VEVENT
+UID:29417ee7e40260bb@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261129
+SUMMARY:演艺大世界·第12届上海国际喜剧节展演剧目 锐锐脱口秀专场《爱，来不来2.0》
+LOCATION:白玉兰剧场
+DESCRIPTION:脱口秀 | 时间：2026.11.27 - 11.28 | 场馆：白玉兰剧场 | 票价：￥100起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/512895
+END:VEVENT
+BEGIN:VEVENT
+UID:0aafaa2d43602b43@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261129
+SUMMARY:重逢《牡丹亭》
+LOCATION:上海大歌剧院
+DESCRIPTION:戏曲 | 时间：2026.11.27 - 11.28 | 场馆：上海大歌剧院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/516075
+END:VEVENT
+BEGIN:VEVENT
+UID:0d4a12bd6087a37f@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:“纪念京剧大师袁世海诞辰110周年”系列演出上海站 京剧《连环套》
+LOCATION:天蟾逸夫舞台
+DESCRIPTION:戏曲 | 时间：2026.11.28 | 场馆：天蟾逸夫舞台 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/505946
+END:VEVENT
+BEGIN:VEVENT
+UID:768ddeb17cb9345f@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261130
+SUMMARY:《星河旅馆》 金承志与上海彩虹室内合唱团 2026-2027演出季上海音乐会
+LOCATION:上海东方艺术中心
+DESCRIPTION:音乐会 | 时间：2026.11.28 - 11.29 | 场馆：上海东方艺术中心 | 票价：￥480起 | 猫眼评分 0.
+ 0
+URL:https://www.gewara.com/detail/284179
+END:VEVENT
+BEGIN:VEVENT
+UID:7bc696875454cfc4@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:《沧海一声笑》金庸武侠影视金曲音乐会
+LOCATION:保利上海城市剧院
+DESCRIPTION:音乐会 | 时间：2026.11.28 | 场馆：保利上海城市剧院 | 票价：￥68起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/509812
+END:VEVENT
+BEGIN:VEVENT
+UID:e7b715d71cfad32a@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:「栖息之地」钱安琪生日音乐会-【缪时客出品】
+LOCATION:世界盒子剧场
+DESCRIPTION:音乐会 | 时间：2026.11.28 | 场馆：世界盒子剧场 | 票价：￥199起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518102
+END:VEVENT
+BEGIN:VEVENT
+UID:8cc8d842a9405fa0@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261231
+SUMMARY:【二狗推荐】一支麦爆笑脱口秀拼盘 | 上海站
+LOCATION:一支麦小剧场
+DESCRIPTION:脱口秀 | 时间：2026.11.28 - 12.30 | 场馆：一支麦小剧场 | 票价：￥88起 | 猫眼评分 9.4
+URL:https://www.gewara.com/detail/471336
+END:VEVENT
+BEGIN:VEVENT
+UID:73e4dbb73308b66d@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:绍剧《孙悟空三打白骨精》
+LOCATION:宛平剧院
+DESCRIPTION:戏曲 | 时间：2026.11.28 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518855
+END:VEVENT
+BEGIN:VEVENT
+UID:01bcbe0b762dc29c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:龙宝玲专场—《梅润申江·百载传歌》 纪念黄梅戏入城100年感恩演唱会
+LOCATION:豫园·海上梨园
+DESCRIPTION:戏曲 | 时间：2026.11.28 | 场馆：豫园·海上梨园 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/517279
+END:VEVENT
+BEGIN:VEVENT
+UID:9ebebc53e22642dd@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:“探索俄罗斯”音乐节——柴科夫斯基之夜 艺术总监:孔祥东 指挥:张亮 演奏:上海爱乐乐团
+LOCATION:上海东方艺术中心
+DESCRIPTION:音乐会 | 时间：2026.11.30 | 场馆：上海东方艺术中心 | 票价：￥50起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/517273
+END:VEVENT
+BEGIN:VEVENT
+UID:d44cd782f289334f@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261203
+SUMMARY:当代舞集锦《慢热集》
+LOCATION:上海国际舞蹈中心
+DESCRIPTION:舞蹈 | 时间：2026.12.01 - 12.02 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/516919
+END:VEVENT
+BEGIN:VEVENT
+UID:10c8efc5ce01c3bd@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261231
+SUMMARY:新国风沉浸式互动喜剧-王熹正卿国风专场
+LOCATION:松江大世界聚场
+DESCRIPTION:戏曲 | 时间：2026.12.01 - 12.30 | 场馆：松江大世界聚场 | 票价：￥28起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/509516
+END:VEVENT
+BEGIN:VEVENT
+UID:194c78007bbb2f1d@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:豫剧《七品芝麻官》
+LOCATION:天蟾逸夫舞台
+DESCRIPTION:戏曲 | 时间：2026.12.01 | 场馆：天蟾逸夫舞台 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/519113
+END:VEVENT
+BEGIN:VEVENT
+UID:23342b8690ac8e21@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:“探索俄罗斯”音乐节——拉赫玛尼诺夫之夜 艺术总监:孔祥东 指挥:张亮 演奏:上海爱乐乐团
+LOCATION:上海东方艺术中心
+DESCRIPTION:音乐会 | 时间：2026.12.03 | 场馆：上海东方艺术中心 | 票价：￥50起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/517275
+END:VEVENT
+BEGIN:VEVENT
+UID:6609d2a82375ed33@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261207
+SUMMARY:童漠男脱口秀专场《寻找王医生·北下关特别版》丨笑果出品@上海
+LOCATION:交通银行前滩31演艺中心
+DESCRIPTION:脱口秀 | 时间：2026.12.03 - 12.06 | 场馆：交通银行前滩31演艺中心 | 票价：￥220起 | 猫眼评
+ 分 0.0
+URL:https://www.gewara.com/detail/507151
+END:VEVENT
+BEGIN:VEVENT
+UID:84831e1468795381@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261206
+SUMMARY:京剧《大唐贵妃》
+LOCATION:上海大歌剧院
+DESCRIPTION:戏曲 | 时间：2026.12.04 - 12.05 | 场馆：上海大歌剧院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518668
+END:VEVENT
+BEGIN:VEVENT
+UID:cb46cdfbc8cfc472@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261214
+SUMMARY:开心麻花2026新喜剧秀《爆打人生四格》
+LOCATION:开心麻花 I 空间
+DESCRIPTION:脱口秀 | 时间：2026.12.04 - 12.13 | 场馆：开心麻花 I 空间 | 票价：￥79起 | 猫眼评分 9.
+ 7
+URL:https://www.gewara.com/detail/517641
+END:VEVENT
+BEGIN:VEVENT
+UID:0eeecd2f49cac9e0@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:第55届不熟艺术书展上海站
+LOCATION:上海世博展览馆
+DESCRIPTION:展览 | 时间：2026.12.04 | 场馆：上海世博展览馆 | 票价：￥19.9 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/495813
+END:VEVENT
+BEGIN:VEVENT
+UID:ff2941427dee91a9@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261207
+SUMMARY:舞剧《碧海沧澜》
+LOCATION:上海东方艺术中心
+DESCRIPTION:舞蹈 | 时间：2026.12.04 - 12.06 | 场馆：上海东方艺术中心 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/519356
+END:VEVENT
+BEGIN:VEVENT
+UID:cd336eca4770e1c8@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:2026东方市民音乐会：神奇的管风琴之旅——马丁·施梅丁管风琴音乐会
+LOCATION:上海东方艺术中心
+DESCRIPTION:音乐会 | 时间：2026.12.05 | 场馆：上海东方艺术中心 | 票价：￥50起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/481020
+END:VEVENT
+BEGIN:VEVENT
+UID:538fbad3cb21481f@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:“多厨狂喜”白金交响乐团音乐会
+LOCATION:上海东方艺术中心
+DESCRIPTION:音乐会 | 时间：2026.12.05 | 场馆：上海东方艺术中心 | 票价：￥99起 | 猫眼评分 9.7
+URL:https://www.gewara.com/detail/517871
+END:VEVENT
+BEGIN:VEVENT
+UID:6136dc092b385172@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261207
+SUMMARY:舞蹈剧场《注意力现场》
+LOCATION:上海国际舞蹈中心
+DESCRIPTION:舞蹈 | 时间：2026.12.05 - 12.06 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/516917
+END:VEVENT
+BEGIN:VEVENT
+UID:e07a389358b6f189@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:中国建设银行嘉定支行艺术普及 善建者行·月月有戏 婺剧《三打白骨精》
+LOCATION:上海保利大剧院
+DESCRIPTION:戏曲 | 时间：2026.12.06 | 场馆：上海保利大剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/516109
+END:VEVENT
+BEGIN:VEVENT
+UID:5a31124afee71c78@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:DRUMK男团沉浸式舞剧《M境》
+LOCATION:北外滩友邦大剧院
+DESCRIPTION:舞蹈 | 时间：2026.12.08 | 场馆：北外滩友邦大剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/514155
+END:VEVENT
+BEGIN:VEVENT
+UID:47d35b848359f8c9@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261219
+SUMMARY:圣彼得堡艾夫曼芭蕾舞团《罪与罚》《叶甫盖尼·奥涅金》《安娜·卡列尼娜》三部曲
+LOCATION:上海大歌剧院
+DESCRIPTION:舞蹈 | 时间：2026.12.09 - 12.18 | 场馆：上海大歌剧院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/517119
+END:VEVENT
+BEGIN:VEVENT
+UID:0651e561cee3915f@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261211
+SUMMARY:舞剧《五星出东方》
+LOCATION:大零号湾文化艺术中心
+DESCRIPTION:舞蹈 | 时间：2026.12.09 - 12.10 | 场馆：大零号湾文化艺术中心 | 票价：￥100起 | 猫眼评分 0
+ .0
+URL:https://www.gewara.com/detail/506918
+END:VEVENT
+BEGIN:VEVENT
+UID:7558960480fdc69e@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261213
+SUMMARY:孟川脱口秀专场《好不好》｜快乐共暖出品@上海
+LOCATION:美琪大戏院
+DESCRIPTION:脱口秀 | 时间：2026.12.11 - 12.12 | 场馆：美琪大戏院 | 票价：￥120起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518745
+END:VEVENT
+BEGIN:VEVENT
+UID:02d902923cfd0ba5@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:DDK剧团喜剧专场｜全国巡演第一站｜上海站
+LOCATION:尽情空间
+DESCRIPTION:脱口秀 | 时间：2026.12.12 | 场馆：尽情空间 | 票价：￥168起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/517669
+END:VEVENT
+BEGIN:VEVENT
+UID:446b52ab31ce7f85@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:“上海阿婆”—舒悦滑稽专场
+LOCATION:兰心大戏院
+DESCRIPTION:戏曲 | 时间：2026.12.12 | 场馆：兰心大戏院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/515243
+END:VEVENT
+BEGIN:VEVENT
+UID:24e056585ae2b2e1@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:《维也纳－柏林爱乐音乐家合奏团音乐会》
+LOCATION:上海大歌剧院
+DESCRIPTION:音乐会 | 时间：2026.12.12 | 场馆：上海大歌剧院 | 票价：￥280起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518418
+END:VEVENT
+BEGIN:VEVENT
+UID:d8120a0fa6b1e8b4@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:京剧《霸王别姬》
+LOCATION:豫园·海上梨园
+DESCRIPTION:戏曲 | 时间：2026.12.12 | 场馆：豫园·海上梨园 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/516790
+END:VEVENT
+BEGIN:VEVENT
+UID:245e2740e0d21132@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261214
+SUMMARY:百老汇璀璨夜 Phillipa Soo & Steven Pasquale 2026音乐会
+LOCATION:上海西岸大剧院
+DESCRIPTION:音乐会 | 时间：2026.12.12 - 12.13 | 场馆：上海西岸大剧院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/513279
+END:VEVENT
+BEGIN:VEVENT
+UID:0d61056b01f606ac@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:《哈利的奇幻世界》经典魔幻电影金曲音乐会
+LOCATION:上海保利大剧院
+DESCRIPTION:音乐会 | 时间：2026.12.13 | 场馆：上海保利大剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/516138
+END:VEVENT
+BEGIN:VEVENT
+UID:f066fc03063c1a4e@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:《魔法的世界》经典幻想电影音乐会
+LOCATION:保利上海城市剧院
+DESCRIPTION:音乐会 | 时间：2026.12.13 | 场馆：保利上海城市剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/515245
+END:VEVENT
+BEGIN:VEVENT
+UID:818711933301ef6f@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261220
+SUMMARY:「时代的旋律」超燃回忆杀丨带爸妈听老歌丨80年代沉浸式音乐现场丨怀旧金曲丨致敬经典奔赴旧日芳华《时光唱片》
+LOCATION:喜剧玩家
+DESCRIPTION:音乐会 | 时间：2026.12.13 - 12.19 | 场馆：喜剧玩家 | 票价：￥9.9起 | 猫眼评分 9.9
+URL:https://www.gewara.com/detail/498903
+END:VEVENT
+BEGIN:VEVENT
+UID:19b61800bbfc5b7c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:昆曲《牡丹亭·游园惊梦》
+LOCATION:豫园·海上梨园
+DESCRIPTION:戏曲 | 时间：2026.12.13 | 场馆：豫园·海上梨园 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/516804
+END:VEVENT
+BEGIN:VEVENT
+UID:2c2d8a2bb26c7cca@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261221
+SUMMARY:英文原版话剧《肖申克的救赎》
+LOCATION:美琪大戏院
+DESCRIPTION:话剧 | 时间：2026.12.15 - 12.20 | 场馆：美琪大戏院 | 票价：￥280起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/511881
+END:VEVENT
+BEGIN:VEVENT
+UID:3ee257f8c78b7ed7@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:越剧《三看御妹》
+LOCATION:宛平剧院
+DESCRIPTION:戏曲 | 时间：2026.12.15 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/514717
+END:VEVENT
+BEGIN:VEVENT
+UID:20f18b563c7e6ed3@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20270104
+SUMMARY:音乐剧《梦断花都》（电影《红磨坊》改编）Moulin Rouge！The Musical
+LOCATION:交通银行前滩31演艺中心
+DESCRIPTION:音乐剧 | 时间：2026.12.15 - 2027.01.03 | 场馆：交通银行前滩31演艺中心 | 票价：￥180起 
+ | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/477429
+END:VEVENT
+BEGIN:VEVENT
+UID:c38613eb0432a40c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20270301
+SUMMARY:浦东美术馆指定单日票
+LOCATION:卡罗莱娜·凯塞多·鲸鱼的致敬
+DESCRIPTION:展览 | 时间：2026.12.16 - 2027.02.28 | 场馆：卡罗莱娜·凯塞多·鲸鱼的致敬 | 票价：￥80起 
+ | 猫眼评分 9.3
+URL:https://www.gewara.com/detail/453007
+END:VEVENT
+BEGIN:VEVENT
+UID:562211b9cb2bef05@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261221
+SUMMARY:12/17-12/20 凡几10周年"Big Little Celebration"生诞市集
+LOCATION:上海A.F.A-ROJO艺术文化空间
+DESCRIPTION:展览 | 时间：2026.12.17 - 12.20 | 场馆：上海A.F.A-ROJO艺术文化空间 | 票价：￥39起 |
+  猫眼评分 0.0
+URL:https://www.gewara.com/detail/519751
+END:VEVENT
+BEGIN:VEVENT
+UID:1f6ecb545b4a09a5@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20270104
+SUMMARY:【悬疑巅峰之作】音乐剧《嫌疑人X的献身》-【跨年演出季-缪时客出品】
+LOCATION:黄浦文化中心·大上海剧场
+DESCRIPTION:音乐剧 | 时间：2026.12.18 - 2027.01.03 | 场馆：黄浦文化中心·大上海剧场 | 票价：￥180起 
+ | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/513480
+END:VEVENT
+BEGIN:VEVENT
+UID:4d36b3e931a08512@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261219
+SUMMARY:史依弘领衔 京剧《霸王别姬》
+LOCATION:宛平剧院
+DESCRIPTION:戏曲 | 时间：2026.12.18 | 场馆：宛平剧院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/507409
+END:VEVENT
+BEGIN:VEVENT
+UID:63a995564ad03165@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20280515
+SUMMARY:想象现实——蓬皮杜中心典藏展（五）
+LOCATION:上海西岸美术馆
+DESCRIPTION:展览 | 时间：2026.12.18 - 2028.05.14 | 场馆：上海西岸美术馆 | 票价：￥50 | 猫眼评分 0
+ .0
+URL:https://www.gewara.com/detail/519854
+END:VEVENT
+BEGIN:VEVENT
+UID:77278b3d63f0f105@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261220
+SUMMARY:滑稽舞台剧《72国房客》
+LOCATION:兰心大戏院
+DESCRIPTION:戏曲 | 时间：2026.12.18 - 12.19 | 场馆：兰心大戏院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/511873
+END:VEVENT
+BEGIN:VEVENT
+UID:ff69a61eaf6609e0@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261221
+SUMMARY:舞剧《咏春》
+LOCATION:上海大歌剧院
+DESCRIPTION:舞蹈 | 时间：2026.12.18 - 12.20 | 场馆：上海大歌剧院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/511245
+END:VEVENT
+BEGIN:VEVENT
+UID:48768333fa4c8e55@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:Mr.Miss「十年之后」剧场巡回音乐会——上海站
+LOCATION:上海保利大剧院
+DESCRIPTION:音乐会 | 时间：2026.12.19 | 场馆：上海保利大剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518031
+END:VEVENT
+BEGIN:VEVENT
+UID:456148b568c86c9d@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261221
+SUMMARY:耿子博导演作品 舞蹈剧场《北斗》
+LOCATION:人民大舞台
+DESCRIPTION:舞蹈 | 时间：2026.12.19 - 12.20 | 场馆：人民大舞台 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/519331
+END:VEVENT
+BEGIN:VEVENT
+UID:2c6d8eef23cb6719@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261220
+DTEND;VALUE=DATE:20261221
+SUMMARY:史依弘领衔 京剧《玉堂春》
+LOCATION:宛平剧院
+DESCRIPTION:戏曲 | 时间：2026.12.20 | 场馆：宛平剧院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/507407
+END:VEVENT
+BEGIN:VEVENT
+UID:a007db498142f8e5@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261228
+SUMMARY:俄罗斯芭蕾国家剧院《胡桃夹子》
+LOCATION:上海国际舞蹈中心
+DESCRIPTION:舞蹈 | 时间：2026.12.24 - 12.27 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/509593
+END:VEVENT
+BEGIN:VEVENT
+UID:91deacf41020fec4@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261226
+SUMMARY:俄罗斯鞑靼国家模范剧院芭蕾舞剧《胡桃夹子》交响乐团现场伴奏版
+LOCATION:上海东方艺术中心
+DESCRIPTION:舞蹈 | 时间：2026.12.24 - 12.25 | 场馆：上海东方艺术中心 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/498758
+END:VEVENT
+BEGIN:VEVENT
+UID:4e9f336a7b3c78a4@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261226
+SUMMARY:梁海源脱口秀专场《天才的三个夜晚》｜笑果出品@上海
+LOCATION:美琪大戏院
+DESCRIPTION:脱口秀 | 时间：2026.12.24 - 12.25 | 场馆：美琪大戏院 | 票价：￥220起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/515340
+END:VEVENT
+BEGIN:VEVENT
+UID:9941f837b5edf10b@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261228
+SUMMARY:芭蕾舞剧《胡桃夹子》
+LOCATION:上海大歌剧院
+DESCRIPTION:舞蹈 | 时间：2026.12.24 - 12.27 | 场馆：上海大歌剧院 | 票价：￥100起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/519062
+END:VEVENT
+BEGIN:VEVENT
+UID:fe5c2028f51e657c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+SUMMARY:交响音画《红楼梦·回响》
+LOCATION:凯迪拉克-上海音乐厅
+DESCRIPTION:音乐会 | 时间：2026.12.25 | 场馆：凯迪拉克-上海音乐厅 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/517802
+END:VEVENT
+BEGIN:VEVENT
+UID:a499aa6cf4c5326d@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+SUMMARY:俄罗斯帝国芭蕾舞团芭蕾舞剧《天鹅湖》
+LOCATION:保利上海城市剧院
+DESCRIPTION:舞蹈 | 时间：2026.12.25 | 场馆：保利上海城市剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/499568
+END:VEVENT
+BEGIN:VEVENT
+UID:c880470e3e26de3e@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261227
+SUMMARY:独脚戏《石库门的笑声》
+LOCATION:兰心大戏院
+DESCRIPTION:戏曲 | 时间：2026.12.25 - 12.26 | 场馆：兰心大戏院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/516504
+END:VEVENT
+BEGIN:VEVENT
+UID:aa012ae1b478b38c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261227
+SUMMARY:维也纳皇家爱乐乐团新年音乐会
+LOCATION:上海东方艺术中心
+DESCRIPTION:音乐会 | 时间：2026.12.25 - 12.26 | 场馆：上海东方艺术中心 | 票价：￥144起 | 猫眼评分 0.
+ 0
+URL:https://www.gewara.com/detail/486961
+END:VEVENT
+BEGIN:VEVENT
+UID:5d16e66e578466b4@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261228
+SUMMARY:上海越剧院 越剧《红楼梦》
+LOCATION:上海大歌剧院
+DESCRIPTION:戏曲 | 时间：2026.12.26 - 12.27 | 场馆：上海大歌剧院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/519896
+END:VEVENT
+BEGIN:VEVENT
+UID:0fdf10a2ae27658d@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+SUMMARY:俄罗斯帝国芭蕾舞团芭蕾舞剧《胡桃夹子》
+LOCATION:保利上海城市剧院
+DESCRIPTION:舞蹈 | 时间：2026.12.26 | 场馆：保利上海城市剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/499588
+END:VEVENT
+BEGIN:VEVENT
+UID:e4ac6c8e046dc28b@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+SUMMARY:俄罗斯鞑靼国家模范剧院芭蕾舞剧《天鹅湖》交响乐团现场伴奏版
+LOCATION:上海东方艺术中心
+DESCRIPTION:舞蹈 | 时间：2026.12.26 | 场馆：上海东方艺术中心 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/498757
+END:VEVENT
+BEGIN:VEVENT
+UID:07dd09e476be3def@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261228
+SUMMARY:2027上海儿童新年音乐会（交响演唱版）
+LOCATION:上海东方艺术中心
+DESCRIPTION:音乐会 | 时间：2026.12.27 | 场馆：上海东方艺术中心 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/509130
+END:VEVENT
+BEGIN:VEVENT
+UID:e03ef007dbb79b79@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270111
+SUMMARY:中文原创音乐剧《狂飙》Chinese Original Musical <The Knockout>
+LOCATION:上海西岸大剧院
+DESCRIPTION:音乐剧 | 时间：2026.12.31 - 2027.01.10 | 场馆：上海西岸大剧院 | 票价：￥180起 | 猫眼评
+ 分 0.0
+URL:https://www.gewara.com/detail/509787
+END:VEVENT
+BEGIN:VEVENT
+UID:f74416c73d2129ed@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:维也纳施特劳斯乐团2027新年音乐会
+LOCATION:上海大剧院
+DESCRIPTION:音乐会 | 时间：2026.12.31 | 场馆：上海大剧院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/486771
+END:VEVENT
+BEGIN:VEVENT
+UID:5901702a84b24e77@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270102
+SUMMARY:维也纳春之声交响乐团新年音乐会-上海站
+LOCATION:上海东方艺术中心
+DESCRIPTION:音乐会 | 时间：2026.12.31 - 2027.01.01 | 场馆：上海东方艺术中心 | 票价：￥126起 | 猫眼
+ 评分 0.0
+URL:https://www.gewara.com/detail/490899
+END:VEVENT
+BEGIN:VEVENT
+UID:71b465a8fcad350c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270104
+SUMMARY:西班牙国宝级舞团 马德里弗拉门戈舞团《卡门》
+LOCATION:上海东方艺术中心
+DESCRIPTION:舞蹈 | 时间：2026.12.31 - 2027.01.03 | 场馆：上海东方艺术中心 | 票价：￥126起 | 猫眼评
+ 分 0.0
+URL:https://www.gewara.com/detail/497426
+END:VEVENT
+BEGIN:VEVENT
+UID:71e82f3d409d389c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270103
+SUMMARY:阿根廷国宝级探戈舞团《魅影暗舞2 布宜诺斯艾利斯》 Tango 2 Buenos Aires
+LOCATION:上海国际舞蹈中心
+DESCRIPTION:舞蹈 | 时间：2026.12.31 - 2027.01.02 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分
+  0.0
+URL:https://www.gewara.com/detail/511645
+END:VEVENT
+BEGIN:VEVENT
+UID:739c93bf6b4dbd77@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:《爱·永恒》理查德·克莱德曼钢琴音乐会-上海站
+LOCATION:国家会展中心（上海）虹馆EH
+DESCRIPTION:音乐会 | 时间：2027.01.01 | 场馆：国家会展中心（上海）虹馆EH | 票价：￥380起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/497189
+END:VEVENT
+BEGIN:VEVENT
+UID:cb6c39c87e759b8a@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270102
+DTEND;VALUE=DATE:20270104
+SUMMARY:原创芭蕾舞剧《白毛女》
+LOCATION:宛平剧院
+DESCRIPTION:舞蹈 | 时间：2027.01.02 - 01.03 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/519617
+END:VEVENT
+BEGIN:VEVENT
+UID:f09c5e5e495d683d@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:《爱乐之城》—经典电影金曲交响音乐会
+LOCATION:上海东方艺术中心
+DESCRIPTION:音乐会 | 时间：2027.01.09 | 场馆：上海东方艺术中心 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518972
+END:VEVENT
+BEGIN:VEVENT
+UID:2a033948467061f7@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270111
+SUMMARY:舞剧《李清照》
+LOCATION:上海保利云间剧院
+DESCRIPTION:舞蹈 | 时间：2027.01.09 - 01.10 | 场馆：上海保利云间剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/516696
+END:VEVENT
+BEGIN:VEVENT
+UID:52705197ffec34a3@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:韩再芬领衔主演黄梅戏《女驸马》
+LOCATION:美琪大戏院
+DESCRIPTION:戏曲 | 时间：2027.01.09 | 场馆：美琪大戏院 | 票价：￥280起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/514509
+END:VEVENT
+BEGIN:VEVENT
+UID:7b594c6fbaba949f@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:俄罗斯莫斯科芭蕾舞团《天鹅湖》
+LOCATION:上海东方艺术中心
+DESCRIPTION:舞蹈 | 时间：2027.01.10 | 场馆：上海东方艺术中心 | 票价：￥108起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/512776
+END:VEVENT
+BEGIN:VEVENT
+UID:426b08fc6b49897b@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:昆剧《闹天宫》
+LOCATION:宛平剧院
+DESCRIPTION:戏曲 | 时间：2027.01.10 | 场馆：宛平剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518854
+END:VEVENT
+BEGIN:VEVENT
+UID:b83f59ea77d66d7b@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270116
+DTEND;VALUE=DATE:20270118
+SUMMARY:芭蕾舞剧《胡桃夹子》新年特别版-哈尔滨芭蕾舞团×云憬文化
+LOCATION:上海国际舞蹈中心
+DESCRIPTION:舞蹈 | 时间：2027.01.16 - 01.17 | 场馆：上海国际舞蹈中心 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/511920
+END:VEVENT
+BEGIN:VEVENT
+UID:76141be6168dae67@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270116
+DTEND;VALUE=DATE:20270117
+SUMMARY:鼓神降临-当代爵士鼓宗师·格莱美奖得主· Steve Gadd内地首演
+LOCATION:久事·上海商城剧院
+DESCRIPTION:音乐会 | 时间：2027.01.16 | 场馆：久事·上海商城剧院 | 票价：￥280起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518017
+END:VEVENT
+BEGIN:VEVENT
+UID:3e9787e1dd5aa97f@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270121
+DTEND;VALUE=DATE:20270125
+SUMMARY:原创音乐剧《她的海》
+LOCATION:上海西岸大剧院
+DESCRIPTION:音乐剧 | 时间：2027.01.21 - 01.24 | 场馆：上海西岸大剧院 | 票价：￥280起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/518939
+END:VEVENT
+BEGIN:VEVENT
+UID:e98dcfa987f1c9b9@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270123
+DTEND;VALUE=DATE:20270125
+SUMMARY:舞剧《大染坊》
+LOCATION:北外滩友邦大剧院
+DESCRIPTION:舞蹈 | 时间：2027.01.23 - 01.24 | 场馆：北外滩友邦大剧院 | 票价：￥180起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/514057
+END:VEVENT
+BEGIN:VEVENT
+UID:b41fd7c72a0ba07c@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270130
+DTEND;VALUE=DATE:20270131
+SUMMARY:2027马克西姆“边界II”古典跨界钢琴演奏会-上海站
+LOCATION:浦发银行东方体育中心
+DESCRIPTION:音乐会 | 时间：2027.01.30 | 场馆：浦发银行东方体育中心 | 票价：￥380起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/515771
+END:VEVENT
+BEGIN:VEVENT
+UID:9d22981c393c162a@play-in-shanghai
+DTSTAMP:20261119T062933Z
+DTSTART;VALUE=DATE:20270130
+DTEND;VALUE=DATE:20270201
+SUMMARY:江西文演·陆川导演作品 舞剧《天工开物》
+LOCATION:上海西岸大剧院
+DESCRIPTION:舞蹈 | 时间：2027.01.30 - 01.31 | 场馆：上海西岸大剧院 | 票价：￥80起 | 猫眼评分 0.0
+URL:https://www.gewara.com/detail/516150
+END:VEVENT
+END:VCALENDAR
