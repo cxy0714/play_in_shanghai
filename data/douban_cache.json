@@ -140,17 +140,17 @@
     "status": ""
   },
   {
-    "title": "互助网周末活动",
+    "title": "漂流木塔羅占星工坊",
     "category": "话剧",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/279492/",
+    "ticket_url": "https://site.douban.com/happybear/",
     "source_url": "https://shanghai.douban.com/events/week-drama",
     "image_url": "",
-    "summary": "互助网周末活动",
+    "summary": "漂流木塔羅占星工坊",
     "status": ""
   },
   {
@@ -168,31 +168,31 @@
     "status": ""
   },
   {
-    "title": "Talkspace",
+    "title": "林雨阁俱乐部",
     "category": "话剧",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/307201/",
+    "ticket_url": "https://site.douban.com/133075/",
     "source_url": "https://shanghai.douban.com/events/week-drama",
     "image_url": "",
-    "summary": "Talkspace",
+    "summary": "林雨阁俱乐部",
     "status": ""
   },
   {
-    "title": "漂流木塔羅占星工坊",
+    "title": "互助网周末活动",
     "category": "话剧",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/happybear/",
+    "ticket_url": "https://site.douban.com/279492/",
     "source_url": "https://shanghai.douban.com/events/week-drama",
     "image_url": "",
-    "summary": "漂流木塔羅占星工坊",
+    "summary": "互助网周末活动",
     "status": ""
   },
   {
@@ -350,6 +350,34 @@
     "status": ""
   },
   {
+    "title": "票牛",
+    "category": "脱口秀",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/267084/",
+    "source_url": "https://shanghai.douban.com/events/week-comedy",
+    "image_url": "",
+    "summary": "票牛",
+    "status": ""
+  },
+  {
+    "title": "互助网周末活动",
+    "category": "脱口秀",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/279492/",
+    "source_url": "https://shanghai.douban.com/events/week-comedy",
+    "image_url": "",
+    "summary": "互助网周末活动",
+    "status": ""
+  },
+  {
     "title": "漂流木塔羅占星工坊",
     "category": "脱口秀",
     "venue": "上海",
@@ -378,45 +406,17 @@
     "status": ""
   },
   {
-    "title": "票牛",
+    "title": "迷波隆社交聚会",
     "category": "脱口秀",
     "venue": "上海",
     "address": "",
     "start_date": "",
     "end_date": "",
     "price_text": "",
-    "ticket_url": "https://site.douban.com/267084/",
+    "ticket_url": "https://site.douban.com/282179/",
     "source_url": "https://shanghai.douban.com/events/week-comedy",
     "image_url": "",
-    "summary": "票牛",
-    "status": ""
-  },
-  {
-    "title": "林雨阁俱乐部",
-    "category": "脱口秀",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/133075/",
-    "source_url": "https://shanghai.douban.com/events/week-comedy",
-    "image_url": "",
-    "summary": "林雨阁俱乐部",
-    "status": ""
-  },
-  {
-    "title": "互助网周末活动",
-    "category": "脱口秀",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/279492/",
-    "source_url": "https://shanghai.douban.com/events/week-comedy",
-    "image_url": "",
-    "summary": "互助网周末活动",
+    "summary": "迷波隆社交聚会",
     "status": ""
   },
   {
@@ -588,6 +588,20 @@
     "status": ""
   },
   {
+    "title": "Talkspace",
+    "category": "展览",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/307201/",
+    "source_url": "https://shanghai.douban.com/events/week-exhibition",
+    "image_url": "",
+    "summary": "Talkspace",
+    "status": ""
+  },
+  {
     "title": "林雨阁俱乐部",
     "category": "展览",
     "venue": "上海",
@@ -599,20 +613,6 @@
     "source_url": "https://shanghai.douban.com/events/week-exhibition",
     "image_url": "",
     "summary": "林雨阁俱乐部",
-    "status": ""
-  },
-  {
-    "title": "互助网周末活动",
-    "category": "展览",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/279492/",
-    "source_url": "https://shanghai.douban.com/events/week-exhibition",
-    "image_url": "",
-    "summary": "互助网周末活动",
     "status": ""
   },
   {
@@ -700,34 +700,6 @@
     "status": ""
   },
   {
-    "title": "【钢琴&小提琴】烛光音乐会“海上钢琴师”“爱乐之城”“加勒比海盗”曲目主题青春无限乐团",
-    "category": "音乐会",
-    "venue": "青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A",
-    "address": "上海 黄浦区 青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A",
-    "start_date": "2026-11-28T20:20:00",
-    "end_date": "2026-11-28T21:30:00",
-    "price_text": "298.00元起",
-    "ticket_url": "https://www.douban.com/event/37236933/",
-    "source_url": "https://shanghai.douban.com/events/week-music",
-    "image_url": "",
-    "summary": "1人参加 0人感兴趣",
-    "status": ""
-  },
-  {
-    "title": "[青春无限乐团]“爱乐之城主题”世界影视作品曲目LALALAND三重奏烛光音乐会",
-    "category": "音乐会",
-    "venue": "青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A",
-    "address": "上海 黄浦区 青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A",
-    "start_date": "2026-11-28T18:30:00",
-    "end_date": "2026-11-28T19:40:00",
-    "price_text": "298.00元起",
-    "ticket_url": "https://www.douban.com/event/37264238/",
-    "source_url": "https://shanghai.douban.com/events/week-music",
-    "image_url": "",
-    "summary": "0人参加 1人感兴趣",
-    "status": ""
-  },
-  {
     "title": "【钢琴&大提琴】青春无限乐团烛光音乐会权力的游戏&诀别书曲目演出",
     "category": "音乐会",
     "venue": "青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A",
@@ -770,6 +742,48 @@
     "status": ""
   },
   {
+    "title": "【奇妙嘿夜】“海上钢琴师”“爱乐之城”“世界赠予我的”曲目主题烛光音乐会钢琴&大提琴演奏",
+    "category": "音乐会",
+    "venue": "青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A",
+    "address": "上海 黄浦区 青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A",
+    "start_date": "2026-11-28T15:00:00",
+    "end_date": "2026-11-28T16:10:00",
+    "price_text": "388.00元起",
+    "ticket_url": "https://www.douban.com/event/37975994/",
+    "source_url": "https://shanghai.douban.com/events/week-music",
+    "image_url": "",
+    "summary": "0人参加 1人感兴趣",
+    "status": ""
+  },
+  {
+    "title": "奇妙嘿夜“海上钢琴师”“诀别书”“世界赠予我的”曲目主题烛光音乐会钢琴&大提琴演奏",
+    "category": "音乐会",
+    "venue": "青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A",
+    "address": "上海 黄浦区 青春无限乐团烛光音乐会-上海广场店 淮海中路138号上海广场2楼206A",
+    "start_date": "2026-11-28T15:00:00",
+    "end_date": "2026-11-28T16:10:00",
+    "price_text": "198.0元起",
+    "ticket_url": "https://www.douban.com/event/38006413/",
+    "source_url": "https://shanghai.douban.com/events/week-music",
+    "image_url": "",
+    "summary": "0人参加 1人感兴趣",
+    "status": ""
+  },
+  {
+    "title": "漂流木塔羅占星工坊",
+    "category": "音乐会",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/happybear/",
+    "source_url": "https://shanghai.douban.com/events/week-music",
+    "image_url": "",
+    "summary": "漂流木塔羅占星工坊",
+    "status": ""
+  },
+  {
     "title": "票牛",
     "category": "音乐会",
     "venue": "上海",
@@ -781,20 +795,6 @@
     "source_url": "https://shanghai.douban.com/events/week-music",
     "image_url": "",
     "summary": "票牛",
-    "status": ""
-  },
-  {
-    "title": "互助网周末活动",
-    "category": "音乐会",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/279492/",
-    "source_url": "https://shanghai.douban.com/events/week-music",
-    "image_url": "",
-    "summary": "互助网周末活动",
     "status": ""
   },
   {
@@ -812,20 +812,6 @@
     "status": ""
   },
   {
-    "title": "迷波隆社交聚会",
-    "category": "音乐会",
-    "venue": "上海",
-    "address": "",
-    "start_date": "",
-    "end_date": "",
-    "price_text": "",
-    "ticket_url": "https://site.douban.com/282179/",
-    "source_url": "https://shanghai.douban.com/events/week-music",
-    "image_url": "",
-    "summary": "迷波隆社交聚会",
-    "status": ""
-  },
-  {
     "title": "林雨阁俱乐部",
     "category": "音乐会",
     "venue": "上海",
@@ -837,6 +823,20 @@
     "source_url": "https://shanghai.douban.com/events/week-music",
     "image_url": "",
     "summary": "林雨阁俱乐部",
+    "status": ""
+  },
+  {
+    "title": "迷波隆社交聚会",
+    "category": "音乐会",
+    "venue": "上海",
+    "address": "",
+    "start_date": "",
+    "end_date": "",
+    "price_text": "",
+    "ticket_url": "https://site.douban.com/282179/",
+    "source_url": "https://shanghai.douban.com/events/week-music",
+    "image_url": "",
+    "summary": "迷波隆社交聚会",
     "status": ""
   }
 ]
