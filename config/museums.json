@@ -377,6 +377,20 @@
       "notes": "当前展览页 p.text 每块「<a>展名</a><span>2026.10.24 - 2026.11.29</span>」"
     },
     {
+      "name": "世博会博物馆",
+      "city": "上海",
+      "list_url": "https://www.expo-museum.cn/sbbwg/n281/n282/n299/n305/index.html",
+      "detail": false,
+      "item_selector": "ul.liebiao li",
+      "title_selector": "h2",
+      "date_regex": "展览时间[：:]\\s*([^<。；\\n]{4,60})",
+      "exclude_regex": "常设|讲座|活动|公告|招募|预告|回顾|论坛|导览|招聘",
+      "venue_default": "世博会博物馆",
+      "price_text": "免费（免预约）",
+      "max_articles": 20,
+      "notes": "临时展览栏目（展名在 h2，展览时间和展厅在列表项文本里）。注意该栏目更新滞后：新展常先发在综合快讯/首页轮播，那些页面的展期在图片里，抓不到时用 config/extra_events.json 手动补充"
+    },
+    {
       "name": "四川博物院",
       "adapter": "museum_api",
       "site": "scmuseum",

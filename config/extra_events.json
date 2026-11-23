@@ -1,0 +1,19 @@
+{
+  "_说明": "手工补充的展讯：官方站点把展期只写在图片里、或者官网栏目更新滞后导致采集器抓不到的展，可以写在这里。每轮抓取后按常规去重逻辑合并，不会被自动更新覆盖。字段和采集器输出一致（title/venue/city/address/start_date/end_date/price_text/ticket_url/source_url/image_url/summary/category）。",
+  "events": [
+    {
+      "title": "克里姆林宫瑰宝——从彼得一世到叶卡捷琳娜二世",
+      "category": "展览",
+      "city": "上海",
+      "venue": "世博会博物馆",
+      "address": "上海市黄浦区蒙自路818号",
+      "start_date": "2026-11-19",
+      "end_date": "2027-03-07",
+      "price_text": "免费（免预约）",
+      "ticket_url": "http://www.expo-museum.org/sbbwg/n281/n282/n330/n331/u1ai30416.html",
+      "source_url": "https://m.thepaper.cn/newsDetail_forward_34509631",
+      "image_url": "http://www.expo-museum.org/images/thumbnailimg/month_2611/202611190349365623.jpg",
+      "summary": "莫斯科克里姆林宫博物馆藏 129 件/套珍品，以彼得一世与叶卡捷琳娜二世时代为叙事主线，呈现罗曼诺夫王朝的宫廷历史与皇室珍藏；上海世博会博物馆、莫斯科克里姆林宫博物馆、湖北省博物馆、中国文物交流中心共同主办。"
+    }
+  ]
+}

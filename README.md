@@ -75,6 +75,15 @@
 
 上面这些「接口存在但拿不到」的馆，HTML 侧也基本是 SPA 壳，**暂时抓不到**，不必再重复试。
 
+### 手工补充：`config/extra_events.json`
+
+有些馆的展期只写在**海报图片**里，或者新展只发了新闻稿/首页轮播、官网的展览栏目还没更新（例：世博会博物馆的「临时展览」栏目会滞后数周）。这类展采集器按规则拿不到真实展期，就写进 [`config/extra_events.json`](config/extra_events.json) 兜底：
+
+- 顶层 `{"events": [...]}`，每条字段和采集器输出一致：`title` / `venue` / `city` / `address` / `start_date` / `end_date` / `price_text` / `ticket_url` / `source_url` / `image_url` / `summary` / `category`。
+- 每轮抓取后合并，不会被自动更新覆盖；和其它来源撞标题/场馆/开始日期时按常规去重合并成一条。
+- `source_name` 显示为「手动补充」，`source_kind` 记为 `museum`。
+- 只用来补「官网确实这么写、但机器读不到」的展，展期请以官方公告为准。
+
 ## 一次性设置
 
 1. 把仓库推到 GitHub。

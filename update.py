@@ -55,11 +55,12 @@ except Exception as exc:  # pragma: no cover
     collect_museum_json = None
     print(f"[warn] museum_api 加载失败，跳过接口型博物馆来源：{exc}", flush=True)
 
-MUSEUM_ADAPTERS = {"museum_cn", "museum_generic", "museum_api", "museum_json", "shmuseum"}
+MUSEUM_ADAPTERS = {"museum_cn", "museum_generic", "museum_api", "museum_json", "shmuseum", "manual"}
 
 ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = ROOT / "config" / "sources.json"
 MUSEUM_CONFIG_PATH = ROOT / "config" / "museums.json"
+EXTRA_EVENTS_PATH = ROOT / "config" / "extra_events.json"
 DATA_DIR = ROOT / "data"
 DOCS_DIR = ROOT / "docs"
 SHANGHAI_TZ = ZoneInfo("Asia/Shanghai")
@@ -2942,6 +2943,31 @@ def load_museum_sources() -> list[dict]:
     return sources
 
 
+def load_extra_events() -> list[dict]:
+    """读 config/extra_events.json：手工补充采集器抓不到的展。
+
+    适用于官方站点把展期只写在图片里、或者官网栏目更新滞后（展讯只发了新闻稿/
+    首页轮播）的展。条目字段和采集器输出一致，每轮抓取后按常规去重逻辑合并，
+    不会被自动更新覆盖；标题/场馆/开始日期与其它来源相同则自动合并成一条。
+    """
+    if not EXTRA_EVENTS_PATH.exists():
+        return []
+    try:
+        payload = load_json(EXTRA_EVENTS_PATH)
+    except Exception as exc:  # noqa: BLE001
+        log(f"手动补充配置读取失败：{exc}")
+        return []
+    entries = payload.get("events", []) if isinstance(payload, dict) else payload
+    results: list[dict] = []
+    for entry in entries or []:
+        if not isinstance(entry, dict) or not clean_text(entry.get("title")):
+            continue
+        item = dict(entry)
+        item.setdefault("city", SHANGHAI_CITY)
+        results.append(item)
+    return results
+
+
 def run(config_path: Path, no_llm: bool = False) -> None:
     global LLM_CONFIG
     LLM_CONFIG = load_llm_config(no_llm=no_llm)
@@ -2979,6 +3005,13 @@ def run(config_path: Path, no_llm: bool = False) -> None:
         source_counts[name] = len(items)
         for item in items:
             raw_with_source.append((item, source))
+
+    extra_events = load_extra_events()
+    if extra_events:
+        log(f"手动补充 {len(extra_events)} 条（config/extra_events.json）")
+        extra_source = {"name": "手动补充", "adapter": "manual", "city": SHANGHAI_CITY}
+        for item in extra_events:
+            raw_with_source.append((item, extra_source))
 
     if not raw_with_source and (DATA_DIR / "events.json").exists():
         log("本次没有抓到任何原始数据，保留上一次结果，不覆盖页面")
